@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --background: 48 100% 98%;
+    --foreground: 260 30% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 30% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 30% 18%;
+    --primary: 142 55% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 45% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 48 40% 94%;
+    --muted-foreground: 260 15% 40%;
+    --accent: 48 95% 62%;
+    --accent-foreground: 260 30% 18%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 20% 88%;
+    --input: 260 20% 88%;
+    --ring: 142 55% 42%;
+    --radius: 1rem;
+
+    --speakup-yellow: 48 95% 62%;
+    --speakup-green: 142 55% 42%;
+    --speakup-purple: 270 45% 58%;
+    --speakup-yellow-soft: 48 80% 92%;
+    --speakup-green-soft: 142 40% 92%;
+    --speakup-purple-soft: 270 40% 94%;
+  }
+
+  .dark {
+    --background: 260 25% 10%;
+    --foreground: 48 30% 96%;
+    --card: 260 22% 14%;
+    --card-foreground: 48 30% 96%;
+    --popover: 260 22% 14%;
+    --popover-foreground: 48 30% 96%;
+    --primary: 142 50% 48%;
+    --primary-foreground: 260 30% 10%;
+    --secondary: 270 40% 65%;
+    --secondary-foreground: 260 30% 10%;
+    --muted: 260 18% 20%;
+    --muted-foreground: 260 15% 70%;
+    --accent: 48 85% 55%;
+    --accent-foreground: 260 30% 10%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 18% 24%;
+    --input: 260 18% 24%;
+    --ring: 142 50% 48%;
+
+    --speakup-yellow-soft: 48 30% 18%;
+    --speakup-green-soft: 142 25% 16%;
+    --speakup-purple-soft: 270 25% 18%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html.reduce-motion,
+  html.reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  html.high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --primary: 142 70% 28%;
+    --secondary: 270 70% 35%;
+    --accent: 48 100% 45%;
+    --border: 0 0% 0%;
+    --muted-foreground: 0 0% 15%;
+  }
+
+  html.high-contrast.dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+  }
+
+  html.accessible-font body {
+    font-family: var(--font-atkinson), system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-speakup {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--speakup-yellow-soft)) 0%,
+      hsl(var(--speakup-green-soft)) 50%,
+      hsl(var(--speakup-purple-soft)) 100%
+    );
+  }
+
+  .prose-legal h2 {
+    @apply mt-8 first:mt-0;
+  }
+
+  .prose-legal p,
+  .prose-legal ul {
+    @apply leading-relaxed;
+  }
+}
