@@ -1,6 +1,5 @@
 import type {
   LessonActivityListen,
-  LessonActivityQuiz,
   LessonQuizQuestion,
   LessonActivityWordOrder,
   LessonVocabCard,

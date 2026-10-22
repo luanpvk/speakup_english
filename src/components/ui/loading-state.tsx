@@ -1,57 +1,61 @@
 "use client";
 
-import { Loader2, BookOpen, Save, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import type { LucideIcon } from "lucide-react";
+import {
+  FlashcardSkeleton,
+  FormSkeleton,
+  GridSkeleton,
+  LessonSkeleton,
+  ListSkeleton,
+  PathSkeleton,
+  ProfileSkeleton,
+  RowsSkeleton,
+} from "@/components/ui/skeleton";
 
-type LoadingVariant = "default" | "lesson" | "save" | "flashcards";
-
-const VARIANT_ICON: Record<LoadingVariant, LucideIcon> = {
-  default: Loader2,
-  lesson: BookOpen,
-  save: Save,
-  flashcards: Sparkles,
-};
+const SKELETONS = {
+  path: PathSkeleton,
+  lesson: LessonSkeleton,
+  grid: GridSkeleton,
+  list: ListSkeleton,
+  profile: ProfileSkeleton,
+  form: FormSkeleton,
+  rows: RowsSkeleton,
+  flashcards: FlashcardSkeleton,
+} as const;
 
 interface LoadingStateProps {
+  /** Lido por leitores de tela; na tela aparece o esqueleto da página */
   message?: string;
-  variant?: LoadingVariant;
+  /** Formato do esqueleto; "mascot" mostra o gatinho (ex.: salvando) */
+  skeleton?: keyof typeof SKELETONS | "mascot";
   className?: string;
-  fullScreen?: boolean;
 }
 
 export function LoadingState({
   message = "Carregando...",
-  variant = "default",
+  skeleton = "grid",
   className,
-  fullScreen = false,
 }: LoadingStateProps) {
-  const Icon = VARIANT_ICON[variant];
-  const spin = variant === "default";
-
-  const content = (
-    <div
-      className={cn("flex flex-col items-center justify-center gap-4 text-center", className)}
-      role="status"
-      aria-live="polite"
-      aria-busy="true"
-    >
-      <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary/40 bg-speakup-green-soft">
-        <Icon
-          className={cn("h-8 w-8 text-primary", spin && "animate-spin")}
-          strokeWidth={2}
-          aria-hidden
-        />
-      </div>
-      <p className="font-display text-lg font-semibold text-foreground">{message}</p>
-    </div>
-  );
-
-  if (fullScreen) {
+  if (skeleton === "mascot") {
     return (
-      <div className="flex min-h-[50vh] items-center justify-center py-16">{content}</div>
+      <div
+        className={cn("flex flex-col items-center justify-center gap-3 text-center", className)}
+        role="status"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <Image src="/mascot.png" alt="" width={88} height={88} className="animate-hop" />
+        <p className="font-display text-lg font-semibold">{message}</p>
+      </div>
     );
   }
 
-  return <div className="py-12">{content}</div>;
+  const Layout = SKELETONS[skeleton];
+  return (
+    <div className={cn("animate-fade-in", className)} role="status" aria-live="polite" aria-busy="true">
+      <span className="sr-only">{message}</span>
+      <Layout />
+    </div>
+  );
 }

@@ -42,12 +42,27 @@ export async function ensureFlashcardBankForChild(childProfileId: string): Promi
   const oid = childOid(childProfileId);
   const now = new Date();
 
+  // Corrige textos antigos "I like car" mantendo o progresso de revisão do card
+  if (await Flashcard.exists({ childProfileId: oid, cardKey: /^bank:like-/, word: /^I like (?!the )/ })) {
+    await Flashcard.bulkWrite(
+      FLASHCARD_BANK.filter((e) => e.id.startsWith("like-")).map((entry) => ({
+        updateOne: {
+          filter: { childProfileId: oid, cardKey: `bank:${entry.id}` },
+          update: {
+            $set: { word: entry.word, translation: entry.translation, example: entry.example },
+          },
+        },
+      })),
+      { ordered: false }
+    );
+  }
+
   const total = await Flashcard.countDocuments({ childProfileId: oid });
   if (total >= FLASHCARD_BANK_SIZE) {
     await Flashcard.updateMany(
       {
         childProfileId: oid,
-        $or: [{ nextReviewAt: { $exists: false } }, { nextReviewAt: null }],
+        $or: [{ nextReviewAt: mongoose.trusted({ $exists: false }) }, { nextReviewAt: null }],
       },
       { $set: { nextReviewAt: now } }
     );
@@ -132,27 +147,27 @@ export async function upsertFlashcardsFromLesson(
 export async function getDailyFlashcardSession(childProfileId: string) {
   await connectDB();
   const oid = childOid(childProfileId);
-  const profile = await ChildProfile.findById(childProfileId);
+  const [profile, totalCardsInBank] = await Promise.all([
+    ChildProfile.findById(childProfileId).select("flashcardReviewsToday flashcardReviewDate"),
+    ensureFlashcardBankForChild(childProfileId),
+  ]);
   if (!profile) throw new Error("Perfil não encontrado");
-
-  const totalCardsInBank = await ensureFlashcardBankForChild(childProfileId);
 
   await resetDailyCounterIfNeeded(profile);
   const reviewsDoneToday = profile.flashcardReviewsToday ?? 0;
   const remainingToday = Math.max(0, MAX_DAILY_FLASHCARD_REVIEWS - reviewsDoneToday);
 
-  const now = new Date();
-  const dueCards = await Flashcard.find({
-    childProfileId: oid,
-    nextReviewAt: { $lte: now },
-  })
-    .sort({ nextReviewAt: 1, repetitions: 1 })
-    .lean();
+  const dueFilter = { childProfileId: oid, nextReviewAt: mongoose.trusted({ $lte: new Date() }) };
+  // Só os cartões de hoje (antes vinham todos os vencidos, ~1000, para usar 10)
+  const [dueCards, totalDue, totalCards] = await Promise.all([
+    remainingToday > 0
+      ? Flashcard.find(dueFilter).sort({ nextReviewAt: 1, repetitions: 1 }).limit(remainingToday).lean()
+      : [],
+    Flashcard.countDocuments(dueFilter),
+    Flashcard.countDocuments({ childProfileId: oid }),
+  ]);
 
-  const queue = dueCards.slice(0, remainingToday).map((c) => serializeCard(c));
-
-  const totalDue = dueCards.length;
-  const totalCards = await Flashcard.countDocuments({ childProfileId: oid });
+  const queue = dueCards.map((c) => serializeCard(c));
 
   return {
     queue,

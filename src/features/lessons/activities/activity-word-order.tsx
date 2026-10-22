@@ -1,42 +1,53 @@
 "use client";
 
-import { useState } from "react";
-import { Check, RotateCcw } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import type { LessonActivityWordOrder } from "@/types/lesson";
 import type { LessonMistake } from "@/types/lesson-mistakes";
+import { FEEDBACK_MS } from "./activity-quiz";
+import { LessonFooter, playFeedback, speak } from "../lesson-kit";
 
 interface Props {
   data: LessonActivityWordOrder;
   onComplete: (correct: boolean) => void;
   onMistake?: (mistake: LessonMistake) => void;
+  onAnswer?: (correct: boolean) => void;
 }
 
-export function ActivityWordOrder({ data, onComplete, onMistake }: Props) {
-  const [pool, setPool] = useState(() => [...data.words]);
-  const [sentence, setSentence] = useState<string[]>([]);
-  const [checked, setChecked] = useState(false);
-  const [correct, setCorrect] = useState(false);
+/** Cada palavra tem id próprio para palavras repetidas não se confundirem */
+type WordTile = { id: number; word: string };
 
-  const addWord = (word: string, fromIndex: number) => {
-    if (checked) return;
-    setSentence((s) => [...s, word]);
-    setPool((p) => p.filter((_, i) => i !== fromIndex));
+export function ActivityWordOrder({ data, onComplete, onMistake, onAnswer }: Props) {
+  const tiles = useMemo<WordTile[]>(() => data.words.map((word, id) => ({ id, word })), [data.words]);
+  const [sentence, setSentence] = useState<WordTile[]>([]);
+  const [result, setResult] = useState<"correct" | "wrong" | null>(null);
+  const timer = useRef<number | undefined>(undefined);
+  const pool = tiles.filter((t) => !sentence.some((s) => s.id === t.id));
+
+  useEffect(() => () => window.clearTimeout(timer.current), []);
+
+  const add = (tile: WordTile) => {
+    if (result) return;
+    speak(tile.word);
+    setSentence((s) => [...s, tile]);
   };
 
-  const reset = () => {
-    setPool([...data.words]);
-    setSentence([]);
-    setChecked(false);
-    setCorrect(false);
+  const remove = (tile: WordTile) => {
+    if (!result) setSentence((s) => s.filter((t) => t.id !== tile.id));
   };
 
   const check = () => {
-    const built = sentence.join(" ");
-    const ok = built.toLowerCase() === data.correctSentence.toLowerCase();
-    setCorrect(ok);
-    setChecked(true);
+    if (result) {
+      window.clearTimeout(timer.current);
+      onComplete(result === "correct");
+      return;
+    }
+    const ok =
+      sentence.map((t) => t.word).join(" ").toLowerCase() === data.correctSentence.toLowerCase();
+    setResult(ok ? "correct" : "wrong");
+    playFeedback(ok ? "correct" : "wrong");
+    speak(data.correctSentence);
+    onAnswer?.(ok);
     if (!ok) {
       onMistake?.({
         id: `word-order-${data.correctSentence.slice(0, 24)}`,
@@ -45,57 +56,53 @@ export function ActivityWordOrder({ data, onComplete, onMistake }: Props) {
         data,
       });
     }
+    // Errou: mostra a frase certa e segue. A correção acontece na revisão final
+    timer.current = window.setTimeout(() => onComplete(ok), ok ? FEEDBACK_MS.correct : FEEDBACK_MS.wrong + 600);
   };
 
   return (
-    <Card className="border-2">
-      <CardContent className="space-y-4 py-6">
-        <p className="text-center text-muted-foreground">{data.instruction}</p>
-        <div className="min-h-[56px] rounded-xl border-2 border-dashed border-primary/40 bg-muted/30 p-3">
-          <p className="text-center font-display text-lg font-semibold">
-            {sentence.length > 0 ? sentence.join(" ") : "Monte a frase aqui..."}
-          </p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-2">
-          {pool.map((word, i) => (
-            <Button key={`${word}-${i}`} variant="secondary" onClick={() => addWord(word, i)}>
-              {word}
-            </Button>
-          ))}
-        </div>
-        {!checked ? (
-          <div className="flex gap-2">
-            <Button variant="outline" className="flex-1" onClick={reset}>
-              <RotateCcw className="h-4 w-4" />
-              Limpar
-            </Button>
-            <Button className="flex-1" disabled={pool.length > 0} onClick={check}>
-              Verificar
-            </Button>
-          </div>
-        ) : (
-          <div className="space-y-3 text-center">
-            <p className={correct ? "text-primary font-semibold" : "text-destructive font-semibold"}>
-              {correct ? (
-                <>
-                  <Check className="inline h-5 w-5" /> Correto!
-                </>
-              ) : (
-                <>Quase! A frase certa é: &ldquo;{data.correctSentence}&rdquo;</>
-              )}
-            </p>
-            {correct ? (
-              <Button className="w-full" onClick={() => onComplete(true)}>
-                Continuar
-              </Button>
-            ) : (
-              <Button className="w-full" variant="outline" onClick={reset}>
-                Tentar de novo
-              </Button>
-            )}
-          </div>
-        )}
-      </CardContent>
-    </Card>
+    <div className="space-y-6">
+      <div className="text-center">
+        <p className="font-display text-xl font-bold">Monte a frase</p>
+        <p className="mt-1 text-muted-foreground">{data.instruction}</p>
+      </div>
+
+      <div className="flex min-h-20 flex-wrap content-start gap-2 border-b-2 border-border pb-3">
+        {sentence.map((t) => (
+          <motion.button
+            layout
+            key={t.id}
+            type="button"
+            onClick={() => remove(t)}
+            className="press-3d rounded-2xl border-2 border-border bg-card px-4 py-2.5 text-lg font-semibold shadow-[0_4px_0_hsl(var(--border-shadow))]"
+          >
+            {t.word}
+          </motion.button>
+        ))}
+      </div>
+
+      <div className="flex min-h-14 flex-wrap justify-center gap-2">
+        {pool.map((t) => (
+          <motion.button
+            layout
+            key={t.id}
+            type="button"
+            onClick={() => add(t)}
+            className="press-3d rounded-2xl border-2 border-border bg-card px-4 py-2.5 text-lg font-semibold shadow-[0_4px_0_hsl(var(--border-shadow))] hover:bg-muted/50"
+          >
+            {t.word}
+          </motion.button>
+        ))}
+      </div>
+
+      <LessonFooter
+        status={result ?? "idle"}
+        title={result === "correct" ? "Muito bem!" : "Quase!"}
+        detail={result === "wrong" ? `A frase certa é "${data.correctSentence}"` : undefined}
+        actionLabel={result ? "Continuar" : "Verificar"}
+        disabled={!result && pool.length > 0}
+        onAction={check}
+      />
+    </div>
   );
 }

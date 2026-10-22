@@ -9,5 +9,6 @@ export default function LessonPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
-  return <LessonPlayer slug={slug} />;
+  // key: outra lição começa com estado novo, sem precisar "resetar"
+  return <LessonPlayer key={slug} slug={slug} />;
 }

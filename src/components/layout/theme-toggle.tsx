@@ -9,9 +9,12 @@ import { cn } from "@/lib/utils";
 
 interface ThemeToggleProps {
   compact?: boolean;
+  /** Texto ao lado do ícone (versão compacta) */
+  label?: string;
+  className?: string;
 }
 
-export function ThemeToggle({ compact = false }: ThemeToggleProps) {
+export function ThemeToggle({ compact = false, label, className }: ThemeToggleProps) {
   const {
     theme,
     reduceMotion,
@@ -33,12 +36,17 @@ export function ThemeToggle({ compact = false }: ThemeToggleProps) {
     return (
       <Button
         variant="ghost"
-        size="icon"
+        size={label ? "sm" : "icon"}
         onClick={toggleTheme}
         aria-label="Alternar tema claro/escuro"
+        className={className}
       >
-        <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        {/* relative: sol e lua ficam no mesmo lugar (um some, o outro aparece) */}
+        <span className="relative flex h-5 w-5 items-center justify-center">
+          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        </span>
+        {label}
       </Button>
     );
   }

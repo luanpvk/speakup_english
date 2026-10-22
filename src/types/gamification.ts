@@ -4,6 +4,7 @@ export interface ChildStats {
     displayName: string;
     username: string;
     avatarEmoji: string;
+    hyperfocus: string | null;
     level: number;
     xp: number;
     coins: number;
@@ -28,6 +29,7 @@ export interface ChildStats {
     hairSlug: string;
     clothesSlug: string;
     accessorySlug?: string;
+    backgroundSlug?: string;
     baseEmoji: string;
   };
   modules: ModuleWithLessons[];
@@ -72,6 +74,8 @@ export interface AchievementWithStatus {
   threshold: number;
   unlocked: boolean;
   unlockedAt?: string;
+  xpBonus?: number;
+  coinBonus?: number;
 }
 
 import type { LessonActivity } from "@/types/lesson";

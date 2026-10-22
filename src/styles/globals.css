@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@config "../../tailwind.config.ts";
+@config "../../tailwind.config.mts";
 
 @layer base {
   :root {
@@ -30,6 +30,12 @@
     --speakup-yellow-soft: 48 80% 92%;
     --speakup-green-soft: 142 40% 92%;
     --speakup-purple-soft: 270 40% 94%;
+
+    /* Borda inferior dos botões/blocos "3D" (estilo Duolingo) */
+    --primary-shadow: 142 55% 32%;
+    --secondary-shadow: 270 40% 45%;
+    --accent-shadow: 42 90% 45%;
+    --border-shadow: 260 20% 80%;
   }
 
   .dark {
@@ -56,6 +62,11 @@
     --speakup-yellow-soft: 48 30% 18%;
     --speakup-green-soft: 142 25% 16%;
     --speakup-purple-soft: 270 25% 18%;
+
+    --primary-shadow: 142 50% 30%;
+    --secondary-shadow: 270 35% 45%;
+    --accent-shadow: 42 80% 36%;
+    --border-shadow: 260 18% 18%;
   }
 
   * {
@@ -66,6 +77,27 @@
     scroll-behavior: smooth;
   }
 
+  /* Scrollbar fina na identidade visual: padrão moderno (Chrome 121+, Edge, Firefox) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.75) transparent;
+  }
+
+  /* Fallback para Safari, que não suporta scrollbar-color */
+  @supports not (scrollbar-color: auto) {
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary) / 0.75);
+      border-radius: 9999px;
+    }
+  }
+
   html.reduce-motion,
   html.reduce-motion * {
     animation-duration: 0.01ms !important;
@@ -74,26 +106,93 @@
     scroll-behavior: auto !important;
   }
 
+  /* Brilhos suaves de fundo (verde e roxo) atrás de todas as páginas */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 12% 18%, hsl(var(--primary) / 0.09), transparent 42%),
+      radial-gradient(circle at 88% 82%, hsl(var(--secondary) / 0.1), transparent 45%);
+  }
+  .dark body::before {
+    background:
+      radial-gradient(circle at 12% 18%, hsl(var(--primary) / 0.13), transparent 42%),
+      radial-gradient(circle at 88% 82%, hsl(var(--secondary) / 0.15), transparent 45%);
+  }
+  /* Área logada (painel, lições, loja...): brilhos mais discretos que na landing */
+  body:has(.quiet-glow)::before {
+    opacity: 0.4;
+  }
+  /* Alto contraste e baixo estímulo: fundo liso */
+  html.high-contrast body::before,
+  html.low-stimulus body::before {
+    display: none;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-size: 1.0625rem;
     line-height: 1.6;
   }
 
+  /* Alto contraste: paleta completa para cada tema (texto sempre forte sobre o fundo) */
   html.high-contrast {
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
-    --primary: 142 70% 28%;
-    --secondary: 270 70% 35%;
-    --accent: 48 100% 45%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 12%;
     --border: 0 0% 0%;
-    --muted-foreground: 0 0% 15%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+    --primary: 142 75% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 70% 35%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 85% 38%;
+    --destructive-foreground: 0 0% 100%;
+    --speakup-green-soft: 142 60% 88%;
+    --speakup-yellow-soft: 48 100% 88%;
+    --speakup-purple-soft: 270 60% 92%;
+    --primary-shadow: 142 75% 14%;
+    --secondary-shadow: 270 70% 20%;
+    --border-shadow: 0 0% 0%;
   }
 
   html.high-contrast.dark {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 88%;
     --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
+    --primary: 142 80% 55%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 270 100% 80%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 48 100% 60%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 68%;
+    --destructive-foreground: 0 0% 0%;
+    --speakup-green-soft: 142 60% 14%;
+    --speakup-yellow-soft: 48 70% 14%;
+    --speakup-purple-soft: 270 50% 16%;
+    --primary-shadow: 142 80% 30%;
+    --secondary-shadow: 270 60% 45%;
+    --border-shadow: 0 0% 100%;
   }
 
   html.accessible-font body {
@@ -110,6 +209,178 @@
     text-wrap: balance;
   }
 
+  /* Bloco 3D: borda inferior grossa que "afunda" ao pressionar */
+  .press-3d {
+    transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s ease;
+  }
+  .press-3d:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: none;
+  }
+
+  /* Skeleton: brilho deslizando sobre o bloco */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted) / 0.45) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  }
+  @keyframes skeleton-shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.25s ease-out;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  /* Mascote pulando (ex.: salvando progresso) */
+  .animate-hop {
+    animation: hop 0.9s ease-in-out infinite;
+  }
+  @keyframes hop {
+    0%,
+    100% {
+      transform: translateY(0) scale(1, 1);
+    }
+    40% {
+      transform: translateY(-14px) scale(0.97, 1.03);
+    }
+    60% {
+      transform: translateY(-14px);
+    }
+    85% {
+      transform: translateY(0) scale(1.05, 0.95);
+    }
+  }
+
+  /* Ícone de confirmação aparecendo com um "pop" */
+  .animate-pop {
+    animation: pop 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.4);
+  }
+  @keyframes pop {
+    from {
+      transform: scale(0);
+    }
+  }
+
+  /* Confete da comemoração: cai pelo cartão e some */
+  .confetti-piece {
+    opacity: 0;
+    animation: confetti-fall 1.6s ease-in forwards;
+  }
+  @keyframes confetti-fall {
+    0% {
+      opacity: 1;
+      transform: translateY(-12px) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(260px) rotate(540deg);
+    }
+  }
+
+  /* Erro: tremidinha rápida */
+  .animate-shake {
+    animation: shake 0.35s ease-in-out;
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-6px);
+    }
+    75% {
+      transform: translateX(6px);
+    }
+  }
+
+  /* Cartão que vira (vocabulário e jogo da memória) */
+  .flip-card {
+    perspective: 900px;
+  }
+  .flip-inner {
+    position: relative;
+    transition: transform 0.45s cubic-bezier(0.3, 0.8, 0.3, 1);
+    transform-style: preserve-3d;
+  }
+  .flip-card[data-flipped="true"] .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-face {
+    backface-visibility: hidden;
+  }
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Toasts */
+  .toast-root[data-state="open"] {
+    animation: toast-in 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  }
+  .toast-root[data-state="closed"] {
+    animation: toast-out 0.25s ease-in forwards;
+  }
+  /* Arrastando: acompanha o dedo */
+  .toast-root[data-swipe="move"] {
+    transform: translateX(var(--radix-toast-swipe-move-x));
+    transition: none;
+  }
+  .toast-root[data-swipe="cancel"] {
+    transform: translateX(0);
+    transition: transform 0.2s ease-out;
+  }
+  .toast-root[data-swipe="end"] {
+    animation: toast-swipe-out 0.25s ease-out forwards;
+  }
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% + 1rem));
+    }
+  }
+  @keyframes toast-out {
+    to {
+      opacity: 0;
+      transform: translateX(calc(100% + 1rem));
+    }
+  }
+  @keyframes toast-swipe-out {
+    from {
+      transform: translateX(var(--radix-toast-swipe-end-x));
+    }
+    to {
+      opacity: 0;
+      transform: translateX(calc(100% + 1rem));
+    }
+  }
+
+  /* Faixa de fundo levemente destacada que some nas bordas (sem corte seco entre seções) */
+  .bg-fade-muted {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsl(var(--muted) / 0.45) 18%,
+      hsl(var(--muted) / 0.45) 82%,
+      transparent
+    );
+  }
+
   .gradient-speakup {
     background: linear-gradient(
       135deg,
@@ -117,6 +388,10 @@
       hsl(var(--speakup-green-soft)) 50%,
       hsl(var(--speakup-purple-soft)) 100%
     );
+  }
+  /* No escuro, deixa aparecer os brilhos do fundo da página */
+  .dark .gradient-speakup {
+    background: transparent;
   }
 
   .prose-legal h2 {

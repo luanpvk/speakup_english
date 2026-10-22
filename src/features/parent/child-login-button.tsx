@@ -6,6 +6,7 @@ import { Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { ROUTES } from "@/utils/constants";
+import { rememberParentEmail } from "@/features/auth/child-login-form";
 import type { ChildListItem } from "@/services/parent.service";
 
 interface ChildLoginButtonProps {
@@ -22,12 +23,13 @@ export function ChildLoginButton({
   className,
 }: ChildLoginButtonProps) {
   const router = useRouter();
-  const { logoutSilent } = useAuth();
+  const { user, logoutSilent } = useAuth();
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
     setLoading(true);
     try {
+      if (user?.email) rememberParentEmail(user.email);
       await logoutSilent();
       router.push(ROUTES.loginChildFor(child.username, child.displayName));
     } finally {

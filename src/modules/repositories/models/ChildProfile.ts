@@ -26,7 +26,12 @@ const ChildProfileSchema = new Schema<IChildProfile>(
     },
     avatarEmoji: { type: String, default: "🦊" },
     pinHash: { type: String, required: true, select: false },
+    /** Proteção contra tentativa de adivinhar o PIN (só 10.000 combinações) */
+    failedPinAttempts: { type: Number, default: 0, select: false },
+    pinLockedUntil: { type: Date, select: false },
     birthYear: { type: Number },
+    /** Tema de hiperfoco (HYPERFOCUS_THEMES): libera e recomenda lições relacionadas */
+    hyperfocus: { type: String },
     level: { type: Number, default: 1 },
     xp: { type: Number, default: 0 },
     coins: { type: Number, default: 50 },
@@ -40,6 +45,9 @@ const ChildProfileSchema = new Schema<IChildProfile>(
   },
   { timestamps: true }
 );
+
+// Ranking: maiores XP entre perfis ativos
+ChildProfileSchema.index({ isActive: 1, xp: -1 });
 
 export const ChildProfile: Model<IChildProfile> =
   mongoose.models.ChildProfile ??

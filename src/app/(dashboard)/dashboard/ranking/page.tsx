@@ -1,5 +1,6 @@
 "use client";
 
+import { AvatarPreview } from "@/components/gamification/avatar-preview";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Trophy, Crown } from "lucide-react";
@@ -15,12 +16,12 @@ export default function RankingPage() {
 
   return (
     <div className="space-y-6">
-      <header>
-        <h1 className="font-display text-3xl font-bold flex items-center gap-2">
+      <header className="text-center">
+        <h1 className="flex items-center justify-center gap-2 font-display text-3xl font-bold">
           <Trophy className="h-8 w-8 text-accent" />
           Ranking dos exploradores
         </h1>
-        <p className="text-muted-foreground">Competição saudável — todo mundo aprende junto!</p>
+        <p className="text-muted-foreground">Aqui ninguém perde: todo mundo está aprendendo!</p>
         <div className="mt-4 flex gap-2">
           <Button
             variant={period === "alltime" ? "default" : "outline"}
@@ -40,7 +41,7 @@ export default function RankingPage() {
       </header>
 
       {isLoading ? (
-        <LoadingState message="Carregando ranking..." />
+        <LoadingState message="Carregando ranking..." skeleton="rows" />
       ) : !ranking?.length ? (
         <Card className="border-2 border-dashed">
           <CardContent className="py-12 text-center text-muted-foreground">
@@ -72,7 +73,7 @@ export default function RankingPage() {
                       entry.rank
                     )}
                   </span>
-                  <span className="text-2xl">{entry.avatarEmoji}</span>
+                  <AvatarPreview baseEmoji={entry.avatarEmoji} size="sm" className="h-11 w-11 border-2" />
                   <div className="flex-1">
                     <p className="font-semibold">
                       {entry.displayName}

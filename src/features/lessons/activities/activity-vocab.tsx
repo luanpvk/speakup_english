@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Volume2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { RotateCw } from "lucide-react";
 import { KidIcon } from "@/lib/icons/kid-icons";
 import type { LessonActivityVocab } from "@/types/lesson";
+import { LessonFooter, ListenButtons, useAutoSpeak } from "../lesson-kit";
 
 interface Props {
   data: LessonActivityVocab;
@@ -17,61 +16,63 @@ export function ActivityVocab({ data, onComplete }: Props) {
   const [flipped, setFlipped] = useState(false);
   const cards = data.cards;
   const card = cards[index];
+  const isLast = index >= cards.length - 1;
 
-  const speak = () => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      const u = new SpeechSynthesisUtterance(card.word);
-      u.lang = "en-US";
-      window.speechSynthesis.speak(u);
-    }
-  };
+  useAutoSpeak(card.word);
 
   const next = () => {
-    if (index < cards.length - 1) {
-      setIndex((i) => i + 1);
-      setFlipped(false);
-    } else {
+    if (isLast) {
       onComplete();
+      return;
     }
+    setFlipped(false);
+    setIndex((i) => i + 1);
   };
 
   return (
-    <Card className="border-2">
-      <CardContent className="space-y-4 py-8 text-center">
-        <p className="text-sm text-muted-foreground">
-          Cartão {index + 1} de {cards.length} — toque para virar
-        </p>
-        <button
-          type="button"
-          className="mx-auto block w-full max-w-sm rounded-2xl border-2 border-primary/30 bg-card p-8 shadow-md transition hover:border-primary"
-          onClick={() => setFlipped((f) => !f)}
-        >
-          <KidIcon emoji={card.emoji} word={card.word} size="xl" className="mx-auto" />
-          {!flipped ? (
-            <p className="mt-4 font-display text-4xl font-bold text-primary">{card.word}</p>
-          ) : (
-            <>
-              <p className="mt-4 text-3xl font-semibold">{card.translation}</p>
-              {card.example && (
-                <p className="mt-3 text-sm text-muted-foreground">
-                  &ldquo;{card.example}&rdquo;
-                  {card.examplePt && <span className="block">{card.examplePt}</span>}
-                </p>
-              )}
-            </>
-          )}
-        </button>
-        <div className="flex justify-center gap-3">
-          <Button variant="outline" size="sm" onClick={speak}>
-            <Volume2 className="h-4 w-4" />
-            Ouvir
-          </Button>
-          <Button onClick={next}>
-            {index < cards.length - 1 ? "Próximo cartão" : "Praticar mais!"}
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="flex flex-col items-center gap-5">
+      <div className="flex gap-1.5" aria-label={`Cartão ${index + 1} de ${cards.length}`}>
+        {cards.map((c, i) => (
+          <span
+            key={c.word}
+            className={`h-2 rounded-full transition-all ${i === index ? "w-6 bg-primary" : i < index ? "w-2 bg-primary/60" : "w-2 bg-muted"}`}
+          />
+        ))}
+      </div>
+
+      <button
+        key={card.word}
+        type="button"
+        onClick={() => setFlipped((f) => !f)}
+        className="flip-card w-full max-w-sm"
+        data-flipped={flipped}
+        aria-label={flipped ? `${card.translation}. Toque para ver em inglês` : `${card.word}. Toque para ver a tradução`}
+      >
+        <span className="flip-inner grid">
+          <span className="flip-face col-start-1 row-start-1 flex min-h-64 flex-col items-center justify-center rounded-3xl border-2 border-border bg-card p-6 shadow-[0_6px_0_hsl(var(--border-shadow))]">
+            <KidIcon emoji={card.emoji} word={card.word} size="xl" />
+            <span className="mt-4 font-display text-4xl font-bold text-primary">{card.word}</span>
+            <span className="mt-3 flex items-center gap-1 text-xs font-semibold text-muted-foreground">
+              <RotateCw className="h-3.5 w-3.5" aria-hidden />
+              Toque para ver a tradução
+            </span>
+          </span>
+          <span className="flip-face flip-back col-start-1 row-start-1 flex min-h-64 flex-col items-center justify-center rounded-3xl border-2 border-primary/40 bg-speakup-green-soft p-6 shadow-[0_6px_0_hsl(var(--primary-shadow))]">
+            <span className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Em português</span>
+            <span className="mt-2 font-display text-3xl font-bold">{card.translation}</span>
+            {card.example && (
+              <span className="mt-4 text-sm text-muted-foreground">
+                &ldquo;{card.example}&rdquo;
+                {card.examplePt && <span className="block">{card.examplePt}</span>}
+              </span>
+            )}
+          </span>
+        </span>
+      </button>
+
+      <ListenButtons text={card.word} />
+
+      <LessonFooter actionLabel={isLast ? "Vamos praticar" : "Próxima palavra"} onAction={next} />
+    </div>
   );
 }

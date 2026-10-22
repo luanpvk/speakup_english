@@ -1,20 +1,20 @@
 "use client";
 
+import { toast } from "@/store/toast-store";
+
 import { useState } from "react";
 import Link from "next/link";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Loader2, ShoppingBag, Lock, Check, Coins } from "lucide-react";
+import { Loader2, ShoppingBag, Check, Coins, Undo2 } from "lucide-react";
 import { AVATAR_ICON_OPTIONS } from "@/lib/icons/kid-icons";
-import { KidIcon } from "@/lib/icons/kid-icons";
+import { AvatarFigure } from "@/components/gamification/avatar-figure";
 import { LoadingState } from "@/components/ui/loading-state";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AvatarPreview } from "@/components/gamification/avatar-preview";
 import { useAvatar, useChildStats } from "@/hooks/use-gamification";
 import { useAuth } from "@/hooks/use-auth";
-import { useGamificationStore } from "@/store/gamification-store";
 import { gamificationApi } from "@/services/gamification.service";
-import { gamificationKeys } from "@/hooks/use-gamification";
 import { ROUTES } from "@/utils/constants";
 import { cn } from "@/lib/utils";
 
@@ -34,14 +34,13 @@ export default function AvatarPage() {
   const { data, isLoading, error, refetch } = useAvatar(isChild);
   const { data: stats } = useChildStats();
   const queryClient = useQueryClient();
-  const showCelebration = useGamificationStore((s) => s.showCelebration);
 
   const [selectedHair, setSelectedHair] = useState<string | null>(null);
   const [selectedClothes, setSelectedClothes] = useState<string | null>(null);
   const [selectedAccessory, setSelectedAccessory] = useState<string | null | "">(null);
+  const [selectedBackground, setSelectedBackground] = useState<string | null>(null);
   const [selectedEmoji, setSelectedEmoji] = useState<string | null>(null);
-  const [saveError, setSaveError] = useState<string | null>(null);
-  const [saved, setSaved] = useState(false);
+  const [tab, setTab] = useState<TabId>("base");
 
   const updateMutation = useMutation({
     mutationFn: () => {
@@ -55,24 +54,19 @@ export default function AvatarPage() {
         hairSlug: selectedHair ?? data.avatar.hairSlug,
         clothesSlug: selectedClothes ?? data.avatar.clothesSlug,
         accessorySlug: accessoryValue,
+        backgroundSlug: selectedBackground ?? data.avatar.backgroundSlug ?? "bg-default",
         baseEmoji: selectedEmoji ?? data.avatar.baseEmoji,
       });
     },
     onSuccess: (res) => {
       if (!res.success) {
-        setSaveError(res.error ?? "Erro ao salvar");
+        toast.error("Não deu para salvar o avatar", res.error ?? "Tente de novo.");
         return;
       }
-      setSaveError(null);
-      setSaved(true);
-      showCelebration({
-        title: "Avatar atualizado!",
-        message: "Seu explorador está com visual novo!",
-      });
+      toast.success("Visual salvo!", "Seu personagem já aparece assim em todo o site.");
       queryClient.invalidateQueries({ queryKey: ["gamification"] });
-      setTimeout(() => setSaved(false), 3000);
     },
-    onError: (e: Error) => setSaveError(e.message),
+    onError: () => toast.error("Não deu para salvar o avatar", "Confira sua internet e tente de novo."),
   });
 
 
@@ -90,7 +84,7 @@ export default function AvatarPage() {
   }
 
   if (isLoading) {
-    return <LoadingState message="Montando seu avatar..." />;
+    return <LoadingState message="Montando seu avatar..." skeleton="grid" />;
   }
 
   if (error || !data) {
@@ -109,189 +103,239 @@ export default function AvatarPage() {
   }
 
   const items = data.items as AvatarItemRow[];
-  const hair = selectedHair ?? data.avatar.hairSlug;
-  const clothes = selectedClothes ?? data.avatar.clothesSlug;
-  const accessory =
-    selectedAccessory === ""
-      ? undefined
-      : selectedAccessory ?? data.avatar.accessorySlug;
-  const emoji = selectedEmoji ?? data.avatar.baseEmoji;
+  const saved = {
+    base: data.avatar.baseEmoji,
+    hair: data.avatar.hairSlug ?? "hair-default",
+    clothes: data.avatar.clothesSlug ?? "clothes-default",
+    accessory: data.avatar.accessorySlug ?? null,
+    background: data.avatar.backgroundSlug ?? "bg-default",
+  };
+  const look = {
+    base: selectedEmoji ?? saved.base,
+    hair: selectedHair ?? saved.hair,
+    clothes: selectedClothes ?? saved.clothes,
+    accessory: selectedAccessory === "" ? null : (selectedAccessory ?? saved.accessory),
+    background: selectedBackground ?? saved.background,
+  };
+  const dirty =
+    look.base !== saved.base ||
+    look.hair !== saved.hair ||
+    look.clothes !== saved.clothes ||
+    look.accessory !== saved.accessory ||
+    look.background !== saved.background;
 
-  const getItemIcon = (slug?: string) =>
-    slug ? items.find((i) => i.slug === slug)?.icon : undefined;
+  const reset = () => {
+    setSelectedEmoji(null);
+    setSelectedHair(null);
+    setSelectedClothes(null);
+    setSelectedAccessory(null);
+    setSelectedBackground(null);
+  };
 
-  const itemsByType = (type: "hair" | "clothes" | "accessory") =>
-    items.filter((i) => i.type === type);
+  const coins = data.coins ?? stats?.profile.coins ?? 0;
+  const tabItems =
+    tab === "base" ? [] : items.filter((i) => i.type === tab).sort((a, b) => a.price - b.price);
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6">
-      <header className="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h1 className="font-display text-3xl font-bold">Meu avatar</h1>
-          <p className="text-muted-foreground">
-            <span className="inline-flex items-center gap-1">
-              Personalize seu explorador ·
-              <Coins className="h-4 w-4 text-amber-600" />
-              {data.coins ?? stats?.profile.coins ?? 0} moedas
-            </span>
-          </p>
+    <div className="space-y-6">
+      <header className="flex items-center justify-between gap-3">
+        <h1 className="font-display text-3xl font-bold">Meu avatar</h1>
+        <div className="flex items-center gap-2">
+          <span className="flex items-center gap-1.5 rounded-xl border-2 border-amber-400/60 bg-amber-400/10 px-3 py-1.5 font-display text-lg font-bold text-amber-500">
+            <Coins className="h-5 w-5" aria-hidden />
+            {coins}
+          </span>
+          <Button variant="outline" size="sm" asChild>
+            <Link href={ROUTES.shop}>
+              <ShoppingBag className="h-4 w-4" />
+              Loja
+            </Link>
+          </Button>
         </div>
-        <Button variant="outline" asChild>
-          <Link href={ROUTES.shop}>
-            <ShoppingBag className="h-4 w-4" />
-            Ir à loja
-          </Link>
-        </Button>
       </header>
 
-      <Card className="border-2 border-primary/30 bg-gradient-to-br from-speakup-green-soft/40 to-card">
-        <CardContent className="flex flex-col items-center gap-4 py-8">
+      <section className="flex flex-col items-center gap-4 rounded-3xl border-2 border-border bg-card p-6">
+        <div className="animate-float-gentle">
           <AvatarPreview
-            baseEmoji={emoji}
-            hairIcon={getItemIcon(hair)}
-            clothesIcon={getItemIcon(clothes)}
-            accessoryIcon={accessory ? getItemIcon(accessory) : undefined}
-            size="lg"
+            baseEmoji={look.base}
+            hairSlug={look.hair}
+            clothesSlug={look.clothes}
+            accessorySlug={look.accessory}
+            backgroundSlug={look.background}
+            size="xl"
           />
-          <p className="text-sm text-muted-foreground">Pré-visualização ao vivo</p>
-        </CardContent>
-      </Card>
+        </div>
+        <div className="flex w-full max-w-xs gap-2">
+          {dirty && (
+            <Button variant="outline" className="flex-1" onClick={reset} disabled={updateMutation.isPending}>
+              <Undo2 className="h-4 w-4" />
+              Desfazer
+            </Button>
+          )}
+          <Button
+            className="flex-1"
+            disabled={!dirty || updateMutation.isPending}
+            onClick={() => updateMutation.mutate()}
+          >
+            {updateMutation.isPending ? (
+              <Loader2 className="animate-spin" />
+            ) : !dirty ? (
+              <Check className="h-4 w-4" strokeWidth={3} />
+            ) : null}
+            {updateMutation.isPending ? "Salvando..." : dirty ? "Salvar visual" : "Tudo salvo"}
+          </Button>
+        </div>
+      </section>
 
-      <Card className="border-2">
-        <CardHeader>
-          <CardTitle>Personagem base</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-wrap justify-center gap-2">
-          {AVATAR_ICON_OPTIONS.map(({ id, Icon, label }) => (
-            <button
+      <div className="flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Partes do avatar">
+        {TABS.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === t.id}
+            onClick={() => setTab(t.id)}
+            className={cn(
+              "shrink-0 rounded-full border-2 px-4 py-1.5 text-sm font-bold transition-colors",
+              tab === t.id
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border text-muted-foreground hover:bg-muted"
+            )}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-4" role="tabpanel">
+        {tab === "base" &&
+          AVATAR_ICON_OPTIONS.map(({ id, label }) => (
+            <OptionTile
               key={id}
-              type="button"
-              className={cn(
-                "flex flex-col items-center gap-1 rounded-xl border-2 p-3 transition-transform hover:scale-105",
-                emoji === id ? "border-primary bg-speakup-green-soft ring-2 ring-primary/30" : "border-border"
-              )}
-              onClick={() => setSelectedEmoji(id)}
-              aria-label={label}
-            >
-              <Icon className="h-8 w-8 text-primary" strokeWidth={2} />
-              <span className="text-[10px] font-medium">{label}</span>
-            </button>
+              label={label}
+              selected={look.base === id}
+              onSelect={() => setSelectedEmoji(id)}
+              figure={{ ...look, base: id }}
+            />
           ))}
-        </CardContent>
-      </Card>
 
-      {(["hair", "clothes", "accessory"] as const).map((type) => (
-        <AvatarCategory
-          key={type}
-          type={type}
-          items={itemsByType(type)}
-          selectedSlug={
-            type === "hair"
-              ? (hair ?? "hair-default")
-              : type === "clothes"
-                ? (clothes ?? "clothes-default")
-                : (accessory ?? "")
-          }
-          onSelect={(slug) => {
-            if (type === "hair") setSelectedHair(slug);
-            if (type === "clothes") setSelectedClothes(slug);
-            if (type === "accessory") setSelectedAccessory(slug);
-          }}
-          onClearAccessory={type === "accessory" ? () => setSelectedAccessory("") : undefined}
-        />
-      ))}
+        {tab === "accessory" && (
+          <OptionTile
+            label="Nenhum"
+            selected={!look.accessory}
+            onSelect={() => setSelectedAccessory("")}
+            figure={{ ...look, accessory: null }}
+          />
+        )}
 
-      {saveError && (
-        <p role="alert" className="text-sm text-destructive text-center">
-          {saveError}
-        </p>
-      )}
-
-      <Button
-        className="w-full"
-        size="lg"
-        disabled={updateMutation.isPending}
-        onClick={() => updateMutation.mutate()}
-      >
-        {updateMutation.isPending && <Loader2 className="animate-spin" />}
-        {saved ? "Salvo!" : "Salvar avatar"}
-      </Button>
+        {tabItems.map((item) => (
+          <OptionTile
+            key={item.slug}
+            label={item.name}
+            selected={
+              (item.type === "hair" && look.hair === item.slug) ||
+              (item.type === "clothes" && look.clothes === item.slug) ||
+              (item.type === "accessory" && look.accessory === item.slug) ||
+              (item.type === "background" && look.background === item.slug)
+            }
+            locked={!item.owned}
+            price={item.price}
+            onSelect={() => {
+              if (item.type === "hair") setSelectedHair(item.slug);
+              if (item.type === "clothes") setSelectedClothes(item.slug);
+              if (item.type === "accessory") setSelectedAccessory(item.slug);
+              if (item.type === "background") setSelectedBackground(item.slug);
+            }}
+            figure={{
+              ...look,
+              [item.type === "hair"
+                ? "hair"
+                : item.type === "clothes"
+                  ? "clothes"
+                  : item.type === "background"
+                    ? "background"
+                    : "accessory"]: item.slug,
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
-function AvatarCategory({
-  type,
-  items,
-  selectedSlug,
-  onSelect,
-  onClearAccessory,
-}: {
-  type: "hair" | "clothes" | "accessory";
-  items: AvatarItemRow[];
-  selectedSlug: string;
-  onSelect: (slug: string) => void;
-  onClearAccessory?: () => void;
-}) {
-  const title =
-    type === "hair" ? "Cabelo" : type === "clothes" ? "Roupas" : "Acessórios";
+const TABS = [
+  { id: "base", label: "Personagem" },
+  { id: "hair", label: "Cabelo" },
+  { id: "clothes", label: "Roupa" },
+  { id: "accessory", label: "Acessório" },
+  { id: "background", label: "Fundo" },
+] as const;
 
+type TabId = (typeof TABS)[number]["id"];
+
+type Look = { base: string; hair: string; clothes: string; accessory: string | null; background: string };
+
+/** Opção mostrada como miniatura do próprio personagem usando a peça */
+function OptionTile({
+  label,
+  selected,
+  locked = false,
+  price,
+  onSelect,
+  figure,
+}: {
+  label: string;
+  selected: boolean;
+  locked?: boolean;
+  price?: number;
+  onSelect: () => void;
+  figure: Look;
+}) {
+  const content = (
+    <>
+      <span className="relative block aspect-square w-full overflow-hidden rounded-2xl">
+        <AvatarFigure
+          base={figure.base}
+          hair={figure.hair}
+          clothes={figure.clothes}
+          accessory={figure.accessory}
+          background={figure.background}
+          className={cn(locked && "opacity-40 grayscale")}
+        />
+        {locked && (
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="flex items-center gap-1 rounded-full bg-card/95 px-2 py-1 text-xs font-bold text-amber-500 shadow">
+              <Coins className="h-3.5 w-3.5" aria-hidden />
+              {price}
+            </span>
+          </span>
+        )}
+        {selected && (
+          <span className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground">
+            <Check className="h-4 w-4" strokeWidth={3} aria-hidden />
+          </span>
+        )}
+      </span>
+      <span className="mt-1.5 block text-center text-xs font-bold leading-tight">{label}</span>
+    </>
+  );
+
+  const base = cn(
+    "rounded-3xl border-2 p-2 text-left transition-all",
+    selected ? "border-primary bg-speakup-green-soft" : "border-border bg-card hover:border-primary/50"
+  );
+
+  // Bloqueado: leva para a loja em vez de equipar
+  if (locked) {
+    return (
+      <Link href={ROUTES.shop} className={cn(base, "border-dashed")} aria-label={`${label}: comprar na loja por ${price} moedas`}>
+        {content}
+      </Link>
+    );
+  }
   return (
-    <Card className="border-2">
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>
-          Itens bloqueados podem ser comprados na loja
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-wrap gap-2">
-        {items.map((item) => {
-          const selected = selectedSlug === item.slug;
-          return (
-            <button
-              key={item.slug}
-              type="button"
-              disabled={!item.owned}
-              className={cn(
-                "relative flex min-w-[88px] flex-col items-center gap-1 rounded-xl border-2 p-3 transition-all",
-                item.owned
-                  ? selected
-                    ? "border-primary bg-speakup-green-soft shadow-md"
-                    : "border-border hover:border-primary/50"
-                  : "cursor-not-allowed border-dashed opacity-50"
-              )}
-              onClick={() => item.owned && onSelect(item.slug)}
-            >
-              {!item.owned && (
-                <Lock className="absolute right-1 top-1 h-3 w-3 text-muted-foreground" />
-              )}
-              {item.owned && selected && (
-                <Check className="absolute right-1 top-1 h-3 w-3 text-primary" />
-              )}
-              <KidIcon emoji={item.icon} slug={item.slug} size="sm" />
-              <span className="text-xs font-medium text-center">{item.name}</span>
-              {!item.owned && (
-                <span className="flex items-center gap-0.5 text-[10px] text-muted-foreground">
-                  <Coins className="h-3 w-3 text-amber-600" />
-                  {item.price}
-                </span>
-              )}
-            </button>
-          );
-        })}
-        {onClearAccessory && selectedSlug && (
-          <button
-            type="button"
-            className="rounded-xl border-2 border-dashed px-4 py-3 text-sm text-muted-foreground hover:border-primary"
-            onClick={onClearAccessory}
-          >
-            Remover acessório
-          </button>
-        )}
-        {items.length === 0 && (
-          <p className="text-sm text-muted-foreground">Nenhum item nesta categoria.</p>
-        )}
-      </CardContent>
-    </Card>
+    <button type="button" onClick={onSelect} className={base} aria-pressed={selected} aria-label={label}>
+      {content}
+    </button>
   );
 }

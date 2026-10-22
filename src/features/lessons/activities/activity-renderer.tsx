@@ -38,6 +38,8 @@ interface Props {
     quizTotal?: number;
   }) => void;
   onMistake?: (mistake: LessonMistake) => void;
+  /** Cada resposta de pergunta (para o contador de acertos seguidos) */
+  onAnswer?: (correct: boolean) => void;
   onFinishLesson?: () => void;
 }
 
@@ -48,6 +50,7 @@ export function ActivityRenderer({
   lessonSlug,
   onStepComplete,
   onMistake,
+  onAnswer,
 }: Props) {
   switch (activity.type) {
     case "intro":
@@ -80,6 +83,7 @@ export function ActivityRenderer({
           data={activity.data as LessonActivityListen}
           onComplete={(correct) => onStepComplete({ correct })}
           onMistake={onMistake}
+          onAnswer={onAnswer}
         />
       );
     case "speak-practice":
@@ -123,6 +127,7 @@ export function ActivityRenderer({
           data={activity.data as LessonActivityWordOrder}
           onComplete={(correct) => onStepComplete({ correct })}
           onMistake={onMistake}
+          onAnswer={onAnswer}
         />
       );
     case "quiz":
@@ -133,6 +138,7 @@ export function ActivityRenderer({
             onStepComplete({ quizCorrect, quizTotal })
           }
           onMistake={onMistake}
+          onAnswer={onAnswer}
         />
       );
     default:

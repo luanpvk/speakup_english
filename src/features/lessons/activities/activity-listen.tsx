@@ -1,97 +1,78 @@
 "use client";
 
-import { useState } from "react";
-import { Check, Volume2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { KidIcon } from "@/lib/icons/kid-icons";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { LessonActivityListen } from "@/types/lesson";
 import type { LessonMistake } from "@/types/lesson-mistakes";
+import { FEEDBACK_MS } from "./activity-quiz";
+import { LessonFooter, ListenButtons, OptionButton, playFeedback, useAutoSpeak, useOptionKeys } from "../lesson-kit";
 
 interface Props {
   data: LessonActivityListen;
   onComplete: (correct: boolean) => void;
   onMistake?: (mistake: LessonMistake) => void;
+  onAnswer?: (correct: boolean) => void;
 }
 
-export function ActivityListen({ data, onComplete, onMistake }: Props) {
+export function ActivityListen({ data, onComplete, onMistake, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
-  const [wrongAttempt, setWrongAttempt] = useState(false);
+  const timer = useRef<number | undefined>(undefined);
+  const answered = selected !== null;
+  const ok = selected === data.correctIndex;
 
-  const play = () => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      const u = new SpeechSynthesisUtterance(data.targetWord);
-      u.lang = "en-US";
-      window.speechSynthesis.speak(u);
-    }
-  };
+  useAutoSpeak(data.targetWord);
+  useEffect(() => () => window.clearTimeout(timer.current), []);
 
-  const pick = (index: number) => {
-    setSelected(index);
-    if (index === data.correctIndex) {
-      setWrongAttempt(false);
-    } else {
-      setWrongAttempt(true);
-      onMistake?.({
-        id: `listen-${data.targetWord}`,
-        kind: "listen",
-        label: data.prompt,
-        data,
-      });
-    }
-  };
+  const finish = useCallback(() => {
+    window.clearTimeout(timer.current);
+    onComplete(ok);
+  }, [ok, onComplete]);
 
-  const submit = () => {
-    if (selected === null || selected !== data.correctIndex) return;
-    onComplete(true);
-  };
+  const pick = useCallback(
+    (index: number) => {
+      if (answered) return;
+      setSelected(index);
+      const right = index === data.correctIndex;
+      playFeedback(right ? "correct" : "wrong");
+      onAnswer?.(right);
+      if (!right) {
+        onMistake?.({ id: `listen-${data.targetWord}`, kind: "listen", label: data.prompt, data });
+      }
+      // Segue sozinho; a revisão dos erros acontece no final
+      timer.current = window.setTimeout(() => onComplete(right), right ? FEEDBACK_MS.correct : FEEDBACK_MS.wrong);
+    },
+    [answered, data, onAnswer, onComplete, onMistake]
+  );
+
+  useOptionKeys(data.options.length, pick, !answered);
 
   return (
-    <Card className="border-2">
-      <CardContent className="space-y-4 py-6">
-        <div className="flex flex-col items-center gap-3 rounded-xl bg-muted/40 p-6">
-          <KidIcon emoji={data.targetEmoji} word={data.targetWord} size="lg" />
-          <p className="text-center text-lg">{data.prompt}</p>
-          <Button variant="outline" onClick={play}>
-            <Volume2 className="h-5 w-5" />
-            Ouvir palavra
-          </Button>
-        </div>
-        {wrongAttempt && (
-          <p className="text-center text-sm font-medium text-destructive">
-            Não foi dessa vez — escolha a tradução correta
-          </p>
-        )}
-        <div className="grid gap-2">
-          {data.options.map((opt, i) => {
-            const show = selected !== null;
-            const isCorrect = i === data.correctIndex;
-            const isSelected = selected === i;
-            return (
-              <Button
-                key={opt}
-                variant="outline"
-                className={`h-auto justify-start py-3 ${
-                  show && isCorrect
-                    ? "border-primary bg-speakup-green-soft"
-                    : show && isSelected && !isCorrect
-                      ? "border-destructive bg-destructive/10"
-                      : ""
-                }`}
-                onClick={() => pick(i)}
-              >
-                {show && isCorrect && <Check className="h-4 w-4 text-primary" />}
-                {opt}
-              </Button>
-            );
-          })}
-        </div>
-        {selected === data.correctIndex && (
-          <Button className="w-full" size="lg" onClick={submit}>
-            Continuar
-          </Button>
-        )}
-      </CardContent>
-    </Card>
+    <div className="space-y-6">
+      <div className="flex flex-col items-center gap-3 text-center">
+        <p className="font-display text-xl font-bold">O que você ouviu?</p>
+        <ListenButtons text={data.targetWord} size="lg" />
+      </div>
+      <div className="grid gap-3">
+        {data.options.map((opt, i) => (
+          <OptionButton
+            key={i}
+            index={i}
+            label={opt}
+            disabled={answered}
+            onClick={() => pick(i)}
+            state={
+              !answered ? "idle" : i === data.correctIndex ? "correct" : i === selected ? "wrong" : "faded"
+            }
+          />
+        ))}
+      </div>
+      <LessonFooter
+        status={!answered ? "idle" : ok ? "correct" : "wrong"}
+        title={ok ? "Muito bem!" : "Quase!"}
+        detail={!ok && answered ? `"${data.targetWord}" é "${data.options[data.correctIndex]}"` : undefined}
+        actionLabel="Continuar"
+        disabled={!answered}
+        onAction={finish}
+      />
+    </div>
   );
 }

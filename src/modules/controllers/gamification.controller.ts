@@ -1,7 +1,14 @@
 import { NextRequest } from "next/server";
-import { jsonSuccess, jsonError } from "@/modules/utils/api-response";
+import { jsonSuccess, jsonError, errorResponse } from "@/modules/utils/api-response";
 import { authenticateRequest } from "@/modules/middlewares/auth.middleware";
 import * as gamificationService from "@/modules/services/gamification.service";
+import {
+  completeLessonSchema,
+  flashcardReviewSchema,
+  purchaseSchema,
+  updateAvatarSchema,
+  updateChildProfileSchema,
+} from "@/modules/utils/validators";
 
 async function getChildId(request: NextRequest) {
   const tokenUser = authenticateRequest(request);
@@ -14,9 +21,7 @@ export async function handleGetStats(request: NextRequest) {
     const stats = await gamificationService.getChildStats(childProfileId);
     return jsonSuccess(stats);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    const status = message.includes("Acesso") ? 403 : 400;
-    return jsonError(message, status);
+    return errorResponse(error, "Erro");
   }
 }
 
@@ -26,17 +31,14 @@ export async function handleGetLesson(request: NextRequest, lessonSlug: string) 
     const data = await gamificationService.getLessonDetail(childProfileId, lessonSlug);
     return jsonSuccess(data);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 404);
+    return errorResponse(error, "Erro", 404);
   }
 }
 
 export async function handleCompleteLesson(request: NextRequest, lessonSlug: string) {
   try {
     const childProfileId = await getChildId(request);
-    const body = await request.json();
-    const score = Number(body.score) || 0;
-    const timeSpentSeconds = Number(body.timeSpentSeconds) || 0;
+    const { score, timeSpentSeconds } = completeLessonSchema.parse(await request.json());
     const result = await gamificationService.completeLesson(
       childProfileId,
       lessonSlug,
@@ -45,8 +47,7 @@ export async function handleCompleteLesson(request: NextRequest, lessonSlug: str
     );
     return jsonSuccess(result, 200, "Lição concluída! Parabéns! 🎉");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
   }
 }
 
@@ -57,8 +58,7 @@ export async function handleGetRanking(request: NextRequest) {
     const ranking = await gamificationService.getRankingForChild(childProfileId, period);
     return jsonSuccess({ ranking, period });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 403);
+    return errorResponse(error, "Erro", 403);
   }
 }
 
@@ -68,8 +68,7 @@ export async function handleGetShop(request: NextRequest) {
     const shop = await gamificationService.getShopItems(childProfileId);
     return jsonSuccess(shop);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 403);
+    return errorResponse(error, "Erro", 403);
   }
 }
 
@@ -79,18 +78,17 @@ export async function handlePurchaseReward(
 ) {
   try {
     const childProfileId = await getChildId(request);
-    const payload = body ?? (await request.json());
-    if (!payload.rewardSlug) {
+    const payload = purchaseSchema.safeParse(body ?? (await request.json()));
+    if (!payload.success || !payload.data.rewardSlug) {
       return jsonError("Recompensa inválida", 400);
     }
     const result = await gamificationService.purchaseReward(
       childProfileId,
-      payload.rewardSlug
+      payload.data.rewardSlug
     );
     return jsonSuccess(result, 200, "Compra realizada!");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
   }
 }
 
@@ -100,18 +98,17 @@ export async function handlePurchaseAvatarItem(
 ) {
   try {
     const childProfileId = await getChildId(request);
-    const payload = body ?? (await request.json());
-    if (!payload.itemSlug) {
+    const payload = purchaseSchema.safeParse(body ?? (await request.json()));
+    if (!payload.success || !payload.data.itemSlug) {
       return jsonError("Item inválido", 400);
     }
     const result = await gamificationService.purchaseAvatarItem(
       childProfileId,
-      payload.itemSlug
+      payload.data.itemSlug
     );
     return jsonSuccess(result, 200, "Item desbloqueado!");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
   }
 }
 
@@ -121,20 +118,33 @@ export async function handleGetAvatar(request: NextRequest) {
     const data = await gamificationService.getAvatarCustomization(childProfileId);
     return jsonSuccess(data);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 403);
+    return errorResponse(error, "Erro", 403);
   }
 }
 
 export async function handleUpdateAvatar(request: NextRequest) {
   try {
     const childProfileId = await getChildId(request);
-    const body = await request.json();
-    const data = await gamificationService.updateAvatar(childProfileId, body);
+    const parsed = updateAvatarSchema.safeParse(await request.json());
+    if (!parsed.success) return jsonError("Dados do avatar inválidos", 400);
+    const data = await gamificationService.updateAvatar(childProfileId, parsed.data);
     return jsonSuccess(data, 200, "Avatar atualizado!");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
+  }
+}
+
+export async function handleUpdateChildProfile(request: NextRequest) {
+  try {
+    const childProfileId = await getChildId(request);
+    const parsed = updateChildProfileSchema.safeParse(await request.json());
+    if (!parsed.success) {
+      return jsonError(parsed.error.issues.map((i) => i.message).join(" · "), 400);
+    }
+    const data = await gamificationService.updateChildProfile(childProfileId, parsed.data);
+    return jsonSuccess(data, 200, "Perfil atualizado!");
+  } catch (error) {
+    return errorResponse(error, "Erro", 400);
   }
 }
 
@@ -145,25 +155,20 @@ export async function handleGetDailyFlashcards(request: NextRequest) {
     const session = await getDailyFlashcardSession(childProfileId);
     return jsonSuccess(session);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
   }
 }
 
 export async function handleReviewFlashcard(request: NextRequest) {
   try {
     const childProfileId = await getChildId(request);
-    const body = await request.json();
-    const cardId = String(body.cardId ?? "");
-    const rating = Number(body.rating) as 1 | 2 | 3 | 4;
-    if (!cardId || rating < 1 || rating > 4) {
-      return jsonError("Dados inválidos", 400);
-    }
+    const parsed = flashcardReviewSchema.safeParse(await request.json());
+    if (!parsed.success) return jsonError("Dados inválidos", 400);
+    const { cardId, rating } = parsed.data;
     const { reviewFlashcard } = await import("@/modules/services/flashcard.service");
     const result = await reviewFlashcard(childProfileId, cardId, rating);
     return jsonSuccess(result);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Erro";
-    return jsonError(message, 400);
+    return errorResponse(error, "Erro", 400);
   }
 }

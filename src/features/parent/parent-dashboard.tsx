@@ -9,19 +9,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { RegisterChildForm } from "@/features/parent/register-child-form";
 import { LoadingState } from "@/components/ui/loading-state";
 import { ChildLoginButton } from "@/features/parent/child-login-button";
+import { AvatarPreview } from "@/components/gamification/avatar-preview";
 import { useParentChildren } from "@/hooks/use-parent-children";
 import { useAuth } from "@/hooks/use-auth";
 import { ROUTES } from "@/utils/constants";
+import { rememberParentEmail } from "@/features/auth/child-login-form";
 
 export function ParentDashboard() {
   const router = useRouter();
-  const { logoutSilent } = useAuth();
+  const { user, logoutSilent } = useAuth();
   const { data: children, isLoading, refetch } = useParentChildren();
   const [openingChildLogin, setOpeningChildLogin] = useState(false);
 
   const openChildLogin = async () => {
     setOpeningChildLogin(true);
     try {
+      if (user?.email) rememberParentEmail(user.email);
       await logoutSilent();
       router.push(ROUTES.loginChild);
     } finally {
@@ -71,12 +74,12 @@ export function ParentDashboard() {
               ? "Carregando..."
               : children?.length
                 ? `${children.length} explorador(es) na conta`
-                : "Nenhum perfil ainda — cadastre acima"}
+                : "Nenhum perfil ainda. Cadastre uma criança acima."}
           </CardDescription>
         </CardHeader>
         <CardContent>
           {isLoading ? (
-            <LoadingState message="Carregando perfis..." />
+            <LoadingState message="Carregando perfis..." skeleton="rows" />
           ) : !children?.length ? (
             <p className="rounded-xl border-2 border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
               Após cadastrar, clique em &quot;Login desta criança&quot; e digite o PIN
@@ -90,9 +93,7 @@ export function ParentDashboard() {
                   className="flex flex-wrap items-center justify-between gap-3 rounded-xl border-2 border-border bg-muted/30 px-4 py-3"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-card text-2xl shadow-sm">
-                      {child.avatarEmoji}
-                    </span>
+                    <AvatarPreview baseEmoji={child.avatarEmoji} size="sm" />
                     <div>
                       <p className="font-semibold">{child.displayName}</p>
                       <p className="text-sm text-muted-foreground">

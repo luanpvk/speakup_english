@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Logo } from "@/components/ui/logo";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 
@@ -20,14 +21,22 @@ export default function AuthLayout({
         id="main-content"
         className="mx-auto flex min-h-[calc(100vh-8rem)] max-w-6xl flex-col items-center justify-center px-4 py-8 md:flex-row md:gap-12"
       >
-        <div className="mb-8 hidden max-w-sm md:block">
+        <div className="mb-8 hidden max-w-sm text-center md:block">
+          <Image
+            src="/mascot.png"
+            alt=""
+            width={220}
+            height={220}
+            loading="eager"
+            className="mx-auto mb-4 animate-float-gentle"
+          />
           <h1 className="font-display text-3xl font-bold">
-            Aprender inglês pode ser leve e divertido
+            Inglês pode ser leve e divertido
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Ambiente seguro, visual calmo e progresso que motiva sem pressionar.
+            Um cantinho seguro e tranquilo para aprender um pouco todo dia.
           </p>
-          <nav className="mt-6 flex flex-wrap gap-4 text-sm" aria-label="Links de acesso">
+          <nav className="mt-6 flex flex-wrap justify-center gap-4 text-sm" aria-label="Links de acesso">
             <Link href="/login/child" className="font-semibold text-secondary hover:underline">
               Área infantil
             </Link>

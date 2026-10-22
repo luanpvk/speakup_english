@@ -13,6 +13,7 @@ const AvatarSchema = new Schema<IAvatar>(
     hairSlug: { type: String, default: "hair-default" },
     clothesSlug: { type: String, default: "clothes-default" },
     accessorySlug: { type: String },
+    backgroundSlug: { type: String, default: "bg-default" },
     baseEmoji: { type: String, default: "🦊" },
   },
   { timestamps: true }

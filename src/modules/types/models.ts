@@ -32,7 +32,10 @@ export interface IChildProfile {
   username: string;
   avatarEmoji: string;
   pinHash: string;
+  failedPinAttempts?: number;
+  pinLockedUntil?: Date;
   birthYear?: number;
+  hyperfocus?: string;
   level: number;
   xp: number;
   coins: number;
@@ -158,7 +161,7 @@ export interface IAvatarItem {
   _id: Types.ObjectId;
   slug: string;
   name: string;
-  type: "hair" | "clothes" | "accessory";
+  type: "hair" | "clothes" | "accessory" | "background";
   icon: string;
   price: number;
   unlockLevel: number;
@@ -174,6 +177,7 @@ export interface IAvatar {
   hairSlug: string;
   clothesSlug: string;
   accessorySlug?: string;
+  backgroundSlug?: string;
   baseEmoji: string;
   createdAt: Date;
   updatedAt: Date;

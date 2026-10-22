@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { toast } from "@/store/toast-store";
+
 import Link from "next/link";
-import { useForm, type FieldValues } from "react-hook-form";
+import { useForm, useWatch, type FieldValues } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Loader2 } from "lucide-react";
+import { Check, Loader2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,6 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { PASSWORD_RULES, passwordSchema } from "@/modules/utils/validators";
 
 type AuthFormVariant = "parent-login" | "child-login" | "register" | "forgot" | "reset";
 
@@ -25,7 +27,6 @@ interface AuthFormProps {
   variant: AuthFormVariant;
   onSubmit: (data: Record<string, string>) => Promise<void>;
   isLoading?: boolean;
-  error?: string | null;
   className?: string;
   resetToken?: string;
 }
@@ -36,27 +37,19 @@ const schemas = {
     password: z.string().min(1, "Senha obrigatória"),
   }),
   "child-login": z.object({
-    username: z.string().min(3, "Usuário inválido"),
+    username: z.string().min(3, "O usuário precisa ter pelo menos 3 caracteres"),
     pin: z.string().length(4, "PIN de 4 dígitos").regex(/^\d+$/, "Apenas números"),
   }),
   register: z.object({
     name: z.string().min(2, "Nome muito curto"),
     email: z.string().email("E-mail inválido"),
-    password: z
-      .string()
-      .min(8, "Mínimo 8 caracteres")
-      .regex(/[A-Za-z]/, "Inclua letras")
-      .regex(/[0-9]/, "Inclua números"),
+    password: passwordSchema,
   }),
   forgot: z.object({
     email: z.string().email("E-mail inválido"),
   }),
   reset: z.object({
-    password: z
-      .string()
-      .min(8, "Mínimo 8 caracteres")
-      .regex(/[A-Za-z]/, "Inclua letras")
-      .regex(/[0-9]/, "Inclua números"),
+    password: passwordSchema,
     confirmPassword: z.string(),
   }).refine((d) => d.password === d.confirmPassword, {
     message: "Senhas não coincidem",
@@ -64,10 +57,18 @@ const schemas = {
   }),
 } satisfies Record<AuthFormVariant, z.ZodType<FieldValues>>;
 
+const ERROR_TITLE: Record<AuthFormVariant, string> = {
+  "parent-login": "Não deu para entrar",
+  "child-login": "Não deu para entrar",
+  register: "Não deu para criar a conta",
+  forgot: "Não deu para enviar o link",
+  reset: "Não deu para trocar a senha",
+};
+
 const titles: Record<AuthFormVariant, { title: string; description: string }> = {
   "parent-login": {
     title: "Área dos responsáveis",
-    description: "Gerencie perfis, progresso e configurações.",
+    description: "Acompanhe seus filhos e cuide dos perfis deles.",
   },
   "child-login": {
     title: "Oi, explorador! 👋",
@@ -75,15 +76,15 @@ const titles: Record<AuthFormVariant, { title: string; description: string }> = 
   },
   register: {
     title: "Criar conta",
-    description: "Cadastre-se para começar a jornada em inglês.",
+    description: "Leva só uns minutinhos.",
   },
   forgot: {
     title: "Esqueceu a senha?",
-    description: "Enviaremos instruções para o seu e-mail.",
+    description: "A gente manda um link para você criar outra.",
   },
   reset: {
     title: "Nova senha",
-    description: "Escolha uma senha segura para sua conta.",
+    description: "Escolha uma senha nova para entrar.",
   },
 };
 
@@ -91,10 +92,8 @@ export function AuthForm({
   variant,
   onSubmit,
   isLoading,
-  error,
   className,
 }: AuthFormProps) {
-  const [submitError, setSubmitError] = useState<string | null>(null);
   const meta = titles[variant];
   const schema = schemas[variant];
 
@@ -111,15 +110,24 @@ export function AuthForm({
   });
 
   const handleSubmit = form.handleSubmit(async (data) => {
-    setSubmitError(null);
     try {
       await onSubmit(data as unknown as Record<string, string>);
     } catch (e) {
-      setSubmitError(e instanceof Error ? e.message : "Erro ao enviar");
+      toast.error(ERROR_TITLE[variant], e instanceof Error && e.message ? e.message : "Tente de novo.");
     }
   });
 
-  const displayError = error ?? submitError;
+  const errors = form.formState.errors;
+  const fieldError = (name: string) => {
+    const message = errors[name]?.message;
+    return message ? (
+      <p id={`${name}-error`} className="text-sm text-destructive" role="alert">
+        {String(message)}
+      </p>
+    ) : null;
+  };
+  const showPasswordRules = variant === "register" || variant === "reset";
+  const password = String(useWatch({ control: form.control, name: "password" }) ?? "");
 
   return (
     <Card className={cn("w-full max-w-md border-2 shadow-lg", className)}>
@@ -132,24 +140,12 @@ export function AuthForm({
 
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
-          {displayError && (
-            <p
-              role="alert"
-              className="rounded-xl border-2 border-destructive/50 bg-destructive/10 px-4 py-3 text-sm text-destructive"
-            >
-              {displayError}
-            </p>
-          )}
 
           {variant === "register" && (
             <div className="space-y-2">
               <Label htmlFor="name">Nome completo</Label>
               <Input id="name" {...form.register("name")} autoComplete="name" />
-              {form.formState.errors.name && (
-                <p className="text-sm text-destructive">
-                  {String(form.formState.errors.name.message)}
-                </p>
-              )}
+              {fieldError("name")}
             </div>
           )}
 
@@ -163,6 +159,7 @@ export function AuthForm({
                   {...form.register("username")}
                   autoComplete="username"
                 />
+                {fieldError("username")}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="pin">PIN (4 números)</Label>
@@ -175,6 +172,7 @@ export function AuthForm({
                   {...form.register("pin")}
                   autoComplete="off"
                 />
+                {fieldError("pin")}
               </div>
             </>
           ) : (
@@ -188,6 +186,7 @@ export function AuthForm({
                     {...form.register("email")}
                     autoComplete="email"
                   />
+                  {fieldError("email")}
                 </div>
               )}
 
@@ -205,7 +204,33 @@ export function AuthForm({
                     autoComplete={
                       variant === "register" ? "new-password" : "current-password"
                     }
+                    aria-describedby={showPasswordRules ? "password-rules" : undefined}
                   />
+                  {showPasswordRules && (
+                    <ul id="password-rules" className="space-y-1 text-sm" aria-live="polite">
+                      {PASSWORD_RULES.map((rule) => {
+                        const ok = rule.test(password);
+                        return (
+                          <li
+                            key={rule.label}
+                            className={cn(
+                              "flex items-center gap-2",
+                              ok ? "text-primary" : "text-muted-foreground"
+                            )}
+                          >
+                            {ok ? (
+                              <Check className="h-4 w-4" aria-hidden />
+                            ) : (
+                              <X className="h-4 w-4" aria-hidden />
+                            )}
+                            {rule.label}
+                            <span className="sr-only">{ok ? "(ok)" : "(faltando)"}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                  {fieldError("password")}
                 </div>
               )}
 
@@ -218,19 +243,12 @@ export function AuthForm({
                     {...form.register("confirmPassword")}
                     autoComplete="new-password"
                   />
+                  {fieldError("confirmPassword")}
                 </div>
               )}
             </>
           )}
 
-          {(form.formState.errors.email ||
-            form.formState.errors.password ||
-            form.formState.errors.pin ||
-            form.formState.errors.username) && (
-            <p className="text-sm text-destructive" role="alert">
-              Verifique os campos acima
-            </p>
-          )}
         </CardContent>
 
         <CardFooter className="flex flex-col gap-4">

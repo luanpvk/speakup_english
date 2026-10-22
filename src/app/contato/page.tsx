@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContatoPage() {
   return (
-    <LegalPageShell title="Contato" updatedAt="29 de maio de 2026">
+    <LegalPageShell title="Contato" updatedAt="21 de outubro de 2026">
       <section>
         <p>
           Estamos à disposição para dúvidas sobre a plataforma, privacidade, acessibilidade ou

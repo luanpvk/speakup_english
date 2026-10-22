@@ -1,16 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Sparkles } from "lucide-react";
 import type { LessonActivityMemory } from "@/types/lesson";
+import { cn } from "@/lib/utils";
+import { LessonFooter, playFeedback, speak } from "../lesson-kit";
 
 interface MemoryCard {
   uid: string;
   pairId: string;
   text: string;
   lang: "en" | "pt";
-  emoji?: string;
 }
 
 interface Props {
@@ -27,90 +27,107 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export function ActivityMemory({ data, onComplete }: Props) {
-  const cards = useMemo(() => {
-    const built: MemoryCard[] = [];
-    for (const pair of data.pairs) {
-      built.push({
-        uid: `${pair.id}-en`,
-        pairId: pair.id,
-        text: pair.english,
-        lang: "en",
-        emoji: pair.emoji,
-      });
-      built.push({
-        uid: `${pair.id}-pt`,
-        pairId: pair.id,
-        text: pair.portuguese,
-        lang: "pt",
-      });
-    }
-    return shuffle(built);
-  }, [data.pairs]);
+const DONE_MS = 1300;
 
-  const [flipped, setFlipped] = useState<string[]>([]);
+export function ActivityMemory({ data, onComplete }: Props) {
+  const cards = useMemo(
+    () =>
+      shuffle(
+        data.pairs.flatMap((pair) => [
+          { uid: `${pair.id}-en`, pairId: pair.id, text: pair.english, lang: "en" as const },
+          { uid: `${pair.id}-pt`, pairId: pair.id, text: pair.portuguese, lang: "pt" as const },
+        ])
+      ),
+    [data.pairs]
+  );
+
+  const [open, setOpen] = useState<string[]>([]);
   const [matched, setMatched] = useState<Set<string>>(new Set());
   const [lock, setLock] = useState(false);
-
+  const timer = useRef<number | undefined>(undefined);
   const allMatched = matched.size === data.pairs.length;
 
-  const handleFlip = (card: MemoryCard) => {
-    if (lock || matched.has(card.pairId) || flipped.includes(card.uid)) return;
+  useEffect(() => () => window.clearTimeout(timer.current), []);
 
-    const next = [...flipped, card.uid];
-    setFlipped(next);
+  const flip = (card: MemoryCard) => {
+    if (lock || matched.has(card.pairId) || open.includes(card.uid)) return;
+    if (card.lang === "en") speak(card.text);
 
-    if (next.length === 2) {
-      const [a, b] = next.map((uid) => cards.find((c) => c.uid === uid)!);
-      if (a.pairId === b.pairId && a.lang !== b.lang) {
-        setMatched((m) => new Set(m).add(a.pairId));
-        setFlipped([]);
+    const next = [...open, card.uid];
+    setOpen(next);
+    if (next.length < 2) return;
+
+    const [a, b] = next.map((uid) => cards.find((c) => c.uid === uid)!);
+    if (a.pairId === b.pairId) {
+      const done = new Set(matched).add(a.pairId);
+      setMatched(done);
+      setOpen([]);
+      if (done.size === data.pairs.length) {
+        playFeedback("complete");
+        timer.current = window.setTimeout(onComplete, DONE_MS);
       } else {
-        setLock(true);
-        setTimeout(() => {
-          setFlipped([]);
-          setLock(false);
-        }, 900);
+        playFeedback("correct");
       }
+    } else {
+      setLock(true);
+      playFeedback("wrong");
+      timer.current = window.setTimeout(() => {
+        setOpen([]);
+        setLock(false);
+      }, 900);
     }
   };
 
   return (
-    <Card className="border-2">
-      <CardContent className="space-y-4 py-6">
-        <p className="text-center text-sm text-muted-foreground">
-          Pares encontrados: {matched.size} / {data.pairs.length}
-        </p>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {cards.map((card) => {
-            const isOpen = flipped.includes(card.uid) || matched.has(card.pairId);
-            return (
-              <button
-                key={card.uid}
-                type="button"
-                disabled={matched.has(card.pairId)}
-                onClick={() => handleFlip(card)}
-                className={`flex min-h-[88px] flex-col items-center justify-center rounded-xl border-2 p-2 text-sm font-semibold transition ${
-                  isOpen
-                    ? "border-primary bg-speakup-green-soft"
-                    : "border-muted bg-muted/30 hover:border-primary/50"
-                } ${matched.has(card.pairId) ? "opacity-60" : ""}`}
-              >
-                {isOpen ? (
-                  <span className="mt-1 text-center text-sm font-semibold leading-tight">{card.text}</span>
-                ) : (
-                  <span className="text-lg font-bold text-muted-foreground">?</span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-        {allMatched && (
-          <Button className="w-full" size="lg" onClick={onComplete}>
-            Memória completa — continuar!
-          </Button>
-        )}
-      </CardContent>
-    </Card>
+    <div className="space-y-4">
+      <p className="text-center font-display text-xl font-bold">Ache os pares</p>
+      <p className="text-center text-sm font-semibold text-muted-foreground">
+        {matched.size} de {data.pairs.length} pares
+      </p>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {cards.map((card) => {
+          const isMatched = matched.has(card.pairId);
+          const isOpen = open.includes(card.uid) || isMatched;
+          return (
+            <button
+              key={card.uid}
+              type="button"
+              disabled={isMatched}
+              onClick={() => flip(card)}
+              className="flip-card"
+              data-flipped={isOpen}
+              aria-label={isOpen ? card.text : "Carta virada para baixo"}
+            >
+              <span className="flip-inner grid">
+                <span className="flip-face col-start-1 row-start-1 flex min-h-24 items-center justify-center rounded-2xl border-2 border-border bg-secondary/15 text-secondary shadow-[0_4px_0_hsl(var(--border-shadow))]">
+                  <Sparkles className="h-7 w-7" aria-hidden />
+                </span>
+                <span
+                  className={cn(
+                    "flip-face flip-back col-start-1 row-start-1 flex min-h-24 items-center justify-center rounded-2xl border-2 p-2 text-center font-semibold leading-tight",
+                    isMatched
+                      ? "border-primary bg-speakup-green-soft text-primary"
+                      : "border-sky-500 bg-card shadow-[0_4px_0_#0369a1]",
+                    card.lang === "en" && "font-display text-lg"
+                  )}
+                >
+                  {card.text}
+                </span>
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <LessonFooter
+        status={allMatched ? "correct" : "idle"}
+        title="Achou todos!"
+        actionLabel="Continuar"
+        disabled={!allMatched}
+        onAction={() => {
+          window.clearTimeout(timer.current);
+          onComplete();
+        }}
+      />
+    </div>
   );
 }

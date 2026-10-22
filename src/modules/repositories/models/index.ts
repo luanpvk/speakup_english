@@ -14,3 +14,4 @@ export { Avatar } from "./Avatar";
 export { Ranking } from "./Ranking";
 export { ChildAchievement } from "./ChildAchievement";
 export { Flashcard } from "./Flashcard";
+export { RateLimit } from "./RateLimit";

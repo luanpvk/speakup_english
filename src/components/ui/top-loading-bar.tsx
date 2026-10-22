@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface TopLoadingBarProps {
@@ -15,19 +15,23 @@ export function TopLoadingBar({
   className,
   placement = "fixed",
 }: TopLoadingBarProps) {
-  const [progress, setProgress] = useState(0);
-  const [visible, setVisible] = useState(false);
-  const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [progress, setProgress] = useState(active ? 22 : 0);
+  const [visible, setVisible] = useState(active);
+  const [prevActive, setPrevActive] = useState(active);
 
-  useEffect(() => {
-    if (hideTimer.current) {
-      clearTimeout(hideTimer.current);
-      hideTimer.current = null;
-    }
-
+  // Começou ou terminou de carregar: ajusta no render (sem setState dentro de efeito)
+  if (active !== prevActive) {
+    setPrevActive(active);
     if (active) {
       setVisible(true);
       setProgress(22);
+    } else {
+      setProgress(100);
+    }
+  }
+
+  useEffect(() => {
+    if (active) {
       const t1 = setTimeout(() => setProgress(58), 120);
       const t2 = setTimeout(() => setProgress(86), 380);
       return () => {
@@ -35,24 +39,20 @@ export function TopLoadingBar({
         clearTimeout(t2);
       };
     }
-
-    setProgress(100);
-    hideTimer.current = setTimeout(() => {
+    if (!visible) return;
+    const t = setTimeout(() => {
       setVisible(false);
       setProgress(0);
     }, 320);
-
-    return () => {
-      if (hideTimer.current) clearTimeout(hideTimer.current);
-    };
-  }, [active]);
+    return () => clearTimeout(t);
+  }, [active, visible]);
 
   if (!visible) return null;
 
   return (
     <div
       className={cn(
-        "pointer-events-none left-0 right-0 top-0 z-50 h-2 overflow-hidden",
+        "pointer-events-none left-0 right-0 top-0 z-50 h-[3px] overflow-hidden",
         placement === "embedded" ? "absolute rounded-t-3xl" : "fixed z-[200]",
         className
       )}
@@ -62,9 +62,8 @@ export function TopLoadingBar({
       aria-valuenow={progress}
       aria-label="Carregando"
     >
-      <div className="h-full w-full bg-primary/15" />
       <div
-        className="absolute inset-y-0 left-0 bg-primary transition-[width] duration-300 ease-out"
+        className="absolute inset-y-0 left-0 rounded-r-full bg-primary shadow-[0_0_8px_hsl(var(--primary))] transition-[width] duration-300 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>

@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import crypto from "crypto";
 import { connectDB } from "@/lib/mongodb";
 import {
@@ -134,27 +135,69 @@ export async function loginParent(input: {
   };
 }
 
+const MAX_PIN_ATTEMPTS = 5;
+const PIN_LOCK_MINUTES = 15;
+/** Mesma mensagem para qualquer erro: não revela se o e-mail ou o usuário existem */
+const CHILD_LOGIN_ERROR = "E-mail do responsável, usuário ou PIN incorretos";
+
 export async function loginChild(input: {
+  parentEmail: string;
   username: string;
   pin: string;
 }): Promise<{ user: AuthUser; accessToken: string; refreshToken: string }> {
   await connectDB();
 
-  const profile = await ChildProfile.findOne({
-    username: input.username.toLowerCase(),
-    isActive: true,
-  })
-    .select("+pinHash")
-    .populate<{ userId: { _id: { toString: () => string }; email: string; name: string; role: string } }>("userId")
-    .lean();
+  // Consultas independentes em paralelo (banco remoto: cada ida custa ~150 ms)
+  const [parentUser, candidate] = await Promise.all([
+    User.findOne({ email: input.parentEmail.toLowerCase().trim(), role: "parent" })
+      .select("_id")
+      .lean(),
+    ChildProfile.findOne({ username: input.username.toLowerCase(), isActive: true })
+      .select("+pinHash +failedPinAttempts +pinLockedUntil")
+      .lean(),
+  ]);
 
+  const [isOwnChild, childUserDoc] = await Promise.all([
+    parentUser && candidate
+      ? Parent.exists({ _id: candidate.parentId, userId: parentUser._id })
+      : null,
+    candidate ? User.findById(candidate.userId).select("email name role").lean() : null,
+  ]);
+
+  const profile = isOwnChild && childUserDoc ? { ...candidate!, userId: childUserDoc } : null;
   if (!profile) {
-    throw new Error("Usuário ou PIN incorretos");
+    throw new Error(CHILD_LOGIN_ERROR);
+  }
+
+  if (profile.pinLockedUntil && profile.pinLockedUntil > new Date()) {
+    const minutes = Math.ceil((profile.pinLockedUntil.getTime() - Date.now()) / 60_000);
+    throw new Error(
+      `Muitas tentativas erradas. Espere ${minutes} min ou peça ajuda ao responsável.`
+    );
   }
 
   const valid = await comparePin(input.pin, profile.pinHash);
   if (!valid) {
-    throw new Error("Usuário ou PIN incorretos");
+    const attempts = (profile.failedPinAttempts ?? 0) + 1;
+    const locked = attempts >= MAX_PIN_ATTEMPTS;
+    await ChildProfile.updateOne(
+      { _id: profile._id },
+      locked
+        ? { failedPinAttempts: 0, pinLockedUntil: new Date(Date.now() + PIN_LOCK_MINUTES * 60_000) }
+        : { failedPinAttempts: attempts }
+    );
+    throw new Error(
+      locked
+        ? `Muitas tentativas erradas. O login desta criança foi pausado por ${PIN_LOCK_MINUTES} minutos.`
+        : CHILD_LOGIN_ERROR
+    );
+  }
+
+  if (profile.failedPinAttempts || profile.pinLockedUntil) {
+    await ChildProfile.updateOne(
+      { _id: profile._id },
+      { failedPinAttempts: 0, $unset: { pinLockedUntil: 1 } }
+    );
   }
 
   const childUser = profile.userId;
@@ -199,8 +242,15 @@ export async function refreshSession(
     throw new Error("Sessão expirada");
   }
 
-  await RefreshToken.deleteOne({ _id: stored._id });
-  const tokenId = await createRefreshTokenRecord(payload.userId);
+  // Em vez de apagar o token antigo na hora, deixa ele valer mais 60 s: duas abas (ou dois
+  // pedidos) renovando ao mesmo tempo usam o mesmo cookie e não podem derrubar a sessão.
+  const grace = new Date(Date.now() + REFRESH_GRACE_MS);
+  const [tokenId] = await Promise.all([
+    createRefreshTokenRecord(payload.userId),
+    stored.expiresAt > grace
+      ? RefreshToken.updateOne({ _id: stored._id }, { expiresAt: grace })
+      : null,
+  ]);
 
   const tokenUser: TokenUser = {
     userId: payload.userId,
@@ -215,6 +265,8 @@ export async function refreshSession(
   return { accessToken, refreshToken };
 }
 
+const REFRESH_GRACE_MS = 60_000;
+
 export async function logoutUser(refreshTokenValue?: string): Promise<void> {
   if (!refreshTokenValue) return;
   await connectDB();
@@ -223,7 +275,7 @@ export async function logoutUser(refreshTokenValue?: string): Promise<void> {
     const payload = verifyRefreshToken(refreshTokenValue);
     await RefreshToken.deleteOne({ tokenId: payload.tokenId });
   } catch {
-    // Token invalid — ignore
+    // Token invalid: ignore
   }
 }
 
@@ -253,7 +305,7 @@ export async function resetPassword(token: string, password: string): Promise<vo
 
   const user = await User.findOne({
     resetPasswordToken: hashedToken,
-    resetPasswordExpires: { $gt: new Date() },
+    resetPasswordExpires: mongoose.trusted({ $gt: new Date() }),
     role: "parent",
   }).select("+resetPasswordToken +resetPasswordExpires");
 
@@ -265,11 +317,17 @@ export async function resetPassword(token: string, password: string): Promise<vo
   user.resetPasswordToken = undefined;
   user.resetPasswordExpires = undefined;
   await user.save();
+  // Quem estava logado com a senha antiga (ex.: invasor) perde a sessão
+  await RefreshToken.deleteMany({ userId: user._id });
 }
 
 export async function getCurrentUser(userId: string): Promise<AuthUser | null> {
   await connectDB();
-  const user = await User.findById(userId).lean();
+  // Em paralelo
+  const [user, profile] = await Promise.all([
+    User.findById(userId).lean(),
+    ChildProfile.findOne({ userId }).select("_id avatarEmoji displayName").lean(),
+  ]);
   if (!user) return null;
 
   let childProfileId: string | undefined;
@@ -277,7 +335,6 @@ export async function getCurrentUser(userId: string): Promise<AuthUser | null> {
   let displayName = user.name;
 
   if (user.role === "child") {
-    const profile = await ChildProfile.findOne({ userId: user._id }).lean();
     childProfileId = profile?._id.toString();
     avatarEmoji = profile?.avatarEmoji;
     displayName = profile?.displayName ?? user.name;
@@ -297,6 +354,7 @@ export async function createChildForParent(
     username: string;
     pin: string;
     avatarEmoji?: string;
+    hyperfocus?: string;
     birthYear?: number;
   }
 ): Promise<AuthUser> {
@@ -333,6 +391,7 @@ export async function createChildForParent(
     pinHash,
     avatarEmoji: input.avatarEmoji ?? "🦊",
     birthYear: input.birthYear,
+    hyperfocus: input.hyperfocus,
     ownedItemSlugs: ["hair-default", "clothes-default"],
   });
 

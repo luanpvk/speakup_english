@@ -1,15 +1,17 @@
 "use client";
 
+import { toast } from "@/store/toast-store";
+
 import { useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { AuthForm } from "@/features/auth/auth-form";
 import { authApi } from "@/services/auth.service";
 
 function ResetPasswordForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get("token") ?? "";
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   if (!token) {
     return (
@@ -23,17 +25,13 @@ function ResetPasswordForm() {
     <AuthForm
       variant="reset"
       isLoading={isLoading}
-      error={error}
       onSubmit={async (data) => {
         setIsLoading(true);
-        setError(null);
         const res = await authApi.resetPassword(token, data.password);
         setIsLoading(false);
-        if (!res.success) {
-          setError(res.error ?? "Não foi possível redefinir a senha");
-          throw new Error(res.error);
-        }
-        window.location.href = "/login/parent";
+        if (!res.success) throw new Error(res.error ?? "O link pode ter expirado. Peça outro.");
+        toast.success("Senha trocada!", "Agora é só entrar com a senha nova.");
+        router.push("/login/parent");
       }}
     />
   );

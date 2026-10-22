@@ -47,6 +47,7 @@ export async function createChildForParent(
     username: string;
     pin: string;
     avatarEmoji?: string;
+    hyperfocus?: string;
     birthYear?: number;
   }
 ) {

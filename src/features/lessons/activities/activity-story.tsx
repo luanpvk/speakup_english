@@ -1,59 +1,59 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Volume2 } from "lucide-react";
+import Image from "next/image";
 import type { LessonActivityStory } from "@/types/lesson";
+import { LessonFooter, speak } from "../lesson-kit";
 
 interface Props {
   data: LessonActivityStory;
   onComplete: () => void;
 }
 
+/** História em forma de conversa: cada toque revela a próxima fala e já lê em inglês */
 export function ActivityStory({ data, onComplete }: Props) {
-  const [index, setIndex] = useState(0);
-  const [showEnglish, setShowEnglish] = useState(false);
-  const paragraph = data.paragraphs[index];
-  const isLast = index >= data.paragraphs.length - 1;
+  const [shown, setShown] = useState(1);
+  const lines = data.paragraphs.slice(0, shown);
+  const isLast = shown >= data.paragraphs.length;
 
-  const next = () => {
-    if (!showEnglish) {
-      setShowEnglish(true);
-      return;
-    }
-    if (isLast) {
-      onComplete();
-    } else {
-      setIndex((i) => i + 1);
-      setShowEnglish(false);
-    }
-  };
+  useEffect(() => {
+    const line = data.paragraphs[shown - 1];
+    if (!line) return;
+    const t = window.setTimeout(() => speak(line.en), 250);
+    return () => window.clearTimeout(t);
+  }, [shown, data.paragraphs]);
 
   return (
-    <Card className="border-2">
-      <CardContent className="space-y-6 py-8">
-        <p className="text-center text-sm text-muted-foreground">
-          Trecho {index + 1} de {data.paragraphs.length}
-        </p>
-        <div className="rounded-2xl bg-speakup-green-soft/40 p-6 text-center">
-          {!showEnglish ? (
-            <>
-              <p className="text-xs uppercase text-muted-foreground">Português</p>
-              <p className="mt-2 text-xl font-medium">{paragraph.pt}</p>
-            </>
-          ) : (
-            <>
-              <p className="text-xs uppercase text-primary">English</p>
-              <p className="mt-2 font-display text-2xl font-bold text-primary">{paragraph.en}</p>
-            </>
-          )}
-        </div>
-        <Button size="lg" className="w-full" onClick={next}>
-          {!showEnglish ? "Ver em inglês" : isLast ? "Continuar" : "Próximo trecho"}
-          <ArrowRight className="h-5 w-5" />
-        </Button>
-      </CardContent>
-    </Card>
+    <div className="space-y-4">
+      {lines.map((p, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-end gap-3"
+        >
+          <Image src="/mascot.png" alt="" width={44} height={44} className="shrink-0" />
+          <button
+            type="button"
+            onClick={() => speak(p.en, { force: true })}
+            className="group rounded-2xl rounded-bl-sm border-2 border-border bg-card px-4 py-3 text-left shadow-[0_4px_0_hsl(var(--border-shadow))]"
+            aria-label={`Ouvir: ${p.en}`}
+          >
+            <span className="flex items-center gap-2 font-display text-xl font-bold text-primary">
+              {p.en}
+              <Volume2 className="h-5 w-5 shrink-0 text-sky-500 opacity-70 group-hover:opacity-100" aria-hidden />
+            </span>
+            <span className="block text-muted-foreground">{p.pt}</span>
+          </button>
+        </motion.div>
+      ))}
+
+      <LessonFooter
+        actionLabel={isLast ? "Continuar" : "Próxima fala"}
+        onAction={() => (isLast ? onComplete() : setShown((n) => n + 1))}
+      />
+    </div>
   );
 }

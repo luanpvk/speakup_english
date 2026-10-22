@@ -11,9 +11,9 @@ import { UserMenu } from "@/components/layout/user-menu";
 import { useAuth } from "@/hooks/use-auth";
 
 const navLinks = [
-  { href: "#features", label: "Recursos" },
-  { href: "#how-it-works", label: "Como funciona" },
-  { href: "#accessibility", label: "Acessibilidade" },
+  { href: "/#features", label: "Recursos" },
+  { href: "/#how-it-works", label: "Como funciona" },
+  { href: "/#accessibility", label: "Acessibilidade" },
 ];
 
 export function Navbar() {
@@ -23,17 +23,17 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-border/60 bg-background/90 backdrop-blur-md">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6"
+        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
         aria-label="Principal"
       >
-        <Logo showTagline size="lg" href="/" />
+        <Logo size="md" href="/" className="shrink-0" />
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-1 rounded-full border-2 border-border/60 bg-muted/50 p-1 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="block whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-card hover:text-foreground hover:shadow-sm"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden shrink-0 items-center gap-2 whitespace-nowrap lg:flex">
           <ThemeToggle compact />
           {!isLoading && isAuthenticated ? (
             <UserMenu />
@@ -65,7 +65,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border-2 border-border md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border-2 border-border lg:hidden"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -76,7 +76,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "border-t-2 border-border bg-background px-4 py-4 md:hidden",
+          "border-t-2 border-border bg-background px-4 py-4 lg:hidden",
           open ? "block" : "hidden"
         )}
       >

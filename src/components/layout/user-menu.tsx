@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { ROUTES } from "@/utils/constants";
 import { cn } from "@/lib/utils";
-import { resolveAvatarIcon } from "@/lib/icons/kid-icons";
+import { AvatarFigure } from "@/components/gamification/avatar-figure";
 
 interface UserMenuProps {
   compact?: boolean;
@@ -29,7 +29,6 @@ export function UserMenu({ compact }: UserMenuProps) {
   }
 
   const avatarKey = user.avatarEmoji ?? (user.role === "child" ? "rabbit" : "smile");
-  const AvatarIcon = resolveAvatarIcon(avatarKey);
   const dashboardHref = ROUTES.dashboard;
 
   return (
@@ -39,11 +38,8 @@ export function UserMenu({ compact }: UserMenuProps) {
         className="group flex items-center gap-2 rounded-2xl border-2 border-primary/20 bg-speakup-green-soft/40 px-3 py-2 transition-all hover:border-primary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         aria-label={`Ir para o painel de ${user.name}`}
       >
-        <span
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-card shadow-sm"
-          aria-hidden
-        >
-          <AvatarIcon className="h-6 w-6 text-primary" strokeWidth={2.25} />
+        <span className="block h-10 w-10 overflow-hidden rounded-full shadow-sm" aria-hidden>
+          <AvatarFigure base={avatarKey} />
         </span>
         <span className="hidden max-w-[120px] truncate font-semibold sm:inline">
           {user.name}

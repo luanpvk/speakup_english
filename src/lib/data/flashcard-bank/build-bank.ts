@@ -423,14 +423,14 @@ const NATURE: Tuple[] = [
   ["seed", "semente"], ["fruit", "fruta"], ["vegetable", "legume", "🥕"],
 ];
 
-/** Frases com padrão: I like + noun */
+/** Frases com padrão: I like the + noun ("I like car" não é inglês correto) */
 function buildLikePhrases(nouns: Tuple[]): FlashcardBankEntry[] {
   return nouns.slice(0, 80).map(([noun, pt, emoji], i) => ({
     id: `like-${i}`,
-    word: `I like ${noun}`,
-    translation: `Eu gosto de ${pt}`,
+    word: `I like the ${noun}`,
+    translation: `Eu gosto do(a) ${pt}`,
     emoji,
-    example: `I like ${noun}.`,
+    example: `I like the ${noun}.`,
     category: "phrases-pattern",
   }));
 }

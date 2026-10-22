@@ -22,7 +22,7 @@ const defaultPrefs: AccessibilityPreferences = {
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
-      theme: "light",
+      theme: "dark",
       ...defaultPrefs,
       setTheme: (theme) => {
         set({ theme });

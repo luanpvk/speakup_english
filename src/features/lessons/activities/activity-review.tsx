@@ -1,11 +1,10 @@
 "use client";
 
-import { AlertCircle, Trophy } from "lucide-react";
-import { LoadingState } from "@/components/ui/loading-state";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import { AlertCircle } from "lucide-react";
 import { KidIcon } from "@/lib/icons/kid-icons";
 import type { LessonActivityReview } from "@/types/lesson";
+import { LessonFooter, speak } from "../lesson-kit";
 
 interface Props {
   data: LessonActivityReview;
@@ -15,66 +14,46 @@ interface Props {
   pendingMistakes?: number;
 }
 
-export function ActivityReview({
-  data,
-  onFinish,
-  finishing,
-  canFinish = true,
-  pendingMistakes = 0,
-}: Props) {
+export function ActivityReview({ data, onFinish, finishing, canFinish = true, pendingMistakes = 0 }: Props) {
   return (
-    <Card className="relative border-2 border-primary text-center">
-      {finishing && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-card/90 backdrop-blur-sm">
-          <LoadingState message="Salvando progresso..." variant="save" />
+    <div className="flex flex-col items-center gap-5 text-center">
+      <Image src="/mascot.png" alt="" width={110} height={110} className="animate-hop" />
+      <div>
+        <h3 className="font-display text-2xl font-bold">Você chegou ao fim!</h3>
+        <p className="text-muted-foreground">Toque nas palavras para ouvir mais uma vez.</p>
+      </div>
+
+      {!canFinish && pendingMistakes > 0 && (
+        <p className="flex items-center gap-2 rounded-2xl bg-amber-400/15 px-4 py-3 text-sm">
+          <AlertCircle className="h-5 w-5 shrink-0 text-amber-500" aria-hidden />
+          Ainda {pendingMistakes === 1 ? "falta corrigir 1 erro" : `faltam corrigir ${pendingMistakes} erros`}.
+        </p>
+      )}
+
+      {data.words.length > 0 && (
+        <div className="grid w-full grid-cols-2 gap-3">
+          {data.words.map((w) => (
+            <button
+              key={w.word}
+              type="button"
+              onClick={() => speak(w.word, { force: true })}
+              className="press-3d flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3 text-left shadow-[0_4px_0_hsl(var(--border-shadow))] hover:bg-muted/50"
+            >
+              <KidIcon emoji={w.emoji} word={w.word} size="md" variant="plain" />
+              <span className="min-w-0">
+                <span className="block font-display text-lg font-bold leading-tight text-primary">{w.word}</span>
+                <span className="block text-sm text-muted-foreground">{w.translation}</span>
+              </span>
+            </button>
+          ))}
         </div>
       )}
-      <CardContent className="space-y-6 py-10">
-        <Trophy className="mx-auto h-16 w-16 text-amber-500" strokeWidth={2} />
-        <h3 className="font-display text-2xl font-bold">Hora da revisão!</h3>
-        <p className="text-muted-foreground">{data.summary}</p>
 
-        {!canFinish && pendingMistakes > 0 && (
-          <div className="flex items-center justify-center gap-2 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:bg-amber-950/40">
-            <AlertCircle className="h-5 w-5 shrink-0" />
-            <span>
-              Ainda há {pendingMistakes} {pendingMistakes === 1 ? "erro" : "erros"} para corrigir
-              antes do parabéns.
-            </span>
-          </div>
-        )}
-
-        {data.words.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-3">
-            {data.words.map((w) => (
-              <div
-                key={w.word}
-                className="flex items-center gap-2 rounded-xl border bg-muted/40 px-4 py-2 text-sm"
-              >
-                <KidIcon emoji={w.emoji} word={w.word} size="sm" variant="plain" />
-                <span>
-                  <strong>{w.word}</strong> — {w.translation}
-                </span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <Button
-          size="lg"
-          className="w-full gap-2"
-          onClick={onFinish}
-          disabled={finishing || !canFinish}
-        >
-          {finishing ? (
-            "Salvando..."
-          ) : canFinish ? (
-            "Concluir lição e ganhar recompensas!"
-          ) : (
-            "Corrija os erros primeiro"
-          )}
-        </Button>
-      </CardContent>
-    </Card>
+      <LessonFooter
+        actionLabel={finishing ? "Salvando..." : "Concluir lição"}
+        disabled={finishing || !canFinish}
+        onAction={onFinish}
+      />
+    </div>
   );
 }

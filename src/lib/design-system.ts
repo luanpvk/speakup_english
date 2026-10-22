@@ -1,5 +1,5 @@
 /**
- * Design tokens — SpeakUp English
+ * Design tokens: SpeakUp English
  * Cores principais: amarelo (accent), verde (primary), roxo (secondary)
  */
 export const designTokens = {

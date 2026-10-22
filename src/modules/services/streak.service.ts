@@ -12,7 +12,7 @@ export async function recordDailyActivity(childProfileId: string): Promise<void>
   await connectDB();
 
   const today = startOfLocalDay(new Date());
-  let streak = await Streak.findOne({ childProfileId });
+  const streak = await Streak.findOne({ childProfileId });
 
   if (!streak) {
     await Streak.create({

@@ -4,27 +4,27 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl font-display text-base font-semibold tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-md hover:bg-primary/90",
+          "press-3d bg-primary text-primary-foreground shadow-[0_4px_0_hsl(var(--primary-shadow))] hover:brightness-105",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-md hover:bg-secondary/90",
+          "press-3d bg-secondary text-secondary-foreground shadow-[0_4px_0_hsl(var(--secondary-shadow))] hover:brightness-105",
         accent:
-          "bg-accent text-accent-foreground shadow-md hover:bg-accent/90",
+          "press-3d bg-accent text-accent-foreground shadow-[0_4px_0_hsl(var(--accent-shadow))] hover:brightness-105",
         outline:
-          "border-2 border-primary bg-transparent text-primary hover:bg-speakup-green-soft",
-        ghost: "hover:bg-muted hover:text-foreground",
+          "press-3d border-2 border-border bg-card text-primary shadow-[0_4px_0_hsl(var(--border-shadow))] hover:bg-muted/60",
+        ghost: "shadow-none hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         child:
-          "border-2 border-primary/70 bg-card text-primary shadow-sm hover:bg-speakup-green-soft/60 hover:border-primary",
+          "press-3d border-2 border-primary/60 bg-card text-primary shadow-[0_4px_0_hsl(var(--primary)/0.45)] hover:bg-speakup-green-soft/60",
       },
       size: {
-        default: "h-11 px-6 py-2",
-        sm: "h-9 rounded-lg px-4 text-sm",
-        lg: "h-14 rounded-2xl px-8 text-lg",
+        default: "h-12 px-6 py-2",
+        sm: "h-10 rounded-xl px-4 text-sm",
+        lg: "h-14 px-8 text-lg",
         icon: "h-11 w-11",
       },
     },

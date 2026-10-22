@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useThemeStore } from "@/store/theme-store";
 import { useAuthStore } from "@/store/auth-store";
 import { authApi } from "@/services/auth.service";
+import { markSessionActive, msSinceLastRefresh, onSessionLost, refreshSession } from "@/services/api-client";
+import { toast } from "@/store/toast-store";
+import { Toaster } from "@/components/ui/toaster";
 
 function ThemeSync() {
   const applyToDocument = useThemeStore((s) => s.applyToDocument);
@@ -18,20 +20,42 @@ function ThemeSync() {
 }
 
 async function resolveSession() {
+  // apiFetch já renova a sessão sozinho se o token de acesso tiver expirado
   const me = await authApi.me();
-  if (me.success && me.data?.user) {
-    return me.data.user;
-  }
+  return me.success && me.data?.user ? me.data.user : null;
+}
 
-  const refreshed = await authApi.refresh();
-  if (!refreshed.success) {
-    return null;
-  }
+/** Renova antes do token de acesso (15 min) expirar */
+const KEEP_ALIVE_MS = 10 * 60_000;
 
-  const retry = await authApi.me();
-  if (retry.success && retry.data?.user) {
-    return retry.data.user;
-  }
+/** Mantém a sessão viva enquanto a aba está aberta e avisa se ela acabar de vez */
+function SessionKeeper() {
+  const user = useAuthStore((s) => s.user);
+  const setUser = useAuthStore((s) => s.setUser);
+
+  useEffect(() => {
+    if (!user) return;
+    markSessionActive();
+
+    const interval = window.setInterval(() => void refreshSession(), KEEP_ALIVE_MS);
+    // Ao voltar para a aba (ex.: computador dormiu), renova se já passou do ponto
+    const onVisible = () => {
+      if (document.visibilityState === "visible" && msSinceLastRefresh() > KEEP_ALIVE_MS) {
+        void refreshSession();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    const stopListening = onSessionLost(() => {
+      setUser(null);
+      toast.warning("Sua sessão acabou", "Entre de novo para continuar de onde parou.");
+    });
+
+    return () => {
+      window.clearInterval(interval);
+      document.removeEventListener("visibilitychange", onVisible);
+      stopListening();
+    };
+  }, [user, setUser]);
 
   return null;
 }
@@ -99,11 +123,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <NextThemesProvider attribute="class" defaultTheme="light" enableSystem>
-        <ThemeSync />
-        <AuthBootstrap />
-        {children}
-      </NextThemesProvider>
+      <ThemeSync />
+      <AuthBootstrap />
+      <SessionKeeper />
+      {children}
+      <Toaster />
     </QueryClientProvider>
   );
 }

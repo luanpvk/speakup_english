@@ -31,18 +31,21 @@ export function ProgressBar({
         </div>
       )}
       <div
-        className="h-4 overflow-hidden rounded-full border-2 border-border bg-muted"
+        className="h-4 overflow-hidden rounded-full bg-muted"
         role="progressbar"
         aria-valuenow={value}
         aria-valuemin={0}
         aria-valuemax={100}
       >
         <motion.div
-          className={cn("h-full rounded-full", colors[color])}
+          className={cn("relative h-full rounded-full", colors[color])}
           initial={{ width: 0 }}
           animate={{ width: `${Math.min(100, Math.max(0, value))}%` }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-        />
+        >
+          {/* brilho no topo da barra */}
+          <span className="absolute inset-x-2 top-1 h-1 rounded-full bg-white/35" aria-hidden />
+        </motion.div>
       </div>
     </div>
   );

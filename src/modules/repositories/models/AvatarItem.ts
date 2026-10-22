@@ -7,7 +7,7 @@ const AvatarItemSchema = new Schema<IAvatarItem>(
     name: { type: String, required: true },
     type: {
       type: String,
-      enum: ["hair", "clothes", "accessory"],
+      enum: ["hair", "clothes", "accessory", "background"],
       required: true,
     },
     icon: { type: String, required: true },

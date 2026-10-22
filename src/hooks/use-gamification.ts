@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { gamificationApi } from "@/services/gamification.service";
 
@@ -25,16 +26,32 @@ export function useChildStats(enabled = true) {
   });
 }
 
+async function fetchLesson(slug: string) {
+  const res = await gamificationApi.getLesson(slug);
+  if (!res.success || !res.data) throw new Error(res.error ?? "Lição não encontrada");
+  return res.data;
+}
+
 export function useLesson(slug: string, enabled = true) {
   return useQuery({
     queryKey: gamificationKeys.lesson(slug),
-    queryFn: async () => {
-      const res = await gamificationApi.getLesson(slug);
-      if (!res.success || !res.data) throw new Error(res.error ?? "Lição não encontrada");
-      return res.data;
-    },
+    queryFn: () => fetchLesson(slug),
     enabled: enabled && Boolean(slug),
+    staleTime: 5 * 60_000,
   });
+}
+
+/** Baixa a próxima lição em segundo plano para ela abrir na hora */
+export function usePrefetchLesson(slug?: string) {
+  const queryClient = useQueryClient();
+  useEffect(() => {
+    if (!slug) return;
+    void queryClient.prefetchQuery({
+      queryKey: gamificationKeys.lesson(slug),
+      queryFn: () => fetchLesson(slug),
+      staleTime: 5 * 60_000,
+    });
+  }, [queryClient, slug]);
 }
 
 export function useCompleteLesson() {
@@ -51,6 +68,16 @@ export function useCompleteLesson() {
     }) => gamificationApi.completeLesson(slug, score, timeSpentSeconds),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["gamification"] });
+    },
+  });
+}
+
+export function useUpdateChildProfile() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: gamificationApi.updateProfile,
+    onSuccess: (res) => {
+      if (res.success) queryClient.invalidateQueries({ queryKey: ["gamification"] });
     },
   });
 }

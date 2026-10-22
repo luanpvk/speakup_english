@@ -1,65 +1,42 @@
-import { UserPlus, KeyRound, TrendingUp } from "lucide-react";
+import { KeyRound, Sprout, UserPlus, type LucideIcon } from "lucide-react";
+import { SectionHeading } from "./section-heading";
 
-const steps = [
+const steps: { icon: LucideIcon; title: string; text: string }[] = [
   {
-    step: "1",
     icon: UserPlus,
-    title: "Cadastre-se como responsável",
-    description: "Crie sua conta e configure o perfil da criança com PIN seguro.",
+    title: "Você cria a conta",
+    text: "Leva uns dois minutos. Depois cadastre a criança e escolha um PIN de 4 números para ela.",
   },
   {
-    step: "2",
     icon: KeyRound,
-    title: "A criança entra na área kids",
-    description: "Interface grande, colorida e calma — login com usuário e PIN de 4 dígitos.",
+    title: "A criança entra",
+    text: "Com o seu e-mail, o usuário dela e o PIN. Botões grandes e telas calmas desde o primeiro toque.",
   },
   {
-    step: "3",
-    icon: TrendingUp,
-    title: "Aprenda e acompanhe",
-    description: "Lições curtas, streak gentil e painel para pais verem o progresso.",
+    icon: Sprout,
+    title: "Um pouquinho por dia",
+    text: "Uma lição curta por dia já faz diferença. A trilha mostra sempre qual é a próxima.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section
-      id="how-it-works"
-      className="bg-muted/30 px-4 py-16 md:py-24"
-      aria-labelledby="how-heading"
-    >
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <h2 id="how-heading" className="font-display text-3xl font-bold md:text-4xl">
-            Como funciona
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Três passos simples para começar a jornada em inglês.
-          </p>
-        </div>
-        <ol className="mt-12 grid gap-6 md:grid-cols-3">
-          {steps.map((item) => (
-            <li
-              key={item.step}
-              className="relative rounded-2xl border-2 border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="flex items-center gap-3">
-                <span
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-lg font-bold text-primary-foreground"
-                  aria-hidden
-                >
-                  {item.step}
-                </span>
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-speakup-green-soft">
-                  <item.icon className="h-5 w-5 text-primary" aria-hidden />
-                </span>
-              </div>
-              <h3 className="mt-4 font-display text-xl font-bold">{item.title}</h3>
-              <p className="mt-2 text-muted-foreground">{item.description}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
+    <section id="how-it-works" className="px-4 py-16 md:py-24" aria-labelledby="how-heading">
+      <SectionHeading id="how-heading" eyebrow="Começar é fácil" title="Como funciona" />
+      <ol className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+        {steps.map(({ icon: Icon, title, text }, i) => (
+          <li key={title} className="relative flex flex-col items-center text-center">
+            <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_6px_0_hsl(var(--primary-shadow))]">
+              <Icon className="h-9 w-9" strokeWidth={2.3} aria-hidden />
+              <span className="absolute -right-1 -top-1 flex h-8 w-8 items-center justify-center rounded-full border-4 border-background bg-accent font-display text-sm font-bold text-accent-foreground">
+                {i + 1}
+              </span>
+            </span>
+            <h3 className="mt-5 font-display text-xl font-bold">{title}</h3>
+            <p className="mt-1 max-w-xs text-muted-foreground">{text}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
   Produto: [
-    { href: "#features", label: "Recursos" },
-    { href: "#how-it-works", label: "Como funciona" },
+    { href: "/#features", label: "Recursos" },
+    { href: "/#how-it-works", label: "Como funciona" },
     { href: "/register", label: "Cadastro" },
   ],
   Acesso: [
@@ -29,8 +29,8 @@ export function Footer() {
           <div className="md:col-span-1">
             <Logo size="lg" href="/" />
             <p className="mt-4 max-w-xs text-muted-foreground">
-              Inglês gamificado, acolhedor e pensado para crianças — com foco em
-              acessibilidade e baixo estímulo.
+              Inglês para crianças aprenderem no ritmo delas, com calma e muita comemoração a
+              cada acerto.
             </p>
           </div>
 

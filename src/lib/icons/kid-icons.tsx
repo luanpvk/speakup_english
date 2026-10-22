@@ -1,3 +1,4 @@
+import { createElement } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
   Hand,
@@ -53,6 +54,9 @@ import {
   Plane,
   Laptop,
   Leaf,
+  TrainFront,
+  Hash,
+  Lightbulb,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -92,6 +96,20 @@ const EMOJI_ICON: Record<string, LucideIcon> = {
   "🎉": Sparkles,
   "🪙": Star,
   "🔒": HelpCircle,
+  // Temas de hiperfoco e tutorial
+  "🚀": Rocket,
+  "🚆": TrainFront,
+  "📅": Calendar,
+  "🔢": Hash,
+  "🎮": Gamepad2,
+  "🎵": Music,
+  "⚽": Dumbbell,
+  "🌳": TreePine,
+  "🍳": ChefHat,
+  "🌊": Waves,
+  "🃏": Layers,
+  "💡": Lightbulb,
+  "⭐": Star,
 };
 
 const SLUG_ICON: Record<string, LucideIcon> = {
@@ -174,7 +192,7 @@ export function resolveKidIcon(
     if (re.test(input)) return icon;
   }
 
-  return Languages;
+  return Sparkles;
 }
 
 const SIZE_CLASS = {
@@ -212,14 +230,11 @@ export function KidIcon({
   className,
   iconClassName,
 }: KidIconProps) {
-  const Icon = resolveKidIcon(emoji ?? word, { slug });
-  const iconEl = (
-    <Icon
-      className={cn(SIZE_CLASS[size], "text-primary shrink-0", iconClassName)}
-      strokeWidth={2.25}
-      aria-hidden
-    />
-  );
+  const iconEl = createElement(resolveKidIcon(emoji ?? word, { slug }), {
+    className: cn(SIZE_CLASS[size], "text-primary shrink-0", iconClassName),
+    strokeWidth: 2.25,
+    "aria-hidden": true,
+  });
 
   if (variant === "plain") {
     return <span className={cn("inline-flex", className)}>{iconEl}</span>;
@@ -243,20 +258,12 @@ export const AVATAR_ICON_OPTIONS = [
   { id: "rabbit", Icon: Rabbit, label: "Coelho" },
   { id: "cat", Icon: Cat, label: "Gato" },
   { id: "dog", Icon: Dog, label: "Cachorro" },
-  { id: "bird", Icon: Bird, label: "Pássaro" },
-  { id: "fish", Icon: Fish, label: "Peixe" },
-  { id: "smile", Icon: Smile, label: "Sorriso" },
-  { id: "star", Icon: Star, label: "Estrela" },
-  { id: "sparkles", Icon: Sparkles, label: "Mágica" },
+  { id: "bird", Icon: Bird, label: "Passarinho" },
+  { id: "fish", Icon: Fish, label: "Peixinho" },
+  { id: "smile", Icon: Smile, label: "Criança" },
+  { id: "star", Icon: Star, label: "Estrelinha" },
+  { id: "sparkles", Icon: Sparkles, label: "Unicórnio" },
 ] as const;
-
-export function resolveAvatarIcon(avatarKey?: string | null): LucideIcon {
-  const key = (avatarKey ?? "rabbit").replace(/[^\w]/g, "").toLowerCase();
-  const found = AVATAR_ICON_OPTIONS.find((o) => o.id === key);
-  if (found) return found.Icon;
-  if (avatarKey && EMOJI_ICON[avatarKey]) return EMOJI_ICON[avatarKey];
-  return Rabbit;
-}
 
 export {
   BookOpen,

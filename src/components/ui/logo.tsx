@@ -6,7 +6,7 @@ interface LogoProps {
   className?: string;
   showTagline?: boolean;
   size?: "sm" | "md" | "lg" | "xl";
-  /** Destino ao clicar — padrão: página inicial */
+  /** Destino ao clicar: padrão: página inicial */
   href?: string;
 }
 
@@ -32,7 +32,7 @@ export function Logo({
         "inline-flex items-center gap-3 rounded-lg transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
         className
       )}
-      aria-label="SpeakUp English — voltar para a página inicial"
+      aria-label="SpeakUp English, voltar para a página inicial"
     >
       <Image
         src="/logo.png"

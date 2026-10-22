@@ -1,4 +1,4 @@
-import type { ApiResponse } from "@/types";
+import { apiFetch } from "@/services/api-client";
 
 export interface ChildListItem {
   id: string;
@@ -11,27 +11,20 @@ export interface ChildListItem {
   isActive: boolean;
 }
 
-async function fetchApi<T>(url: string, options?: RequestInit): Promise<ApiResponse<T>> {
-  const res = await fetch(url, {
-    ...options,
-    credentials: "include",
-    headers: { "Content-Type": "application/json", ...options?.headers },
-  });
-  return res.json() as Promise<ApiResponse<T>>;
-}
 
 export const parentApi = {
   listChildren: () =>
-    fetchApi<{ children: ChildListItem[] }>("/api/parent/children"),
+    apiFetch<{ children: ChildListItem[] }>("/api/parent/children"),
 
   createChild: (data: {
     displayName: string;
     username: string;
     pin: string;
     avatarEmoji?: string;
+    hyperfocus?: string;
     birthYear?: number;
   }) =>
-    fetchApi<{ child: ChildListItem }>("/api/parent/children", {
+    apiFetch<{ child: ChildListItem }>("/api/parent/children", {
       method: "POST",
       body: JSON.stringify(data),
     }),

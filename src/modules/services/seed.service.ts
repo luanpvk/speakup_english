@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { connectDB } from "@/lib/mongodb";
 import { LESSON_CONTENT, CHAPTER_MODULES } from "@/lib/data/lesson-content";
 import { lessonContentToDbFields, LESSON_CONTENT_VERSION } from "@/lib/lessons/lesson-db";
@@ -14,43 +15,70 @@ import {
   Achievement,
 } from "@/modules/repositories/models";
 
-let seeded = false;
+/** Promise compartilhada: requisições simultâneas esperam o mesmo seed em vez de repetir */
+let seeding: Promise<void> | null = null;
 
-export async function ensureSeedData(): Promise<void> {
-  if (seeded) return;
+export function ensureSeedData(): Promise<void> {
+  seeding ??= runSeed().catch((error) => {
+    seeding = null; // permite tentar de novo na próxima requisição
+    throw error;
+  });
+  return seeding;
+}
+
+async function runSeed(): Promise<void> {
   await connectDB();
 
-  for (const mod of CHAPTER_MODULES) {
-    await Module.findOneAndUpdate({ slug: mod.slug }, { ...mod, isActive: true }, { upsert: true });
-  }
+  // Poucas idas ao banco: importante com MongoDB remoto (antes eram ~900 consultas sequenciais)
+  await Module.bulkWrite(
+    CHAPTER_MODULES.map((mod) => ({
+      updateOne: { filter: { slug: mod.slug }, update: { $set: { ...mod, isActive: true } }, upsert: true },
+    })),
+    { ordered: false }
+  );
 
-  for (const content of LESSON_CONTENT) {
-    const fields = lessonContentToDbFields(content);
-    const existing = await Lesson.findOne({ slug: content.slug }).select("contentVersion").lean();
-    if (!existing || (existing.contentVersion ?? 1) < LESSON_CONTENT_VERSION) {
-      await Lesson.findOneAndUpdate({ slug: content.slug }, fields, { upsert: true, returnDocument: "after" });
-    }
+  const upToDate = new Set(
+    (
+      await Lesson.find({ contentVersion: mongoose.trusted({ $gte: LESSON_CONTENT_VERSION }) })
+        .select("slug")
+        .lean()
+    ).map((l) => l.slug)
+  );
+  const outdated = LESSON_CONTENT.filter((c) => !upToDate.has(c.slug));
+  if (outdated.length > 0) {
+    await Lesson.bulkWrite(
+      outdated.map((content) => ({
+        updateOne: {
+          filter: { slug: content.slug },
+          update: { $set: lessonContentToDbFields(content) },
+          upsert: true,
+        },
+      })),
+      { ordered: false }
+    );
   }
 
   const activeSlugs = LESSON_CONTENT.map((c) => c.slug);
-  await Lesson.updateMany({ slug: { $nin: activeSlugs } }, { isActive: false });
+  await Lesson.updateMany({ slug: mongoose.trusted({ $nin: activeSlugs }) }, { isActive: false });
 
-  const itemCount = await AvatarItem.countDocuments();
-  if (itemCount === 0) {
-    await AvatarItem.insertMany(SEED_AVATAR_ITEMS);
-  }
+  await AvatarItem.bulkWrite(
+    SEED_AVATAR_ITEMS.map((item) => ({
+      updateOne: { filter: { slug: item.slug }, update: { $set: { ...item, isActive: true } }, upsert: true },
+    })),
+    { ordered: false }
+  );
 
   const rewardCount = await Reward.countDocuments();
   if (rewardCount === 0) {
     await Reward.insertMany(SEED_REWARDS);
   }
 
-  const achievementCount = await Achievement.countDocuments();
-  if (achievementCount === 0) {
-    await Achievement.insertMany(SEED_ACHIEVEMENTS);
-  }
-
-  seeded = true;
+  await Achievement.bulkWrite(
+    SEED_ACHIEVEMENTS.map((a) => ({
+      updateOne: { filter: { slug: a.slug }, update: { $set: { ...a, isActive: true } }, upsert: true },
+    })),
+    { ordered: false }
+  );
 }
 
 /** Força atualização do conteúdo das lições (dev/admin) */

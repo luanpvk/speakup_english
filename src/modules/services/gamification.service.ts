@@ -1,20 +1,20 @@
+import mongoose from "mongoose";
 import { connectDB } from "@/lib/mongodb";
 import {
   levelFromXp,
   xpProgressInLevel,
 } from "@/lib/data/seed-content";
 import { ensureSeedData } from "@/modules/services/seed.service";
+import { hyperfocusModules } from "@/lib/data/hyperfocus";
+import { completedModuleSlugs, getCatalog, type Catalog } from "@/modules/services/catalog.service";
 import {
   ChildProfile,
   Progress,
   Streak,
-  Module,
   Lesson,
   Reward,
-  Achievement,
   Avatar,
   AvatarItem,
-  Ranking,
   ChildAchievement,
 } from "@/modules/repositories/models";
 import type { TokenUser } from "@/lib/auth/jwt";
@@ -99,40 +99,20 @@ async function ensureChildAvatar(childProfileId: string, baseEmoji: string) {
   return avatar;
 }
 
-async function updateRanking(childProfileId: string, displayName: string, avatarEmoji: string, score: number) {
-  for (const period of ["alltime", "weekly"] as const) {
-    await Ranking.findOneAndUpdate(
-      { childProfileId, period },
-      { displayName, avatarEmoji, score },
-      { upsert: true, returnDocument: "after" }
-    );
-  }
-
-  const allEntries = await Ranking.find({ period: "alltime" })
-    .sort({ score: -1 })
-    .limit(50)
-    .lean();
-
-  for (let i = 0; i < allEntries.length; i++) {
-    await Ranking.updateOne(
-      { _id: allEntries[i]._id },
-      { rank: i + 1 }
-    );
-  }
-}
-
 async function checkAchievements(childProfileId: string) {
-  const profile = await ChildProfile.findById(childProfileId);
-  const streak = await Streak.findOne({ childProfileId });
-  const lessonCount = await Progress.countDocuments({ childProfileId });
+  const [profile, streak, lessonCount, unlocked, catalog] = await Promise.all([
+    ChildProfile.findById(childProfileId),
+    Streak.findOne({ childProfileId }).lean(),
+    Progress.countDocuments({ childProfileId }),
+    ChildAchievement.find({ childProfileId }).select("achievementSlug").lean(),
+    getCatalog(),
+  ]);
   if (!profile) return [];
 
-  const achievements = await Achievement.find({ isActive: true }).lean();
-  const unlocked = await ChildAchievement.find({ childProfileId }).lean();
   const unlockedSlugs = new Set(unlocked.map((a) => a.achievementSlug));
   const newlyUnlocked: string[] = [];
 
-  for (const ach of achievements) {
+  for (const ach of catalog.achievements) {
     if (unlockedSlugs.has(ach.slug)) continue;
 
     let met = false;
@@ -155,10 +135,6 @@ async function checkAchievements(childProfileId: string) {
     }
 
     if (met) {
-      await ChildAchievement.create({
-        childProfileId,
-        achievementSlug: ach.slug,
-      });
       profile.xp += ach.xpBonus;
       profile.coins += ach.coinBonus;
       profile.medals += 1;
@@ -168,7 +144,12 @@ async function checkAchievements(childProfileId: string) {
 
   if (newlyUnlocked.length) {
     profile.level = levelFromXp(profile.xp);
-    await profile.save();
+    await Promise.all([
+      ChildAchievement.insertMany(
+        newlyUnlocked.map((achievementSlug) => ({ childProfileId, achievementSlug }))
+      ),
+      profile.save(),
+    ]);
   }
 
   return newlyUnlocked;
@@ -176,9 +157,11 @@ async function checkAchievements(childProfileId: string) {
 
 function isModuleUnlocked(
   mod: { requiredLevel: number; requiredModuleSlug?: string; slug: string },
-  profile: { level: number },
+  profile: { level: number; hyperfocus?: string },
   completedModuleSlugs: Set<string>
 ): boolean {
+  // Capítulos do hiperfoco ficam sempre liberados
+  if (hyperfocusModules(profile.hyperfocus).includes(mod.slug)) return true;
   if (profile.level < mod.requiredLevel) return false;
   if (mod.requiredModuleSlug && !completedModuleSlugs.has(mod.requiredModuleSlug)) {
     return false;
@@ -186,37 +169,34 @@ function isModuleUnlocked(
   return true;
 }
 
-export async function getChildStats(childProfileId: string) {
-  await ensureSeedData();
-  await connectDB();
-
-  const profile = await getChildProfileOrThrow(childProfileId);
-  const streak = await Streak.findOne({ childProfileId }).lean();
-  const progressList = await Progress.find({ childProfileId }).lean();
-  const completedLessonIds = new Set(progressList.map((p) => p.lessonId));
-  const avatar = await ensureChildAvatar(childProfileId, profile.avatarEmoji);
-
-  const modules = await Module.find({ isActive: true }).sort({ order: 1 }).lean();
-  const lessons = await Lesson.find({ isActive: true }).sort({ order: 1 }).lean();
-
-  const lessonsByModule = lessons.reduce<Record<string, typeof lessons>>((acc, l) => {
-    if (!acc[l.moduleSlug]) acc[l.moduleSlug] = [];
-    acc[l.moduleSlug].push(l);
-    return acc;
-  }, {});
-
-  const completedModuleSlugs = new Set<string>();
-  for (const mod of modules) {
-    const modLessons = lessonsByModule[mod.slug] ?? [];
-    if (modLessons.length > 0 && modLessons.every((l) => completedLessonIds.has(l.slug))) {
-      completedModuleSlugs.add(mod.slug);
-    }
+/** Lança erro se o capítulo da lição ainda está bloqueado para a criança */
+function assertModuleUnlocked(
+  catalog: Catalog,
+  moduleSlug: string,
+  profile: { level: number; hyperfocus?: string },
+  completedLessonIds: Set<string>
+) {
+  const mod = catalog.modules.find((m) => m.slug === moduleSlug);
+  if (mod && !isModuleUnlocked(mod, profile, completedModuleSlugs(catalog, completedLessonIds))) {
+    throw new Error("Módulo bloqueado. Complete as lições anteriores!");
   }
+}
 
+export async function getChildStats(childProfileId: string) {
+  const catalog = await getCatalog();
+  const [profile, streak, progressList, existingAvatar, childAchievements] = await Promise.all([
+    getChildProfileOrThrow(childProfileId),
+    Streak.findOne({ childProfileId }).lean(),
+    Progress.find({ childProfileId }).select("lessonId score").lean(),
+    Avatar.findOne({ childProfileId }).lean(),
+    ChildAchievement.find({ childProfileId }).select("achievementSlug unlockedAt").lean(),
+  ]);
+  const avatar = existingAvatar ?? (await ensureChildAvatar(childProfileId, profile.avatarEmoji));
+
+  const scoreByLesson = new Map(progressList.map((p) => [p.lessonId, p.score]));
+  const completedModules = completedModuleSlugs(catalog, new Set(scoreByLesson.keys()));
+  const unlockedAtBySlug = new Map(childAchievements.map((a) => [a.achievementSlug, a.unlockedAt]));
   const xpProgress = xpProgressInLevel(profile.xp, profile.level);
-  const achievements = await Achievement.find({ isActive: true }).lean();
-  const childAchievements = await ChildAchievement.find({ childProfileId }).lean();
-  const unlockedAchievementSlugs = new Set(childAchievements.map((a) => a.achievementSlug));
 
   return {
     profile: {
@@ -224,6 +204,7 @@ export async function getChildStats(childProfileId: string) {
       displayName: profile.displayName,
       username: profile.username,
       avatarEmoji: profile.avatarEmoji,
+      hyperfocus: profile.hyperfocus ?? null,
       level: profile.level,
       xp: profile.xp,
       coins: profile.coins ?? 0,
@@ -239,22 +220,22 @@ export async function getChildStats(childProfileId: string) {
     },
     xpProgress,
     lessonsCompleted: progressList.length,
-    totalLessons: lessons.length,
+    totalLessons: catalog.lessons.length,
     avatar: {
       hairSlug: avatar.hairSlug,
       clothesSlug: avatar.clothesSlug,
       accessorySlug: avatar.accessorySlug,
+      backgroundSlug: avatar.backgroundSlug ?? "bg-default",
       baseEmoji: avatar.baseEmoji,
     },
-    modules: modules.map((mod) => {
-      const modLessons = lessonsByModule[mod.slug] ?? [];
-      const completedCount = modLessons.filter((l) => completedLessonIds.has(l.slug)).length;
+    modules: catalog.modules.map((mod) => {
+      const modLessons = catalog.lessonsByModule.get(mod.slug) ?? [];
       return {
         ...mod,
         id: mod._id.toString(),
-        unlocked: isModuleUnlocked(mod, profile, completedModuleSlugs),
+        unlocked: isModuleUnlocked(mod, profile, completedModules),
         lessonsTotal: modLessons.length,
-        lessonsCompleted: completedCount,
+        lessonsCompleted: modLessons.filter((l) => scoreByLesson.has(l.slug)).length,
         lessons: modLessons.map((l) => ({
           id: l._id.toString(),
           slug: l.slug,
@@ -265,47 +246,36 @@ export async function getChildStats(childProfileId: string) {
           xpReward: l.xpReward,
           coinReward: l.coinReward,
           estimatedMinutes: l.estimatedMinutes,
-          completed: completedLessonIds.has(l.slug),
-          score: progressList.find((p) => p.lessonId === l.slug)?.score,
+          completed: scoreByLesson.has(l.slug),
+          score: scoreByLesson.get(l.slug),
         })),
       };
     }),
-    achievements: achievements.map((a) => ({
+    achievements: catalog.achievements.map((a) => ({
       ...a,
       id: a._id.toString(),
-      unlocked: unlockedAchievementSlugs.has(a.slug),
-      unlockedAt: childAchievements.find((ca) => ca.achievementSlug === a.slug)?.unlockedAt,
+      unlocked: unlockedAtBySlug.has(a.slug),
+      unlockedAt: unlockedAtBySlug.get(a.slug),
     })),
   };
 }
 
 export async function getLessonDetail(childProfileId: string, lessonSlug: string) {
-  await ensureSeedData();
-  await connectDB();
-
-  const lesson = await Lesson.findOne({ slug: lessonSlug, isActive: true }).lean();
+  const catalog = await getCatalog();
+  const [lesson, profile, progressList] = await Promise.all([
+    Lesson.findOne({ slug: lessonSlug, isActive: true }).lean(),
+    getChildProfileOrThrow(childProfileId),
+    Progress.find({ childProfileId }).select("lessonId score completedAt").lean(),
+  ]);
   if (!lesson) throw new Error("Lição não encontrada");
 
-  const progress = await Progress.findOne({ childProfileId, lessonId: lessonSlug }).lean();
-  const profile = await getChildProfileOrThrow(childProfileId);
-  const mod = await Module.findOne({ slug: lesson.moduleSlug }).lean();
-
-  if (mod) {
-    const modules = await Module.find({ isActive: true }).lean();
-    const allLessons = await Lesson.find({ isActive: true }).lean();
-    const progressList = await Progress.find({ childProfileId }).lean();
-    const completedLessonIds = new Set(progressList.map((p) => p.lessonId));
-    const completedModuleSlugs = new Set<string>();
-    for (const m of modules) {
-      const modLessons = allLessons.filter((l) => l.moduleSlug === m.slug);
-      if (modLessons.length > 0 && modLessons.every((l) => completedLessonIds.has(l.slug))) {
-        completedModuleSlugs.add(m.slug);
-      }
-    }
-    if (!isModuleUnlocked(mod, profile, completedModuleSlugs)) {
-      throw new Error("Módulo bloqueado. Complete as lições anteriores!");
-    }
-  }
+  assertModuleUnlocked(
+    catalog,
+    lesson.moduleSlug,
+    profile,
+    new Set(progressList.map((p) => p.lessonId))
+  );
+  const progress = progressList.find((p) => p.lessonId === lessonSlug);
 
   const activities =
     lesson.activities?.length > 0
@@ -419,58 +389,73 @@ export async function completeLesson(
   score: number,
   timeSpentSeconds: number
 ) {
-  await ensureSeedData();
-  await connectDB();
-
-  const lesson = await Lesson.findOne({ slug: lessonSlug, isActive: true });
+  const catalog = await getCatalog();
+  const [lesson, profile, progressList] = await Promise.all([
+    Lesson.findOne({ slug: lessonSlug, isActive: true }).lean(),
+    getChildProfileOrThrow(childProfileId),
+    Progress.find({ childProfileId }).select("lessonId score completedAt timeSpentSeconds").lean(),
+  ]);
   if (!lesson) throw new Error("Lição não encontrada");
+  // Impede ganhar XP/moedas de capítulos bloqueados chamando a API direto
+  assertModuleUnlocked(
+    catalog,
+    lesson.moduleSlug,
+    profile,
+    new Set(progressList.map((p) => p.lessonId))
+  );
 
-  const { upsertFlashcardsFromLesson } = await import("@/modules/services/flashcard.service");
-  const vocabWords = extractLessonVocabulary(lesson);
-  await upsertFlashcardsFromLesson(childProfileId, lessonSlug, vocabWords);
-
-  const profile = await getChildProfileOrThrow(childProfileId);
-  const existing = await Progress.findOne({ childProfileId, lessonId: lessonSlug });
+  const existing = progressList.find((p) => p.lessonId === lessonSlug);
   const isFirstComplete = !existing;
 
   const normalizedScore = Math.min(100, Math.max(0, score));
+  // Repetir a mesma lição em menos de 2 min não rende nada (evita farmar XP pela API)
+  const tooSoon =
+    !isFirstComplete && Date.now() - new Date(existing.completedAt).getTime() < 2 * 60_000;
   const xpGain = isFirstComplete
     ? lesson.xpReward + Math.floor(normalizedScore / 10)
-    : Math.floor(lesson.xpReward * 0.25);
-  const coinGain = isFirstComplete ? lesson.coinReward : Math.floor(lesson.coinReward * 0.1);
+    : tooSoon
+      ? 0
+      : Math.floor(lesson.xpReward * 0.25);
+  const coinGain = isFirstComplete
+    ? lesson.coinReward
+    : tooSoon
+      ? 0
+      : Math.floor(lesson.coinReward * 0.1);
   const starGain = isFirstComplete ? lesson.starReward : 0;
-
-  await Progress.findOneAndUpdate(
-    { childProfileId, lessonId: lessonSlug },
-    {
-      childProfileId,
-      lessonId: lessonSlug,
-      moduleId: lesson.moduleSlug,
-      score: Math.max(existing?.score ?? 0, normalizedScore),
-      completedAt: new Date(),
-      timeSpentSeconds: (existing?.timeSpentSeconds ?? 0) + timeSpentSeconds,
-    },
-    { upsert: true, returnDocument: "after" }
-  );
 
   profile.xp += xpGain;
   profile.coins += coinGain;
   profile.stars += starGain;
   profile.level = levelFromXp(profile.xp);
-  await profile.save();
 
-  const { recordDailyActivity } = await import("@/modules/services/streak.service");
-  await recordDailyActivity(childProfileId);
+  const [{ upsertFlashcardsFromLesson }, { recordDailyActivity }] = await Promise.all([
+    import("@/modules/services/flashcard.service"),
+    import("@/modules/services/streak.service"),
+  ]);
 
-  await updateRanking(
-    childProfileId,
-    profile.displayName,
-    profile.avatarEmoji,
-    profile.xp
-  );
+  // Escritas independentes em paralelo (cada ida ao banco remoto custa ~150 ms)
+  await Promise.all([
+    upsertFlashcardsFromLesson(childProfileId, lessonSlug, extractLessonVocabulary(lesson)),
+    Progress.updateOne(
+      { childProfileId, lessonId: lessonSlug },
+      {
+        childProfileId,
+        lessonId: lessonSlug,
+        moduleId: lesson.moduleSlug,
+        score: Math.max(existing?.score ?? 0, normalizedScore),
+        completedAt: new Date(),
+        timeSpentSeconds: (existing?.timeSpentSeconds ?? 0) + timeSpentSeconds,
+      },
+      { upsert: true }
+    ),
+    profile.save(),
+    recordDailyActivity(childProfileId),
+  ]);
 
   const newAchievements = await checkAchievements(childProfileId);
-  const updatedProfile = await ChildProfile.findById(childProfileId).lean();
+  const updatedProfile = newAchievements.length
+    ? await ChildProfile.findById(childProfileId).select("level xp coins stars").lean()
+    : null;
 
   return {
     xpGained: xpGain,
@@ -485,29 +470,21 @@ export async function completeLesson(
   };
 }
 
-/** Ranking ao vivo pelos perfis — sem duplicatas */
+/** Ranking ao vivo pelos perfis: sem duplicatas */
 export async function getRanking(period: "weekly" | "alltime" = "alltime", limit = 50) {
   await ensureSeedData();
   await connectDB();
 
   void period; // semanal usa o mesmo XP por enquanto; período reservado para evolução futura
 
+  // Só os campos e a quantidade necessários
   const profiles = await ChildProfile.find({ isActive: true })
     .sort({ xp: -1, updatedAt: -1 })
+    .limit(limit)
+    .select("displayName avatarEmoji xp")
     .lean();
 
-  const seen = new Set<string>();
-  const unique: typeof profiles = [];
-
-  for (const profile of profiles) {
-    const id = profile._id.toString();
-    if (seen.has(id)) continue;
-    seen.add(id);
-    unique.push(profile);
-    if (unique.length >= limit) break;
-  }
-
-  return unique.map((p, i) => ({
+  return profiles.map((p, i) => ({
     rank: i + 1,
     displayName: p.displayName,
     avatarEmoji: p.avatarEmoji,
@@ -529,9 +506,11 @@ export async function getShopItems(childProfileId: string) {
   await ensureSeedData();
   await connectDB();
 
-  const profile = await getChildProfileOrThrow(childProfileId);
-  const rewards = await Reward.find({ isActive: true }).lean();
-  const avatarItems = await AvatarItem.find({ isActive: true }).lean();
+  const [profile, rewards, avatarItems] = await Promise.all([
+    getChildProfileOrThrow(childProfileId),
+    Reward.find({ isActive: true }).lean(),
+    AvatarItem.find({ isActive: true }).lean(),
+  ]);
 
   const ownedSlugs = profile.ownedItemSlugs ?? [];
   const purchasedSlugs = profile.purchasedRewardSlugs ?? [];
@@ -581,22 +560,35 @@ export async function purchaseReward(childProfileId: string, rewardSlug: string)
   if (profile.coins < reward.cost) throw new Error("Moedas insuficientes");
   if (profile.level < reward.requiredLevel) throw new Error("Nível insuficiente");
 
-  profile.coins = (profile.coins ?? 0) - reward.cost;
-  profile.purchasedRewardSlugs = [...purchasedSlugs, rewardSlug];
+  // Atômico: dois cliques simultâneos não gastam a mesma moeda nem compram duas vezes
+  const updated = await ChildProfile.findOneAndUpdate(
+    {
+      _id: profile._id,
+      coins: mongoose.trusted({ $gte: reward.cost }),
+      purchasedRewardSlugs: mongoose.trusted({ $ne: rewardSlug }),
+    },
+    {
+      $inc: {
+        coins: -reward.cost,
+        stars: reward.type === "badge" ? 3 : 0,
+        xp: reward.type === "boost" ? 20 : 0,
+      },
+      $addToSet: {
+        purchasedRewardSlugs: rewardSlug,
+        ...(reward.avatarItemSlug && !ownedSlugs.includes(reward.avatarItemSlug)
+          ? { ownedItemSlugs: reward.avatarItemSlug }
+          : {}),
+      },
+    },
+    { returnDocument: "after" }
+  );
+  if (!updated) throw new Error("Moedas insuficientes ou recompensa já comprada");
 
-  if (reward.type === "badge") {
-    profile.stars += 3;
-  }
   if (reward.type === "boost") {
-    profile.xp += 20;
-    profile.level = levelFromXp(profile.xp);
+    updated.level = levelFromXp(updated.xp);
+    await updated.save();
   }
-  if (reward.avatarItemSlug && !ownedSlugs.includes(reward.avatarItemSlug)) {
-    profile.ownedItemSlugs = [...ownedSlugs, reward.avatarItemSlug];
-  }
-
-  await profile.save();
-  return { coins: profile.coins, stars: profile.stars, xp: profile.xp, level: profile.level };
+  return { coins: updated.coins, stars: updated.stars, xp: updated.xp, level: updated.level };
 }
 
 export async function purchaseAvatarItem(childProfileId: string, itemSlug: string) {
@@ -614,23 +606,37 @@ export async function purchaseAvatarItem(childProfileId: string, itemSlug: strin
   if (profile.level < item.unlockLevel) throw new Error("Nível insuficiente");
   if ((profile.coins ?? 0) < item.price) throw new Error("Moedas insuficientes");
 
-  profile.coins = (profile.coins ?? 0) - item.price;
-  profile.ownedItemSlugs = [...ownedSlugs, itemSlug];
-  await profile.save();
+  // Atômico: evita gastar a mesma moeda em pedidos simultâneos
+  const updated = await ChildProfile.findOneAndUpdate(
+    {
+      _id: profile._id,
+      coins: mongoose.trusted({ $gte: item.price }),
+      ownedItemSlugs: mongoose.trusted({ $ne: itemSlug }),
+    },
+    { $inc: { coins: -item.price }, $addToSet: { ownedItemSlugs: itemSlug } },
+    { returnDocument: "after" }
+  );
+  if (!updated) throw new Error("Moedas insuficientes ou item já comprado");
 
-  return { coins: profile.coins, ownedItemSlugs: profile.ownedItemSlugs };
+  return { coins: updated.coins, ownedItemSlugs: updated.ownedItemSlugs };
 }
 
 export async function updateAvatar(
   childProfileId: string,
-  data: { hairSlug?: string; clothesSlug?: string; accessorySlug?: string | null; baseEmoji?: string }
+  data: {
+    hairSlug?: string;
+    clothesSlug?: string;
+    accessorySlug?: string | null;
+    backgroundSlug?: string;
+    baseEmoji?: string;
+  }
 ) {
   await connectDB();
   const profile = await getChildProfileOrThrow(childProfileId);
   const avatar = await ensureChildAvatar(childProfileId, profile.avatarEmoji);
 
   const ownedSlugs = profile.ownedItemSlugs ?? [];
-  const slugsToCheck = [data.hairSlug, data.clothesSlug, data.accessorySlug].filter(Boolean) as string[];
+  const slugsToCheck = [data.hairSlug, data.clothesSlug, data.accessorySlug, data.backgroundSlug].filter(Boolean) as string[];
   for (const slug of slugsToCheck) {
     if (!ownedSlugs.includes(slug)) {
       const item = await AvatarItem.findOne({ slug, isDefault: true });
@@ -639,6 +645,7 @@ export async function updateAvatar(
   }
 
   if (data.hairSlug) avatar.hairSlug = data.hairSlug;
+  if (data.backgroundSlug) avatar.backgroundSlug = data.backgroundSlug;
   if (data.clothesSlug) avatar.clothesSlug = data.clothesSlug;
   if (data.accessorySlug !== undefined) {
     avatar.accessorySlug = data.accessorySlug || undefined;
@@ -653,15 +660,26 @@ export async function updateAvatar(
   const slugs = [avatar.hairSlug, avatar.clothesSlug, avatar.accessorySlug].filter(
     (s): s is string => Boolean(s)
   );
-  const items = await AvatarItem.find({ slug: { $in: slugs } }).lean();
+  const items = await AvatarItem.find({ slug: mongoose.trusted({ $in: slugs }) }).lean();
 
   return {
     hairSlug: avatar.hairSlug,
     clothesSlug: avatar.clothesSlug,
     accessorySlug: avatar.accessorySlug,
+    backgroundSlug: avatar.backgroundSlug ?? "bg-default",
     baseEmoji: avatar.baseEmoji,
     items,
   };
+}
+
+export async function updateChildProfile(
+  childProfileId: string,
+  data: { hyperfocus?: string | null }
+) {
+  const profile = await getChildProfileOrThrow(childProfileId);
+  if (data.hyperfocus !== undefined) profile.hyperfocus = data.hyperfocus ?? undefined;
+  await profile.save();
+  return { hyperfocus: profile.hyperfocus ?? null };
 }
 
 export async function getAvatarCustomization(childProfileId: string) {
@@ -677,6 +695,7 @@ export async function getAvatarCustomization(childProfileId: string) {
       hairSlug: avatar.hairSlug,
       clothesSlug: avatar.clothesSlug,
       accessorySlug: avatar.accessorySlug,
+      backgroundSlug: avatar.backgroundSlug ?? "bg-default",
       baseEmoji: avatar.baseEmoji,
     },
     ownedItemSlugs: profile.ownedItemSlugs ?? [],

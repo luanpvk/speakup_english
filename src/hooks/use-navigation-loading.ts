@@ -11,12 +11,19 @@ export function useNavigationLoading(): boolean {
   const pathname = usePathname();
   const appLoading = useAppLoadingActive();
   const [routeLoading, setRouteLoading] = useState(false);
+  const [prevPath, setPrevPath] = useState(pathname);
+
+  // Mudou de página: liga a barra (ajuste no render, sem efeito em cascata)
+  if (pathname !== prevPath) {
+    setPrevPath(pathname);
+    setRouteLoading(true);
+  }
 
   useEffect(() => {
-    setRouteLoading(true);
+    if (!routeLoading) return;
     const t = window.setTimeout(() => setRouteLoading(false), MIN_ROUTE_MS);
     return () => window.clearTimeout(t);
-  }, [pathname]);
+  }, [routeLoading, pathname]);
 
   return appLoading || routeLoading;
 }

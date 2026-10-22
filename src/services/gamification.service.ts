@@ -1,35 +1,7 @@
-import type { ApiResponse } from "@/types";
+import { apiFetch } from "@/services/api-client";
 import type { ChildStats, LessonDetail, RankingEntry } from "@/types/gamification";
 import type { DailyFlashcardSession, FlashcardRating } from "@/types/flashcard";
 
-async function apiFetch<T>(url: string, options?: RequestInit): Promise<ApiResponse<T>> {
-  try {
-    const res = await fetch(url, {
-      ...options,
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        ...options?.headers,
-      },
-    });
-
-    const data = (await res.json()) as ApiResponse<T>;
-
-    if (!res.ok && !data.error) {
-      return {
-        success: false,
-        error: `Erro do servidor (${res.status})`,
-      };
-    }
-
-    return data;
-  } catch {
-    return {
-      success: false,
-      error: "Não foi possível conectar ao servidor",
-    };
-  }
-}
 
 export const gamificationApi = {
   getStats: () => apiFetch<ChildStats>("/api/gamification/stats"),
@@ -81,6 +53,7 @@ export const gamificationApi = {
         hairSlug: string;
         clothesSlug: string;
         accessorySlug?: string;
+        backgroundSlug?: string;
         baseEmoji: string;
       };
       ownedItemSlugs: string[];
@@ -90,6 +63,12 @@ export const gamificationApi = {
 
   updateAvatar: (data: Record<string, string | null | undefined>) =>
     apiFetch<Record<string, unknown>>("/api/gamification/avatar", {
+      method: "PATCH",
+      body: JSON.stringify(data),
+    }),
+
+  updateProfile: (data: { hyperfocus?: string | null }) =>
+    apiFetch<{ hyperfocus: string | null }>("/api/gamification/profile", {
       method: "PATCH",
       body: JSON.stringify(data),
     }),

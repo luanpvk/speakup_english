@@ -1,9 +1,15 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { toast } from "@/store/toast-store";
+
+import { useState, useCallback, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import { Flame, Layers, X } from "lucide-react";
+import Image from "next/image";
+import { LessonFooter } from "./lesson-kit";
+import { ProgressBar } from "@/components/ui/progress-bar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLesson, useCompleteLesson } from "@/hooks/use-gamification";
@@ -11,10 +17,9 @@ import { useGamificationStore } from "@/store/gamification-store";
 import { ROUTES } from "@/utils/constants";
 import { LessonStepHeader } from "./lesson-step-header";
 import { ActivityRenderer } from "./activities/activity-renderer";
-import { ActivityFixMistakes } from "./activities/activity-fix-mistakes";
+import { ActivityFixMistakes, MAX_REVIEW_ERRORS } from "./activities/activity-fix-mistakes";
 import { ActivityReview } from "./activities/activity-review";
 import { LoadingState } from "@/components/ui/loading-state";
-import { KidIcon } from "@/lib/icons/kid-icons";
 import type { LessonMistake } from "@/types/lesson-mistakes";
 import { mistakeKey } from "@/types/lesson-mistakes";
 import type { LessonActivityReview } from "@/types/lesson";
@@ -34,12 +39,16 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
   const [activityIndex, setActivityIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("playing");
   const [mistakes, setMistakes] = useState<LessonMistake[]>([]);
-  const [startTime] = useState(Date.now());
+  const [startTime] = useState(() => Date.now());
+  const [reviewErrors, setReviewErrors] = useState(0);
+  const [combo, setCombo] = useState(0);
+  const handleAnswer = useCallback((correct: boolean) => setCombo((c) => (correct ? c + 1 : 0)), []);
+  const [restarted, setRestarted] = useState(false);
 
   const scoredRef = useRef({ correct: 0, total: 0 });
   const mistakesMapRef = useRef(new Map<string, LessonMistake>());
 
-  const activities = data?.lesson.activities ?? [];
+  const activities = useMemo(() => data?.lesson.activities ?? [], [data]);
   const learningActivities = useMemo(
     () => activities.filter((a) => a.type !== "review"),
     [activities]
@@ -50,13 +59,27 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
   );
   const reviewData = reviewActivity?.data as LessonActivityReview | undefined;
 
-  useEffect(() => {
+  const resetRun = useCallback(() => {
     setActivityIndex(0);
     setPhase("playing");
     setMistakes([]);
+    setReviewErrors(0);
+    setCombo(0);
     scoredRef.current = { correct: 0, total: 0 };
     mistakesMapRef.current = new Map();
-  }, [slug]);
+  }, []);
+
+
+  const handleReviewWrong = useCallback(() => {
+    if (reviewErrors + 1 < MAX_REVIEW_ERRORS) {
+      setReviewErrors(reviewErrors + 1);
+      return;
+    }
+    // 3 erros na revisão: refaz a lição inteira
+    resetRun();
+    setRestarted(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [reviewErrors, resetRun]);
 
   const addMistake = useCallback((mistake: LessonMistake) => {
     const key = mistakeKey(mistake);
@@ -91,10 +114,16 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
       timeSpentSeconds: timeSpent,
     });
 
-    if (res.success && res.data && data) {
+    if (!res.success) {
+      // Não mostra "Lição completa" se o progresso não foi salvo
+      toast.error("Não deu para salvar sua lição", res.error ?? "Toque em concluir para tentar de novo.");
+      return;
+    }
+
+    if (res.data && data) {
       showCelebration({
-        title: "Parabéns!",
-        message: `Você aprendeu tudo em "${data.lesson.title}"!`,
+        title: "Mandou bem!",
+        message: `Você terminou a ${data.lesson.title}.`,
         xp: res.data.xpGained,
         coins: res.data.coinsGained,
       });
@@ -113,7 +142,7 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
   }, [activityIndex, learningActivities.length]);
 
   if (isLoading) {
-    return <LoadingState message="Carregando lição..." variant="lesson" fullScreen />;
+    return <LoadingState message="Carregando lição..." skeleton="lesson" />;
   }
 
   if (error || !data) {
@@ -144,42 +173,80 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
       scoredRef.current.total += 1;
       if (opts.correct) scoredRef.current.correct += 1;
     }
+    setRestarted(false);
     afterActivityComplete();
   };
 
   if (phase === "done") {
     return (
-      <div className="mx-auto max-w-2xl space-y-6">
-        <Card className="border-2 border-primary text-center">
-          <CardContent className="py-12">
-            <KidIcon emoji="🏆" size="xl" className="mx-auto" />
-            <h2 className="mt-4 font-display text-2xl font-bold">Lição completa!</h2>
-            <p className="mt-2 text-muted-foreground">
-              Você corrigiu todos os erros e aprendeu de verdade.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <Button asChild>
-                <a href={ROUTES.dashboard}>Painel</a>
-              </Button>
-              <Button variant="outline" asChild>
-                <a href={ROUTES.flashcards}>Flashcards diários</a>
-              </Button>
-              <Button variant="outline" asChild>
-                <a href={ROUTES.lessons}>Mais lições</a>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+      <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 pb-44 pt-10 text-center">
+        <Image src="/mascot.png" alt="" width={140} height={140} className="animate-hop" />
+        <h2 className="font-display text-3xl font-bold">Lição completa!</h2>
+        <p className="text-muted-foreground">Você aprendeu de verdade. A próxima já está esperando na trilha.</p>
+        <LessonFooter
+          actionLabel="Continuar"
+          onAction={() => router.push(ROUTES.dashboard)}
+          secondary={
+            <Button variant="ghost" asChild>
+              <Link href={ROUTES.flashcards}>
+                <Layers className="h-4 w-4" />
+                Flashcards
+              </Link>
+            </Button>
+          }
+        />
       </div>
     );
   }
 
+
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <Button variant="ghost" onClick={() => router.push(ROUTES.lessons)}>
-        <ArrowLeft className="h-4 w-4" />
-        Voltar às lições
-      </Button>
+    <div className="mx-auto max-w-2xl space-y-6 pb-44">
+      <div className="flex items-center gap-3">
+        <Link
+          href={ROUTES.dashboard}
+          aria-label="Sair da lição"
+          className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        >
+          <X className="h-7 w-7" strokeWidth={2.5} />
+        </Link>
+        <ProgressBar
+          className="flex-1"
+          value={
+            phase === "playing"
+              ? (activityIndex / Math.max(learningActivities.length + (reviewActivity ? 1 : 0), 1)) * 100
+              : phase === "fixing"
+                ? 90
+                : 100
+          }
+        />
+        {/* Acertos seguidos: aparece a partir de 2 */}
+        <AnimatePresence>
+          {combo >= 2 && phase === "playing" && (
+            <motion.span
+              key={combo}
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              className="flex items-center gap-1 font-display text-lg font-bold text-orange-500"
+              aria-label={`${combo} acertos seguidos`}
+            >
+              <Flame className="h-5 w-5 fill-orange-400" aria-hidden />
+              {combo}
+            </motion.span>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {restarted && phase === "playing" && (
+        <p
+          role="alert"
+          className="rounded-xl border-2 border-amber-400 bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
+        >
+          Você errou {MAX_REVIEW_ERRORS} vezes na revisão, e tudo bem! Vamos fazer a lição de novo
+          desde o começo, com calma.
+        </p>
+      )}
 
       {phase === "playing" && current && (
         <>
@@ -193,9 +260,10 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
           <AnimatePresence mode="wait">
             <motion.div
               key={`${slug}-${current.id}`}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -24 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
             >
               <ActivityRenderer
             activity={current}
@@ -204,6 +272,7 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
             lessonSlug={lesson.slug}
             onStepComplete={handleStepComplete}
                 onMistake={addMistake}
+                onAnswer={handleAnswer}
               />
             </motion.div>
           </AnimatePresence>
@@ -211,7 +280,12 @@ export function LessonPlayer({ slug }: LessonPlayerProps) {
       )}
 
       {phase === "fixing" && mistakes.length > 0 && (
-        <ActivityFixMistakes mistakes={mistakes} onFixed={handleMistakeFixed} />
+        <ActivityFixMistakes
+          mistakes={mistakes}
+          onFixed={handleMistakeFixed}
+          onWrong={handleReviewWrong}
+          wrongCount={reviewErrors}
+        />
       )}
 
       {phase === "review" && reviewData && (

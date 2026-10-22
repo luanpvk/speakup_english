@@ -5,7 +5,7 @@ import { LoadingState } from "@/components/ui/loading-state";
 function ChildLoginFallback() {
   return (
     <div className="w-full max-w-md">
-      <LoadingState message="Carregando login..." />
+      <LoadingState message="Carregando login..." skeleton="form" />
     </div>
   );
 }

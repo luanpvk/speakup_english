@@ -50,15 +50,11 @@ function toCards(words: WordEntry[]): LessonVocabCard[] {
 function buildListen(words: WordEntry[], globalOrder: number) {
   const index = globalOrder % words.length;
   const [target, pt, emoji] = words[index];
-  const wrong = words.filter((_, i) => i !== index).map((x) => x[1]).slice(0, 3);
-  const correctIndex = globalOrder % 4;
-  const options: string[] = ["—", "—", "—", "—"];
-  options[correctIndex] = pt;
-  let wi = 0;
-  for (let i = 0; i < 4; i++) {
-    if (i === correctIndex) continue;
-    options[i] = wrong[wi++] ?? "—";
-  }
+  // Sem traduções repetidas (ex.: Goodbye/Bye = "Tchau") nem a resposta certa como opção errada
+  const wrong = [...new Set(words.map((x) => x[1]).filter((t) => t !== pt))].slice(0, 3);
+  const correctIndex = globalOrder % (wrong.length + 1);
+  const options = [...wrong];
+  options.splice(correctIndex, 0, pt);
   return {
     prompt: `Alguém disse: "${target}"`,
     targetWord: target,
@@ -66,6 +62,12 @@ function buildListen(words: WordEntry[], globalOrder: number) {
     options,
     correctIndex,
   };
+}
+
+/** Remove opções duplicadas mantendo a resposta correta */
+function uniqueOptions(options: string[], correctIndex: number) {
+  const unique = [...new Set(options)];
+  return { options: unique, correctIndex: unique.indexOf(options[correctIndex]) };
 }
 
 function buildMemory(words: WordEntry[]) {
@@ -94,7 +96,7 @@ function buildDragFit(words: WordEntry[]) {
   const slice = words.slice(0, 4);
   return {
     instruction: "Toque na palavra em inglês e depois no significado em português correto.",
-    slots: slice.map(([en, pt, emoji], i) => ({
+    slots: slice.map(([, pt, emoji], i) => ({
       id: `slot-${i}`,
       label: pt,
       emoji,
@@ -124,12 +126,14 @@ function buildPuzzle(words: WordEntry[]) {
   };
 }
 
+/** História padrão neutra: funciona com palavras, frases ou perguntas ("What's your name?") */
 function defaultStory(words: WordEntry[]): [string, string][] {
-  const a = words[0];
-  const b = words[1] ?? words[0];
   return [
-    [`${a[0]}!`, `${a[1]}!`],
-    [`I like ${b[0]}.`, `Eu gosto de ${b[1]}.`],
+    ["Today I learn new words!", "Hoje eu aprendo palavras novas!"],
+    ...words.slice(0, 2).map(([en, pt]): [string, string] => [
+      `"${en}" means "${pt}".`,
+      `"${en}" significa "${pt}".`,
+    ]),
   ];
 }
 
@@ -160,7 +164,7 @@ export function buildLessonFromSpec(spec: LessonSpec): LessonContent {
     {
       id: "vocab",
       type: "vocab",
-      title: "Flashcards — aprenda as palavras",
+      title: "Palavras novas",
       instruction: "Toque em cada cartão, ouça mentalmente e repita em voz alta.",
       data: { cards },
     },
@@ -247,8 +251,7 @@ export function buildLessonFromSpec(spec: LessonSpec): LessonContent {
     data: {
       questions: spec.quiz.map(([question, options, correctIndex, hint]) => ({
         question,
-        options,
-        correctIndex,
+        ...uniqueOptions(options, correctIndex),
         hint,
       })),
     },

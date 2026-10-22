@@ -1,10 +1,12 @@
 "use client";
 
+import { toast } from "@/store/toast-store";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Loader2, Rabbit } from "lucide-react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import {
@@ -21,7 +23,19 @@ import { Label } from "@/components/ui/label";
 import { PinPad } from "@/features/auth/pin-pad";
 import { useAuth } from "@/hooks/use-auth";
 
+const PARENT_EMAIL_KEY = "speakup-parent-email";
+
+/** Lembra o e-mail do responsável neste aparelho para a criança não precisar digitar */
+export function rememberParentEmail(email: string) {
+  try {
+    localStorage.setItem(PARENT_EMAIL_KEY, email.toLowerCase().trim());
+  } catch {
+    // sem storage: a criança digita o e-mail
+  }
+}
+
 const schema = z.object({
+  parentEmail: z.string().email("Digite o e-mail do responsável"),
   username: z.string().min(3, "Usuário inválido"),
   pin: z.string().length(4, "PIN de 4 dígitos").regex(/^\d+$/, "Apenas números"),
 });
@@ -36,7 +50,6 @@ export function ChildLoginForm({
   initialDisplayName = "",
 }: ChildLoginFormProps) {
   const { loginChild } = useAuth();
-  const [error, setError] = useState<string | null>(null);
   const [pin, setPin] = useState("");
 
   const normalizedUsername = initialUsername.toLowerCase().trim();
@@ -44,6 +57,7 @@ export function ChildLoginForm({
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
+      parentEmail: "",
       username: normalizedUsername,
       pin: "",
     },
@@ -55,22 +69,36 @@ export function ChildLoginForm({
     }
   }, [normalizedUsername, form]);
 
-  const username = form.watch("username");
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(PARENT_EMAIL_KEY);
+      if (saved) form.setValue("parentEmail", saved);
+    } catch {
+      // sem storage
+    }
+  }, [form]);
+
+  const username = useWatch({ control: form.control, name: "username" });
+  const parentEmail = useWatch({ control: form.control, name: "parentEmail" });
 
   const handleSubmit = form.handleSubmit(async (data) => {
-    setError(null);
     const pinValue = pin.length === 4 ? pin : data.pin;
 
     try {
       const res = await loginChild.mutateAsync({
+        parentEmail: data.parentEmail.toLowerCase().trim(),
         username: data.username.toLowerCase().trim(),
         pin: pinValue,
       });
       if (!res.success) {
-        setError(res.error ?? "Usuário ou PIN incorretos");
+        toast.error("Não deu para entrar", res.error ?? "Confira o e-mail do responsável, o usuário e o PIN.");
+        setPin("");
+        form.setValue("pin", "");
+      } else {
+        rememberParentEmail(data.parentEmail);
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Não foi possível entrar");
+      toast.error("Não deu para entrar", e instanceof Error ? e.message : "Tente de novo.");
     }
   });
 
@@ -96,12 +124,11 @@ export function ChildLoginForm({
           <CardDescription>
             {normalizedUsername ? (
               <>
-                Conta <strong>@{normalizedUsername}</strong> — digite o PIN de 4 números
-                para entrar.
+                Digite seu PIN para entrar.
               </>
             ) : (
               <>
-                Digite seu usuário e PIN de 4 números para começar a aventura.
+                Vamos começar a aventura!
               </>
             )}
           </CardDescription>
@@ -109,14 +136,23 @@ export function ChildLoginForm({
 
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-6">
-            {error && (
-              <p
-                role="alert"
-                className="rounded-xl border-2 border-destructive/50 bg-destructive/10 px-4 py-3 text-sm text-destructive"
-              >
-                {error}
-              </p>
-            )}
+
+            <div className="space-y-2">
+              <Label htmlFor="parentEmail">E-mail do responsável</Label>
+              <Input
+                id="parentEmail"
+                type="email"
+                inputMode="email"
+                placeholder="ex: mae@email.com"
+                autoComplete="email"
+                {...form.register("parentEmail")}
+              />
+              {form.formState.errors.parentEmail && (
+                <p className="text-sm text-destructive" role="alert">
+                  {form.formState.errors.parentEmail.message}
+                </p>
+              )}
+            </div>
 
             <div className="space-y-2">
               <Label htmlFor="username">Seu usuário</Label>
@@ -132,13 +168,9 @@ export function ChildLoginForm({
                 autoComplete="username"
               />
               {normalizedUsername && (
-                <p className="text-xs text-muted-foreground">
-                  Usuário definido pelo responsável. Para outra conta,{" "}
-                  <Link href="/login/child" className="text-primary hover:underline">
-                    login geral
-                  </Link>
-                  .
-                </p>
+                <Link href="/login/child" className="text-xs text-primary hover:underline">
+                  Entrar com outra conta
+                </Link>
               )}
             </div>
 
@@ -161,7 +193,7 @@ export function ChildLoginForm({
               className="w-full"
               variant="child"
               size="lg"
-              disabled={loginChild.isPending || !username || pin.length !== 4}
+              disabled={loginChild.isPending || !parentEmail || !username || pin.length !== 4}
             >
               {loginChild.isPending && <Loader2 className="animate-spin" />}
               Entrar na aventura!
