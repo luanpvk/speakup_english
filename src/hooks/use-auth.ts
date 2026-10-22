@@ -44,9 +44,8 @@ export function useAuth() {
   const logout = useMutation({
     mutationFn: authApi.logout,
     onSettled: () => {
-      clearUser();
-      queryClient.clear();
-      router.push("/");
+      // Navegação completa: o painel não chega a ver o usuário nulo e disputar o redirecionamento
+      window.location.replace("/");
     },
   });
 

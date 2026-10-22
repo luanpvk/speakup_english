@@ -19,7 +19,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const DONE_MS = 1200;
 
 export function ActivityMatch({ data, onComplete }: Props) {
   const english = useMemo(() => shuffle(data.pairs), [data.pairs]);
@@ -43,7 +42,6 @@ export function ActivityMatch({ data, onComplete }: Props) {
       setSelectedPt(null);
       if (next.size === data.pairs.length) {
         playFeedback("complete");
-        timer.current = window.setTimeout(() => onComplete(errors === 0), DONE_MS);
       } else {
         playFeedback("correct");
       }

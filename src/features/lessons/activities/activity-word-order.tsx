@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import type { LessonActivityWordOrder } from "@/types/lesson";
 import type { LessonMistake } from "@/types/lesson-mistakes";
-import { FEEDBACK_MS } from "./activity-quiz";
 import { LessonFooter, playFeedback, speak } from "../lesson-kit";
 
 interface Props {
@@ -21,10 +20,7 @@ export function ActivityWordOrder({ data, onComplete, onMistake, onAnswer }: Pro
   const tiles = useMemo<WordTile[]>(() => data.words.map((word, id) => ({ id, word })), [data.words]);
   const [sentence, setSentence] = useState<WordTile[]>([]);
   const [result, setResult] = useState<"correct" | "wrong" | null>(null);
-  const timer = useRef<number | undefined>(undefined);
   const pool = tiles.filter((t) => !sentence.some((s) => s.id === t.id));
-
-  useEffect(() => () => window.clearTimeout(timer.current), []);
 
   const add = (tile: WordTile) => {
     if (result) return;
@@ -38,7 +34,6 @@ export function ActivityWordOrder({ data, onComplete, onMistake, onAnswer }: Pro
 
   const check = () => {
     if (result) {
-      window.clearTimeout(timer.current);
       onComplete(result === "correct");
       return;
     }
@@ -56,8 +51,6 @@ export function ActivityWordOrder({ data, onComplete, onMistake, onAnswer }: Pro
         data,
       });
     }
-    // Errou: mostra a frase certa e segue. A correção acontece na revisão final
-    timer.current = window.setTimeout(() => onComplete(ok), ok ? FEEDBACK_MS.correct : FEEDBACK_MS.wrong + 600);
   };
 
   return (

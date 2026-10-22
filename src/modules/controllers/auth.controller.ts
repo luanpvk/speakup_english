@@ -109,8 +109,12 @@ export async function handleRefresh() {
 
 export async function handleLogout() {
   const refreshToken = await getRefreshTokenFromCookies();
-  await authService.logoutUser(refreshToken);
-  await clearAuthCookies();
+  try {
+    await authService.logoutUser(refreshToken);
+  } finally {
+    // Mesmo se o banco falhar, a sessão do navegador precisa acabar
+    await clearAuthCookies();
+  }
   return jsonSuccess({ ok: true }, 200, "Logout realizado");
 }
 

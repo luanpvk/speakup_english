@@ -23,7 +23,6 @@ function shuffleLetters(word: string): string[] {
   return letters;
 }
 
-const DONE_MS = 1200;
 
 /** Cada letra tem id próprio para letras repetidas não se confundirem */
 type Tile = { id: number; letter: string };
@@ -52,7 +51,6 @@ export function ActivityPuzzle({ data, onComplete }: Props) {
       setSolved(true);
       playFeedback("complete");
       speak(data.word);
-      timer.current = window.setTimeout(() => onComplete(errors === 0), DONE_MS);
     } else {
       playFeedback("wrong");
       setErrors((n) => n + 1);

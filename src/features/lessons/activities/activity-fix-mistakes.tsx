@@ -10,8 +10,6 @@ import { LessonFooter, ListenButtons, OptionButton, playFeedback, speak, useAuto
 /** Erros permitidos na revisão antes de refazer a lição inteira */
 export const MAX_REVIEW_ERRORS = 3;
 
-const NEXT_MS = 900;
-
 interface Props {
   mistakes: LessonMistake[];
   onFixed: (mistakeId: string) => void;
@@ -120,14 +118,13 @@ function ChoiceFix({
       if (i === correctIndex) {
         setSolved(true);
         playFeedback("correct");
-        timer.current = window.setTimeout(onFixed, NEXT_MS);
       } else {
         playFeedback("wrong");
         onWrong();
         timer.current = window.setTimeout(() => setPicked(null), 800);
       }
     },
-    [correctIndex, onFixed, onWrong, picked, solved]
+    [correctIndex, onWrong, picked, solved]
   );
 
   useOptionKeys(options.length, pick, picked === null && !solved);
@@ -196,7 +193,6 @@ function WordOrderFix({
       setSolved(true);
       playFeedback("correct");
       speak(correct);
-      timer.current = window.setTimeout(onFixed, NEXT_MS + 400);
     } else {
       playFeedback("wrong");
       onWrong();

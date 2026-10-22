@@ -27,7 +27,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const DONE_MS = 1300;
 
 export function ActivityMemory({ data, onComplete }: Props) {
   const cards = useMemo(
@@ -64,7 +63,6 @@ export function ActivityMemory({ data, onComplete }: Props) {
       setOpen([]);
       if (done.size === data.pairs.length) {
         playFeedback("complete");
-        timer.current = window.setTimeout(onComplete, DONE_MS);
       } else {
         playFeedback("correct");
       }

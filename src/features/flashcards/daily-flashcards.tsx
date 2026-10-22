@@ -11,7 +11,7 @@ import { ProgressBar } from "@/components/ui/progress-bar";
 import { LoadingState } from "@/components/ui/loading-state";
 import { useQueryClient } from "@tanstack/react-query";
 import { gamificationKeys, useDailyFlashcards, useReviewFlashcard } from "@/hooks/use-gamification";
-import { ListenButtons, playFeedback, useAutoSpeak, useOptionKeys } from "@/features/lessons/lesson-kit";
+import { ListenButtons, playFeedback, useOptionKeys } from "@/features/lessons/lesson-kit";
 import { MAX_DAILY_FLASHCARDS, ROUTES } from "@/utils/constants";
 import { toast } from "@/store/toast-store";
 import { cn } from "@/lib/utils";
@@ -35,8 +35,6 @@ export function DailyFlashcards() {
   const current = queue[0];
   const dailyLimit = session?.dailyLimit ?? MAX_DAILY_FLASHCARDS;
   const totalCards = session?.totalCards ?? 0;
-
-  useAutoSpeak(current?.word);
 
   const rate = useCallback(
     async (rating: FlashcardRating) => {

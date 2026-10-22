@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import type { LessonActivityListen } from "@/types/lesson";
 import type { LessonMistake } from "@/types/lesson-mistakes";
-import { FEEDBACK_MS } from "./activity-quiz";
 import { LessonFooter, ListenButtons, OptionButton, playFeedback, useAutoSpeak, useOptionKeys } from "../lesson-kit";
 
 interface Props {
@@ -15,15 +14,12 @@ interface Props {
 
 export function ActivityListen({ data, onComplete, onMistake, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
-  const timer = useRef<number | undefined>(undefined);
   const answered = selected !== null;
   const ok = selected === data.correctIndex;
 
   useAutoSpeak(data.targetWord);
-  useEffect(() => () => window.clearTimeout(timer.current), []);
 
   const finish = useCallback(() => {
-    window.clearTimeout(timer.current);
     onComplete(ok);
   }, [ok, onComplete]);
 
@@ -37,10 +33,8 @@ export function ActivityListen({ data, onComplete, onMistake, onAnswer }: Props)
       if (!right) {
         onMistake?.({ id: `listen-${data.targetWord}`, kind: "listen", label: data.prompt, data });
       }
-      // Segue sozinho; a revisão dos erros acontece no final
-      timer.current = window.setTimeout(() => onComplete(right), right ? FEEDBACK_MS.correct : FEEDBACK_MS.wrong);
     },
-    [answered, data, onAnswer, onComplete, onMistake]
+    [answered, data, onAnswer, onMistake]
   );
 
   useOptionKeys(data.options.length, pick, !answered);

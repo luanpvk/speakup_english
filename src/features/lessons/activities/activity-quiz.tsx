@@ -1,12 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import type { LessonActivityQuiz } from "@/types/lesson";
 import type { LessonMistake } from "@/types/lesson-mistakes";
 import { LessonFooter, OptionButton, playFeedback, useOptionKeys } from "../lesson-kit";
-
-/** Tempo para a criança ver o feedback antes de avançar sozinho */
-export const FEEDBACK_MS = { correct: 1100, wrong: 2400 };
 
 interface Props {
   data: LessonActivityQuiz;
@@ -19,9 +16,6 @@ export function ActivityQuiz({ data, onComplete, onMistake, onAnswer }: Props) {
   const [qIndex, setQIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
-  const timer = useRef<number | undefined>(undefined);
-
-  useEffect(() => () => window.clearTimeout(timer.current), []);
 
   const questions = data.questions;
   const current = questions[qIndex];
@@ -31,7 +25,6 @@ export function ActivityQuiz({ data, onComplete, onMistake, onAnswer }: Props) {
 
   const advance = useCallback(
     (total: number) => {
-      window.clearTimeout(timer.current);
       if (isLast) {
         onComplete(total, questions.length);
       } else {
@@ -59,10 +52,8 @@ export function ActivityQuiz({ data, onComplete, onMistake, onAnswer }: Props) {
           data: current,
         });
       }
-      // Errou: mostra a resposta certa e segue sozinho. A correção acontece na revisão final
-      timer.current = window.setTimeout(() => advance(total), right ? FEEDBACK_MS.correct : FEEDBACK_MS.wrong);
     },
-    [answered, advance, correctCount, current, onAnswer, onMistake, qIndex]
+    [answered, correctCount, current, onAnswer, onMistake, qIndex]
   );
 
   useOptionKeys(current.options.length, pick, !answered);

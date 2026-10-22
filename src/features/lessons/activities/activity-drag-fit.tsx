@@ -12,7 +12,6 @@ interface Props {
   onComplete: (correct: boolean) => void;
 }
 
-const DONE_MS = 1200;
 /** Movimento mínimo para contar como arrasto (abaixo disso é um toque) */
 const DRAG_THRESHOLD = 6;
 
@@ -51,7 +50,6 @@ export function ActivityDragFit({ data, onComplete }: Props) {
       setPlaced(next);
       if (data.slots.every((s) => next[s.id])) {
         playFeedback("complete");
-        timer.current = window.setTimeout(() => onComplete(errors === 0), DONE_MS);
       } else {
         playFeedback("correct");
       }
