@@ -9,6 +9,8 @@ export type WordEntry = [string, string, string?, string?, string?];
 
 export type QuizEntry = [string, string[], number, string?];
 
+export type LessonGame = "memory" | "match" | "drag-fit" | "puzzle";
+
 export type LessonSpec = {
   slug: string;
   moduleSlug: string;
@@ -22,10 +24,17 @@ export type LessonSpec = {
   learn: string[];
   words: WordEntry[];
   story?: [string, string][];
-  speak?: { phrase: string; tip: string };
+  /** translation: tradução da frase inteira (sem ela, usa a da palavra contida na frase) */
+  speak?: { phrase: string; tip: string; translation?: string };
   wordOrder?: { ptLabel: string; words: string[]; correct: string };
   quiz: QuizEntry[];
+  /** Minijogos da lição; sem isso, um único jogo alternado pela ordem global */
+  games?: LessonGame[];
+  /** XP fixo; sem isso, cresce com a ordem global */
+  xpReward?: number;
 };
+
+const GAME_ORDER: LessonGame[] = ["memory", "match", "drag-fit", "puzzle"];
 
 export function w(
   en: string,
@@ -116,19 +125,29 @@ function buildDragFit(words: WordEntry[]) {
   };
 }
 
+/** Quebra-cabeça só com palavra única de 3 a 8 letras (frase viraria "GOODBYEFRIEND") */
+function puzzleCandidate(words: WordEntry[]) {
+  return words
+    .filter(([en]) => /^[A-Za-z]{3,8}$/.test(en))
+    .sort((a, b) => a[0].length - b[0].length)[0];
+}
+
 function buildPuzzle(words: WordEntry[]) {
-  const candidate =
-    words
-      .filter(([en]) => !en.includes(" ") && en.length >= 3 && en.length <= 8)
-      .sort((a, b) => a[0].length - b[0].length)[0] ?? words[0];
-  const [word, translation, emoji] = candidate;
+  const [word, translation, emoji] = puzzleCandidate(words) ?? words[0];
   return {
     instruction: "Monte a palavra em inglês letra por letra.",
-    word: word.replace(/[^a-zA-Z]/g, "") || word,
+    word,
     translation,
     emoji,
-    hint: `A palavra tem ${word.replace(/[^a-zA-Z]/g, "").length || word.length} letras.`,
+    hint: `A palavra tem ${word.length} letras.`,
   };
+}
+
+/** Sem palavra boa para o quebra-cabeça, usa outro jogo que a lição ainda não tem */
+function playableGames(games: LessonGame[], words: WordEntry[]): LessonGame[] {
+  if (!games.includes("puzzle") || puzzleCandidate(words)) return games;
+  const swap = GAME_ORDER.find((g) => g !== "puzzle" && !games.includes(g))!;
+  return games.map((g) => (g === "puzzle" ? swap : g));
 }
 
 /** História padrão neutra: funciona com palavras, frases ou perguntas ("What's your name?") */
@@ -142,11 +161,48 @@ function defaultStory(words: WordEntry[]): [string, string][] {
   ];
 }
 
+function buildGame(game: LessonGame, words: WordEntry[]): LessonActivity {
+  switch (game) {
+    case "memory":
+      return {
+        id: "memory",
+        type: "memory",
+        title: "Jogo da memória",
+        instruction: "Encontre os pares: inglês ↔ português.",
+        data: buildMemory(words),
+      };
+    case "match":
+      return {
+        id: "match",
+        type: "match",
+        title: "Ligue os pares",
+        instruction: "Toque inglês e português que combinam.",
+        data: buildMatch(words),
+      };
+    case "drag-fit":
+      return {
+        id: "drag-fit",
+        type: "drag-fit",
+        title: "Encaixe as palavras",
+        instruction: "Mini jogo: encaixe inglês no significado certo.",
+        data: buildDragFit(words),
+      };
+    case "puzzle":
+      return {
+        id: "puzzle",
+        type: "puzzle",
+        title: "Quebra-cabeça de letras",
+        instruction: "Monte a palavra em inglês.",
+        data: buildPuzzle(words),
+      };
+  }
+}
+
 export function buildLessonFromSpec(spec: LessonSpec): LessonContent {
   const cards = toCards(spec.words);
   const storyLines = spec.story ?? defaultStory(spec.words);
-  const game = spec.globalOrder % 4;
-  const baseXp = 38 + Math.floor(spec.globalOrder / 3) * 2;
+  const games = playableGames(spec.games ?? [GAME_ORDER[spec.globalOrder % 4]], spec.words);
+  const baseXp = spec.xpReward ?? 38 + Math.floor(spec.globalOrder / 3) * 2;
   const activities: LessonActivity[] = [
     {
       id: "intro",
@@ -184,6 +240,7 @@ export function buildLessonFromSpec(spec: LessonSpec): LessonContent {
       data: {
         phrase: spec.speak.phrase,
         translation:
+          spec.speak.translation ??
           spec.words.find(([en]) => spec.speak!.phrase.includes(en))?.[1] ??
           spec.speak.phrase,
         emoji: spec.icon,
@@ -200,39 +257,7 @@ export function buildLessonFromSpec(spec: LessonSpec): LessonContent {
     data: buildListen(spec.words, spec.globalOrder),
   });
 
-  if (game === 0) {
-    activities.push({
-      id: "memory",
-      type: "memory",
-      title: "Jogo da memória",
-      instruction: "Encontre os pares: inglês ↔ português.",
-      data: buildMemory(spec.words),
-    });
-  } else if (game === 1) {
-    activities.push({
-      id: "match",
-      type: "match",
-      title: "Ligue os pares",
-      instruction: "Toque inglês e português que combinam.",
-      data: buildMatch(spec.words),
-    });
-  } else if (game === 2) {
-    activities.push({
-      id: "drag-fit",
-      type: "drag-fit",
-      title: "Encaixe as palavras",
-      instruction: "Mini jogo: encaixe inglês no significado certo.",
-      data: buildDragFit(spec.words),
-    });
-  } else {
-    activities.push({
-      id: "puzzle",
-      type: "puzzle",
-      title: "Quebra-cabeça de letras",
-      instruction: "Monte a palavra em inglês.",
-      data: buildPuzzle(spec.words),
-    });
-  }
+  for (const game of games) activities.push(buildGame(game, spec.words));
 
   if (spec.wordOrder) {
     activities.push({
