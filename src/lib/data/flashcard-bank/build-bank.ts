@@ -21,7 +21,7 @@ const GREETINGS: Tuple[] = [
   ["Good afternoon", "Boa tarde", "☀️"],
   ["Good evening", "Boa noite", "🌆"],
   ["Good night", "Boa noite", "🌙", "Good night, mom!"],
-  ["Goodbye", "Tchau", "🖐️"],
+  ["Goodbye", "Adeus", "🖐️"],
   ["Bye", "Tchau", "✌️"],
   ["See you", "Até logo", "👋"],
   ["See you later", "Até mais tarde"],

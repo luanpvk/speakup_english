@@ -46,7 +46,7 @@ export const SEED_LESSONS = [
     estimatedMinutes: 5,
     vocabulary: [
       { word: "Hello", translation: "Olá", emoji: "👋" },
-      { word: "Goodbye", translation: "Tchau", emoji: "🖐️" },
+      { word: "Goodbye", translation: "Adeus", emoji: "🖐️" },
       { word: "Hi", translation: "Oi", emoji: "😊" },
       { word: "Bye", translation: "Tchau", emoji: "✌️" },
     ],

@@ -70,9 +70,14 @@ function uniqueOptions(options: string[], correctIndex: number) {
   return { options: unique, correctIndex: unique.indexOf(options[correctIndex]) };
 }
 
+/** Jogos de pares comparam por id: duas palavras com a mesma tradução (ex.: dois "Tchau") deixariam um par impossível */
+function uniqueByTranslation(words: WordEntry[]) {
+  return words.filter((w, i) => words.findIndex((x) => x[1] === w[1]) === i);
+}
+
 function buildMemory(words: WordEntry[]) {
   return {
-    pairs: words.slice(0, 4).map(([english, portuguese, emoji], i) => ({
+    pairs: uniqueByTranslation(words).slice(0, 4).map(([english, portuguese, emoji], i) => ({
       id: String(i + 1),
       english,
       portuguese,
@@ -83,7 +88,7 @@ function buildMemory(words: WordEntry[]) {
 
 function buildMatch(words: WordEntry[]) {
   return {
-    pairs: words.map(([english, portuguese, emoji], i) => ({
+    pairs: uniqueByTranslation(words).map(([english, portuguese, emoji], i) => ({
       id: String(i + 1),
       english,
       portuguese,
@@ -93,7 +98,7 @@ function buildMatch(words: WordEntry[]) {
 }
 
 function buildDragFit(words: WordEntry[]) {
-  const slice = words.slice(0, 4);
+  const slice = uniqueByTranslation(words).slice(0, 4);
   return {
     instruction: "Toque na palavra em inglês e depois no significado em português correto.",
     slots: slice.map(([, pt, emoji], i) => ({

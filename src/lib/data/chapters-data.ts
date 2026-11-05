@@ -31,7 +31,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Goodbye",
-        "Tchau",
+        "Adeus",
         "🖐️"
       ],
       [
@@ -47,7 +47,7 @@ export const LESSON_SPECS: LessonSpec[] = [
           "Tchau",
           "Olá",
           "Oi",
-          "Tchau"
+          "Adeus"
         ],
         1
       ],
@@ -57,7 +57,7 @@ export const LESSON_SPECS: LessonSpec[] = [
           "Tchau",
           "Oi",
           "Olá",
-          "Tchau"
+          "Adeus"
         ],
         1
       ],
@@ -7466,7 +7466,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Clean room",
-        "Limpar quarto",
+        "Limpar o quarto",
         "🧹"
       ],
       [
@@ -7482,7 +7482,7 @@ export const LESSON_SPECS: LessonSpec[] = [
           "Ir dormir",
           "Abrir porta",
           "Estou em casa",
-          "Limpar quarto"
+          "Limpar o quarto"
         ],
         2
       ],
@@ -7490,7 +7490,7 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Go to bed significa:",
         [
           "Estou em casa",
-          "Limpar quarto",
+          "Limpar o quarto",
           "Ir dormir",
           "Abrir porta"
         ],
@@ -8170,7 +8170,7 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Throw",
-        "Jogar/Arremessar",
+        "Arremessar",
         "🎯"
       ],
       [
@@ -8196,7 +8196,7 @@ export const LESSON_SPECS: LessonSpec[] = [
           "Subir/Escalar",
           "Sentar",
           "Pegar",
-          "Jogar/Arremessar"
+          "Arremessar"
         ],
         3
       ],
@@ -8206,7 +8206,7 @@ export const LESSON_SPECS: LessonSpec[] = [
           "Subir/Escalar",
           "Pegar",
           "Sentar",
-          "Jogar/Arremessar"
+          "Arremessar"
         ],
         1
       ],
@@ -10820,17 +10820,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Boat",
-        "(Boat)",
+        "Barco",
         "📚"
       ],
       [
         "Subway",
-        "(Subway)",
+        "Metrô",
         "📚"
       ],
       [
         "Taxi",
-        "(Taxi)",
+        "Táxi",
         "📚"
       ]
     ],
@@ -10838,10 +10838,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bike significa:",
         [
-          "(Taxi)",
+          "Táxi",
           "Bicicleta",
-          "(Subway)",
-          "(Boat)"
+          "Metrô",
+          "Barco"
         ],
         1
       ],
@@ -10849,14 +10849,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Boat significa:",
         [
           "Bicicleta",
-          "(Taxi)",
-          "(Boat)",
-          "(Subway)"
+          "Táxi",
+          "Barco",
+          "Metrô"
         ],
         2
       ],
       [
-        "Como dizemos \"(Boat)\" em inglês?",
+        "Como dizemos \"Barco\" em inglês?",
         [
           "Bike",
           "Subway",
@@ -10886,22 +10886,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Helicopter",
-        "(Helicopter)",
+        "Helicóptero",
         "📚"
       ],
       [
         "Scooter",
-        "(Scooter)",
+        "Patinete",
         "📚"
       ],
       [
         "Ticket",
-        "(Ticket)",
+        "Passagem",
         "📚"
       ],
       [
         "Station",
-        "(Station)",
+        "Estação",
         "📚"
       ]
     ],
@@ -10909,25 +10909,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Helicopter significa:",
         [
-          "(Scooter)",
-          "(Station)",
-          "(Helicopter)",
-          "(Ticket)"
+          "Patinete",
+          "Estação",
+          "Helicóptero",
+          "Passagem"
         ],
         2
       ],
       [
         "Scooter significa:",
         [
-          "(Ticket)",
-          "(Scooter)",
-          "(Helicopter)",
-          "(Station)"
+          "Passagem",
+          "Patinete",
+          "Helicóptero",
+          "Estação"
         ],
         1
       ],
       [
-        "Como dizemos \"(Scooter)\" em inglês?",
+        "Como dizemos \"Patinete\" em inglês?",
         [
           "Ticket",
           "Station",
@@ -10957,22 +10957,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Driver",
-        "(Driver)",
+        "Motorista",
         "📚"
       ],
       [
         "Passenger",
-        "(Passenger)",
+        "Passageiro",
         "📚"
       ],
       [
         "Road",
-        "(Road)",
+        "Estrada",
         "📚"
       ],
       [
         "Highway",
-        "(Highway)",
+        "Rodovia",
         "📚"
       ]
     ],
@@ -10980,25 +10980,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Driver significa:",
         [
-          "(Road)",
-          "(Driver)",
-          "(Passenger)",
-          "(Highway)"
+          "Estrada",
+          "Motorista",
+          "Passageiro",
+          "Rodovia"
         ],
         1
       ],
       [
         "Passenger significa:",
         [
-          "(Road)",
-          "(Highway)",
-          "(Driver)",
-          "(Passenger)"
+          "Estrada",
+          "Rodovia",
+          "Motorista",
+          "Passageiro"
         ],
         3
       ],
       [
-        "Como dizemos \"(Passenger)\" em inglês?",
+        "Como dizemos \"Passageiro\" em inglês?",
         [
           "Highway",
           "Passenger",
@@ -11028,22 +11028,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Traffic",
-        "(Traffic)",
+        "Trânsito",
         "📚"
       ],
       [
         "Stop",
-        "(Stop)",
+        "Parar",
         "📚"
       ],
       [
         "Fast",
-        "(Fast)",
+        "Rápido",
         "📚"
       ],
       [
         "Slow",
-        "(Slow)",
+        "Devagar",
         "📚"
       ]
     ],
@@ -11051,25 +11051,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Traffic significa:",
         [
-          "(Fast)",
-          "(Slow)",
-          "(Stop)",
-          "(Traffic)"
+          "Rápido",
+          "Devagar",
+          "Parar",
+          "Trânsito"
         ],
         3
       ],
       [
         "Stop significa:",
         [
-          "(Fast)",
-          "(Stop)",
-          "(Slow)",
-          "(Traffic)"
+          "Rápido",
+          "Parar",
+          "Devagar",
+          "Trânsito"
         ],
         1
       ],
       [
-        "Como dizemos \"(Stop)\" em inglês?",
+        "Como dizemos \"Parar\" em inglês?",
         [
           "Traffic",
           "Stop",
@@ -11099,22 +11099,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Travel",
-        "(Travel)",
+        "Viajar",
         "📚"
       ],
       [
         "Trip",
-        "(Trip)",
+        "Viagem",
         "📚"
       ],
       [
         "Seat belt",
-        "(Seat belt)",
+        "Cinto de segurança",
         "📚"
       ],
       [
         "Wheel",
-        "(Wheel)",
+        "Roda",
         "📚"
       ]
     ],
@@ -11122,25 +11122,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Travel significa:",
         [
-          "(Seat belt)",
-          "(Travel)",
-          "(Wheel)",
-          "(Trip)"
+          "Cinto de segurança",
+          "Viajar",
+          "Roda",
+          "Viagem"
         ],
         1
       ],
       [
         "Trip significa:",
         [
-          "(Travel)",
-          "(Trip)",
-          "(Wheel)",
-          "(Seat belt)"
+          "Viajar",
+          "Viagem",
+          "Roda",
+          "Cinto de segurança"
         ],
         1
       ],
       [
-        "Como dizemos \"(Trip)\" em inglês?",
+        "Como dizemos \"Viagem\" em inglês?",
         [
           "Travel",
           "Seat belt",
@@ -11170,22 +11170,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Engine",
-        "(Engine)",
+        "Motor",
         "📚"
       ],
       [
         "Fuel",
-        "(Fuel)",
+        "Combustível",
         "📚"
       ],
       [
         "Bridge",
-        "(Bridge)",
+        "Ponte",
         "📚"
       ],
       [
         "Tunnel",
-        "(Tunnel)",
+        "Túnel",
         "📚"
       ]
     ],
@@ -11193,25 +11193,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Engine significa:",
         [
-          "(Fuel)",
-          "(Engine)",
-          "(Tunnel)",
-          "(Bridge)"
+          "Combustível",
+          "Motor",
+          "Túnel",
+          "Ponte"
         ],
         1
       ],
       [
         "Fuel significa:",
         [
-          "(Bridge)",
-          "(Fuel)",
-          "(Engine)",
-          "(Tunnel)"
+          "Ponte",
+          "Combustível",
+          "Motor",
+          "Túnel"
         ],
         1
       ],
       [
-        "Como dizemos \"(Fuel)\" em inglês?",
+        "Como dizemos \"Combustível\" em inglês?",
         [
           "Engine",
           "Bridge",
@@ -11241,22 +11241,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Map",
-        "(Map)",
+        "Mapa",
         "📚"
       ],
       [
         "GPS",
-        "(GPS)",
+        "GPS",
         "📚"
       ],
       [
         "Arrive",
-        "(Arrive)",
+        "Chegar",
         "📚"
       ],
       [
         "Depart",
-        "(Depart)",
+        "Partir",
         "📚"
       ]
     ],
@@ -11264,25 +11264,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Map significa:",
         [
-          "(Arrive)",
-          "(Map)",
-          "(GPS)",
-          "(Depart)"
+          "Chegar",
+          "Mapa",
+          "GPS",
+          "Partir"
         ],
         1
       ],
       [
         "GPS significa:",
         [
-          "(Map)",
-          "(Depart)",
-          "(Arrive)",
-          "(GPS)"
+          "Mapa",
+          "Partir",
+          "Chegar",
+          "GPS"
         ],
         3
       ],
       [
-        "Como dizemos \"(GPS)\" em inglês?",
+        "Como dizemos \"GPS\" em inglês?",
         [
           "Depart",
           "GPS",
@@ -11312,22 +11312,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Platform",
-        "(Platform)",
+        "Plataforma",
         "📚"
       ],
       [
         "Schedule",
-        "(Schedule)",
+        "Horário",
         "📚"
       ],
       [
         "Delay",
-        "(Delay)",
+        "Atraso",
         "📚"
       ],
       [
         "Safe trip",
-        "(Safe trip)",
+        "Boa viagem",
         "📚"
       ]
     ],
@@ -11335,25 +11335,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Platform significa:",
         [
-          "(Schedule)",
-          "(Safe trip)",
-          "(Delay)",
-          "(Platform)"
+          "Horário",
+          "Boa viagem",
+          "Atraso",
+          "Plataforma"
         ],
         3
       ],
       [
         "Schedule significa:",
         [
-          "(Safe trip)",
-          "(Schedule)",
-          "(Delay)",
-          "(Platform)"
+          "Boa viagem",
+          "Horário",
+          "Atraso",
+          "Plataforma"
         ],
         1
       ],
       [
-        "Como dizemos \"(Schedule)\" em inglês?",
+        "Como dizemos \"Horário\" em inglês?",
         [
           "Safe trip",
           "Schedule",
@@ -11383,22 +11383,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Ride",
-        "(Ride)",
+        "Passeio",
         "📚"
       ],
       [
         "Walk",
-        "(Walk)",
+        "Caminhar",
         "📚"
       ],
       [
         "Crosswalk",
-        "(Crosswalk)",
+        "Faixa de pedestres",
         "📚"
       ],
       [
         "Parking",
-        "(Parking)",
+        "Estacionamento",
         "📚"
       ]
     ],
@@ -11406,25 +11406,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ride significa:",
         [
-          "(Parking)",
-          "(Ride)",
-          "(Crosswalk)",
-          "(Walk)"
+          "Estacionamento",
+          "Passeio",
+          "Faixa de pedestres",
+          "Caminhar"
         ],
         1
       ],
       [
         "Walk significa:",
         [
-          "(Ride)",
-          "(Parking)",
-          "(Walk)",
-          "(Crosswalk)"
+          "Passeio",
+          "Estacionamento",
+          "Caminhar",
+          "Faixa de pedestres"
         ],
         2
       ],
       [
-        "Como dizemos \"(Walk)\" em inglês?",
+        "Como dizemos \"Caminhar\" em inglês?",
         [
           "Ride",
           "Crosswalk",
@@ -11464,12 +11464,12 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Firefighter",
-        "(Firefighter)",
+        "Bombeiro",
         "📚"
       ],
       [
         "Police",
-        "(Police)",
+        "Polícia",
         "📚"
       ]
     ],
@@ -11478,9 +11478,9 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Doctor significa:",
         [
           "Professor(a)",
-          "(Police)",
+          "Polícia",
           "Médico(a)",
-          "(Firefighter)"
+          "Bombeiro"
         ],
         2
       ],
@@ -11488,9 +11488,9 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Teacher significa:",
         [
           "Médico(a)",
-          "(Firefighter)",
+          "Bombeiro",
           "Professor(a)",
-          "(Police)"
+          "Polícia"
         ],
         2
       ],
@@ -11525,22 +11525,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Chef",
-        "(Chef)",
+        "Chef de cozinha",
         "📚"
       ],
       [
         "Farmer",
-        "(Farmer)",
+        "Fazendeiro",
         "📚"
       ],
       [
         "Artist",
-        "(Artist)",
+        "Artista",
         "📚"
       ],
       [
         "Singer",
-        "(Singer)",
+        "Cantor",
         "📚"
       ]
     ],
@@ -11548,25 +11548,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Chef significa:",
         [
-          "(Farmer)",
-          "(Artist)",
-          "(Chef)",
-          "(Singer)"
+          "Fazendeiro",
+          "Artista",
+          "Chef de cozinha",
+          "Cantor"
         ],
         2
       ],
       [
         "Farmer significa:",
         [
-          "(Artist)",
-          "(Singer)",
-          "(Chef)",
-          "(Farmer)"
+          "Artista",
+          "Cantor",
+          "Chef de cozinha",
+          "Fazendeiro"
         ],
         3
       ],
       [
-        "Como dizemos \"(Farmer)\" em inglês?",
+        "Como dizemos \"Fazendeiro\" em inglês?",
         [
           "Artist",
           "Farmer",
@@ -11596,22 +11596,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Builder",
-        "(Builder)",
+        "Pedreiro",
         "📚"
       ],
       [
         "Pilot",
-        "(Pilot)",
+        "Piloto",
         "📚"
       ],
       [
         "Nurse",
-        "(Nurse)",
+        "Enfermeiro",
         "📚"
       ],
       [
         "Dentist",
-        "(Dentist)",
+        "Dentista",
         "📚"
       ]
     ],
@@ -11619,25 +11619,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Builder significa:",
         [
-          "(Nurse)",
-          "(Dentist)",
-          "(Pilot)",
-          "(Builder)"
+          "Enfermeiro",
+          "Dentista",
+          "Piloto",
+          "Pedreiro"
         ],
         3
       ],
       [
         "Pilot significa:",
         [
-          "(Dentist)",
-          "(Pilot)",
-          "(Nurse)",
-          "(Builder)"
+          "Dentista",
+          "Piloto",
+          "Enfermeiro",
+          "Pedreiro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Pilot)\" em inglês?",
+        "Como dizemos \"Piloto\" em inglês?",
         [
           "Builder",
           "Pilot",
@@ -11667,22 +11667,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Vet",
-        "(Vet)",
+        "Veterinário",
         "📚"
       ],
       [
         "Engineer",
-        "(Engineer)",
+        "Engenheiro",
         "📚"
       ],
       [
         "Scientist",
-        "(Scientist)",
+        "Cientista",
         "📚"
       ],
       [
         "Writer",
-        "(Writer)",
+        "Escritor",
         "📚"
       ]
     ],
@@ -11690,25 +11690,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Vet significa:",
         [
-          "(Writer)",
-          "(Vet)",
-          "(Scientist)",
-          "(Engineer)"
+          "Escritor",
+          "Veterinário",
+          "Cientista",
+          "Engenheiro"
         ],
         1
       ],
       [
         "Engineer significa:",
         [
-          "(Vet)",
-          "(Engineer)",
-          "(Writer)",
-          "(Scientist)"
+          "Veterinário",
+          "Engenheiro",
+          "Escritor",
+          "Cientista"
         ],
         1
       ],
       [
-        "Como dizemos \"(Engineer)\" em inglês?",
+        "Como dizemos \"Engenheiro\" em inglês?",
         [
           "Vet",
           "Scientist",
@@ -11738,22 +11738,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Actor",
-        "(Actor)",
+        "Ator",
         "📚"
       ],
       [
         "Driver",
-        "(Driver)",
+        "Motorista",
         "📚"
       ],
       [
         "Baker",
-        "(Baker)",
+        "Padeiro",
         "📚"
       ],
       [
         "Mechanic",
-        "(Mechanic)",
+        "Mecânico",
         "📚"
       ]
     ],
@@ -11761,25 +11761,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Actor significa:",
         [
-          "(Driver)",
-          "(Actor)",
-          "(Mechanic)",
-          "(Baker)"
+          "Motorista",
+          "Ator",
+          "Mecânico",
+          "Padeiro"
         ],
         1
       ],
       [
         "Driver significa:",
         [
-          "(Actor)",
-          "(Baker)",
-          "(Driver)",
-          "(Mechanic)"
+          "Ator",
+          "Padeiro",
+          "Motorista",
+          "Mecânico"
         ],
         2
       ],
       [
-        "Como dizemos \"(Driver)\" em inglês?",
+        "Como dizemos \"Motorista\" em inglês?",
         [
           "Actor",
           "Baker",
@@ -11809,22 +11809,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Help people",
-        "(Help people)",
+        "Ajudar as pessoas",
         "📚"
       ],
       [
         "Work hard",
-        "(Work hard)",
+        "Trabalhar bastante",
         "📚"
       ],
       [
         "Office",
-        "(Office)",
+        "Escritório",
         "📚"
       ],
       [
         "Uniform",
-        "(Uniform)",
+        "Uniforme",
         "📚"
       ]
     ],
@@ -11832,25 +11832,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Help people significa:",
         [
-          "(Work hard)",
-          "(Office)",
-          "(Help people)",
-          "(Uniform)"
+          "Trabalhar bastante",
+          "Escritório",
+          "Ajudar as pessoas",
+          "Uniforme"
         ],
         2
       ],
       [
         "Work hard significa:",
         [
-          "(Help people)",
-          "(Office)",
-          "(Uniform)",
-          "(Work hard)"
+          "Ajudar as pessoas",
+          "Escritório",
+          "Uniforme",
+          "Trabalhar bastante"
         ],
         3
       ],
       [
-        "Como dizemos \"(Work hard)\" em inglês?",
+        "Como dizemos \"Trabalhar bastante\" em inglês?",
         [
           "Office",
           "Work hard",
@@ -11880,22 +11880,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Tools",
-        "(Tools)",
+        "Ferramentas",
         "📚"
       ],
       [
         "Team",
-        "(Team)",
+        "Equipe",
         "📚"
       ],
       [
         "Boss",
-        "(Boss)",
+        "Chefe",
         "📚"
       ],
       [
         "Employee",
-        "(Employee)",
+        "Funcionário",
         "📚"
       ]
     ],
@@ -11903,25 +11903,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tools significa:",
         [
-          "(Team)",
-          "(Boss)",
-          "(Employee)",
-          "(Tools)"
+          "Equipe",
+          "Chefe",
+          "Funcionário",
+          "Ferramentas"
         ],
         3
       ],
       [
         "Team significa:",
         [
-          "(Employee)",
-          "(Team)",
-          "(Boss)",
-          "(Tools)"
+          "Funcionário",
+          "Equipe",
+          "Chefe",
+          "Ferramentas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Team)\" em inglês?",
+        "Como dizemos \"Equipe\" em inglês?",
         [
           "Employee",
           "Team",
@@ -11951,22 +11951,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Interview",
-        "(Interview)",
+        "Entrevista",
         "📚"
       ],
       [
         "Salary",
-        "(Salary)",
+        "Salário",
         "📚"
       ],
       [
         "Dream job",
-        "(Dream job)",
+        "Emprego dos sonhos",
         "📚"
       ],
       [
         "Skill",
-        "(Skill)",
+        "Habilidade",
         "📚"
       ]
     ],
@@ -11974,25 +11974,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Interview significa:",
         [
-          "(Skill)",
-          "(Interview)",
-          "(Dream job)",
-          "(Salary)"
+          "Habilidade",
+          "Entrevista",
+          "Emprego dos sonhos",
+          "Salário"
         ],
         1
       ],
       [
         "Salary significa:",
         [
-          "(Skill)",
-          "(Salary)",
-          "(Interview)",
-          "(Dream job)"
+          "Habilidade",
+          "Salário",
+          "Entrevista",
+          "Emprego dos sonhos"
         ],
         1
       ],
       [
-        "Como dizemos \"(Salary)\" em inglês?",
+        "Como dizemos \"Salário\" em inglês?",
         [
           "Interview",
           "Salary",
@@ -12022,22 +12022,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Practice",
-        "(Practice)",
+        "Praticar",
         "📚"
       ],
       [
         "Learn",
-        "(Learn)",
+        "Aprender",
         "📚"
       ],
       [
         "Serve",
-        "(Serve)",
+        "Servir",
         "📚"
       ],
       [
         "Protect",
-        "(Protect)",
+        "Proteger",
         "📚"
       ]
     ],
@@ -12045,25 +12045,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Practice significa:",
         [
-          "(Protect)",
-          "(Practice)",
-          "(Learn)",
-          "(Serve)"
+          "Proteger",
+          "Praticar",
+          "Aprender",
+          "Servir"
         ],
         1
       ],
       [
         "Learn significa:",
         [
-          "(Practice)",
-          "(Serve)",
-          "(Learn)",
-          "(Protect)"
+          "Praticar",
+          "Servir",
+          "Aprender",
+          "Proteger"
         ],
         2
       ],
       [
-        "Como dizemos \"(Learn)\" em inglês?",
+        "Como dizemos \"Aprender\" em inglês?",
         [
           "Practice",
           "Protect",
@@ -12093,22 +12093,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Create",
-        "(Create)",
+        "Criar",
         "📚"
       ],
       [
         "Fix",
-        "(Fix)",
+        "Consertar",
         "📚"
       ],
       [
         "Cook",
-        "(Cook)",
+        "Cozinhar",
         "📚"
       ],
       [
         "Teach",
-        "(Teach)",
+        "Ensinar",
         "📚"
       ]
     ],
@@ -12116,25 +12116,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Create significa:",
         [
-          "(Fix)",
-          "(Cook)",
-          "(Create)",
-          "(Teach)"
+          "Consertar",
+          "Cozinhar",
+          "Criar",
+          "Ensinar"
         ],
         2
       ],
       [
         "Fix significa:",
         [
-          "(Cook)",
-          "(Teach)",
-          "(Create)",
-          "(Fix)"
+          "Cozinhar",
+          "Ensinar",
+          "Criar",
+          "Consertar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Fix)\" em inglês?",
+        "Como dizemos \"Consertar\" em inglês?",
         [
           "Cook",
           "Fix",
@@ -12169,17 +12169,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Basketball",
-        "(Basketball)",
+        "Basquete",
         "📚"
       ],
       [
         "Tennis",
-        "(Tennis)",
+        "Tênis",
         "📚"
       ],
       [
         "Swim",
-        "(Swim)",
+        "Nadar",
         "📚"
       ]
     ],
@@ -12187,9 +12187,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Soccer significa:",
         [
-          "(Tennis)",
-          "(Swim)",
-          "(Basketball)",
+          "Tênis",
+          "Nadar",
+          "Basquete",
           "Futebol"
         ],
         3
@@ -12197,15 +12197,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Basketball significa:",
         [
-          "(Tennis)",
-          "(Basketball)",
-          "(Swim)",
+          "Tênis",
+          "Basquete",
+          "Nadar",
           "Futebol"
         ],
         1
       ],
       [
-        "Como dizemos \"(Basketball)\" em inglês?",
+        "Como dizemos \"Basquete\" em inglês?",
         [
           "Soccer",
           "Swim",
@@ -12235,22 +12235,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Run",
-        "(Run)",
+        "Correr",
         "📚"
       ],
       [
         "Volleyball",
-        "(Volleyball)",
+        "Vôlei",
         "📚"
       ],
       [
         "Baseball",
-        "(Baseball)",
+        "Beisebol",
         "📚"
       ],
       [
         "Golf",
-        "(Golf)",
+        "Golfe",
         "📚"
       ]
     ],
@@ -12258,25 +12258,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Run significa:",
         [
-          "(Baseball)",
-          "(Run)",
-          "(Golf)",
-          "(Volleyball)"
+          "Beisebol",
+          "Correr",
+          "Golfe",
+          "Vôlei"
         ],
         1
       ],
       [
         "Volleyball significa:",
         [
-          "(Run)",
-          "(Volleyball)",
-          "(Golf)",
-          "(Baseball)"
+          "Correr",
+          "Vôlei",
+          "Golfe",
+          "Beisebol"
         ],
         1
       ],
       [
-        "Como dizemos \"(Volleyball)\" em inglês?",
+        "Como dizemos \"Vôlei\" em inglês?",
         [
           "Run",
           "Volleyball",
@@ -12306,22 +12306,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Skate",
-        "(Skate)",
+        "Andar de skate",
         "📚"
       ],
       [
         "Ski",
-        "(Ski)",
+        "Esquiar",
         "📚"
       ],
       [
         "Team",
-        "(Team)",
+        "Equipe",
         "📚"
       ],
       [
         "Coach",
-        "(Coach)",
+        "Treinador",
         "📚"
       ]
     ],
@@ -12329,25 +12329,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Skate significa:",
         [
-          "(Ski)",
-          "(Skate)",
-          "(Coach)",
-          "(Team)"
+          "Esquiar",
+          "Andar de skate",
+          "Treinador",
+          "Equipe"
         ],
         1
       ],
       [
         "Ski significa:",
         [
-          "(Skate)",
-          "(Team)",
-          "(Ski)",
-          "(Coach)"
+          "Andar de skate",
+          "Equipe",
+          "Esquiar",
+          "Treinador"
         ],
         2
       ],
       [
-        "Como dizemos \"(Ski)\" em inglês?",
+        "Como dizemos \"Esquiar\" em inglês?",
         [
           "Skate",
           "Team",
@@ -12377,22 +12377,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Score",
-        "(Score)",
+        "Placar",
         "📚"
       ],
       [
         "Win",
-        "(Win)",
+        "Ganhar",
         "📚"
       ],
       [
         "Lose",
-        "(Lose)",
+        "Perder",
         "📚"
       ],
       [
         "Game",
-        "(Game)",
+        "Jogo",
         "📚"
       ]
     ],
@@ -12400,25 +12400,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Score significa:",
         [
-          "(Win)",
-          "(Lose)",
-          "(Score)",
-          "(Game)"
+          "Ganhar",
+          "Perder",
+          "Placar",
+          "Jogo"
         ],
         2
       ],
       [
         "Win significa:",
         [
-          "(Score)",
-          "(Lose)",
-          "(Game)",
-          "(Win)"
+          "Placar",
+          "Perder",
+          "Jogo",
+          "Ganhar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Win)\" em inglês?",
+        "Como dizemos \"Ganhar\" em inglês?",
         [
           "Game",
           "Lose",
@@ -12448,22 +12448,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Ball",
-        "(Ball)",
+        "Bola",
         "📚"
       ],
       [
         "Goal",
-        "(Goal)",
+        "Gol",
         "📚"
       ],
       [
         "Race",
-        "(Race)",
+        "Corrida",
         "📚"
       ],
       [
         "Medal",
-        "(Medal)",
+        "Medalha",
         "📚"
       ]
     ],
@@ -12471,25 +12471,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ball significa:",
         [
-          "(Goal)",
-          "(Race)",
-          "(Medal)",
-          "(Ball)"
+          "Gol",
+          "Corrida",
+          "Medalha",
+          "Bola"
         ],
         3
       ],
       [
         "Goal significa:",
         [
-          "(Race)",
-          "(Goal)",
-          "(Medal)",
-          "(Ball)"
+          "Corrida",
+          "Gol",
+          "Medalha",
+          "Bola"
         ],
         1
       ],
       [
-        "Como dizemos \"(Goal)\" em inglês?",
+        "Como dizemos \"Gol\" em inglês?",
         [
           "Medal",
           "Goal",
@@ -12519,22 +12519,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Exercise",
-        "(Exercise)",
+        "Exercício",
         "📚"
       ],
       [
         "Stretch",
-        "(Stretch)",
+        "Alongar",
         "📚"
       ],
       [
         "Strong",
-        "(Strong)",
+        "Forte",
         "📚"
       ],
       [
         "Fast",
-        "(Fast)",
+        "Rápido",
         "📚"
       ]
     ],
@@ -12542,25 +12542,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Exercise significa:",
         [
-          "(Strong)",
-          "(Exercise)",
-          "(Fast)",
-          "(Stretch)"
+          "Forte",
+          "Exercício",
+          "Rápido",
+          "Alongar"
         ],
         1
       ],
       [
         "Stretch significa:",
         [
-          "(Fast)",
-          "(Stretch)",
-          "(Exercise)",
-          "(Strong)"
+          "Rápido",
+          "Alongar",
+          "Exercício",
+          "Forte"
         ],
         1
       ],
       [
-        "Como dizemos \"(Stretch)\" em inglês?",
+        "Como dizemos \"Alongar\" em inglês?",
         [
           "Strong",
           "Stretch",
@@ -12590,22 +12590,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Kick",
-        "(Kick)",
+        "Chutar",
         "📚"
       ],
       [
         "Throw",
-        "(Throw)",
+        "Arremessar",
         "📚"
       ],
       [
         "Catch",
-        "(Catch)",
+        "Pegar",
         "📚"
       ],
       [
         "Jump",
-        "(Jump)",
+        "Pular",
         "📚"
       ]
     ],
@@ -12613,25 +12613,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Kick significa:",
         [
-          "(Jump)",
-          "(Kick)",
-          "(Throw)",
-          "(Catch)"
+          "Pular",
+          "Chutar",
+          "Arremessar",
+          "Pegar"
         ],
         1
       ],
       [
         "Throw significa:",
         [
-          "(Kick)",
-          "(Throw)",
-          "(Catch)",
-          "(Jump)"
+          "Chutar",
+          "Arremessar",
+          "Pegar",
+          "Pular"
         ],
         1
       ],
       [
-        "Como dizemos \"(Throw)\" em inglês?",
+        "Como dizemos \"Arremessar\" em inglês?",
         [
           "Catch",
           "Jump",
@@ -12661,22 +12661,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cheer",
-        "(Cheer)",
+        "Torcer",
         "📚"
       ],
       [
         "Fair play",
-        "(Fair play)",
+        "Jogo limpo",
         "📚"
       ],
       [
         "Practice",
-        "(Practice)",
+        "Praticar",
         "📚"
       ],
       [
         "Stadium",
-        "(Stadium)",
+        "Estádio",
         "📚"
       ]
     ],
@@ -12684,25 +12684,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cheer significa:",
         [
-          "(Fair play)",
-          "(Cheer)",
-          "(Practice)",
-          "(Stadium)"
+          "Jogo limpo",
+          "Torcer",
+          "Praticar",
+          "Estádio"
         ],
         1
       ],
       [
         "Fair play significa:",
         [
-          "(Cheer)",
-          "(Stadium)",
-          "(Practice)",
-          "(Fair play)"
+          "Torcer",
+          "Estádio",
+          "Praticar",
+          "Jogo limpo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Fair play)\" em inglês?",
+        "Como dizemos \"Jogo limpo\" em inglês?",
         [
           "Practice",
           "Fair play",
@@ -12732,22 +12732,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Field",
-        "(Field)",
+        "Campo",
         "📚"
       ],
       [
         "Court",
-        "(Court)",
+        "Quadra",
         "📚"
       ],
       [
         "Pool",
-        "(Pool)",
+        "Piscina",
         "📚"
       ],
       [
         "Helmet",
-        "(Helmet)",
+        "Capacete",
         "📚"
       ]
     ],
@@ -12755,25 +12755,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Field significa:",
         [
-          "(Court)",
-          "(Helmet)",
-          "(Pool)",
-          "(Field)"
+          "Quadra",
+          "Capacete",
+          "Piscina",
+          "Campo"
         ],
         3
       ],
       [
         "Court significa:",
         [
-          "(Pool)",
-          "(Court)",
-          "(Helmet)",
-          "(Field)"
+          "Piscina",
+          "Quadra",
+          "Capacete",
+          "Campo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Court)\" em inglês?",
+        "Como dizemos \"Quadra\" em inglês?",
         [
           "Helmet",
           "Court",
@@ -12803,22 +12803,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Rules",
-        "(Rules)",
+        "Regras",
         "📚"
       ],
       [
         "Referee",
-        "(Referee)",
+        "Juiz",
         "📚"
       ],
       [
         "Champion",
-        "(Champion)",
+        "Campeão",
         "📚"
       ],
       [
         "Try your best",
-        "(Try your best)",
+        "Faça o seu melhor",
         "📚"
       ]
     ],
@@ -12826,25 +12826,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Rules significa:",
         [
-          "(Champion)",
-          "(Rules)",
-          "(Try your best)",
-          "(Referee)"
+          "Campeão",
+          "Regras",
+          "Faça o seu melhor",
+          "Juiz"
         ],
         1
       ],
       [
         "Referee significa:",
         [
-          "(Rules)",
-          "(Try your best)",
-          "(Referee)",
-          "(Champion)"
+          "Regras",
+          "Faça o seu melhor",
+          "Juiz",
+          "Campeão"
         ],
         2
       ],
       [
-        "Como dizemos \"(Referee)\" em inglês?",
+        "Como dizemos \"Juiz\" em inglês?",
         [
           "Rules",
           "Referee",
@@ -12855,7 +12855,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(Try your best)",
+      "ptLabel": "Faça o seu melhor",
       "words": [
         "your",
         "Try",
@@ -12883,22 +12883,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Draw",
-        "(Draw)",
+        "Desenhar",
         "📚"
       ],
       [
         "Paint",
-        "(Paint)",
+        "Pintar",
         "📚"
       ],
       [
         "Read",
-        "(Read)",
+        "Ler",
         "📚"
       ],
       [
         "Cook",
-        "(Cook)",
+        "Cozinhar",
         "📚"
       ]
     ],
@@ -12906,25 +12906,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Draw significa:",
         [
-          "(Paint)",
-          "(Cook)",
-          "(Draw)",
-          "(Read)"
+          "Pintar",
+          "Cozinhar",
+          "Desenhar",
+          "Ler"
         ],
         2
       ],
       [
         "Paint significa:",
         [
-          "(Draw)",
-          "(Paint)",
-          "(Read)",
-          "(Cook)"
+          "Desenhar",
+          "Pintar",
+          "Ler",
+          "Cozinhar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Paint)\" em inglês?",
+        "Como dizemos \"Pintar\" em inglês?",
         [
           "Read",
           "Cook",
@@ -12954,22 +12954,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Garden",
-        "(Garden)",
+        "Cuidar do jardim",
         "📚"
       ],
       [
         "Collect",
-        "(Collect)",
+        "Colecionar",
         "📚"
       ],
       [
         "Build",
-        "(Build)",
+        "Construir",
         "📚"
       ],
       [
         "Craft",
-        "(Craft)",
+        "Artesanato",
         "📚"
       ]
     ],
@@ -12977,25 +12977,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Garden significa:",
         [
-          "(Collect)",
-          "(Garden)",
-          "(Build)",
-          "(Craft)"
+          "Colecionar",
+          "Cuidar do jardim",
+          "Construir",
+          "Artesanato"
         ],
         1
       ],
       [
         "Collect significa:",
         [
-          "(Garden)",
-          "(Build)",
-          "(Craft)",
-          "(Collect)"
+          "Cuidar do jardim",
+          "Construir",
+          "Artesanato",
+          "Colecionar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Collect)\" em inglês?",
+        "Como dizemos \"Colecionar\" em inglês?",
         [
           "Craft",
           "Build",
@@ -13025,22 +13025,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Photo",
-        "(Photo)",
+        "Foto",
         "📚"
       ],
       [
         "Video games",
-        "(Video games)",
+        "Videogame",
         "📚"
       ],
       [
         "Puzzle",
-        "(Puzzle)",
+        "Quebra-cabeça",
         "📚"
       ],
       [
         "Chess",
-        "(Chess)",
+        "Xadrez",
         "📚"
       ]
     ],
@@ -13048,25 +13048,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Photo significa:",
         [
-          "(Video games)",
-          "(Puzzle)",
-          "(Chess)",
-          "(Photo)"
+          "Videogame",
+          "Quebra-cabeça",
+          "Xadrez",
+          "Foto"
         ],
         3
       ],
       [
         "Video games significa:",
         [
-          "(Chess)",
-          "(Puzzle)",
-          "(Video games)",
-          "(Photo)"
+          "Xadrez",
+          "Quebra-cabeça",
+          "Videogame",
+          "Foto"
         ],
         2
       ],
       [
-        "Como dizemos \"(Video games)\" em inglês?",
+        "Como dizemos \"Videogame\" em inglês?",
         [
           "Photo",
           "Video games",
@@ -13096,22 +13096,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cards",
-        "(Cards)",
+        "Cartas",
         "📚"
       ],
       [
         "Origami",
-        "(Origami)",
+        "Origami",
         "📚"
       ],
       [
         "Knit",
-        "(Knit)",
+        "Tricotar",
         "📚"
       ],
       [
         "Sew",
-        "(Sew)",
+        "Costurar",
         "📚"
       ]
     ],
@@ -13119,25 +13119,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cards significa:",
         [
-          "(Sew)",
-          "(Knit)",
-          "(Cards)",
-          "(Origami)"
+          "Costurar",
+          "Tricotar",
+          "Cartas",
+          "Origami"
         ],
         2
       ],
       [
         "Origami significa:",
         [
-          "(Sew)",
-          "(Origami)",
-          "(Cards)",
-          "(Knit)"
+          "Costurar",
+          "Origami",
+          "Cartas",
+          "Tricotar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Origami)\" em inglês?",
+        "Como dizemos \"Origami\" em inglês?",
         [
           "Knit",
           "Origami",
@@ -13167,22 +13167,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Camp",
-        "(Camp)",
+        "Acampar",
         "📚"
       ],
       [
         "Fish",
-        "(Fish)",
+        "Pescar",
         "📚"
       ],
       [
         "Hike",
-        "(Hike)",
+        "Fazer trilha",
         "📚"
       ],
       [
         "Camping",
-        "(Camping)",
+        "Acampamento",
         "📚"
       ]
     ],
@@ -13190,25 +13190,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Camp significa:",
         [
-          "(Camping)",
-          "(Camp)",
-          "(Fish)",
-          "(Hike)"
+          "Acampamento",
+          "Acampar",
+          "Pescar",
+          "Fazer trilha"
         ],
         1
       ],
       [
         "Fish significa:",
         [
-          "(Hike)",
-          "(Fish)",
-          "(Camp)",
-          "(Camping)"
+          "Fazer trilha",
+          "Pescar",
+          "Acampar",
+          "Acampamento"
         ],
         1
       ],
       [
-        "Como dizemos \"(Fish)\" em inglês?",
+        "Como dizemos \"Pescar\" em inglês?",
         [
           "Camp",
           "Camping",
@@ -13238,22 +13238,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Fun",
-        "(Fun)",
+        "Divertido",
         "📚"
       ],
       [
         "Relax",
-        "(Relax)",
+        "Relaxar",
         "📚"
       ],
       [
         "Creative",
-        "(Creative)",
+        "Criativo",
         "📚"
       ],
       [
         "Favorite hobby",
-        "(Favorite hobby)",
+        "Hobby favorito",
         "📚"
       ]
     ],
@@ -13261,25 +13261,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Fun significa:",
         [
-          "(Creative)",
-          "(Fun)",
-          "(Relax)",
-          "(Favorite hobby)"
+          "Criativo",
+          "Divertido",
+          "Relaxar",
+          "Hobby favorito"
         ],
         1
       ],
       [
         "Relax significa:",
         [
-          "(Creative)",
-          "(Favorite hobby)",
-          "(Fun)",
-          "(Relax)"
+          "Criativo",
+          "Hobby favorito",
+          "Divertido",
+          "Relaxar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Relax)\" em inglês?",
+        "Como dizemos \"Relaxar\" em inglês?",
         [
           "Favorite hobby",
           "Relax",
@@ -13297,34 +13297,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 187,
     "slug": "hobbies-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Free time, Weekend fun, Share hobby, Learn new",
+    "description": "Memória: Free time, Weekend fun, Share a hobby, Learn something new",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Free time, Weekend fun, Share hobby e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Free time, Weekend fun, Share a hobby e mais algumas palavras.",
     "learn": [
       "Free time",
       "Weekend fun",
-      "Share hobby",
-      "Learn new"
+      "Share a hobby",
+      "Learn something new"
     ],
     "words": [
       [
         "Free time",
-        "(Free time)",
+        "Tempo livre",
         "📚"
       ],
       [
         "Weekend fun",
-        "(Weekend fun)",
+        "Diversão no fim de semana",
         "📚"
       ],
       [
-        "Share hobby",
-        "(Share hobby)",
+        "Share a hobby",
+        "Compartilhar um hobby",
         "📚"
       ],
       [
-        "Learn new",
-        "(Learn new)",
+        "Learn something new",
+        "Aprender algo novo",
         "📚"
       ]
     ],
@@ -13332,30 +13332,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Free time significa:",
         [
-          "(Share hobby)",
-          "(Learn new)",
-          "(Weekend fun)",
-          "(Free time)"
+          "Compartilhar um hobby",
+          "Aprender algo novo",
+          "Diversão no fim de semana",
+          "Tempo livre"
         ],
         3
       ],
       [
         "Weekend fun significa:",
         [
-          "(Share hobby)",
-          "(Weekend fun)",
-          "(Learn new)",
-          "(Free time)"
+          "Compartilhar um hobby",
+          "Diversão no fim de semana",
+          "Aprender algo novo",
+          "Tempo livre"
         ],
         1
       ],
       [
-        "Como dizemos \"(Weekend fun)\" em inglês?",
+        "Como dizemos \"Diversão no fim de semana\" em inglês?",
         [
           "Free time",
           "Weekend fun",
-          "Learn new",
-          "Share hobby"
+          "Learn something new",
+          "Share a hobby"
         ],
         1
       ]
@@ -13368,62 +13368,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 188,
     "slug": "hobbies-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Practice daily, Enjoy, Club, Friends",
+    "description": "Frases: Practice every day, Enjoy, Club, Friends",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Practice daily, Enjoy, Club e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Practice every day, Enjoy, Club e mais algumas palavras.",
     "learn": [
-      "Practice daily",
+      "Practice every day",
       "Enjoy",
       "Club",
       "Friends"
     ],
     "words": [
       [
-        "Practice daily",
-        "(Practice daily)",
+        "Practice every day",
+        "Praticar todo dia",
         "📚"
       ],
       [
         "Enjoy",
-        "(Enjoy)",
+        "Aproveitar",
         "📚"
       ],
       [
         "Club",
-        "(Club)",
+        "Clube",
         "📚"
       ],
       [
         "Friends",
-        "(Friends)",
+        "Amigos",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Practice daily significa:",
+        "Practice every day significa:",
         [
-          "(Club)",
-          "(Practice daily)",
-          "(Friends)",
-          "(Enjoy)"
+          "Clube",
+          "Praticar todo dia",
+          "Amigos",
+          "Aproveitar"
         ],
         1
       ],
       [
         "Enjoy significa:",
         [
-          "(Friends)",
-          "(Enjoy)",
-          "(Practice daily)",
-          "(Club)"
+          "Amigos",
+          "Aproveitar",
+          "Praticar todo dia",
+          "Clube"
         ],
         1
       ],
       [
-        "Como dizemos \"(Enjoy)\" em inglês?",
+        "Como dizemos \"Aproveitar\" em inglês?",
         [
-          "Practice daily",
+          "Practice every day",
           "Enjoy",
           "Club",
           "Friends"
@@ -13451,22 +13451,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Indoor",
-        "(Indoor)",
+        "Dentro de casa",
         "📚"
       ],
       [
         "Outdoor",
-        "(Outdoor)",
+        "Ao ar livre",
         "📚"
       ],
       [
         "Music hobby",
-        "(Music hobby)",
+        "Hobby de música",
         "📚"
       ],
       [
         "Sport hobby",
-        "(Sport hobby)",
+        "Hobby de esporte",
         "📚"
       ]
     ],
@@ -13474,25 +13474,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Indoor significa:",
         [
-          "(Sport hobby)",
-          "(Indoor)",
-          "(Outdoor)",
-          "(Music hobby)"
+          "Hobby de esporte",
+          "Dentro de casa",
+          "Ao ar livre",
+          "Hobby de música"
         ],
         1
       ],
       [
         "Outdoor significa:",
         [
-          "(Indoor)",
-          "(Outdoor)",
-          "(Music hobby)",
-          "(Sport hobby)"
+          "Dentro de casa",
+          "Ao ar livre",
+          "Hobby de música",
+          "Hobby de esporte"
         ],
         1
       ],
       [
-        "Como dizemos \"(Outdoor)\" em inglês?",
+        "Como dizemos \"Ao ar livre\" em inglês?",
         [
           "Indoor",
           "Sport hobby",
@@ -13522,22 +13522,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Art hobby",
-        "(Art hobby)",
+        "Hobby de arte",
         "📚"
       ],
       [
         "Quiet time",
-        "(Quiet time)",
+        "Momento tranquilo",
         "📚"
       ],
       [
         "Busy hands",
-        "(Busy hands)",
+        "Mãos ocupadas",
         "📚"
       ],
       [
         "Make something",
-        "(Make something)",
+        "Fazer algo",
         "📚"
       ]
     ],
@@ -13545,25 +13545,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Art hobby significa:",
         [
-          "(Quiet time)",
-          "(Art hobby)",
-          "(Busy hands)",
-          "(Make something)"
+          "Momento tranquilo",
+          "Hobby de arte",
+          "Mãos ocupadas",
+          "Fazer algo"
         ],
         1
       ],
       [
         "Quiet time significa:",
         [
-          "(Busy hands)",
-          "(Make something)",
-          "(Art hobby)",
-          "(Quiet time)"
+          "Mãos ocupadas",
+          "Fazer algo",
+          "Hobby de arte",
+          "Momento tranquilo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Quiet time)\" em inglês?",
+        "Como dizemos \"Momento tranquilo\" em inglês?",
         [
           "Make something",
           "Busy hands",
@@ -13598,17 +13598,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Guitar",
-        "(Guitar)",
+        "Violão",
         "📚"
       ],
       [
         "Drum",
-        "(Drum)",
+        "Tambor",
         "📚"
       ],
       [
         "Violin",
-        "(Violin)",
+        "Violino",
         "📚"
       ]
     ],
@@ -13616,9 +13616,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Piano significa:",
         [
-          "(Drum)",
-          "(Violin)",
-          "(Guitar)",
+          "Tambor",
+          "Violino",
+          "Violão",
           "Piano"
         ],
         3
@@ -13626,15 +13626,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Guitar significa:",
         [
-          "(Violin)",
-          "(Drum)",
-          "(Guitar)",
+          "Violino",
+          "Tambor",
+          "Violão",
           "Piano"
         ],
         2
       ],
       [
-        "Como dizemos \"(Guitar)\" em inglês?",
+        "Como dizemos \"Violão\" em inglês?",
         [
           "Violin",
           "Guitar",
@@ -13664,22 +13664,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Flute",
-        "(Flute)",
+        "Flauta",
         "📚"
       ],
       [
         "Trumpet",
-        "(Trumpet)",
+        "Trompete",
         "📚"
       ],
       [
         "Song",
-        "(Song)",
+        "Canção",
         "📚"
       ],
       [
         "Sing",
-        "(Sing)",
+        "Cantar",
         "📚"
       ]
     ],
@@ -13687,25 +13687,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Flute significa:",
         [
-          "(Sing)",
-          "(Song)",
-          "(Flute)",
-          "(Trumpet)"
+          "Cantar",
+          "Canção",
+          "Flauta",
+          "Trompete"
         ],
         2
       ],
       [
         "Trumpet significa:",
         [
-          "(Flute)",
-          "(Trumpet)",
-          "(Sing)",
-          "(Song)"
+          "Flauta",
+          "Trompete",
+          "Cantar",
+          "Canção"
         ],
         1
       ],
       [
-        "Como dizemos \"(Trumpet)\" em inglês?",
+        "Como dizemos \"Trompete\" em inglês?",
         [
           "Song",
           "Trumpet",
@@ -13735,22 +13735,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Dance",
-        "(Dance)",
+        "Dançar",
         "📚"
       ],
       [
         "Rhythm",
-        "(Rhythm)",
+        "Ritmo",
         "📚"
       ],
       [
         "Melody",
-        "(Melody)",
+        "Melodia",
         "📚"
       ],
       [
         "Note",
-        "(Note)",
+        "Nota musical",
         "📚"
       ]
     ],
@@ -13758,25 +13758,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Dance significa:",
         [
-          "(Rhythm)",
-          "(Dance)",
-          "(Note)",
-          "(Melody)"
+          "Ritmo",
+          "Dançar",
+          "Nota musical",
+          "Melodia"
         ],
         1
       ],
       [
         "Rhythm significa:",
         [
-          "(Melody)",
-          "(Rhythm)",
-          "(Dance)",
-          "(Note)"
+          "Melodia",
+          "Ritmo",
+          "Dançar",
+          "Nota musical"
         ],
         1
       ],
       [
-        "Como dizemos \"(Rhythm)\" em inglês?",
+        "Como dizemos \"Ritmo\" em inglês?",
         [
           "Dance",
           "Note",
@@ -13806,22 +13806,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Band",
-        "(Band)",
+        "Banda",
         "📚"
       ],
       [
         "Concert",
-        "(Concert)",
+        "Show",
         "📚"
       ],
       [
         "Listen",
-        "(Listen)",
+        "Ouvir",
         "📚"
       ],
       [
         "Play music",
-        "(Play music)",
+        "Tocar música",
         "📚"
       ]
     ],
@@ -13829,25 +13829,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Band significa:",
         [
-          "(Listen)",
-          "(Band)",
-          "(Concert)",
-          "(Play music)"
+          "Ouvir",
+          "Banda",
+          "Show",
+          "Tocar música"
         ],
         1
       ],
       [
         "Concert significa:",
         [
-          "(Band)",
-          "(Play music)",
-          "(Listen)",
-          "(Concert)"
+          "Banda",
+          "Tocar música",
+          "Ouvir",
+          "Show"
         ],
         3
       ],
       [
-        "Como dizemos \"(Concert)\" em inglês?",
+        "Como dizemos \"Show\" em inglês?",
         [
           "Play music",
           "Concert",
@@ -13877,22 +13877,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Loud",
-        "(Loud)",
+        "Alto (som)",
         "📚"
       ],
       [
         "Soft",
-        "(Soft)",
+        "Baixinho (som)",
         "📚"
       ],
       [
         "Fast beat",
-        "(Fast beat)",
+        "Batida rápida",
         "📚"
       ],
       [
         "Slow song",
-        "(Slow song)",
+        "Música lenta",
         "📚"
       ]
     ],
@@ -13900,25 +13900,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Loud significa:",
         [
-          "(Soft)",
-          "(Slow song)",
-          "(Fast beat)",
-          "(Loud)"
+          "Baixinho (som)",
+          "Música lenta",
+          "Batida rápida",
+          "Alto (som)"
         ],
         3
       ],
       [
         "Soft significa:",
         [
-          "(Slow song)",
-          "(Soft)",
-          "(Fast beat)",
-          "(Loud)"
+          "Música lenta",
+          "Baixinho (som)",
+          "Batida rápida",
+          "Alto (som)"
         ],
         1
       ],
       [
-        "Como dizemos \"(Soft)\" em inglês?",
+        "Como dizemos \"Baixinho (som)\" em inglês?",
         [
           "Loud",
           "Slow song",
@@ -13952,22 +13952,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Lyrics",
-        "(Lyrics)",
+        "Letra da música",
         "📚"
       ],
       [
         "Chorus",
-        "(Chorus)",
+        "Refrão",
         "📚"
       ],
       [
         "Practice",
-        "(Practice)",
+        "Praticar",
         "📚"
       ],
       [
         "Tune",
-        "(Tune)",
+        "Toada",
         "📚"
       ]
     ],
@@ -13975,25 +13975,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Lyrics significa:",
         [
-          "(Tune)",
-          "(Lyrics)",
-          "(Practice)",
-          "(Chorus)"
+          "Toada",
+          "Letra da música",
+          "Praticar",
+          "Refrão"
         ],
         1
       ],
       [
         "Chorus significa:",
         [
-          "(Lyrics)",
-          "(Chorus)",
-          "(Tune)",
-          "(Practice)"
+          "Letra da música",
+          "Refrão",
+          "Toada",
+          "Praticar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Chorus)\" em inglês?",
+        "Como dizemos \"Refrão\" em inglês?",
         [
           "Lyrics",
           "Practice",
@@ -14023,22 +14023,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sound",
-        "(Sound)",
+        "Som",
         "📚"
       ],
       [
         "Voice",
-        "(Voice)",
+        "Voz",
         "📚"
       ],
       [
         "Microphone",
-        "(Microphone)",
+        "Microfone",
         "📚"
       ],
       [
         "Stage",
-        "(Stage)",
+        "Palco",
         "📚"
       ]
     ],
@@ -14046,25 +14046,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sound significa:",
         [
-          "(Voice)",
-          "(Sound)",
-          "(Stage)",
-          "(Microphone)"
+          "Voz",
+          "Som",
+          "Palco",
+          "Microfone"
         ],
         1
       ],
       [
         "Voice significa:",
         [
-          "(Sound)",
-          "(Voice)",
-          "(Microphone)",
-          "(Stage)"
+          "Som",
+          "Voz",
+          "Microfone",
+          "Palco"
         ],
         1
       ],
       [
-        "Como dizemos \"(Voice)\" em inglês?",
+        "Como dizemos \"Voz\" em inglês?",
         [
           "Sound",
           "Stage",
@@ -14094,22 +14094,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Applause",
-        "(Applause)",
+        "Aplausos",
         "📚"
       ],
       [
         "Favorite song",
-        "(Favorite song)",
+        "Música favorita",
         "📚"
       ],
       [
         "Hum",
-        "(Hum)",
+        "Cantarolar",
         "📚"
       ],
       [
         "Whistle",
-        "(Whistle)",
+        "Assobiar",
         "📚"
       ]
     ],
@@ -14117,25 +14117,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Applause significa:",
         [
-          "(Favorite song)",
-          "(Applause)",
-          "(Hum)",
-          "(Whistle)"
+          "Música favorita",
+          "Aplausos",
+          "Cantarolar",
+          "Assobiar"
         ],
         1
       ],
       [
         "Favorite song significa:",
         [
-          "(Applause)",
-          "(Whistle)",
-          "(Hum)",
-          "(Favorite song)"
+          "Aplausos",
+          "Assobiar",
+          "Cantarolar",
+          "Música favorita"
         ],
         3
       ],
       [
-        "Como dizemos \"(Favorite song)\" em inglês?",
+        "Como dizemos \"Música favorita\" em inglês?",
         [
           "Hum",
           "Favorite song",
@@ -14153,34 +14153,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 199,
     "slug": "music-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Clap, Move, Feel music, Happy song",
+    "description": "Quiz mix: Clap, Move, Feel the music, Happy song",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Clap, Move, Feel music e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Clap, Move, Feel the music e mais algumas palavras.",
     "learn": [
       "Clap",
       "Move",
-      "Feel music",
+      "Feel the music",
       "Happy song"
     ],
     "words": [
       [
         "Clap",
-        "(Clap)",
+        "Bater palmas",
         "📚"
       ],
       [
         "Move",
-        "(Move)",
+        "Mexer o corpo",
         "📚"
       ],
       [
-        "Feel music",
-        "(Feel music)",
+        "Feel the music",
+        "Sentir a música",
         "📚"
       ],
       [
         "Happy song",
-        "(Happy song)",
+        "Música alegre",
         "📚"
       ]
     ],
@@ -14188,30 +14188,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Clap significa:",
         [
-          "(Move)",
-          "(Happy song)",
-          "(Feel music)",
-          "(Clap)"
+          "Mexer o corpo",
+          "Música alegre",
+          "Sentir a música",
+          "Bater palmas"
         ],
         3
       ],
       [
         "Move significa:",
         [
-          "(Happy song)",
-          "(Feel music)",
-          "(Move)",
-          "(Clap)"
+          "Música alegre",
+          "Sentir a música",
+          "Mexer o corpo",
+          "Bater palmas"
         ],
         2
       ],
       [
-        "Como dizemos \"(Move)\" em inglês?",
+        "Como dizemos \"Mexer o corpo\" em inglês?",
         [
           "Clap",
           "Happy song",
           "Move",
-          "Feel music"
+          "Feel the music"
         ],
         2
       ]
@@ -14236,22 +14236,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Calm music",
-        "(Calm music)",
+        "Música calma",
         "📚"
       ],
       [
         "Birthday song",
-        "(Birthday song)",
+        "Música de aniversário",
         "📚"
       ],
       [
         "School song",
-        "(School song)",
+        "Música da escola",
         "📚"
       ],
       [
         "Music class",
-        "(Music class)",
+        "Aula de música",
         "📚"
       ]
     ],
@@ -14259,25 +14259,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Calm music significa:",
         [
-          "(Music class)",
-          "(School song)",
-          "(Calm music)",
-          "(Birthday song)"
+          "Aula de música",
+          "Música da escola",
+          "Música calma",
+          "Música de aniversário"
         ],
         2
       ],
       [
         "Birthday song significa:",
         [
-          "(Music class)",
-          "(Birthday song)",
-          "(Calm music)",
-          "(School song)"
+          "Aula de música",
+          "Música de aniversário",
+          "Música calma",
+          "Música da escola"
         ],
         1
       ],
       [
-        "Como dizemos \"(Birthday song)\" em inglês?",
+        "Como dizemos \"Música de aniversário\" em inglês?",
         [
           "School song",
           "Birthday song",
@@ -14312,17 +14312,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Flower",
-        "(Flower)",
+        "Flor",
         "📚"
       ],
       [
         "Grass",
-        "(Grass)",
+        "Grama",
         "📚"
       ],
       [
         "Leaf",
-        "(Leaf)",
+        "Folha",
         "📚"
       ]
     ],
@@ -14330,25 +14330,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tree significa:",
         [
-          "(Leaf)",
+          "Folha",
           "Árvore",
-          "(Flower)",
-          "(Grass)"
+          "Flor",
+          "Grama"
         ],
         1
       ],
       [
         "Flower significa:",
         [
-          "(Grass)",
-          "(Flower)",
+          "Grama",
+          "Flor",
           "Árvore",
-          "(Leaf)"
+          "Folha"
         ],
         1
       ],
       [
-        "Como dizemos \"(Flower)\" em inglês?",
+        "Como dizemos \"Flor\" em inglês?",
         [
           "Grass",
           "Leaf",
@@ -14378,22 +14378,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Root",
-        "(Root)",
+        "Raiz",
         "📚"
       ],
       [
         "Branch",
-        "(Branch)",
+        "Galho",
         "📚"
       ],
       [
         "Forest",
-        "(Forest)",
+        "Floresta",
         "📚"
       ],
       [
         "River",
-        "(River)",
+        "Rio",
         "📚"
       ]
     ],
@@ -14401,25 +14401,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Root significa:",
         [
-          "(Forest)",
-          "(Root)",
-          "(Branch)",
-          "(River)"
+          "Floresta",
+          "Raiz",
+          "Galho",
+          "Rio"
         ],
         1
       ],
       [
         "Branch significa:",
         [
-          "(Root)",
-          "(River)",
-          "(Forest)",
-          "(Branch)"
+          "Raiz",
+          "Rio",
+          "Floresta",
+          "Galho"
         ],
         3
       ],
       [
-        "Como dizemos \"(Branch)\" em inglês?",
+        "Como dizemos \"Galho\" em inglês?",
         [
           "River",
           "Forest",
@@ -14449,22 +14449,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Lake",
-        "(Lake)",
+        "Lago",
         "📚"
       ],
       [
         "Hill",
-        "(Hill)",
+        "Colina",
         "📚"
       ],
       [
         "Rock",
-        "(Rock)",
+        "Pedra",
         "📚"
       ],
       [
         "Soil",
-        "(Soil)",
+        "Solo",
         "📚"
       ]
     ],
@@ -14472,25 +14472,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Lake significa:",
         [
-          "(Hill)",
-          "(Soil)",
-          "(Rock)",
-          "(Lake)"
+          "Colina",
+          "Solo",
+          "Pedra",
+          "Lago"
         ],
         3
       ],
       [
         "Hill significa:",
         [
-          "(Soil)",
-          "(Hill)",
-          "(Rock)",
-          "(Lake)"
+          "Solo",
+          "Colina",
+          "Pedra",
+          "Lago"
         ],
         1
       ],
       [
-        "Como dizemos \"(Hill)\" em inglês?",
+        "Como dizemos \"Colina\" em inglês?",
         [
           "Lake",
           "Soil",
@@ -14508,24 +14508,24 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 204,
     "slug": "nature-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Seed, Grow, Plant, Water plants",
+    "description": "Desafio: Seed, Grow, Plant, Water the plants",
     "icon": "📚",
     "objective": "Hoje você vai aprender Seed, Grow, Plant e mais algumas palavras.",
     "learn": [
       "Seed",
       "Grow",
       "Plant",
-      "Water plants"
+      "Water the plants"
     ],
     "words": [
       [
         "Seed",
-        "(Seed)",
+        "Semente",
         "📚"
       ],
       [
         "Grow",
-        "(Grow)",
+        "Crescer",
         "📚"
       ],
       [
@@ -14534,8 +14534,8 @@ export const LESSON_SPECS: LessonSpec[] = [
         "📚"
       ],
       [
-        "Water plants",
-        "(Water plants)",
+        "Water the plants",
+        "Regar as plantas",
         "📚"
       ]
     ],
@@ -14543,30 +14543,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Seed significa:",
         [
-          "(Water plants)",
-          "(Seed)",
+          "Regar as plantas",
+          "Semente",
           "Plantar",
-          "(Grow)"
+          "Crescer"
         ],
         1
       ],
       [
         "Grow significa:",
         [
-          "(Seed)",
-          "(Water plants)",
-          "(Grow)",
+          "Semente",
+          "Regar as plantas",
+          "Crescer",
           "Plantar"
         ],
         2
       ],
       [
-        "Como dizemos \"(Grow)\" em inglês?",
+        "Como dizemos \"Crescer\" em inglês?",
         [
           "Plant",
           "Grow",
           "Seed",
-          "Water plants"
+          "Water the plants"
         ],
         1
       ]
@@ -14579,34 +14579,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 205,
     "slug": "nature-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Sunlight, Fresh air, Bird nest, Butterfly",
+    "description": "Falar: Sunlight, Fresh air, Bird's nest, Butterfly",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Sunlight, Fresh air, Bird nest e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Sunlight, Fresh air, Bird's nest e mais algumas palavras.",
     "learn": [
       "Sunlight",
       "Fresh air",
-      "Bird nest",
+      "Bird's nest",
       "Butterfly"
     ],
     "words": [
       [
         "Sunlight",
-        "(Sunlight)",
+        "Luz do sol",
         "📚"
       ],
       [
         "Fresh air",
-        "(Fresh air)",
+        "Ar fresco",
         "📚"
       ],
       [
-        "Bird nest",
-        "(Bird nest)",
+        "Bird's nest",
+        "Ninho de pássaro",
         "📚"
       ],
       [
         "Butterfly",
-        "(Butterfly)",
+        "Borboleta",
         "📚"
       ]
     ],
@@ -14614,27 +14614,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sunlight significa:",
         [
-          "(Fresh air)",
-          "(Butterfly)",
-          "(Sunlight)",
-          "(Bird nest)"
+          "Ar fresco",
+          "Borboleta",
+          "Luz do sol",
+          "Ninho de pássaro"
         ],
         2
       ],
       [
         "Fresh air significa:",
         [
-          "(Sunlight)",
-          "(Bird nest)",
-          "(Fresh air)",
-          "(Butterfly)"
+          "Luz do sol",
+          "Ninho de pássaro",
+          "Ar fresco",
+          "Borboleta"
         ],
         2
       ],
       [
-        "Como dizemos \"(Fresh air)\" em inglês?",
+        "Como dizemos \"Ar fresco\" em inglês?",
         [
-          "Bird nest",
+          "Bird's nest",
           "Butterfly",
           "Sunlight",
           "Fresh air"
@@ -14666,22 +14666,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bee",
-        "(Bee)",
+        "Abelha",
         "📚"
       ],
       [
         "Mushroom",
-        "(Mushroom)",
+        "Cogumelo",
         "📚"
       ],
       [
         "Cactus",
-        "(Cactus)",
+        "Cacto",
         "📚"
       ],
       [
         "Palm tree",
-        "(Palm tree)",
+        "Palmeira",
         "📚"
       ]
     ],
@@ -14689,25 +14689,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bee significa:",
         [
-          "(Mushroom)",
-          "(Cactus)",
-          "(Bee)",
-          "(Palm tree)"
+          "Cogumelo",
+          "Cacto",
+          "Abelha",
+          "Palmeira"
         ],
         2
       ],
       [
         "Mushroom significa:",
         [
-          "(Bee)",
-          "(Palm tree)",
-          "(Cactus)",
-          "(Mushroom)"
+          "Abelha",
+          "Palmeira",
+          "Cacto",
+          "Cogumelo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Mushroom)\" em inglês?",
+        "Como dizemos \"Cogumelo\" em inglês?",
         [
           "Cactus",
           "Mushroom",
@@ -14737,22 +14737,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Oak",
-        "(Oak)",
+        "Carvalho",
         "📚"
       ],
       [
         "Rose",
-        "(Rose)",
+        "Rosa",
         "📚"
       ],
       [
         "Daisy",
-        "(Daisy)",
+        "Margarida",
         "📚"
       ],
       [
         "Sunflower",
-        "(Sunflower)",
+        "Girassol",
         "📚"
       ]
     ],
@@ -14760,25 +14760,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Oak significa:",
         [
-          "(Rose)",
-          "(Sunflower)",
-          "(Daisy)",
-          "(Oak)"
+          "Rosa",
+          "Girassol",
+          "Margarida",
+          "Carvalho"
         ],
         3
       ],
       [
         "Rose significa:",
         [
-          "(Daisy)",
-          "(Rose)",
-          "(Sunflower)",
-          "(Oak)"
+          "Margarida",
+          "Rosa",
+          "Girassol",
+          "Carvalho"
         ],
         1
       ],
       [
-        "Como dizemos \"(Rose)\" em inglês?",
+        "Como dizemos \"Rosa\" em inglês?",
         [
           "Oak",
           "Sunflower",
@@ -14808,22 +14808,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Wild",
-        "(Wild)",
+        "Selvagem",
         "📚"
       ],
       [
         "Peaceful",
-        "(Peaceful)",
+        "Tranquilo",
         "📚"
       ],
       [
         "Explore nature",
-        "(Explore nature)",
+        "Explorar a natureza",
         "📚"
       ],
       [
         "Protect trees",
-        "(Protect trees)",
+        "Proteger as árvores",
         "📚"
       ]
     ],
@@ -14831,25 +14831,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wild significa:",
         [
-          "(Explore nature)",
-          "(Wild)",
-          "(Protect trees)",
-          "(Peaceful)"
+          "Explorar a natureza",
+          "Selvagem",
+          "Proteger as árvores",
+          "Tranquilo"
         ],
         1
       ],
       [
         "Peaceful significa:",
         [
-          "(Wild)",
-          "(Protect trees)",
-          "(Peaceful)",
-          "(Explore nature)"
+          "Selvagem",
+          "Proteger as árvores",
+          "Tranquilo",
+          "Explorar a natureza"
         ],
         2
       ],
       [
-        "Como dizemos \"(Peaceful)\" em inglês?",
+        "Como dizemos \"Tranquilo\" em inglês?",
         [
           "Wild",
           "Explore nature",
@@ -14879,22 +14879,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Green world",
-        "(Green world)",
+        "Mundo verde",
         "📚"
       ],
       [
         "Hike",
-        "(Hike)",
+        "Fazer trilha",
         "📚"
       ],
       [
         "Camp",
-        "(Camp)",
+        "Acampar",
         "📚"
       ],
       [
         "Picnic",
-        "(Picnic)",
+        "Piquenique",
         "📚"
       ]
     ],
@@ -14902,25 +14902,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Green world significa:",
         [
-          "(Hike)",
-          "(Picnic)",
-          "(Green world)",
-          "(Camp)"
+          "Fazer trilha",
+          "Piquenique",
+          "Mundo verde",
+          "Acampar"
         ],
         2
       ],
       [
         "Hike significa:",
         [
-          "(Camp)",
-          "(Hike)",
-          "(Green world)",
-          "(Picnic)"
+          "Acampar",
+          "Fazer trilha",
+          "Mundo verde",
+          "Piquenique"
         ],
         1
       ],
       [
-        "Como dizemos \"(Hike)\" em inglês?",
+        "Como dizemos \"Fazer trilha\" em inglês?",
         [
           "Camp",
           "Picnic",
@@ -14950,22 +14950,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Nature walk",
-        "(Nature walk)",
+        "Passeio na natureza",
         "📚"
       ],
       [
         "Beautiful",
-        "(Beautiful)",
+        "Lindo",
         "📚"
       ],
       [
         "Quiet forest",
-        "(Quiet forest)",
+        "Floresta silenciosa",
         "📚"
       ],
       [
         "Mountain view",
-        "(Mountain view)",
+        "Vista da montanha",
         "📚"
       ]
     ],
@@ -14973,25 +14973,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Nature walk significa:",
         [
-          "(Quiet forest)",
-          "(Nature walk)",
-          "(Beautiful)",
-          "(Mountain view)"
+          "Floresta silenciosa",
+          "Passeio na natureza",
+          "Lindo",
+          "Vista da montanha"
         ],
         1
       ],
       [
         "Beautiful significa:",
         [
-          "(Quiet forest)",
-          "(Mountain view)",
-          "(Nature walk)",
-          "(Beautiful)"
+          "Floresta silenciosa",
+          "Vista da montanha",
+          "Passeio na natureza",
+          "Lindo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Beautiful)\" em inglês?",
+        "Como dizemos \"Lindo\" em inglês?",
         [
           "Mountain view",
           "Quiet forest",
@@ -15026,17 +15026,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Sea",
-        "(Sea)",
+        "Mar",
         "📚"
       ],
       [
         "Wave",
-        "(Wave)",
+        "Onda",
         "📚"
       ],
       [
         "Sand",
-        "(Sand)",
+        "Areia",
         "📚"
       ]
     ],
@@ -15044,9 +15044,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ocean significa:",
         [
-          "(Wave)",
-          "(Sand)",
-          "(Sea)",
+          "Onda",
+          "Areia",
+          "Mar",
           "Oceano"
         ],
         3
@@ -15054,15 +15054,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sea significa:",
         [
-          "(Sand)",
-          "(Wave)",
-          "(Sea)",
+          "Areia",
+          "Onda",
+          "Mar",
           "Oceano"
         ],
         2
       ],
       [
-        "Como dizemos \"(Sea)\" em inglês?",
+        "Como dizemos \"Mar\" em inglês?",
         [
           "Ocean",
           "Sea",
@@ -15092,22 +15092,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Shell",
-        "(Shell)",
+        "Concha",
         "📚"
       ],
       [
         "Crab",
-        "(Crab)",
+        "Caranguejo",
         "📚"
       ],
       [
         "Dolphin",
-        "(Dolphin)",
+        "Golfinho",
         "📚"
       ],
       [
         "Whale",
-        "(Whale)",
+        "Baleia",
         "📚"
       ]
     ],
@@ -15115,25 +15115,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Shell significa:",
         [
-          "(Whale)",
-          "(Dolphin)",
-          "(Shell)",
-          "(Crab)"
+          "Baleia",
+          "Golfinho",
+          "Concha",
+          "Caranguejo"
         ],
         2
       ],
       [
         "Crab significa:",
         [
-          "(Shell)",
-          "(Whale)",
-          "(Crab)",
-          "(Dolphin)"
+          "Concha",
+          "Baleia",
+          "Caranguejo",
+          "Golfinho"
         ],
         2
       ],
       [
-        "Como dizemos \"(Crab)\" em inglês?",
+        "Como dizemos \"Caranguejo\" em inglês?",
         [
           "Shell",
           "Crab",
@@ -15163,22 +15163,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Shark",
-        "(Shark)",
+        "Tubarão",
         "📚"
       ],
       [
         "Octopus",
-        "(Octopus)",
+        "Polvo",
         "📚"
       ],
       [
         "Starfish",
-        "(Starfish)",
+        "Estrela-do-mar",
         "📚"
       ],
       [
         "Jellyfish",
-        "(Jellyfish)",
+        "Água-viva",
         "📚"
       ]
     ],
@@ -15186,25 +15186,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Shark significa:",
         [
-          "(Octopus)",
-          "(Jellyfish)",
-          "(Shark)",
-          "(Starfish)"
+          "Polvo",
+          "Água-viva",
+          "Tubarão",
+          "Estrela-do-mar"
         ],
         2
       ],
       [
         "Octopus significa:",
         [
-          "(Starfish)",
-          "(Octopus)",
-          "(Shark)",
-          "(Jellyfish)"
+          "Estrela-do-mar",
+          "Polvo",
+          "Tubarão",
+          "Água-viva"
         ],
         1
       ],
       [
-        "Como dizemos \"(Octopus)\" em inglês?",
+        "Como dizemos \"Polvo\" em inglês?",
         [
           "Shark",
           "Starfish",
@@ -15234,22 +15234,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Seagull",
-        "(Seagull)",
+        "Gaivota",
         "📚"
       ],
       [
         "Boat",
-        "(Boat)",
+        "Barco",
         "📚"
       ],
       [
         "Sail",
-        "(Sail)",
+        "Velejar",
         "📚"
       ],
       [
         "Swim",
-        "(Swim)",
+        "Nadar",
         "📚"
       ]
     ],
@@ -15257,25 +15257,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Seagull significa:",
         [
-          "(Sail)",
-          "(Seagull)",
-          "(Boat)",
-          "(Swim)"
+          "Velejar",
+          "Gaivota",
+          "Barco",
+          "Nadar"
         ],
         1
       ],
       [
         "Boat significa:",
         [
-          "(Sail)",
-          "(Swim)",
-          "(Seagull)",
-          "(Boat)"
+          "Velejar",
+          "Nadar",
+          "Gaivota",
+          "Barco"
         ],
         3
       ],
       [
-        "Como dizemos \"(Boat)\" em inglês?",
+        "Como dizemos \"Barco\" em inglês?",
         [
           "Swim",
           "Boat",
@@ -15305,22 +15305,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Surf",
-        "(Surf)",
+        "Surfar",
         "📚"
       ],
       [
         "Beach ball",
-        "(Beach ball)",
+        "Bola de praia",
         "📚"
       ],
       [
         "Sun hat",
-        "(Sun hat)",
+        "Chapéu de sol",
         "📚"
       ],
       [
         "Sunscreen",
-        "(Sunscreen)",
+        "Protetor solar",
         "📚"
       ]
     ],
@@ -15328,25 +15328,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Surf significa:",
         [
-          "(Sun hat)",
-          "(Sunscreen)",
-          "(Beach ball)",
-          "(Surf)"
+          "Chapéu de sol",
+          "Protetor solar",
+          "Bola de praia",
+          "Surfar"
         ],
         3
       ],
       [
         "Beach ball significa:",
         [
-          "(Sun hat)",
-          "(Beach ball)",
-          "(Sunscreen)",
-          "(Surf)"
+          "Chapéu de sol",
+          "Bola de praia",
+          "Protetor solar",
+          "Surfar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Beach ball)\" em inglês?",
+        "Como dizemos \"Bola de praia\" em inglês?",
         [
           "Sunscreen",
           "Beach ball",
@@ -15380,22 +15380,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Tide",
-        "(Tide)",
+        "Maré",
         "📚"
       ],
       [
         "Deep",
-        "(Deep)",
+        "Fundo",
         "📚"
       ],
       [
         "Salt water",
-        "(Salt water)",
+        "Água salgada",
         "📚"
       ],
       [
         "Coral",
-        "(Coral)",
+        "Coral",
         "📚"
       ]
     ],
@@ -15403,25 +15403,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tide significa:",
         [
-          "(Salt water)",
-          "(Tide)",
-          "(Coral)",
-          "(Deep)"
+          "Água salgada",
+          "Maré",
+          "Coral",
+          "Fundo"
         ],
         1
       ],
       [
         "Deep significa:",
         [
-          "(Tide)",
-          "(Coral)",
-          "(Deep)",
-          "(Salt water)"
+          "Maré",
+          "Coral",
+          "Fundo",
+          "Água salgada"
         ],
         2
       ],
       [
-        "Como dizemos \"(Deep)\" em inglês?",
+        "Como dizemos \"Fundo\" em inglês?",
         [
           "Salt water",
           "Deep",
@@ -15451,22 +15451,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Treasure",
-        "(Treasure)",
+        "Tesouro",
         "📚"
       ],
       [
         "Fishing",
-        "(Fishing)",
+        "Pescaria",
         "📚"
       ],
       [
         "Dock",
-        "(Dock)",
+        "Cais",
         "📚"
       ],
       [
         "Lighthouse",
-        "(Lighthouse)",
+        "Farol",
         "📚"
       ]
     ],
@@ -15474,25 +15474,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Treasure significa:",
         [
-          "(Fishing)",
-          "(Lighthouse)",
-          "(Treasure)",
-          "(Dock)"
+          "Pescaria",
+          "Farol",
+          "Tesouro",
+          "Cais"
         ],
         2
       ],
       [
         "Fishing significa:",
         [
-          "(Treasure)",
-          "(Dock)",
-          "(Fishing)",
-          "(Lighthouse)"
+          "Tesouro",
+          "Cais",
+          "Pescaria",
+          "Farol"
         ],
         2
       ],
       [
-        "Como dizemos \"(Fishing)\" em inglês?",
+        "Como dizemos \"Pescaria\" em inglês?",
         [
           "Dock",
           "Lighthouse",
@@ -15510,34 +15510,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 218,
     "slug": "ocean-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Island, Summer fun, Build sandcastle, Collect shells",
+    "description": "Frases: Island, Summer fun, Build a sandcastle, Collect shells",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Island, Summer fun, Build sandcastle e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Island, Summer fun, Build a sandcastle e mais algumas palavras.",
     "learn": [
       "Island",
       "Summer fun",
-      "Build sandcastle",
+      "Build a sandcastle",
       "Collect shells"
     ],
     "words": [
       [
         "Island",
-        "(Island)",
+        "Ilha",
         "📚"
       ],
       [
         "Summer fun",
-        "(Summer fun)",
+        "Diversão de verão",
         "📚"
       ],
       [
-        "Build sandcastle",
-        "(Build sandcastle)",
+        "Build a sandcastle",
+        "Fazer um castelo de areia",
         "📚"
       ],
       [
         "Collect shells",
-        "(Collect shells)",
+        "Juntar conchas",
         "📚"
       ]
     ],
@@ -15545,27 +15545,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Island significa:",
         [
-          "(Summer fun)",
-          "(Build sandcastle)",
-          "(Island)",
-          "(Collect shells)"
+          "Diversão de verão",
+          "Fazer um castelo de areia",
+          "Ilha",
+          "Juntar conchas"
         ],
         2
       ],
       [
         "Summer fun significa:",
         [
-          "(Build sandcastle)",
-          "(Collect shells)",
-          "(Island)",
-          "(Summer fun)"
+          "Fazer um castelo de areia",
+          "Juntar conchas",
+          "Ilha",
+          "Diversão de verão"
         ],
         3
       ],
       [
-        "Como dizemos \"(Summer fun)\" em inglês?",
+        "Como dizemos \"Diversão de verão\" em inglês?",
         [
-          "Build sandcastle",
+          "Build a sandcastle",
           "Summer fun",
           "Collect shells",
           "Island"
@@ -15593,22 +15593,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Blue water",
-        "(Blue water)",
+        "Água azul",
         "📚"
       ],
       [
         "Warm sand",
-        "(Warm sand)",
+        "Areia quentinha",
         "📚"
       ],
       [
         "Sea breeze",
-        "(Sea breeze)",
+        "Brisa do mar",
         "📚"
       ],
       [
         "Snorkel",
-        "(Snorkel)",
+        "Máscara de mergulho",
         "📚"
       ]
     ],
@@ -15616,25 +15616,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Blue water significa:",
         [
-          "(Sea breeze)",
-          "(Snorkel)",
-          "(Warm sand)",
-          "(Blue water)"
+          "Brisa do mar",
+          "Máscara de mergulho",
+          "Areia quentinha",
+          "Água azul"
         ],
         3
       ],
       [
         "Warm sand significa:",
         [
-          "(Snorkel)",
-          "(Sea breeze)",
-          "(Warm sand)",
-          "(Blue water)"
+          "Máscara de mergulho",
+          "Brisa do mar",
+          "Areia quentinha",
+          "Água azul"
         ],
         2
       ],
       [
-        "Como dizemos \"(Warm sand)\" em inglês?",
+        "Como dizemos \"Areia quentinha\" em inglês?",
         [
           "Blue water",
           "Warm sand",
@@ -15652,34 +15652,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 220,
     "slug": "ocean-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Dive, Safe swim, Beach day, Ocean life",
+    "description": "Revisão final: Dive, Swim safely, Beach day, Ocean life",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Dive, Safe swim, Beach day e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Dive, Swim safely, Beach day e mais algumas palavras.",
     "learn": [
       "Dive",
-      "Safe swim",
+      "Swim safely",
       "Beach day",
       "Ocean life"
     ],
     "words": [
       [
         "Dive",
-        "(Dive)",
+        "Mergulhar",
         "📚"
       ],
       [
-        "Safe swim",
-        "(Safe swim)",
+        "Swim safely",
+        "Nadar com segurança",
         "📚"
       ],
       [
         "Beach day",
-        "(Beach day)",
+        "Dia de praia",
         "📚"
       ],
       [
         "Ocean life",
-        "(Ocean life)",
+        "Vida marinha",
         "📚"
       ]
     ],
@@ -15687,28 +15687,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Dive significa:",
         [
-          "(Ocean life)",
-          "(Beach day)",
-          "(Dive)",
-          "(Safe swim)"
+          "Vida marinha",
+          "Dia de praia",
+          "Mergulhar",
+          "Nadar com segurança"
         ],
         2
       ],
       [
-        "Safe swim significa:",
+        "Swim safely significa:",
         [
-          "(Dive)",
-          "(Safe swim)",
-          "(Ocean life)",
-          "(Beach day)"
+          "Mergulhar",
+          "Nadar com segurança",
+          "Vida marinha",
+          "Dia de praia"
         ],
         1
       ],
       [
-        "Como dizemos \"(Safe swim)\" em inglês?",
+        "Como dizemos \"Nadar com segurança\" em inglês?",
         [
           "Beach day",
-          "Safe swim",
+          "Swim safely",
           "Dive",
           "Ocean life"
         ],
@@ -15740,17 +15740,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Moon",
-        "(Moon)",
+        "Lua",
         "📚"
       ],
       [
         "Star",
-        "(Star)",
+        "Estrela",
         "📚"
       ],
       [
         "Planet",
-        "(Planet)",
+        "Planeta",
         "📚"
       ]
     ],
@@ -15758,10 +15758,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sun significa:",
         [
-          "(Moon)",
+          "Lua",
           "Sol",
-          "(Planet)",
-          "(Star)"
+          "Planeta",
+          "Estrela"
         ],
         1
       ],
@@ -15769,14 +15769,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Moon significa:",
         [
           "Sol",
-          "(Moon)",
-          "(Star)",
-          "(Planet)"
+          "Lua",
+          "Estrela",
+          "Planeta"
         ],
         1
       ],
       [
-        "Como dizemos \"(Moon)\" em inglês?",
+        "Como dizemos \"Lua\" em inglês?",
         [
           "Sun",
           "Star",
@@ -15806,22 +15806,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Earth",
-        "(Earth)",
+        "Terra",
         "📚"
       ],
       [
         "Mars",
-        "(Mars)",
+        "Marte",
         "📚"
       ],
       [
         "Rocket",
-        "(Rocket)",
+        "Foguete",
         "📚"
       ],
       [
         "Astronaut",
-        "(Astronaut)",
+        "Astronauta",
         "📚"
       ]
     ],
@@ -15829,25 +15829,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Earth significa:",
         [
-          "(Mars)",
-          "(Earth)",
-          "(Rocket)",
-          "(Astronaut)"
+          "Marte",
+          "Terra",
+          "Foguete",
+          "Astronauta"
         ],
         1
       ],
       [
         "Mars significa:",
         [
-          "(Earth)",
-          "(Rocket)",
-          "(Astronaut)",
-          "(Mars)"
+          "Terra",
+          "Foguete",
+          "Astronauta",
+          "Marte"
         ],
         3
       ],
       [
-        "Como dizemos \"(Mars)\" em inglês?",
+        "Como dizemos \"Marte\" em inglês?",
         [
           "Astronaut",
           "Mars",
@@ -15877,22 +15877,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Space",
-        "(Space)",
+        "Espaço",
         "📚"
       ],
       [
         "Galaxy",
-        "(Galaxy)",
+        "Galáxia",
         "📚"
       ],
       [
         "Comet",
-        "(Comet)",
+        "Cometa",
         "📚"
       ],
       [
         "Meteor",
-        "(Meteor)",
+        "Meteoro",
         "📚"
       ]
     ],
@@ -15900,25 +15900,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Space significa:",
         [
-          "(Galaxy)",
-          "(Comet)",
-          "(Meteor)",
-          "(Space)"
+          "Galáxia",
+          "Cometa",
+          "Meteoro",
+          "Espaço"
         ],
         3
       ],
       [
         "Galaxy significa:",
         [
-          "(Meteor)",
-          "(Galaxy)",
-          "(Comet)",
-          "(Space)"
+          "Meteoro",
+          "Galáxia",
+          "Cometa",
+          "Espaço"
         ],
         1
       ],
       [
-        "Como dizemos \"(Galaxy)\" em inglês?",
+        "Como dizemos \"Galáxia\" em inglês?",
         [
           "Meteor",
           "Galaxy",
@@ -15948,22 +15948,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Telescope",
-        "(Telescope)",
+        "Telescópio",
         "📚"
       ],
       [
         "Orbit",
-        "(Orbit)",
+        "Órbita",
         "📚"
       ],
       [
         "Launch",
-        "(Launch)",
+        "Lançamento",
         "📚"
       ],
       [
         "Mission",
-        "(Mission)",
+        "Missão",
         "📚"
       ]
     ],
@@ -15971,25 +15971,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Telescope significa:",
         [
-          "(Mission)",
-          "(Telescope)",
-          "(Launch)",
-          "(Orbit)"
+          "Missão",
+          "Telescópio",
+          "Lançamento",
+          "Órbita"
         ],
         1
       ],
       [
         "Orbit significa:",
         [
-          "(Mission)",
-          "(Orbit)",
-          "(Telescope)",
-          "(Launch)"
+          "Missão",
+          "Órbita",
+          "Telescópio",
+          "Lançamento"
         ],
         1
       ],
       [
-        "Como dizemos \"(Orbit)\" em inglês?",
+        "Como dizemos \"Órbita\" em inglês?",
         [
           "Telescope",
           "Launch",
@@ -16019,22 +16019,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Space suit",
-        "(Space suit)",
+        "Traje espacial",
         "📚"
       ],
       [
         "Gravity",
-        "(Gravity)",
+        "Gravidade",
         "📚"
       ],
       [
         "Alien",
-        "(Alien)",
+        "Alienígena",
         "📚"
       ],
       [
         "UFO",
-        "(UFO)",
+        "Disco voador",
         "📚"
       ]
     ],
@@ -16042,25 +16042,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Space suit significa:",
         [
-          "(UFO)",
-          "(Space suit)",
-          "(Gravity)",
-          "(Alien)"
+          "Disco voador",
+          "Traje espacial",
+          "Gravidade",
+          "Alienígena"
         ],
         1
       ],
       [
         "Gravity significa:",
         [
-          "(Alien)",
-          "(Gravity)",
-          "(Space suit)",
-          "(UFO)"
+          "Alienígena",
+          "Gravidade",
+          "Traje espacial",
+          "Disco voador"
         ],
         1
       ],
       [
-        "Como dizemos \"(Gravity)\" em inglês?",
+        "Como dizemos \"Gravidade\" em inglês?",
         [
           "Space suit",
           "UFO",
@@ -16094,22 +16094,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Night sky",
-        "(Night sky)",
+        "Céu noturno",
         "📚"
       ],
       [
         "Full moon",
-        "(Full moon)",
+        "Lua cheia",
         "📚"
       ],
       [
         "Shooting star",
-        "(Shooting star)",
+        "Estrela cadente",
         "📚"
       ],
       [
         "Space station",
-        "(Space station)",
+        "Estação espacial",
         "📚"
       ]
     ],
@@ -16117,25 +16117,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Night sky significa:",
         [
-          "(Shooting star)",
-          "(Night sky)",
-          "(Full moon)",
-          "(Space station)"
+          "Estrela cadente",
+          "Céu noturno",
+          "Lua cheia",
+          "Estação espacial"
         ],
         1
       ],
       [
         "Full moon significa:",
         [
-          "(Shooting star)",
-          "(Space station)",
-          "(Night sky)",
-          "(Full moon)"
+          "Estrela cadente",
+          "Estação espacial",
+          "Céu noturno",
+          "Lua cheia"
         ],
         3
       ],
       [
-        "Como dizemos \"(Full moon)\" em inglês?",
+        "Como dizemos \"Lua cheia\" em inglês?",
         [
           "Shooting star",
           "Full moon",
@@ -16165,22 +16165,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Explore space",
-        "(Explore space)",
+        "Explorar o espaço",
         "📚"
       ],
       [
         "Far away",
-        "(Far away)",
+        "Muito longe",
         "📚"
       ],
       [
         "Big universe",
-        "(Big universe)",
+        "Universo enorme",
         "📚"
       ],
       [
         "Dark sky",
-        "(Dark sky)",
+        "Céu escuro",
         "📚"
       ]
     ],
@@ -16188,25 +16188,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Explore space significa:",
         [
-          "(Big universe)",
-          "(Dark sky)",
-          "(Far away)",
-          "(Explore space)"
+          "Universo enorme",
+          "Céu escuro",
+          "Muito longe",
+          "Explorar o espaço"
         ],
         3
       ],
       [
         "Far away significa:",
         [
-          "(Big universe)",
-          "(Far away)",
-          "(Dark sky)",
-          "(Explore space)"
+          "Universo enorme",
+          "Muito longe",
+          "Céu escuro",
+          "Explorar o espaço"
         ],
         1
       ],
       [
-        "Como dizemos \"(Far away)\" em inglês?",
+        "Como dizemos \"Muito longe\" em inglês?",
         [
           "Explore space",
           "Dark sky",
@@ -16236,22 +16236,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bright star",
-        "(Bright star)",
+        "Estrela brilhante",
         "📚"
       ],
       [
         "Space travel",
-        "(Space travel)",
+        "Viagem espacial",
         "📚"
       ],
       [
         "Dream big",
-        "(Dream big)",
+        "Sonhar alto",
         "📚"
       ],
       [
         "Science",
-        "(Science)",
+        "Ciência",
         "📚"
       ]
     ],
@@ -16259,25 +16259,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bright star significa:",
         [
-          "(Dream big)",
-          "(Bright star)",
-          "(Science)",
-          "(Space travel)"
+          "Sonhar alto",
+          "Estrela brilhante",
+          "Ciência",
+          "Viagem espacial"
         ],
         1
       ],
       [
         "Space travel significa:",
         [
-          "(Bright star)",
-          "(Space travel)",
-          "(Science)",
-          "(Dream big)"
+          "Estrela brilhante",
+          "Viagem espacial",
+          "Ciência",
+          "Sonhar alto"
         ],
         1
       ],
       [
-        "Como dizemos \"(Space travel)\" em inglês?",
+        "Como dizemos \"Viagem espacial\" em inglês?",
         [
           "Bright star",
           "Space travel",
@@ -16295,34 +16295,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 229,
     "slug": "space-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Curious, Discover, Map stars, Planet Earth",
+    "description": "Quiz mix: Curious, Discover, Map the stars, Planet Earth",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Curious, Discover, Map stars e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Curious, Discover, Map the stars e mais algumas palavras.",
     "learn": [
       "Curious",
       "Discover",
-      "Map stars",
+      "Map the stars",
       "Planet Earth"
     ],
     "words": [
       [
         "Curious",
-        "(Curious)",
+        "Curioso(a)",
         "📚"
       ],
       [
         "Discover",
-        "(Discover)",
+        "Descobrir",
         "📚"
       ],
       [
-        "Map stars",
-        "(Map stars)",
+        "Map the stars",
+        "Mapear as estrelas",
         "📚"
       ],
       [
         "Planet Earth",
-        "(Planet Earth)",
+        "Planeta Terra",
         "📚"
       ]
     ],
@@ -16330,27 +16330,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Curious significa:",
         [
-          "(Discover)",
-          "(Curious)",
-          "(Planet Earth)",
-          "(Map stars)"
+          "Descobrir",
+          "Curioso(a)",
+          "Planeta Terra",
+          "Mapear as estrelas"
         ],
         1
       ],
       [
         "Discover significa:",
         [
-          "(Map stars)",
-          "(Discover)",
-          "(Curious)",
-          "(Planet Earth)"
+          "Mapear as estrelas",
+          "Descobrir",
+          "Curioso(a)",
+          "Planeta Terra"
         ],
         1
       ],
       [
-        "Como dizemos \"(Discover)\" em inglês?",
+        "Como dizemos \"Descobrir\" em inglês?",
         [
-          "Map stars",
+          "Map the stars",
           "Planet Earth",
           "Curious",
           "Discover"
@@ -16366,34 +16366,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 230,
     "slug": "space-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Solar system, Space book, Count stars, Fly high",
+    "description": "Revisão final: Solar system, Space book, Count the stars, Fly high",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Solar system, Space book, Count stars e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Solar system, Space book, Count the stars e mais algumas palavras.",
     "learn": [
       "Solar system",
       "Space book",
-      "Count stars",
+      "Count the stars",
       "Fly high"
     ],
     "words": [
       [
         "Solar system",
-        "(Solar system)",
+        "Sistema solar",
         "📚"
       ],
       [
         "Space book",
-        "(Space book)",
+        "Livro sobre o espaço",
         "📚"
       ],
       [
-        "Count stars",
-        "(Count stars)",
+        "Count the stars",
+        "Contar as estrelas",
         "📚"
       ],
       [
         "Fly high",
-        "(Fly high)",
+        "Voar alto",
         "📚"
       ]
     ],
@@ -16401,27 +16401,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Solar system significa:",
         [
-          "(Count stars)",
-          "(Solar system)",
-          "(Space book)",
-          "(Fly high)"
+          "Contar as estrelas",
+          "Sistema solar",
+          "Livro sobre o espaço",
+          "Voar alto"
         ],
         1
       ],
       [
         "Space book significa:",
         [
-          "(Solar system)",
-          "(Count stars)",
-          "(Fly high)",
-          "(Space book)"
+          "Sistema solar",
+          "Contar as estrelas",
+          "Voar alto",
+          "Livro sobre o espaço"
         ],
         3
       ],
       [
-        "Como dizemos \"(Space book)\" em inglês?",
+        "Como dizemos \"Livro sobre o espaço\" em inglês?",
         [
-          "Count stars",
+          "Count the stars",
           "Space book",
           "Fly high",
           "Solar system"
@@ -16454,17 +16454,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Ball",
-        "(Ball)",
+        "Bola",
         "📚"
       ],
       [
         "Blocks",
-        "(Blocks)",
+        "Blocos de montar",
         "📚"
       ],
       [
         "Puzzle",
-        "(Puzzle)",
+        "Quebra-cabeça",
         "📚"
       ]
     ],
@@ -16472,9 +16472,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Doll significa:",
         [
-          "(Ball)",
-          "(Blocks)",
-          "(Puzzle)",
+          "Bola",
+          "Blocos de montar",
+          "Quebra-cabeça",
           "Boneca"
         ],
         3
@@ -16482,15 +16482,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ball significa:",
         [
-          "(Puzzle)",
-          "(Ball)",
-          "(Blocks)",
+          "Quebra-cabeça",
+          "Bola",
+          "Blocos de montar",
           "Boneca"
         ],
         1
       ],
       [
-        "Como dizemos \"(Ball)\" em inglês?",
+        "Como dizemos \"Bola\" em inglês?",
         [
           "Doll",
           "Ball",
@@ -16508,63 +16508,63 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 232,
     "slug": "toys-l2",
     "title": "Lição 2: Prática 1",
-    "description": "Prática 1: Car toy, Train toy, Robot, Teddy bear",
+    "description": "Prática 1: Toy car, Toy train, Robot, Teddy bear",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Car toy, Train toy, Robot e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Toy car, Toy train, Robot e mais algumas palavras.",
     "learn": [
-      "Car toy",
-      "Train toy",
+      "Toy car",
+      "Toy train",
       "Robot",
       "Teddy bear"
     ],
     "words": [
       [
-        "Car toy",
-        "(Car toy)",
+        "Toy car",
+        "Carrinho",
         "📚"
       ],
       [
-        "Train toy",
-        "(Train toy)",
+        "Toy train",
+        "Trenzinho",
         "📚"
       ],
       [
         "Robot",
-        "(Robot)",
+        "Robô",
         "📚"
       ],
       [
         "Teddy bear",
-        "(Teddy bear)",
+        "Ursinho de pelúcia",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Car toy significa:",
+        "Toy car significa:",
         [
-          "(Teddy bear)",
-          "(Car toy)",
-          "(Robot)",
-          "(Train toy)"
+          "Ursinho de pelúcia",
+          "Carrinho",
+          "Robô",
+          "Trenzinho"
         ],
         1
       ],
       [
-        "Train toy significa:",
+        "Toy train significa:",
         [
-          "(Teddy bear)",
-          "(Train toy)",
-          "(Car toy)",
-          "(Robot)"
+          "Ursinho de pelúcia",
+          "Trenzinho",
+          "Carrinho",
+          "Robô"
         ],
         1
       ],
       [
-        "Como dizemos \"(Train toy)\" em inglês?",
+        "Como dizemos \"Trenzinho\" em inglês?",
         [
-          "Car toy",
-          "Train toy",
+          "Toy car",
+          "Toy train",
           "Robot",
           "Teddy bear"
         ],
@@ -16591,22 +16591,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Kite",
-        "(Kite)",
+        "Pipa",
         "📚"
       ],
       [
         "Yo-yo",
-        "(Yo-yo)",
+        "Ioiô",
         "📚"
       ],
       [
         "Lego",
-        "(Lego)",
+        "Lego",
         "📚"
       ],
       [
         "Board game",
-        "(Board game)",
+        "Jogo de tabuleiro",
         "📚"
       ]
     ],
@@ -16614,25 +16614,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Kite significa:",
         [
-          "(Board game)",
-          "(Kite)",
-          "(Yo-yo)",
-          "(Lego)"
+          "Jogo de tabuleiro",
+          "Pipa",
+          "Ioiô",
+          "Lego"
         ],
         1
       ],
       [
         "Yo-yo significa:",
         [
-          "(Kite)",
-          "(Lego)",
-          "(Yo-yo)",
-          "(Board game)"
+          "Pipa",
+          "Lego",
+          "Ioiô",
+          "Jogo de tabuleiro"
         ],
         2
       ],
       [
-        "Como dizemos \"(Yo-yo)\" em inglês?",
+        "Como dizemos \"Ioiô\" em inglês?",
         [
           "Kite",
           "Lego",
@@ -16662,22 +16662,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Card game",
-        "(Card game)",
+        "Jogo de cartas",
         "📚"
       ],
       [
         "Play house",
-        "(Play house)",
+        "Brincar de casinha",
         "📚"
       ],
       [
         "Toy box",
-        "(Toy box)",
+        "Caixa de brinquedos",
         "📚"
       ],
       [
         "Share toys",
-        "(Share toys)",
+        "Dividir os brinquedos",
         "📚"
       ]
     ],
@@ -16685,25 +16685,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Card game significa:",
         [
-          "(Play house)",
-          "(Toy box)",
-          "(Card game)",
-          "(Share toys)"
+          "Brincar de casinha",
+          "Caixa de brinquedos",
+          "Jogo de cartas",
+          "Dividir os brinquedos"
         ],
         2
       ],
       [
         "Play house significa:",
         [
-          "(Card game)",
-          "(Share toys)",
-          "(Toy box)",
-          "(Play house)"
+          "Jogo de cartas",
+          "Dividir os brinquedos",
+          "Caixa de brinquedos",
+          "Brincar de casinha"
         ],
         3
       ],
       [
-        "Como dizemos \"(Play house)\" em inglês?",
+        "Como dizemos \"Brincar de casinha\" em inglês?",
         [
           "Share toys",
           "Toy box",
@@ -16733,22 +16733,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Clean up",
-        "(Clean up)",
+        "Arrumar a bagunça",
         "📚"
       ],
       [
         "Favorite toy",
-        "(Favorite toy)",
+        "Brinquedo favorito",
         "📚"
       ],
       [
         "New toy",
-        "(New toy)",
+        "Brinquedo novo",
         "📚"
       ],
       [
         "Broken toy",
-        "(Broken toy)",
+        "Brinquedo quebrado",
         "📚"
       ]
     ],
@@ -16756,25 +16756,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Clean up significa:",
         [
-          "(Favorite toy)",
-          "(Broken toy)",
-          "(New toy)",
-          "(Clean up)"
+          "Brinquedo favorito",
+          "Brinquedo quebrado",
+          "Brinquedo novo",
+          "Arrumar a bagunça"
         ],
         3
       ],
       [
         "Favorite toy significa:",
         [
-          "(New toy)",
-          "(Favorite toy)",
-          "(Broken toy)",
-          "(Clean up)"
+          "Brinquedo novo",
+          "Brinquedo favorito",
+          "Brinquedo quebrado",
+          "Arrumar a bagunça"
         ],
         1
       ],
       [
-        "Como dizemos \"(Favorite toy)\" em inglês?",
+        "Como dizemos \"Brinquedo favorito\" em inglês?",
         [
           "Broken toy",
           "Favorite toy",
@@ -16796,62 +16796,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 236,
     "slug": "toys-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Fix toy, Soft toy, Loud toy, Quiet toy",
+    "description": "Ouvir: Fix the toy, Soft toy, Loud toy, Quiet toy",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Fix toy, Soft toy, Loud toy e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Fix the toy, Soft toy, Loud toy e mais algumas palavras.",
     "learn": [
-      "Fix toy",
+      "Fix the toy",
       "Soft toy",
       "Loud toy",
       "Quiet toy"
     ],
     "words": [
       [
-        "Fix toy",
-        "(Fix toy)",
+        "Fix the toy",
+        "Consertar o brinquedo",
         "📚"
       ],
       [
         "Soft toy",
-        "(Soft toy)",
+        "Bichinho de pelúcia",
         "📚"
       ],
       [
         "Loud toy",
-        "(Loud toy)",
+        "Brinquedo barulhento",
         "📚"
       ],
       [
         "Quiet toy",
-        "(Quiet toy)",
+        "Brinquedo silencioso",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Fix toy significa:",
+        "Fix the toy significa:",
         [
-          "(Loud toy)",
-          "(Fix toy)",
-          "(Quiet toy)",
-          "(Soft toy)"
+          "Brinquedo barulhento",
+          "Consertar o brinquedo",
+          "Brinquedo silencioso",
+          "Bichinho de pelúcia"
         ],
         1
       ],
       [
         "Soft toy significa:",
         [
-          "(Fix toy)",
-          "(Quiet toy)",
-          "(Soft toy)",
-          "(Loud toy)"
+          "Consertar o brinquedo",
+          "Brinquedo silencioso",
+          "Bichinho de pelúcia",
+          "Brinquedo barulhento"
         ],
         2
       ],
       [
-        "Como dizemos \"(Soft toy)\" em inglês?",
+        "Como dizemos \"Bichinho de pelúcia\" em inglês?",
         [
-          "Fix toy",
+          "Fix the toy",
           "Soft toy",
           "Loud toy",
           "Quiet toy"
@@ -16867,34 +16867,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 237,
     "slug": "toys-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Play together, Take turns, Fun game, Win toy",
+    "description": "Memória: Play together, Take turns, Fun game, Win a toy",
     "icon": "📚",
     "objective": "Hoje você vai aprender Play together, Take turns, Fun game e mais algumas palavras.",
     "learn": [
       "Play together",
       "Take turns",
       "Fun game",
-      "Win toy"
+      "Win a toy"
     ],
     "words": [
       [
         "Play together",
-        "(Play together)",
+        "Brincar juntos",
         "📚"
       ],
       [
         "Take turns",
-        "(Take turns)",
+        "Esperar a vez",
         "📚"
       ],
       [
         "Fun game",
-        "(Fun game)",
+        "Jogo divertido",
         "📚"
       ],
       [
-        "Win toy",
-        "(Win toy)",
+        "Win a toy",
+        "Ganhar um brinquedo",
         "📚"
       ]
     ],
@@ -16902,28 +16902,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Play together significa:",
         [
-          "(Take turns)",
-          "(Win toy)",
-          "(Play together)",
-          "(Fun game)"
+          "Esperar a vez",
+          "Ganhar um brinquedo",
+          "Brincar juntos",
+          "Jogo divertido"
         ],
         2
       ],
       [
         "Take turns significa:",
         [
-          "(Play together)",
-          "(Take turns)",
-          "(Fun game)",
-          "(Win toy)"
+          "Brincar juntos",
+          "Esperar a vez",
+          "Jogo divertido",
+          "Ganhar um brinquedo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Take turns)\" em inglês?",
+        "Como dizemos \"Esperar a vez\" em inglês?",
         [
           "Play together",
-          "Win toy",
+          "Win a toy",
           "Fun game",
           "Take turns"
         ],
@@ -16938,65 +16938,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 238,
     "slug": "toys-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Gift toy, Birthday toy, Outdoor toy, Indoor toy",
+    "description": "Frases: Toy gift, Birthday toy, Outdoor toy, Indoor toy",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Gift toy, Birthday toy, Outdoor toy e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Toy gift, Birthday toy, Outdoor toy e mais algumas palavras.",
     "learn": [
-      "Gift toy",
+      "Toy gift",
       "Birthday toy",
       "Outdoor toy",
       "Indoor toy"
     ],
     "words": [
       [
-        "Gift toy",
-        "(Gift toy)",
+        "Toy gift",
+        "Brinquedo de presente",
         "📚"
       ],
       [
         "Birthday toy",
-        "(Birthday toy)",
+        "Brinquedo de aniversário",
         "📚"
       ],
       [
         "Outdoor toy",
-        "(Outdoor toy)",
+        "Brinquedo para brincar lá fora",
         "📚"
       ],
       [
         "Indoor toy",
-        "(Indoor toy)",
+        "Brinquedo para brincar em casa",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Gift toy significa:",
+        "Toy gift significa:",
         [
-          "(Birthday toy)",
-          "(Gift toy)",
-          "(Outdoor toy)",
-          "(Indoor toy)"
+          "Brinquedo de aniversário",
+          "Brinquedo de presente",
+          "Brinquedo para brincar lá fora",
+          "Brinquedo para brincar em casa"
         ],
         1
       ],
       [
         "Birthday toy significa:",
         [
-          "(Outdoor toy)",
-          "(Indoor toy)",
-          "(Gift toy)",
-          "(Birthday toy)"
+          "Brinquedo para brincar lá fora",
+          "Brinquedo para brincar em casa",
+          "Brinquedo de presente",
+          "Brinquedo de aniversário"
         ],
         3
       ],
       [
-        "Como dizemos \"(Birthday toy)\" em inglês?",
+        "Como dizemos \"Brinquedo de aniversário\" em inglês?",
         [
           "Indoor toy",
           "Outdoor toy",
           "Birthday toy",
-          "Gift toy"
+          "Toy gift"
         ],
         2
       ]
@@ -17009,34 +17009,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 239,
     "slug": "toys-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Creative play, Imagination, Pretend, Build tower",
+    "description": "Quiz mix: Creative play, Imagination, Pretend, Build a tower",
     "icon": "📚",
     "objective": "Hoje você vai aprender Creative play, Imagination, Pretend e mais algumas palavras.",
     "learn": [
       "Creative play",
       "Imagination",
       "Pretend",
-      "Build tower"
+      "Build a tower"
     ],
     "words": [
       [
         "Creative play",
-        "(Creative play)",
+        "Brincadeira criativa",
         "📚"
       ],
       [
         "Imagination",
-        "(Imagination)",
+        "Imaginação",
         "📚"
       ],
       [
         "Pretend",
-        "(Pretend)",
+        "Faz de conta",
         "📚"
       ],
       [
-        "Build tower",
-        "(Build tower)",
+        "Build a tower",
+        "Montar uma torre",
         "📚"
       ]
     ],
@@ -17044,29 +17044,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Creative play significa:",
         [
-          "(Pretend)",
-          "(Build tower)",
-          "(Imagination)",
-          "(Creative play)"
+          "Faz de conta",
+          "Montar uma torre",
+          "Imaginação",
+          "Brincadeira criativa"
         ],
         3
       ],
       [
         "Imagination significa:",
         [
-          "(Pretend)",
-          "(Imagination)",
-          "(Build tower)",
-          "(Creative play)"
+          "Faz de conta",
+          "Imaginação",
+          "Montar uma torre",
+          "Brincadeira criativa"
         ],
         1
       ],
       [
-        "Como dizemos \"(Imagination)\" em inglês?",
+        "Como dizemos \"Imaginação\" em inglês?",
         [
           "Creative play",
           "Imagination",
-          "Build tower",
+          "Build a tower",
           "Pretend"
         ],
         1
@@ -17080,64 +17080,64 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 240,
     "slug": "toys-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Roll ball, Catch toy, Race cars, Happy play",
+    "description": "Revisão final: Roll the ball, Catch the toy, Race cars, Happy play",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Roll ball, Catch toy, Race cars e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Roll the ball, Catch the toy, Race cars e mais algumas palavras.",
     "learn": [
-      "Roll ball",
-      "Catch toy",
+      "Roll the ball",
+      "Catch the toy",
       "Race cars",
       "Happy play"
     ],
     "words": [
       [
-        "Roll ball",
-        "(Roll ball)",
+        "Roll the ball",
+        "Rolar a bola",
         "📚"
       ],
       [
-        "Catch toy",
-        "(Catch toy)",
+        "Catch the toy",
+        "Pegar o brinquedo",
         "📚"
       ],
       [
         "Race cars",
-        "(Race cars)",
+        "Carrinhos de corrida",
         "📚"
       ],
       [
         "Happy play",
-        "(Happy play)",
+        "Brincadeira feliz",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Roll ball significa:",
+        "Roll the ball significa:",
         [
-          "(Race cars)",
-          "(Roll ball)",
-          "(Happy play)",
-          "(Catch toy)"
+          "Carrinhos de corrida",
+          "Rolar a bola",
+          "Brincadeira feliz",
+          "Pegar o brinquedo"
         ],
         1
       ],
       [
-        "Catch toy significa:",
+        "Catch the toy significa:",
         [
-          "(Roll ball)",
-          "(Catch toy)",
-          "(Happy play)",
-          "(Race cars)"
+          "Rolar a bola",
+          "Pegar o brinquedo",
+          "Brincadeira feliz",
+          "Carrinhos de corrida"
         ],
         1
       ],
       [
-        "Como dizemos \"(Catch toy)\" em inglês?",
+        "Como dizemos \"Pegar o brinquedo\" em inglês?",
         [
           "Race cars",
-          "Catch toy",
-          "Roll ball",
+          "Catch the toy",
+          "Roll the ball",
           "Happy play"
         ],
         1
@@ -17168,17 +17168,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Cake",
-        "(Cake)",
+        "Bolo",
         "📚"
       ],
       [
         "Candle",
-        "(Candle)",
+        "Vela",
         "📚"
       ],
       [
         "Gift",
-        "(Gift)",
+        "Presente",
         "📚"
       ]
     ],
@@ -17186,10 +17186,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Birthday significa:",
         [
-          "(Cake)",
+          "Bolo",
           "Aniversário",
-          "(Gift)",
-          "(Candle)"
+          "Presente",
+          "Vela"
         ],
         1
       ],
@@ -17197,14 +17197,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Cake significa:",
         [
           "Aniversário",
-          "(Cake)",
-          "(Candle)",
-          "(Gift)"
+          "Bolo",
+          "Vela",
+          "Presente"
         ],
         1
       ],
       [
-        "Como dizemos \"(Cake)\" em inglês?",
+        "Como dizemos \"Bolo\" em inglês?",
         [
           "Candle",
           "Gift",
@@ -17234,22 +17234,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Balloon",
-        "(Balloon)",
+        "Balão",
         "📚"
       ],
       [
         "Party hat",
-        "(Party hat)",
+        "Chapéu de festa",
         "📚"
       ],
       [
         "Music",
-        "(Music)",
+        "Música",
         "📚"
       ],
       [
         "Dance",
-        "(Dance)",
+        "Dançar",
         "📚"
       ]
     ],
@@ -17257,25 +17257,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Balloon significa:",
         [
-          "(Party hat)",
-          "(Balloon)",
-          "(Music)",
-          "(Dance)"
+          "Chapéu de festa",
+          "Balão",
+          "Música",
+          "Dançar"
         ],
         1
       ],
       [
         "Party hat significa:",
         [
-          "(Balloon)",
-          "(Music)",
-          "(Dance)",
-          "(Party hat)"
+          "Balão",
+          "Música",
+          "Dançar",
+          "Chapéu de festa"
         ],
         3
       ],
       [
-        "Como dizemos \"(Party hat)\" em inglês?",
+        "Como dizemos \"Chapéu de festa\" em inglês?",
         [
           "Dance",
           "Party hat",
@@ -17305,22 +17305,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Friends",
-        "(Friends)",
+        "Amigos",
         "📚"
       ],
       [
         "Invite",
-        "(Invite)",
+        "Convidar",
         "📚"
       ],
       [
         "Celebrate",
-        "(Celebrate)",
+        "Comemorar",
         "📚"
       ],
       [
         "Surprise",
-        "(Surprise)",
+        "Surpresa",
         "📚"
       ]
     ],
@@ -17328,25 +17328,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Friends significa:",
         [
-          "(Invite)",
-          "(Celebrate)",
-          "(Surprise)",
-          "(Friends)"
+          "Convidar",
+          "Comemorar",
+          "Surpresa",
+          "Amigos"
         ],
         3
       ],
       [
         "Invite significa:",
         [
-          "(Surprise)",
-          "(Celebrate)",
-          "(Invite)",
-          "(Friends)"
+          "Surpresa",
+          "Comemorar",
+          "Convidar",
+          "Amigos"
         ],
         2
       ],
       [
-        "Como dizemos \"(Invite)\" em inglês?",
+        "Como dizemos \"Convidar\" em inglês?",
         [
           "Friends",
           "Invite",
@@ -17364,34 +17364,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 244,
     "slug": "party-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Happy birthday, Make a wish, Blow candles, Open gifts",
+    "description": "Desafio: Happy birthday, Make a wish, Blow out the candles, Open the gifts",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Happy birthday, Make a wish, Blow candles e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Happy birthday, Make a wish, Blow out the candles e mais algumas palavras.",
     "learn": [
       "Happy birthday",
       "Make a wish",
-      "Blow candles",
-      "Open gifts"
+      "Blow out the candles",
+      "Open the gifts"
     ],
     "words": [
       [
         "Happy birthday",
-        "(Happy birthday)",
+        "Feliz aniversário",
         "📚"
       ],
       [
         "Make a wish",
-        "(Make a wish)",
+        "Fazer um pedido",
         "📚"
       ],
       [
-        "Blow candles",
-        "(Blow candles)",
+        "Blow out the candles",
+        "Apagar as velas",
         "📚"
       ],
       [
-        "Open gifts",
-        "(Open gifts)",
+        "Open the gifts",
+        "Abrir os presentes",
         "📚"
       ]
     ],
@@ -17399,30 +17399,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Happy birthday significa:",
         [
-          "(Open gifts)",
-          "(Blow candles)",
-          "(Happy birthday)",
-          "(Make a wish)"
+          "Abrir os presentes",
+          "Apagar as velas",
+          "Feliz aniversário",
+          "Fazer um pedido"
         ],
         2
       ],
       [
         "Make a wish significa:",
         [
-          "(Open gifts)",
-          "(Make a wish)",
-          "(Happy birthday)",
-          "(Blow candles)"
+          "Abrir os presentes",
+          "Fazer um pedido",
+          "Feliz aniversário",
+          "Apagar as velas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Make a wish)\" em inglês?",
+        "Como dizemos \"Fazer um pedido\" em inglês?",
         [
           "Happy birthday",
           "Make a wish",
-          "Blow candles",
-          "Open gifts"
+          "Blow out the candles",
+          "Open the gifts"
         ],
         1
       ]
@@ -17447,22 +17447,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Thank you",
-        "(Thank you)",
+        "Obrigado(a)",
         "📚"
       ],
       [
         "Party food",
-        "(Party food)",
+        "Comida de festa",
         "📚"
       ],
       [
         "Juice",
-        "(Juice)",
+        "Suco",
         "📚"
       ],
       [
         "Pizza party",
-        "(Pizza party)",
+        "Festa da pizza",
         "📚"
       ]
     ],
@@ -17470,25 +17470,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Thank you significa:",
         [
-          "(Pizza party)",
-          "(Thank you)",
-          "(Party food)",
-          "(Juice)"
+          "Festa da pizza",
+          "Obrigado(a)",
+          "Comida de festa",
+          "Suco"
         ],
         1
       ],
       [
         "Party food significa:",
         [
-          "(Thank you)",
-          "(Party food)",
-          "(Juice)",
-          "(Pizza party)"
+          "Obrigado(a)",
+          "Comida de festa",
+          "Suco",
+          "Festa da pizza"
         ],
         1
       ],
       [
-        "Como dizemos \"(Party food)\" em inglês?",
+        "Como dizemos \"Comida de festa\" em inglês?",
         [
           "Juice",
           "Pizza party",
@@ -17510,34 +17510,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 246,
     "slug": "party-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Games, Pinata, Confetti, Streamers",
+    "description": "Ouvir: Games, Piñata, Confetti, Streamers",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Games, Pinata, Confetti e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Games, Piñata, Confetti e mais algumas palavras.",
     "learn": [
       "Games",
-      "Pinata",
+      "Piñata",
       "Confetti",
       "Streamers"
     ],
     "words": [
       [
         "Games",
-        "(Games)",
+        "Brincadeiras",
         "📚"
       ],
       [
-        "Pinata",
-        "(Pinata)",
+        "Piñata",
+        "Pinhata",
         "📚"
       ],
       [
         "Confetti",
-        "(Confetti)",
+        "Confete",
         "📚"
       ],
       [
         "Streamers",
-        "(Streamers)",
+        "Serpentinas",
         "📚"
       ]
     ],
@@ -17545,29 +17545,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Games significa:",
         [
-          "(Pinata)",
-          "(Games)",
-          "(Confetti)",
-          "(Streamers)"
+          "Pinhata",
+          "Brincadeiras",
+          "Confete",
+          "Serpentinas"
         ],
         1
       ],
       [
-        "Pinata significa:",
+        "Piñata significa:",
         [
-          "(Games)",
-          "(Streamers)",
-          "(Confetti)",
-          "(Pinata)"
+          "Brincadeiras",
+          "Serpentinas",
+          "Confete",
+          "Pinhata"
         ],
         3
       ],
       [
-        "Como dizemos \"(Pinata)\" em inglês?",
+        "Como dizemos \"Pinhata\" em inglês?",
         [
           "Streamers",
           "Confetti",
-          "Pinata",
+          "Piñata",
           "Games"
         ],
         2
@@ -17593,22 +17593,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Photo",
-        "(Photo)",
+        "Foto",
         "📚"
       ],
       [
         "Smile",
-        "(Smile)",
+        "Sorrir",
         "📚"
       ],
       [
         "Fun party",
-        "(Fun party)",
+        "Festa divertida",
         "📚"
       ],
       [
         "Family party",
-        "(Family party)",
+        "Festa em família",
         "📚"
       ]
     ],
@@ -17616,25 +17616,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Photo significa:",
         [
-          "(Smile)",
-          "(Family party)",
-          "(Fun party)",
-          "(Photo)"
+          "Sorrir",
+          "Festa em família",
+          "Festa divertida",
+          "Foto"
         ],
         3
       ],
       [
         "Smile significa:",
         [
-          "(Family party)",
-          "(Fun party)",
-          "(Smile)",
-          "(Photo)"
+          "Festa em família",
+          "Festa divertida",
+          "Sorrir",
+          "Foto"
         ],
         2
       ],
       [
-        "Como dizemos \"(Smile)\" em inglês?",
+        "Como dizemos \"Sorrir\" em inglês?",
         [
           "Family party",
           "Smile",
@@ -17652,34 +17652,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 248,
     "slug": "party-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: School party, Holiday party, Decorate, Clean after",
+    "description": "Frases: School party, Holiday party, Decorate, Clean up after",
     "icon": "📚",
     "objective": "Hoje você vai aprender School party, Holiday party, Decorate e mais algumas palavras.",
     "learn": [
       "School party",
       "Holiday party",
       "Decorate",
-      "Clean after"
+      "Clean up after"
     ],
     "words": [
       [
         "School party",
-        "(School party)",
+        "Festa da escola",
         "📚"
       ],
       [
         "Holiday party",
-        "(Holiday party)",
+        "Festa de fim de ano",
         "📚"
       ],
       [
         "Decorate",
-        "(Decorate)",
+        "Decorar",
         "📚"
       ],
       [
-        "Clean after",
-        "(Clean after)",
+        "Clean up after",
+        "Arrumar depois",
         "📚"
       ]
     ],
@@ -17687,30 +17687,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "School party significa:",
         [
-          "(Clean after)",
-          "(Decorate)",
-          "(School party)",
-          "(Holiday party)"
+          "Arrumar depois",
+          "Decorar",
+          "Festa da escola",
+          "Festa de fim de ano"
         ],
         2
       ],
       [
         "Holiday party significa:",
         [
-          "(School party)",
-          "(Holiday party)",
-          "(Clean after)",
-          "(Decorate)"
+          "Festa da escola",
+          "Festa de fim de ano",
+          "Arrumar depois",
+          "Decorar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Holiday party)\" em inglês?",
+        "Como dizemos \"Festa de fim de ano\" em inglês?",
         [
           "Decorate",
           "Holiday party",
           "School party",
-          "Clean after"
+          "Clean up after"
         ],
         1
       ]
@@ -17723,65 +17723,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 249,
     "slug": "party-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Share cake, Sing song, Clap, Cheer",
+    "description": "Quiz mix: Share the cake, Sing a song, Clap, Cheer",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Share cake, Sing song, Clap e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Share the cake, Sing a song, Clap e mais algumas palavras.",
     "learn": [
-      "Share cake",
-      "Sing song",
+      "Share the cake",
+      "Sing a song",
       "Clap",
       "Cheer"
     ],
     "words": [
       [
-        "Share cake",
-        "(Share cake)",
+        "Share the cake",
+        "Dividir o bolo",
         "📚"
       ],
       [
-        "Sing song",
-        "(Sing song)",
+        "Sing a song",
+        "Cantar uma música",
         "📚"
       ],
       [
         "Clap",
-        "(Clap)",
+        "Bater palmas",
         "📚"
       ],
       [
         "Cheer",
-        "(Cheer)",
+        "Torcer",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Share cake significa:",
+        "Share the cake significa:",
         [
-          "(Sing song)",
-          "(Share cake)",
-          "(Cheer)",
-          "(Clap)"
+          "Cantar uma música",
+          "Dividir o bolo",
+          "Torcer",
+          "Bater palmas"
         ],
         1
       ],
       [
-        "Sing song significa:",
+        "Sing a song significa:",
         [
-          "(Clap)",
-          "(Sing song)",
-          "(Share cake)",
-          "(Cheer)"
+          "Bater palmas",
+          "Cantar uma música",
+          "Dividir o bolo",
+          "Torcer"
         ],
         1
       ],
       [
-        "Como dizemos \"(Sing song)\" em inglês?",
+        "Como dizemos \"Cantar uma música\" em inglês?",
         [
-          "Share cake",
+          "Share the cake",
           "Clap",
           "Cheer",
-          "Sing song"
+          "Sing a song"
         ],
         3
       ]
@@ -17806,22 +17806,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Special day",
-        "(Special day)",
+        "Dia especial",
         "📚"
       ],
       [
         "Memory",
-        "(Memory)",
+        "Lembrança",
         "📚"
       ],
       [
         "Joy",
-        "(Joy)",
+        "Alegria",
         "📚"
       ],
       [
         "Together",
-        "(Together)",
+        "Juntos",
         "📚"
       ]
     ],
@@ -17829,25 +17829,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Special day significa:",
         [
-          "(Joy)",
-          "(Special day)",
-          "(Memory)",
-          "(Together)"
+          "Alegria",
+          "Dia especial",
+          "Lembrança",
+          "Juntos"
         ],
         1
       ],
       [
         "Memory significa:",
         [
-          "(Joy)",
-          "(Together)",
-          "(Special day)",
-          "(Memory)"
+          "Alegria",
+          "Juntos",
+          "Dia especial",
+          "Lembrança"
         ],
         3
       ],
       [
-        "Como dizemos \"(Memory)\" em inglês?",
+        "Como dizemos \"Lembrança\" em inglês?",
         [
           "Together",
           "Joy",
@@ -17865,12 +17865,12 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 251,
     "slug": "shopping-l1",
     "title": "Lição 1: Fundamentos",
-    "description": "Fundamentos: Shop, Store, Market, Buy",
+    "description": "Fundamentos: Shop, Supermarket, Market, Buy",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Shop, Store, Market e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Shop, Supermarket, Market e mais algumas palavras.",
     "learn": [
       "Shop",
-      "Store",
+      "Supermarket",
       "Market",
       "Buy"
     ],
@@ -17881,18 +17881,18 @@ export const LESSON_SPECS: LessonSpec[] = [
         "📚"
       ],
       [
-        "Store",
-        "(Store)",
+        "Supermarket",
+        "Supermercado",
         "📚"
       ],
       [
         "Market",
-        "(Market)",
+        "Mercado",
         "📚"
       ],
       [
         "Buy",
-        "(Buy)",
+        "Comprar",
         "📚"
       ]
     ],
@@ -17900,28 +17900,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Shop significa:",
         [
-          "(Market)",
-          "(Buy)",
-          "(Store)",
+          "Mercado",
+          "Comprar",
+          "Supermercado",
           "Loja"
         ],
         3
       ],
       [
-        "Store significa:",
+        "Supermarket significa:",
         [
-          "(Buy)",
-          "(Store)",
-          "(Market)",
+          "Comprar",
+          "Supermercado",
+          "Mercado",
           "Loja"
         ],
         1
       ],
       [
-        "Como dizemos \"(Store)\" em inglês?",
+        "Como dizemos \"Supermercado\" em inglês?",
         [
           "Shop",
-          "Store",
+          "Supermarket",
           "Buy",
           "Market"
         ],
@@ -17948,22 +17948,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sell",
-        "(Sell)",
+        "Vender",
         "📚"
       ],
       [
         "Price",
-        "(Price)",
+        "Preço",
         "📚"
       ],
       [
         "Cheap",
-        "(Cheap)",
+        "Barato",
         "📚"
       ],
       [
         "Expensive",
-        "(Expensive)",
+        "Caro",
         "📚"
       ]
     ],
@@ -17971,25 +17971,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sell significa:",
         [
-          "(Expensive)",
-          "(Sell)",
-          "(Cheap)",
-          "(Price)"
+          "Caro",
+          "Vender",
+          "Barato",
+          "Preço"
         ],
         1
       ],
       [
         "Price significa:",
         [
-          "(Sell)",
-          "(Price)",
-          "(Expensive)",
-          "(Cheap)"
+          "Vender",
+          "Preço",
+          "Caro",
+          "Barato"
         ],
         1
       ],
       [
-        "Como dizemos \"(Price)\" em inglês?",
+        "Como dizemos \"Preço\" em inglês?",
         [
           "Cheap",
           "Price",
@@ -18019,22 +18019,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cart",
-        "(Cart)",
+        "Carrinho de compras",
         "📚"
       ],
       [
         "Basket",
-        "(Basket)",
+        "Cesta",
         "📚"
       ],
       [
         "Cashier",
-        "(Cashier)",
+        "Operador de caixa",
         "📚"
       ],
       [
         "Receipt",
-        "(Receipt)",
+        "Recibo",
         "📚"
       ]
     ],
@@ -18042,25 +18042,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cart significa:",
         [
-          "(Basket)",
-          "(Cart)",
-          "(Receipt)",
-          "(Cashier)"
+          "Cesta",
+          "Carrinho de compras",
+          "Recibo",
+          "Operador de caixa"
         ],
         1
       ],
       [
         "Basket significa:",
         [
-          "(Cart)",
-          "(Basket)",
-          "(Cashier)",
-          "(Receipt)"
+          "Carrinho de compras",
+          "Cesta",
+          "Operador de caixa",
+          "Recibo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Basket)\" em inglês?",
+        "Como dizemos \"Cesta\" em inglês?",
         [
           "Cashier",
           "Receipt",
@@ -18090,22 +18090,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bag",
-        "(Bag)",
+        "Sacola",
         "📚"
       ],
       [
         "List",
-        "(List)",
+        "Lista",
         "📚"
       ],
       [
         "Need",
-        "(Need)",
+        "Precisar",
         "📚"
       ],
       [
         "Want",
-        "(Want)",
+        "Querer",
         "📚"
       ]
     ],
@@ -18113,25 +18113,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bag significa:",
         [
-          "(List)",
-          "(Bag)",
-          "(Need)",
-          "(Want)"
+          "Lista",
+          "Sacola",
+          "Precisar",
+          "Querer"
         ],
         1
       ],
       [
         "List significa:",
         [
-          "(Need)",
-          "(Want)",
-          "(Bag)",
-          "(List)"
+          "Precisar",
+          "Querer",
+          "Sacola",
+          "Lista"
         ],
         3
       ],
       [
-        "Como dizemos \"(List)\" em inglês?",
+        "Como dizemos \"Lista\" em inglês?",
         [
           "Want",
           "List",
@@ -18161,22 +18161,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Choose",
-        "(Choose)",
+        "Escolher",
         "📚"
       ],
       [
         "Compare",
-        "(Compare)",
+        "Comparar",
         "📚"
       ],
       [
         "Sale",
-        "(Sale)",
+        "Promoção",
         "📚"
       ],
       [
         "Discount",
-        "(Discount)",
+        "Desconto",
         "📚"
       ]
     ],
@@ -18184,25 +18184,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Choose significa:",
         [
-          "(Sale)",
-          "(Discount)",
-          "(Compare)",
-          "(Choose)"
+          "Promoção",
+          "Desconto",
+          "Comparar",
+          "Escolher"
         ],
         3
       ],
       [
         "Compare significa:",
         [
-          "(Discount)",
-          "(Sale)",
-          "(Compare)",
-          "(Choose)"
+          "Desconto",
+          "Promoção",
+          "Comparar",
+          "Escolher"
         ],
         2
       ],
       [
-        "Como dizemos \"(Compare)\" em inglês?",
+        "Como dizemos \"Comparar\" em inglês?",
         [
           "Discount",
           "Compare",
@@ -18220,65 +18220,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 256,
     "slug": "shopping-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Open store, Close store, Customer, Help please",
+    "description": "Ouvir: Open the store, Close the store, Customer, Help, please",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Open store, Close store, Customer e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Open the store, Close the store, Customer e mais algumas palavras.",
     "learn": [
-      "Open store",
-      "Close store",
+      "Open the store",
+      "Close the store",
       "Customer",
-      "Help please"
+      "Help, please"
     ],
     "words": [
       [
-        "Open store",
-        "(Open store)",
+        "Open the store",
+        "Abrir a loja",
         "📚"
       ],
       [
-        "Close store",
-        "(Close store)",
+        "Close the store",
+        "Fechar a loja",
         "📚"
       ],
       [
         "Customer",
-        "(Customer)",
+        "Cliente",
         "📚"
       ],
       [
-        "Help please",
-        "(Help please)",
+        "Help, please",
+        "Ajuda, por favor",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Open store significa:",
+        "Open the store significa:",
         [
-          "(Help please)",
-          "(Customer)",
-          "(Open store)",
-          "(Close store)"
+          "Ajuda, por favor",
+          "Cliente",
+          "Abrir a loja",
+          "Fechar a loja"
         ],
         2
       ],
       [
-        "Close store significa:",
+        "Close the store significa:",
         [
-          "(Help please)",
-          "(Close store)",
-          "(Open store)",
-          "(Customer)"
+          "Ajuda, por favor",
+          "Fechar a loja",
+          "Abrir a loja",
+          "Cliente"
         ],
         1
       ],
       [
-        "Como dizemos \"(Close store)\" em inglês?",
+        "Como dizemos \"Fechar a loja\" em inglês?",
         [
-          "Open store",
-          "Close store",
+          "Open the store",
+          "Close the store",
           "Customer",
-          "Help please"
+          "Help, please"
         ],
         1
       ]
@@ -18291,65 +18291,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 257,
     "slug": "shopping-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Where is, How much, Pay, Credit card",
+    "description": "Memória: Where is it?, How much is it?, Pay, Credit card",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Where is, How much, Pay e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Where is it?, How much is it?, Pay e mais algumas palavras.",
     "learn": [
-      "Where is",
-      "How much",
+      "Where is it?",
+      "How much is it?",
       "Pay",
       "Credit card"
     ],
     "words": [
       [
-        "Where is",
-        "(Where is)",
+        "Where is it?",
+        "Onde fica?",
         "📚"
       ],
       [
-        "How much",
-        "(How much)",
+        "How much is it?",
+        "Quanto custa?",
         "📚"
       ],
       [
         "Pay",
-        "(Pay)",
+        "Pagar",
         "📚"
       ],
       [
         "Credit card",
-        "(Credit card)",
+        "Cartão de crédito",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Where is significa:",
+        "Where is it? significa:",
         [
-          "(Credit card)",
-          "(Where is)",
-          "(How much)",
-          "(Pay)"
+          "Cartão de crédito",
+          "Onde fica?",
+          "Quanto custa?",
+          "Pagar"
         ],
         1
       ],
       [
-        "How much significa:",
+        "How much is it? significa:",
         [
-          "(Pay)",
-          "(How much)",
-          "(Where is)",
-          "(Credit card)"
+          "Pagar",
+          "Quanto custa?",
+          "Onde fica?",
+          "Cartão de crédito"
         ],
         1
       ],
       [
-        "Como dizemos \"(How much)\" em inglês?",
+        "Como dizemos \"Quanto custa?\" em inglês?",
         [
           "Pay",
           "Credit card",
-          "Where is",
-          "How much"
+          "Where is it?",
+          "How much is it?"
         ],
         3
       ]
@@ -18374,22 +18374,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Coins",
-        "(Coins)",
+        "Moedas",
         "📚"
       ],
       [
         "Bills",
-        "(Bills)",
+        "Notas de dinheiro",
         "📚"
       ],
       [
         "Grocery",
-        "(Grocery)",
+        "Mercearia",
         "📚"
       ],
       [
         "Toy store",
-        "(Toy store)",
+        "Loja de brinquedos",
         "📚"
       ]
     ],
@@ -18397,25 +18397,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Coins significa:",
         [
-          "(Grocery)",
-          "(Coins)",
-          "(Bills)",
-          "(Toy store)"
+          "Mercearia",
+          "Moedas",
+          "Notas de dinheiro",
+          "Loja de brinquedos"
         ],
         1
       ],
       [
         "Bills significa:",
         [
-          "(Coins)",
-          "(Grocery)",
-          "(Toy store)",
-          "(Bills)"
+          "Moedas",
+          "Mercearia",
+          "Loja de brinquedos",
+          "Notas de dinheiro"
         ],
         3
       ],
       [
-        "Como dizemos \"(Bills)\" em inglês?",
+        "Como dizemos \"Notas de dinheiro\" em inglês?",
         [
           "Toy store",
           "Grocery",
@@ -18433,64 +18433,64 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 259,
     "slug": "shopping-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Book store, Clothes shop, Bakery, Fresh food",
+    "description": "Quiz mix: Bookstore, Clothes store, Bakery, Fresh food",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Book store, Clothes shop, Bakery e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Bookstore, Clothes store, Bakery e mais algumas palavras.",
     "learn": [
-      "Book store",
-      "Clothes shop",
+      "Bookstore",
+      "Clothes store",
       "Bakery",
       "Fresh food"
     ],
     "words": [
       [
-        "Book store",
-        "(Book store)",
+        "Bookstore",
+        "Livraria",
         "📚"
       ],
       [
-        "Clothes shop",
-        "(Clothes shop)",
+        "Clothes store",
+        "Loja de roupas",
         "📚"
       ],
       [
         "Bakery",
-        "(Bakery)",
+        "Padaria",
         "📚"
       ],
       [
         "Fresh food",
-        "(Fresh food)",
+        "Comida fresca",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Book store significa:",
+        "Bookstore significa:",
         [
-          "(Clothes shop)",
-          "(Bakery)",
-          "(Fresh food)",
-          "(Book store)"
+          "Loja de roupas",
+          "Padaria",
+          "Comida fresca",
+          "Livraria"
         ],
         3
       ],
       [
-        "Clothes shop significa:",
+        "Clothes store significa:",
         [
-          "(Fresh food)",
-          "(Bakery)",
-          "(Clothes shop)",
-          "(Book store)"
+          "Comida fresca",
+          "Padaria",
+          "Loja de roupas",
+          "Livraria"
         ],
         2
       ],
       [
-        "Como dizemos \"(Clothes shop)\" em inglês?",
+        "Como dizemos \"Loja de roupas\" em inglês?",
         [
           "Fresh food",
-          "Clothes shop",
-          "Book store",
+          "Clothes store",
+          "Bookstore",
           "Bakery"
         ],
         1
@@ -18504,34 +18504,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 260,
     "slug": "shopping-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Checkout, Line, Wait, Thank you shop",
+    "description": "Revisão final: Checkout, Line, Wait, Thank you for shopping",
     "icon": "📚",
     "objective": "Hoje você vai aprender Checkout, Line, Wait e mais algumas palavras.",
     "learn": [
       "Checkout",
       "Line",
       "Wait",
-      "Thank you shop"
+      "Thank you for shopping"
     ],
     "words": [
       [
         "Checkout",
-        "(Checkout)",
+        "Caixa",
         "📚"
       ],
       [
         "Line",
-        "(Line)",
+        "Fila",
         "📚"
       ],
       [
         "Wait",
-        "(Wait)",
+        "Esperar",
         "📚"
       ],
       [
-        "Thank you shop",
-        "(Thank you shop)",
+        "Thank you for shopping",
+        "Obrigado pela compra",
         "📚"
       ]
     ],
@@ -18539,42 +18539,43 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Checkout significa:",
         [
-          "(Thank you shop)",
-          "(Wait)",
-          "(Checkout)",
-          "(Line)"
+          "Obrigado pela compra",
+          "Esperar",
+          "Caixa",
+          "Fila"
         ],
         2
       ],
       [
         "Line significa:",
         [
-          "(Checkout)",
-          "(Line)",
-          "(Thank you shop)",
-          "(Wait)"
+          "Caixa",
+          "Fila",
+          "Obrigado pela compra",
+          "Esperar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Line)\" em inglês?",
+        "Como dizemos \"Fila\" em inglês?",
         [
           "Wait",
           "Line",
           "Checkout",
-          "Thank you shop"
+          "Thank you for shopping"
         ],
         1
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(Thank you shop)",
+      "ptLabel": "Obrigado pela compra",
       "words": [
         "you",
-        "shop",
-        "Thank"
+        "Thank",
+        "shopping",
+        "for"
       ],
-      "correct": "Thank you shop"
+      "correct": "Thank you for shopping"
     }
   },
   {
@@ -18601,17 +18602,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Coin",
-        "(Coin)",
+        "Moeda",
         "📚"
       ],
       [
         "Bill",
-        "(Bill)",
+        "Nota",
         "📚"
       ],
       [
         "Dollar",
-        "(Dollar)",
+        "Dólar",
         "📚"
       ]
     ],
@@ -18619,25 +18620,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Money significa:",
         [
-          "(Coin)",
+          "Moeda",
           "Dinheiro",
-          "(Dollar)",
-          "(Bill)"
+          "Dólar",
+          "Nota"
         ],
         1
       ],
       [
         "Coin significa:",
         [
-          "(Bill)",
-          "(Coin)",
+          "Nota",
+          "Moeda",
           "Dinheiro",
-          "(Dollar)"
+          "Dólar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Coin)\" em inglês?",
+        "Como dizemos \"Moeda\" em inglês?",
         [
           "Bill",
           "Dollar",
@@ -18667,22 +18668,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cent",
-        "(Cent)",
+        "Centavo",
         "📚"
       ],
       [
         "Price",
-        "(Price)",
+        "Preço",
         "📚"
       ],
       [
         "Cost",
-        "(Cost)",
+        "Custar",
         "📚"
       ],
       [
         "Pay",
-        "(Pay)",
+        "Pagar",
         "📚"
       ]
     ],
@@ -18690,25 +18691,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cent significa:",
         [
-          "(Cost)",
-          "(Cent)",
-          "(Price)",
-          "(Pay)"
+          "Custar",
+          "Centavo",
+          "Preço",
+          "Pagar"
         ],
         1
       ],
       [
         "Price significa:",
         [
-          "(Cost)",
-          "(Pay)",
-          "(Cent)",
-          "(Price)"
+          "Custar",
+          "Pagar",
+          "Centavo",
+          "Preço"
         ],
         3
       ],
       [
-        "Como dizemos \"(Price)\" em inglês?",
+        "Como dizemos \"Preço\" em inglês?",
         [
           "Pay",
           "Price",
@@ -18738,22 +18739,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Change",
-        "(Change)",
+        "Troco",
         "📚"
       ],
       [
         "Save",
-        "(Save)",
+        "Economizar",
         "📚"
       ],
       [
         "Spend",
-        "(Spend)",
+        "Gastar",
         "📚"
       ],
       [
         "Earn",
-        "(Earn)",
+        "Ganhar dinheiro",
         "📚"
       ]
     ],
@@ -18761,25 +18762,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Change significa:",
         [
-          "(Spend)",
-          "(Earn)",
-          "(Save)",
-          "(Change)"
+          "Gastar",
+          "Ganhar dinheiro",
+          "Economizar",
+          "Troco"
         ],
         3
       ],
       [
         "Save significa:",
         [
-          "(Earn)",
-          "(Save)",
-          "(Spend)",
-          "(Change)"
+          "Ganhar dinheiro",
+          "Economizar",
+          "Gastar",
+          "Troco"
         ],
         1
       ],
       [
-        "Como dizemos \"(Save)\" em inglês?",
+        "Como dizemos \"Economizar\" em inglês?",
         [
           "Change",
           "Earn",
@@ -18809,22 +18810,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Wallet",
-        "(Wallet)",
+        "Carteira",
         "📚"
       ],
       [
         "Piggy bank",
-        "(Piggy bank)",
+        "Cofrinho",
         "📚"
       ],
       [
         "Budget",
-        "(Budget)",
+        "Orçamento",
         "📚"
       ],
       [
         "Expensive",
-        "(Expensive)",
+        "Caro",
         "📚"
       ]
     ],
@@ -18832,25 +18833,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wallet significa:",
         [
-          "(Expensive)",
-          "(Wallet)",
-          "(Budget)",
-          "(Piggy bank)"
+          "Caro",
+          "Carteira",
+          "Orçamento",
+          "Cofrinho"
         ],
         1
       ],
       [
         "Piggy bank significa:",
         [
-          "(Expensive)",
-          "(Piggy bank)",
-          "(Wallet)",
-          "(Budget)"
+          "Caro",
+          "Cofrinho",
+          "Carteira",
+          "Orçamento"
         ],
         1
       ],
       [
-        "Como dizemos \"(Piggy bank)\" em inglês?",
+        "Como dizemos \"Cofrinho\" em inglês?",
         [
           "Wallet",
           "Budget",
@@ -18880,22 +18881,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cheap",
-        "(Cheap)",
+        "Barato",
         "📚"
       ],
       [
         "Free",
-        "(Free)",
+        "Grátis",
         "📚"
       ],
       [
         "Sale",
-        "(Sale)",
+        "Promoção",
         "📚"
       ],
       [
         "Value",
-        "(Value)",
+        "Valor",
         "📚"
       ]
     ],
@@ -18903,25 +18904,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cheap significa:",
         [
-          "(Value)",
-          "(Cheap)",
-          "(Free)",
-          "(Sale)"
+          "Valor",
+          "Barato",
+          "Grátis",
+          "Promoção"
         ],
         1
       ],
       [
         "Free significa:",
         [
-          "(Cheap)",
-          "(Free)",
-          "(Sale)",
-          "(Value)"
+          "Barato",
+          "Grátis",
+          "Promoção",
+          "Valor"
         ],
         1
       ],
       [
-        "Como dizemos \"(Free)\" em inglês?",
+        "Como dizemos \"Grátis\" em inglês?",
         [
           "Sale",
           "Value",
@@ -18951,22 +18952,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Rich",
-        "(Rich)",
+        "Rico",
         "📚"
       ],
       [
         "Poor",
-        "(Poor)",
+        "Pobre",
         "📚"
       ],
       [
         "Fair price",
-        "(Fair price)",
+        "Preço justo",
         "📚"
       ],
       [
         "Count money",
-        "(Count money)",
+        "Contar dinheiro",
         "📚"
       ]
     ],
@@ -18974,25 +18975,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Rich significa:",
         [
-          "(Poor)",
-          "(Rich)",
-          "(Fair price)",
-          "(Count money)"
+          "Pobre",
+          "Rico",
+          "Preço justo",
+          "Contar dinheiro"
         ],
         1
       ],
       [
         "Poor significa:",
         [
-          "(Fair price)",
-          "(Count money)",
-          "(Rich)",
-          "(Poor)"
+          "Preço justo",
+          "Contar dinheiro",
+          "Rico",
+          "Pobre"
         ],
         3
       ],
       [
-        "Como dizemos \"(Poor)\" em inglês?",
+        "Como dizemos \"Pobre\" em inglês?",
         [
           "Count money",
           "Fair price",
@@ -19010,34 +19011,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 267,
     "slug": "money-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Enough, Not enough, Allowance, Job pay",
+    "description": "Memória: Enough, Not enough, Allowance, Pay for work",
     "icon": "📚",
     "objective": "Hoje você vai aprender Enough, Not enough, Allowance e mais algumas palavras.",
     "learn": [
       "Enough",
       "Not enough",
       "Allowance",
-      "Job pay"
+      "Pay for work"
     ],
     "words": [
       [
         "Enough",
-        "(Enough)",
+        "Suficiente",
         "📚"
       ],
       [
         "Not enough",
-        "(Not enough)",
+        "Não é suficiente",
         "📚"
       ],
       [
         "Allowance",
-        "(Allowance)",
+        "Mesada",
         "📚"
       ],
       [
-        "Job pay",
-        "(Job pay)",
+        "Pay for work",
+        "Pagamento pelo trabalho",
         "📚"
       ]
     ],
@@ -19045,29 +19046,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Enough significa:",
         [
-          "(Allowance)",
-          "(Job pay)",
-          "(Not enough)",
-          "(Enough)"
+          "Mesada",
+          "Pagamento pelo trabalho",
+          "Não é suficiente",
+          "Suficiente"
         ],
         3
       ],
       [
         "Not enough significa:",
         [
-          "(Job pay)",
-          "(Allowance)",
-          "(Not enough)",
-          "(Enough)"
+          "Pagamento pelo trabalho",
+          "Mesada",
+          "Não é suficiente",
+          "Suficiente"
         ],
         2
       ],
       [
-        "Como dizemos \"(Not enough)\" em inglês?",
+        "Como dizemos \"Não é suficiente\" em inglês?",
         [
           "Enough",
           "Not enough",
-          "Job pay",
+          "Pay for work",
           "Allowance"
         ],
         1
@@ -19081,34 +19082,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 268,
     "slug": "money-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Buy food, Buy toy, Save up, Goal",
+    "description": "Frases: Buy food, Buy a toy, Save up, Goal",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Buy food, Buy toy, Save up e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Buy food, Buy a toy, Save up e mais algumas palavras.",
     "learn": [
       "Buy food",
-      "Buy toy",
+      "Buy a toy",
       "Save up",
       "Goal"
     ],
     "words": [
       [
         "Buy food",
-        "(Buy food)",
+        "Comprar comida",
         "📚"
       ],
       [
-        "Buy toy",
-        "(Buy toy)",
+        "Buy a toy",
+        "Comprar um brinquedo",
         "📚"
       ],
       [
         "Save up",
-        "(Save up)",
+        "Juntar dinheiro",
         "📚"
       ],
       [
         "Goal",
-        "(Goal)",
+        "Gol",
         "📚"
       ]
     ],
@@ -19116,28 +19117,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Buy food significa:",
         [
-          "(Goal)",
-          "(Save up)",
-          "(Buy food)",
-          "(Buy toy)"
+          "Gol",
+          "Juntar dinheiro",
+          "Comprar comida",
+          "Comprar um brinquedo"
         ],
         2
       ],
       [
-        "Buy toy significa:",
+        "Buy a toy significa:",
         [
-          "(Goal)",
-          "(Buy toy)",
-          "(Buy food)",
-          "(Save up)"
+          "Gol",
+          "Comprar um brinquedo",
+          "Comprar comida",
+          "Juntar dinheiro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Buy toy)\" em inglês?",
+        "Como dizemos \"Comprar um brinquedo\" em inglês?",
         [
           "Save up",
-          "Buy toy",
+          "Buy a toy",
           "Buy food",
           "Goal"
         ],
@@ -19164,22 +19165,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Plan",
-        "(Plan)",
+        "Planejar",
         "📚"
       ],
       [
         "Smart buy",
-        "(Smart buy)",
+        "Compra inteligente",
         "📚"
       ],
       [
         "Need vs want",
-        "(Need vs want)",
+        "Precisar ou querer",
         "📚"
       ],
       [
         "Share money",
-        "(Share money)",
+        "Dividir dinheiro",
         "📚"
       ]
     ],
@@ -19187,25 +19188,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Plan significa:",
         [
-          "(Share money)",
-          "(Plan)",
-          "(Smart buy)",
-          "(Need vs want)"
+          "Dividir dinheiro",
+          "Planejar",
+          "Compra inteligente",
+          "Precisar ou querer"
         ],
         1
       ],
       [
         "Smart buy significa:",
         [
-          "(Need vs want)",
-          "(Smart buy)",
-          "(Plan)",
-          "(Share money)"
+          "Precisar ou querer",
+          "Compra inteligente",
+          "Planejar",
+          "Dividir dinheiro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Smart buy)\" em inglês?",
+        "Como dizemos \"Compra inteligente\" em inglês?",
         [
           "Need vs want",
           "Share money",
@@ -19223,34 +19224,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 270,
     "slug": "money-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Donate, Charity, Bank, Safe keep",
+    "description": "Revisão final: Donate, Charity, Bank, Keep it safe",
     "icon": "📚",
     "objective": "Hoje você vai aprender Donate, Charity, Bank e mais algumas palavras.",
     "learn": [
       "Donate",
       "Charity",
       "Bank",
-      "Safe keep"
+      "Keep it safe"
     ],
     "words": [
       [
         "Donate",
-        "(Donate)",
+        "Doar",
         "📚"
       ],
       [
         "Charity",
-        "(Charity)",
+        "Caridade",
         "📚"
       ],
       [
         "Bank",
-        "(Bank)",
+        "Banco",
         "📚"
       ],
       [
-        "Safe keep",
-        "(Safe keep)",
+        "Keep it safe",
+        "Guardar com segurança",
         "📚"
       ]
     ],
@@ -19258,27 +19259,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Donate significa:",
         [
-          "(Bank)",
-          "(Donate)",
-          "(Charity)",
-          "(Safe keep)"
+          "Banco",
+          "Doar",
+          "Caridade",
+          "Guardar com segurança"
         ],
         1
       ],
       [
         "Charity significa:",
         [
-          "(Bank)",
-          "(Safe keep)",
-          "(Donate)",
-          "(Charity)"
+          "Banco",
+          "Guardar com segurança",
+          "Doar",
+          "Caridade"
         ],
         3
       ],
       [
-        "Como dizemos \"(Charity)\" em inglês?",
+        "Como dizemos \"Caridade\" em inglês?",
         [
-          "Safe keep",
+          "Keep it safe",
           "Charity",
           "Bank",
           "Donate"
@@ -19311,17 +19312,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Nurse",
-        "(Nurse)",
+        "Enfermeiro",
         "📚"
       ],
       [
         "Hospital",
-        "(Hospital)",
+        "Hospital",
         "📚"
       ],
       [
         "Medicine",
-        "(Medicine)",
+        "Remédio",
         "📚"
       ]
     ],
@@ -19329,9 +19330,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Doctor significa:",
         [
-          "(Hospital)",
-          "(Medicine)",
-          "(Nurse)",
+          "Hospital",
+          "Remédio",
+          "Enfermeiro",
           "Médico(a)"
         ],
         3
@@ -19339,15 +19340,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Nurse significa:",
         [
-          "(Medicine)",
-          "(Nurse)",
-          "(Hospital)",
+          "Remédio",
+          "Enfermeiro",
+          "Hospital",
           "Médico(a)"
         ],
         1
       ],
       [
-        "Como dizemos \"(Nurse)\" em inglês?",
+        "Como dizemos \"Enfermeiro\" em inglês?",
         [
           "Doctor",
           "Nurse",
@@ -19377,22 +19378,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sick",
-        "(Sick)",
+        "Doente",
         "📚"
       ],
       [
         "Healthy",
-        "(Healthy)",
+        "Saudável",
         "📚"
       ],
       [
         "Hurt",
-        "(Hurt)",
+        "Machucado",
         "📚"
       ],
       [
         "Pain",
-        "(Pain)",
+        "Dor",
         "📚"
       ]
     ],
@@ -19400,25 +19401,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sick significa:",
         [
-          "(Pain)",
-          "(Sick)",
-          "(Hurt)",
-          "(Healthy)"
+          "Dor",
+          "Doente",
+          "Machucado",
+          "Saudável"
         ],
         1
       ],
       [
         "Healthy significa:",
         [
-          "(Sick)",
-          "(Pain)",
-          "(Healthy)",
-          "(Hurt)"
+          "Doente",
+          "Dor",
+          "Saudável",
+          "Machucado"
         ],
         2
       ],
       [
-        "Como dizemos \"(Healthy)\" em inglês?",
+        "Como dizemos \"Saudável\" em inglês?",
         [
           "Sick",
           "Hurt",
@@ -19448,22 +19449,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bandage",
-        "(Bandage)",
+        "Curativo",
         "📚"
       ],
       [
         "Rest",
-        "(Rest)",
+        "Descansar",
         "📚"
       ],
       [
         "Sleep well",
-        "(Sleep well)",
+        "Dormir bem",
         "📚"
       ],
       [
         "Eat well",
-        "(Eat well)",
+        "Comer bem",
         "📚"
       ]
     ],
@@ -19471,25 +19472,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bandage significa:",
         [
-          "(Rest)",
-          "(Eat well)",
-          "(Bandage)",
-          "(Sleep well)"
+          "Descansar",
+          "Comer bem",
+          "Curativo",
+          "Dormir bem"
         ],
         2
       ],
       [
         "Rest significa:",
         [
-          "(Bandage)",
-          "(Sleep well)",
-          "(Rest)",
-          "(Eat well)"
+          "Curativo",
+          "Dormir bem",
+          "Descansar",
+          "Comer bem"
         ],
         2
       ],
       [
-        "Como dizemos \"(Rest)\" em inglês?",
+        "Como dizemos \"Descansar\" em inglês?",
         [
           "Bandage",
           "Sleep well",
@@ -19519,22 +19520,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Exercise",
-        "(Exercise)",
+        "Exercício",
         "📚"
       ],
       [
         "Strong",
-        "(Strong)",
+        "Forte",
         "📚"
       ],
       [
         "Checkup",
-        "(Checkup)",
+        "Consulta médica",
         "📚"
       ],
       [
         "Fever",
-        "(Fever)",
+        "Febre",
         "📚"
       ]
     ],
@@ -19542,25 +19543,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Exercise significa:",
         [
-          "(Strong)",
-          "(Checkup)",
-          "(Exercise)",
-          "(Fever)"
+          "Forte",
+          "Consulta médica",
+          "Exercício",
+          "Febre"
         ],
         2
       ],
       [
         "Strong significa:",
         [
-          "(Checkup)",
-          "(Fever)",
-          "(Exercise)",
-          "(Strong)"
+          "Consulta médica",
+          "Febre",
+          "Exercício",
+          "Forte"
         ],
         3
       ],
       [
-        "Como dizemos \"(Strong)\" em inglês?",
+        "Como dizemos \"Forte\" em inglês?",
         [
           "Checkup",
           "Strong",
@@ -19590,22 +19591,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cough",
-        "(Cough)",
+        "Tosse",
         "📚"
       ],
       [
         "Cold",
-        "(Cold)",
+        "Resfriado",
         "📚"
       ],
       [
         "Allergy",
-        "(Allergy)",
+        "Alergia",
         "📚"
       ],
       [
         "Vaccine",
-        "(Vaccine)",
+        "Vacina",
         "📚"
       ]
     ],
@@ -19613,25 +19614,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cough significa:",
         [
-          "(Allergy)",
-          "(Vaccine)",
-          "(Cold)",
-          "(Cough)"
+          "Alergia",
+          "Vacina",
+          "Resfriado",
+          "Tosse"
         ],
         3
       ],
       [
         "Cold significa:",
         [
-          "(Vaccine)",
-          "(Allergy)",
-          "(Cold)",
-          "(Cough)"
+          "Vacina",
+          "Alergia",
+          "Resfriado",
+          "Tosse"
         ],
         2
       ],
       [
-        "Como dizemos \"(Cold)\" em inglês?",
+        "Como dizemos \"Resfriado\" em inglês?",
         [
           "Cough",
           "Vaccine",
@@ -19649,34 +19650,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 276,
     "slug": "health-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Feel better, Call doctor, Emergency, Ambulance",
+    "description": "Ouvir: Feel better, Call the doctor, Emergency, Ambulance",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Feel better, Call doctor, Emergency e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Feel better, Call the doctor, Emergency e mais algumas palavras.",
     "learn": [
       "Feel better",
-      "Call doctor",
+      "Call the doctor",
       "Emergency",
       "Ambulance"
     ],
     "words": [
       [
         "Feel better",
-        "(Feel better)",
+        "Sentir-se melhor",
         "📚"
       ],
       [
-        "Call doctor",
-        "(Call doctor)",
+        "Call the doctor",
+        "Chamar o médico",
         "📚"
       ],
       [
         "Emergency",
-        "(Emergency)",
+        "Emergência",
         "📚"
       ],
       [
         "Ambulance",
-        "(Ambulance)",
+        "Ambulância",
         "📚"
       ]
     ],
@@ -19684,28 +19685,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Feel better significa:",
         [
-          "(Ambulance)",
-          "(Emergency)",
-          "(Feel better)",
-          "(Call doctor)"
+          "Ambulância",
+          "Emergência",
+          "Sentir-se melhor",
+          "Chamar o médico"
         ],
         2
       ],
       [
-        "Call doctor significa:",
+        "Call the doctor significa:",
         [
-          "(Feel better)",
-          "(Call doctor)",
-          "(Ambulance)",
-          "(Emergency)"
+          "Sentir-se melhor",
+          "Chamar o médico",
+          "Ambulância",
+          "Emergência"
         ],
         1
       ],
       [
-        "Como dizemos \"(Call doctor)\" em inglês?",
+        "Como dizemos \"Chamar o médico\" em inglês?",
         [
           "Feel better",
-          "Call doctor",
+          "Call the doctor",
           "Emergency",
           "Ambulance"
         ],
@@ -19732,22 +19733,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Clinic",
-        "(Clinic)",
+        "Clínica",
         "📚"
       ],
       [
         "Dentist",
-        "(Dentist)",
+        "Dentista",
         "📚"
       ],
       [
         "Teeth",
-        "(Teeth)",
+        "Dentes",
         "📚"
       ],
       [
         "Eyes",
-        "(Eyes)",
+        "Olhos",
         "📚"
       ]
     ],
@@ -19755,25 +19756,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Clinic significa:",
         [
-          "(Dentist)",
-          "(Clinic)",
-          "(Eyes)",
-          "(Teeth)"
+          "Dentista",
+          "Clínica",
+          "Olhos",
+          "Dentes"
         ],
         1
       ],
       [
         "Dentist significa:",
         [
-          "(Teeth)",
-          "(Dentist)",
-          "(Clinic)",
-          "(Eyes)"
+          "Dentes",
+          "Dentista",
+          "Clínica",
+          "Olhos"
         ],
         1
       ],
       [
-        "Como dizemos \"(Dentist)\" em inglês?",
+        "Como dizemos \"Dentista\" em inglês?",
         [
           "Teeth",
           "Eyes",
@@ -19791,34 +19792,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 278,
     "slug": "health-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Ears, Heart beat, Breathe, Drink water",
+    "description": "Frases: Ears, Heartbeat, Breathe, Drink water",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Ears, Heart beat, Breathe e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Ears, Heartbeat, Breathe e mais algumas palavras.",
     "learn": [
       "Ears",
-      "Heart beat",
+      "Heartbeat",
       "Breathe",
       "Drink water"
     ],
     "words": [
       [
         "Ears",
-        "(Ears)",
+        "Orelhas",
         "📚"
       ],
       [
-        "Heart beat",
-        "(Heart beat)",
+        "Heartbeat",
+        "Batimento do coração",
         "📚"
       ],
       [
         "Breathe",
-        "(Breathe)",
+        "Respirar",
         "📚"
       ],
       [
         "Drink water",
-        "(Drink water)",
+        "Beber água",
         "📚"
       ]
     ],
@@ -19826,28 +19827,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ears significa:",
         [
-          "(Breathe)",
-          "(Ears)",
-          "(Heart beat)",
-          "(Drink water)"
+          "Respirar",
+          "Orelhas",
+          "Batimento do coração",
+          "Beber água"
         ],
         1
       ],
       [
-        "Heart beat significa:",
+        "Heartbeat significa:",
         [
-          "(Breathe)",
-          "(Drink water)",
-          "(Ears)",
-          "(Heart beat)"
+          "Respirar",
+          "Beber água",
+          "Orelhas",
+          "Batimento do coração"
         ],
         3
       ],
       [
-        "Como dizemos \"(Heart beat)\" em inglês?",
+        "Como dizemos \"Batimento do coração\" em inglês?",
         [
           "Drink water",
-          "Heart beat",
+          "Heartbeat",
           "Breathe",
           "Ears"
         ],
@@ -19874,22 +19875,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Vitamins",
-        "(Vitamins)",
+        "Vitaminas",
         "📚"
       ],
       [
         "Soap",
-        "(Soap)",
+        "Sabonete",
         "📚"
       ],
       [
         "Clean",
-        "(Clean)",
+        "Limpo",
         "📚"
       ],
       [
         "Safe",
-        "(Safe)",
+        "Seguro",
         "📚"
       ]
     ],
@@ -19897,25 +19898,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Vitamins significa:",
         [
-          "(Clean)",
-          "(Safe)",
-          "(Soap)",
-          "(Vitamins)"
+          "Limpo",
+          "Seguro",
+          "Sabonete",
+          "Vitaminas"
         ],
         3
       ],
       [
         "Soap significa:",
         [
-          "(Safe)",
-          "(Soap)",
-          "(Clean)",
-          "(Vitamins)"
+          "Seguro",
+          "Sabonete",
+          "Limpo",
+          "Vitaminas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Soap)\" em inglês?",
+        "Como dizemos \"Sabonete\" em inglês?",
         [
           "Vitamins",
           "Soap",
@@ -19933,34 +19934,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 280,
     "slug": "health-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Care, Help sick, Get well, Stay healthy",
+    "description": "Revisão final: Care, Help sick people, Get well soon, Stay healthy",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Care, Help sick, Get well e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Care, Help sick people, Get well soon e mais algumas palavras.",
     "learn": [
       "Care",
-      "Help sick",
-      "Get well",
+      "Help sick people",
+      "Get well soon",
       "Stay healthy"
     ],
     "words": [
       [
         "Care",
-        "(Care)",
+        "Cuidado",
         "📚"
       ],
       [
-        "Help sick",
-        "(Help sick)",
+        "Help sick people",
+        "Ajudar os doentes",
         "📚"
       ],
       [
-        "Get well",
-        "(Get well)",
+        "Get well soon",
+        "Melhoras",
         "📚"
       ],
       [
         "Stay healthy",
-        "(Stay healthy)",
+        "Ficar saudável",
         "📚"
       ]
     ],
@@ -19968,28 +19969,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Care significa:",
         [
-          "(Stay healthy)",
-          "(Care)",
-          "(Get well)",
-          "(Help sick)"
+          "Ficar saudável",
+          "Cuidado",
+          "Melhoras",
+          "Ajudar os doentes"
         ],
         1
       ],
       [
-        "Help sick significa:",
+        "Help sick people significa:",
         [
-          "(Care)",
-          "(Help sick)",
-          "(Stay healthy)",
-          "(Get well)"
+          "Cuidado",
+          "Ajudar os doentes",
+          "Ficar saudável",
+          "Melhoras"
         ],
         1
       ],
       [
-        "Como dizemos \"(Help sick)\" em inglês?",
+        "Como dizemos \"Ajudar os doentes\" em inglês?",
         [
-          "Get well",
-          "Help sick",
+          "Get well soon",
+          "Help sick people",
           "Care",
           "Stay healthy"
         ],
@@ -20004,34 +20005,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 281,
     "slug": "hygiene-l1",
     "title": "Lição 1: Fundamentos",
-    "description": "Fundamentos: Wash hands, Brush teeth, Shower, Bath",
+    "description": "Fundamentos: Wash hands, Brush your teeth, Shower, Bath",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Wash hands, Brush teeth, Shower e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Wash hands, Brush your teeth, Shower e mais algumas palavras.",
     "learn": [
       "Wash hands",
-      "Brush teeth",
+      "Brush your teeth",
       "Shower",
       "Bath"
     ],
     "words": [
       [
         "Wash hands",
-        "Lavar mãos",
+        "Lavar as mãos",
         "📚"
       ],
       [
-        "Brush teeth",
-        "(Brush teeth)",
+        "Brush your teeth",
+        "Escovar os dentes",
         "📚"
       ],
       [
         "Shower",
-        "(Shower)",
+        "Banho de chuveiro",
         "📚"
       ],
       [
         "Bath",
-        "(Bath)",
+        "Banho de banheira",
         "📚"
       ]
     ],
@@ -20039,30 +20040,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wash hands significa:",
         [
-          "(Brush teeth)",
-          "Lavar mãos",
-          "(Bath)",
-          "(Shower)"
+          "Escovar os dentes",
+          "Lavar as mãos",
+          "Banho de banheira",
+          "Banho de chuveiro"
         ],
         1
       ],
       [
-        "Brush teeth significa:",
+        "Brush your teeth significa:",
         [
-          "Lavar mãos",
-          "(Shower)",
-          "(Brush teeth)",
-          "(Bath)"
+          "Lavar as mãos",
+          "Banho de chuveiro",
+          "Escovar os dentes",
+          "Banho de banheira"
         ],
         2
       ],
       [
-        "Como dizemos \"(Brush teeth)\" em inglês?",
+        "Como dizemos \"Escovar os dentes\" em inglês?",
         [
           "Wash hands",
           "Shower",
           "Bath",
-          "Brush teeth"
+          "Brush your teeth"
         ],
         3
       ]
@@ -20075,34 +20076,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 282,
     "slug": "hygiene-l2",
     "title": "Lição 2: Prática 1",
-    "description": "Prática 1: Soap, Shampoo, Towel, Comb hair",
+    "description": "Prática 1: Soap, Shampoo, Towel, Comb your hair",
     "icon": "📚",
     "objective": "Hoje você vai aprender Soap, Shampoo, Towel e mais algumas palavras.",
     "learn": [
       "Soap",
       "Shampoo",
       "Towel",
-      "Comb hair"
+      "Comb your hair"
     ],
     "words": [
       [
         "Soap",
-        "(Soap)",
+        "Sabonete",
         "📚"
       ],
       [
         "Shampoo",
-        "(Shampoo)",
+        "Xampu",
         "📚"
       ],
       [
         "Towel",
-        "(Towel)",
+        "Toalha",
         "📚"
       ],
       [
-        "Comb hair",
-        "(Comb hair)",
+        "Comb your hair",
+        "Pentear o cabelo",
         "📚"
       ]
     ],
@@ -20110,27 +20111,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Soap significa:",
         [
-          "(Shampoo)",
-          "(Towel)",
-          "(Soap)",
-          "(Comb hair)"
+          "Xampu",
+          "Toalha",
+          "Sabonete",
+          "Pentear o cabelo"
         ],
         2
       ],
       [
         "Shampoo significa:",
         [
-          "(Soap)",
-          "(Towel)",
-          "(Comb hair)",
-          "(Shampoo)"
+          "Sabonete",
+          "Toalha",
+          "Pentear o cabelo",
+          "Xampu"
         ],
         3
       ],
       [
-        "Como dizemos \"(Shampoo)\" em inglês?",
+        "Como dizemos \"Xampu\" em inglês?",
         [
-          "Comb hair",
+          "Comb your hair",
           "Towel",
           "Shampoo",
           "Soap"
@@ -20146,62 +20147,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 283,
     "slug": "hygiene-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: Cut nails, Clean face, Toilet, Flush",
+    "description": "Prática 2: Cut your nails, Clean face, Toilet, Flush",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Cut nails, Clean face, Toilet e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Cut your nails, Clean face, Toilet e mais algumas palavras.",
     "learn": [
-      "Cut nails",
+      "Cut your nails",
       "Clean face",
       "Toilet",
       "Flush"
     ],
     "words": [
       [
-        "Cut nails",
-        "(Cut nails)",
+        "Cut your nails",
+        "Cortar as unhas",
         "📚"
       ],
       [
         "Clean face",
-        "(Clean face)",
+        "Rosto limpo",
         "📚"
       ],
       [
         "Toilet",
-        "(Toilet)",
+        "Vaso sanitário",
         "📚"
       ],
       [
         "Flush",
-        "(Flush)",
+        "Dar descarga",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Cut nails significa:",
+        "Cut your nails significa:",
         [
-          "(Clean face)",
-          "(Toilet)",
-          "(Flush)",
-          "(Cut nails)"
+          "Rosto limpo",
+          "Vaso sanitário",
+          "Dar descarga",
+          "Cortar as unhas"
         ],
         3
       ],
       [
         "Clean face significa:",
         [
-          "(Toilet)",
-          "(Clean face)",
-          "(Flush)",
-          "(Cut nails)"
+          "Vaso sanitário",
+          "Rosto limpo",
+          "Dar descarga",
+          "Cortar as unhas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Clean face)\" em inglês?",
+        "Como dizemos \"Rosto limpo\" em inglês?",
         [
-          "Cut nails",
+          "Cut your nails",
           "Flush",
           "Clean face",
           "Toilet"
@@ -20217,34 +20218,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 284,
     "slug": "hygiene-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Tissue, Sneeze cover, Germs, Clean",
+    "description": "Desafio: Tissue, Cover your sneeze, Germs, Clean",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Tissue, Sneeze cover, Germs e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Tissue, Cover your sneeze, Germs e mais algumas palavras.",
     "learn": [
       "Tissue",
-      "Sneeze cover",
+      "Cover your sneeze",
       "Germs",
       "Clean"
     ],
     "words": [
       [
         "Tissue",
-        "(Tissue)",
+        "Lenço de papel",
         "📚"
       ],
       [
-        "Sneeze cover",
-        "(Sneeze cover)",
+        "Cover your sneeze",
+        "Cobrir o espirro",
         "📚"
       ],
       [
         "Germs",
-        "(Germs)",
+        "Germes",
         "📚"
       ],
       [
         "Clean",
-        "(Clean)",
+        "Limpo",
         "📚"
       ]
     ],
@@ -20252,28 +20253,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tissue significa:",
         [
-          "(Germs)",
-          "(Tissue)",
-          "(Clean)",
-          "(Sneeze cover)"
+          "Germes",
+          "Lenço de papel",
+          "Limpo",
+          "Cobrir o espirro"
         ],
         1
       ],
       [
-        "Sneeze cover significa:",
+        "Cover your sneeze significa:",
         [
-          "(Tissue)",
-          "(Clean)",
-          "(Sneeze cover)",
-          "(Germs)"
+          "Lenço de papel",
+          "Limpo",
+          "Cobrir o espirro",
+          "Germes"
         ],
         2
       ],
       [
-        "Como dizemos \"(Sneeze cover)\" em inglês?",
+        "Como dizemos \"Cobrir o espirro\" em inglês?",
         [
           "Germs",
-          "Sneeze cover",
+          "Cover your sneeze",
           "Tissue",
           "Clean"
         ],
@@ -20300,22 +20301,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Fresh",
-        "(Fresh)",
+        "Fresquinho",
         "📚"
       ],
       [
         "Smell good",
-        "(Smell good)",
+        "Cheirar bem",
         "📚"
       ],
       [
         "Morning routine",
-        "(Morning routine)",
+        "Rotina da manhã",
         "📚"
       ],
       [
         "Night routine",
-        "(Night routine)",
+        "Rotina da noite",
         "📚"
       ]
     ],
@@ -20323,25 +20324,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Fresh significa:",
         [
-          "(Smell good)",
-          "(Night routine)",
-          "(Fresh)",
-          "(Morning routine)"
+          "Cheirar bem",
+          "Rotina da noite",
+          "Fresquinho",
+          "Rotina da manhã"
         ],
         2
       ],
       [
         "Smell good significa:",
         [
-          "(Fresh)",
-          "(Smell good)",
-          "(Morning routine)",
-          "(Night routine)"
+          "Fresquinho",
+          "Cheirar bem",
+          "Rotina da manhã",
+          "Rotina da noite"
         ],
         1
       ],
       [
-        "Como dizemos \"(Smell good)\" em inglês?",
+        "Como dizemos \"Cheirar bem\" em inglês?",
         [
           "Morning routine",
           "Night routine",
@@ -20363,34 +20364,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 286,
     "slug": "hygiene-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Dirty, Clean clothes, Laundry, Wash face",
+    "description": "Ouvir: Dirty, Clean clothes, Laundry, Wash your face",
     "icon": "📚",
     "objective": "Hoje você vai aprender Dirty, Clean clothes, Laundry e mais algumas palavras.",
     "learn": [
       "Dirty",
       "Clean clothes",
       "Laundry",
-      "Wash face"
+      "Wash your face"
     ],
     "words": [
       [
         "Dirty",
-        "(Dirty)",
+        "Sujo",
         "📚"
       ],
       [
         "Clean clothes",
-        "(Clean clothes)",
+        "Roupas limpas",
         "📚"
       ],
       [
         "Laundry",
-        "(Laundry)",
+        "Roupa para lavar",
         "📚"
       ],
       [
-        "Wash face",
-        "(Wash face)",
+        "Wash your face",
+        "Lavar o rosto",
         "📚"
       ]
     ],
@@ -20398,29 +20399,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Dirty significa:",
         [
-          "(Clean clothes)",
-          "(Dirty)",
-          "(Laundry)",
-          "(Wash face)"
+          "Roupas limpas",
+          "Sujo",
+          "Roupa para lavar",
+          "Lavar o rosto"
         ],
         1
       ],
       [
         "Clean clothes significa:",
         [
-          "(Laundry)",
-          "(Wash face)",
-          "(Dirty)",
-          "(Clean clothes)"
+          "Roupa para lavar",
+          "Lavar o rosto",
+          "Sujo",
+          "Roupas limpas"
         ],
         3
       ],
       [
-        "Como dizemos \"(Clean clothes)\" em inglês?",
+        "Como dizemos \"Roupas limpas\" em inglês?",
         [
           "Laundry",
           "Clean clothes",
-          "Wash face",
+          "Wash your face",
           "Dirty"
         ],
         1
@@ -20446,22 +20447,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Mirror",
-        "(Mirror)",
+        "Espelho",
         "📚"
       ],
       [
         "Sink",
-        "(Sink)",
+        "Pia",
         "📚"
       ],
       [
         "Faucet",
-        "(Faucet)",
+        "Torneira",
         "📚"
       ],
       [
         "Hot water",
-        "(Hot water)",
+        "Água quente",
         "📚"
       ]
     ],
@@ -20469,25 +20470,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Mirror significa:",
         [
-          "(Faucet)",
-          "(Hot water)",
-          "(Sink)",
-          "(Mirror)"
+          "Torneira",
+          "Água quente",
+          "Pia",
+          "Espelho"
         ],
         3
       ],
       [
         "Sink significa:",
         [
-          "(Hot water)",
-          "(Sink)",
-          "(Faucet)",
-          "(Mirror)"
+          "Água quente",
+          "Pia",
+          "Torneira",
+          "Espelho"
         ],
         1
       ],
       [
-        "Como dizemos \"(Sink)\" em inglês?",
+        "Como dizemos \"Pia\" em inglês?",
         [
           "Mirror",
           "Sink",
@@ -20505,34 +20506,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 288,
     "slug": "hygiene-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Cold water, Dry hair, Pajamas, Clean room",
+    "description": "Frases: Cold water, Dry your hair, Pajamas, Clean room",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Cold water, Dry hair, Pajamas e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Cold water, Dry your hair, Pajamas e mais algumas palavras.",
     "learn": [
       "Cold water",
-      "Dry hair",
+      "Dry your hair",
       "Pajamas",
       "Clean room"
     ],
     "words": [
       [
         "Cold water",
-        "(Cold water)",
+        "Água fria",
         "📚"
       ],
       [
-        "Dry hair",
-        "(Dry hair)",
+        "Dry your hair",
+        "Secar o cabelo",
         "📚"
       ],
       [
         "Pajamas",
-        "(Pajamas)",
+        "Pijama",
         "📚"
       ],
       [
         "Clean room",
-        "(Clean room)",
+        "Quarto arrumado",
         "📚"
       ]
     ],
@@ -20540,29 +20541,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cold water significa:",
         [
-          "(Clean room)",
-          "(Cold water)",
-          "(Pajamas)",
-          "(Dry hair)"
+          "Quarto arrumado",
+          "Água fria",
+          "Pijama",
+          "Secar o cabelo"
         ],
         1
       ],
       [
-        "Dry hair significa:",
+        "Dry your hair significa:",
         [
-          "(Cold water)",
-          "(Dry hair)",
-          "(Clean room)",
-          "(Pajamas)"
+          "Água fria",
+          "Secar o cabelo",
+          "Quarto arrumado",
+          "Pijama"
         ],
         1
       ],
       [
-        "Como dizemos \"(Dry hair)\" em inglês?",
+        "Como dizemos \"Secar o cabelo\" em inglês?",
         [
           "Cold water",
           "Pajamas",
-          "Dry hair",
+          "Dry your hair",
           "Clean room"
         ],
         2
@@ -20576,34 +20577,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 289,
     "slug": "hygiene-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Trash, Recycle soap, Healthy habit, Every day",
+    "description": "Quiz mix: Trash, Use soap, Healthy habit, Every day",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Trash, Recycle soap, Healthy habit e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Trash, Use soap, Healthy habit e mais algumas palavras.",
     "learn": [
       "Trash",
-      "Recycle soap",
+      "Use soap",
       "Healthy habit",
       "Every day"
     ],
     "words": [
       [
         "Trash",
-        "(Trash)",
+        "Lixo",
         "📚"
       ],
       [
-        "Recycle soap",
-        "(Recycle soap)",
+        "Use soap",
+        "Usar sabonete",
         "📚"
       ],
       [
         "Healthy habit",
-        "(Healthy habit)",
+        "Hábito saudável",
         "📚"
       ],
       [
         "Every day",
-        "(Every day)",
+        "Todo dia",
         "📚"
       ]
     ],
@@ -20611,30 +20612,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Trash significa:",
         [
-          "(Recycle soap)",
-          "(Trash)",
-          "(Every day)",
-          "(Healthy habit)"
+          "Usar sabonete",
+          "Lixo",
+          "Todo dia",
+          "Hábito saudável"
         ],
         1
       ],
       [
-        "Recycle soap significa:",
+        "Use soap significa:",
         [
-          "(Healthy habit)",
-          "(Recycle soap)",
-          "(Trash)",
-          "(Every day)"
+          "Hábito saudável",
+          "Usar sabonete",
+          "Lixo",
+          "Todo dia"
         ],
         1
       ],
       [
-        "Como dizemos \"(Recycle soap)\" em inglês?",
+        "Como dizemos \"Usar sabonete\" em inglês?",
         [
           "Trash",
           "Healthy habit",
           "Every day",
-          "Recycle soap"
+          "Use soap"
         ],
         3
       ]
@@ -20647,65 +20648,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 290,
     "slug": "hygiene-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Care body, Feel fresh, Parent help, Good hygiene",
+    "description": "Revisão final: Care for your body, Feel fresh, Ask a parent for help, Good hygiene",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Care body, Feel fresh, Parent help e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Care for your body, Feel fresh, Ask a parent for help e mais algumas palavras.",
     "learn": [
-      "Care body",
+      "Care for your body",
       "Feel fresh",
-      "Parent help",
+      "Ask a parent for help",
       "Good hygiene"
     ],
     "words": [
       [
-        "Care body",
-        "(Care body)",
+        "Care for your body",
+        "Cuidar do corpo",
         "📚"
       ],
       [
         "Feel fresh",
-        "(Feel fresh)",
+        "Sentir-se limpinho",
         "📚"
       ],
       [
-        "Parent help",
-        "(Parent help)",
+        "Ask a parent for help",
+        "Pedir ajuda aos pais",
         "📚"
       ],
       [
         "Good hygiene",
-        "(Good hygiene)",
+        "Boa higiene",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Care body significa:",
+        "Care for your body significa:",
         [
-          "(Parent help)",
-          "(Care body)",
-          "(Feel fresh)",
-          "(Good hygiene)"
+          "Pedir ajuda aos pais",
+          "Cuidar do corpo",
+          "Sentir-se limpinho",
+          "Boa higiene"
         ],
         1
       ],
       [
         "Feel fresh significa:",
         [
-          "(Care body)",
-          "(Parent help)",
-          "(Good hygiene)",
-          "(Feel fresh)"
+          "Cuidar do corpo",
+          "Pedir ajuda aos pais",
+          "Boa higiene",
+          "Sentir-se limpinho"
         ],
         3
       ],
       [
-        "Como dizemos \"(Feel fresh)\" em inglês?",
+        "Como dizemos \"Sentir-se limpinho\" em inglês?",
         [
           "Good hygiene",
-          "Parent help",
+          "Ask a parent for help",
           "Feel fresh",
-          "Care body"
+          "Care for your body"
         ],
         2
       ]
@@ -20730,22 +20731,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Pan",
-        "(Pan)",
+        "Frigideira",
         "📚"
       ],
       [
         "Pot",
-        "(Pot)",
+        "Panela",
         "📚"
       ],
       [
         "Spoon",
-        "(Spoon)",
+        "Colher",
         "📚"
       ],
       [
         "Fork",
-        "(Fork)",
+        "Garfo",
         "📚"
       ]
     ],
@@ -20753,25 +20754,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Pan significa:",
         [
-          "(Pot)",
-          "(Spoon)",
-          "(Fork)",
-          "(Pan)"
+          "Panela",
+          "Colher",
+          "Garfo",
+          "Frigideira"
         ],
         3
       ],
       [
         "Pot significa:",
         [
-          "(Fork)",
-          "(Spoon)",
-          "(Pot)",
-          "(Pan)"
+          "Garfo",
+          "Colher",
+          "Panela",
+          "Frigideira"
         ],
         2
       ],
       [
-        "Como dizemos \"(Pot)\" em inglês?",
+        "Como dizemos \"Panela\" em inglês?",
         [
           "Fork",
           "Pot",
@@ -20801,22 +20802,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Knife",
-        "(Knife)",
+        "Faca",
         "📚"
       ],
       [
         "Plate",
-        "(Plate)",
+        "Prato",
         "📚"
       ],
       [
         "Cup",
-        "(Cup)",
+        "Xícara",
         "📚"
       ],
       [
         "Bowl",
-        "(Bowl)",
+        "Tigela",
         "📚"
       ]
     ],
@@ -20824,25 +20825,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Knife significa:",
         [
-          "(Bowl)",
-          "(Cup)",
-          "(Knife)",
-          "(Plate)"
+          "Tigela",
+          "Xícara",
+          "Faca",
+          "Prato"
         ],
         2
       ],
       [
         "Plate significa:",
         [
-          "(Knife)",
-          "(Bowl)",
-          "(Plate)",
-          "(Cup)"
+          "Faca",
+          "Tigela",
+          "Prato",
+          "Xícara"
         ],
         2
       ],
       [
-        "Como dizemos \"(Plate)\" em inglês?",
+        "Como dizemos \"Prato\" em inglês?",
         [
           "Cup",
           "Plate",
@@ -20872,22 +20873,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Oven",
-        "(Oven)",
+        "Forno",
         "📚"
       ],
       [
         "Stove",
-        "(Stove)",
+        "Fogão",
         "📚"
       ],
       [
         "Fridge",
-        "(Fridge)",
+        "Geladeira",
         "📚"
       ],
       [
         "Microwave",
-        "(Microwave)",
+        "Micro-ondas",
         "📚"
       ]
     ],
@@ -20895,25 +20896,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Oven significa:",
         [
-          "(Stove)",
-          "(Microwave)",
-          "(Oven)",
-          "(Fridge)"
+          "Fogão",
+          "Micro-ondas",
+          "Forno",
+          "Geladeira"
         ],
         2
       ],
       [
         "Stove significa:",
         [
-          "(Fridge)",
-          "(Stove)",
-          "(Oven)",
-          "(Microwave)"
+          "Geladeira",
+          "Fogão",
+          "Forno",
+          "Micro-ondas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Stove)\" em inglês?",
+        "Como dizemos \"Fogão\" em inglês?",
         [
           "Oven",
           "Microwave",
@@ -20943,22 +20944,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Cut",
-        "(Cut)",
+        "Cortar",
         "📚"
       ],
       [
         "Mix",
-        "(Mix)",
+        "Misturar",
         "📚"
       ],
       [
         "Boil",
-        "(Boil)",
+        "Ferver",
         "📚"
       ],
       [
         "Bake",
-        "(Bake)",
+        "Assar",
         "📚"
       ]
     ],
@@ -20966,25 +20967,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cut significa:",
         [
-          "(Boil)",
-          "(Cut)",
-          "(Mix)",
-          "(Bake)"
+          "Ferver",
+          "Cortar",
+          "Misturar",
+          "Assar"
         ],
         1
       ],
       [
         "Mix significa:",
         [
-          "(Boil)",
-          "(Bake)",
-          "(Cut)",
-          "(Mix)"
+          "Ferver",
+          "Assar",
+          "Cortar",
+          "Misturar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Mix)\" em inglês?",
+        "Como dizemos \"Misturar\" em inglês?",
         [
           "Boil",
           "Mix",
@@ -21014,22 +21015,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Fry",
-        "(Fry)",
+        "Fritar",
         "📚"
       ],
       [
         "Recipe",
-        "(Recipe)",
+        "Receita",
         "📚"
       ],
       [
         "Ingredients",
-        "(Ingredients)",
+        "Ingredientes",
         "📚"
       ],
       [
         "Salt",
-        "(Salt)",
+        "Sal",
         "📚"
       ]
     ],
@@ -21037,25 +21038,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Fry significa:",
         [
-          "(Ingredients)",
-          "(Salt)",
-          "(Recipe)",
-          "(Fry)"
+          "Ingredientes",
+          "Sal",
+          "Receita",
+          "Fritar"
         ],
         3
       ],
       [
         "Recipe significa:",
         [
-          "(Ingredients)",
-          "(Recipe)",
-          "(Salt)",
-          "(Fry)"
+          "Ingredientes",
+          "Receita",
+          "Sal",
+          "Fritar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Recipe)\" em inglês?",
+        "Como dizemos \"Receita\" em inglês?",
         [
           "Fry",
           "Recipe",
@@ -21085,22 +21086,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sugar",
-        "(Sugar)",
+        "Açúcar",
         "📚"
       ],
       [
         "Flour",
-        "(Flour)",
+        "Farinha",
         "📚"
       ],
       [
         "Butter",
-        "(Butter)",
+        "Manteiga",
         "📚"
       ],
       [
         "Oil",
-        "(Oil)",
+        "Óleo",
         "📚"
       ]
     ],
@@ -21108,25 +21109,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sugar significa:",
         [
-          "(Butter)",
-          "(Sugar)",
-          "(Oil)",
-          "(Flour)"
+          "Manteiga",
+          "Açúcar",
+          "Óleo",
+          "Farinha"
         ],
         1
       ],
       [
         "Flour significa:",
         [
-          "(Sugar)",
-          "(Flour)",
-          "(Oil)",
-          "(Butter)"
+          "Açúcar",
+          "Farinha",
+          "Óleo",
+          "Manteiga"
         ],
         1
       ],
       [
-        "Como dizemos \"(Flour)\" em inglês?",
+        "Como dizemos \"Farinha\" em inglês?",
         [
           "Butter",
           "Flour",
@@ -21156,22 +21157,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Timer",
-        "(Timer)",
+        "Cronômetro",
         "📚"
       ],
       [
         "Hot",
-        "(Hot)",
+        "Quente",
         "📚"
       ],
       [
         "Careful",
-        "(Careful)",
+        "Cuidadoso",
         "📚"
       ],
       [
         "Tasty",
-        "(Tasty)",
+        "Saboroso",
         "📚"
       ]
     ],
@@ -21179,25 +21180,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Timer significa:",
         [
-          "(Hot)",
-          "(Timer)",
-          "(Tasty)",
-          "(Careful)"
+          "Quente",
+          "Cronômetro",
+          "Saboroso",
+          "Cuidadoso"
         ],
         1
       ],
       [
         "Hot significa:",
         [
-          "(Timer)",
-          "(Careful)",
-          "(Hot)",
-          "(Tasty)"
+          "Cronômetro",
+          "Cuidadoso",
+          "Quente",
+          "Saboroso"
         ],
         2
       ],
       [
-        "Como dizemos \"(Hot)\" em inglês?",
+        "Como dizemos \"Quente\" em inglês?",
         [
           "Timer",
           "Careful",
@@ -21215,34 +21216,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 298,
     "slug": "kitchen-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Cook together, Help mom, Help dad, Kitchen safety",
+    "description": "Frases: Cook together, Help Mom, Help Dad, Kitchen safety",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Cook together, Help mom, Help dad e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Cook together, Help Mom, Help Dad e mais algumas palavras.",
     "learn": [
       "Cook together",
-      "Help mom",
-      "Help dad",
+      "Help Mom",
+      "Help Dad",
       "Kitchen safety"
     ],
     "words": [
       [
         "Cook together",
-        "(Cook together)",
+        "Cozinhar juntos",
         "📚"
       ],
       [
-        "Help mom",
-        "(Help mom)",
+        "Help Mom",
+        "Ajudar a mamãe",
         "📚"
       ],
       [
-        "Help dad",
-        "(Help dad)",
+        "Help Dad",
+        "Ajudar o papai",
         "📚"
       ],
       [
         "Kitchen safety",
-        "(Kitchen safety)",
+        "Segurança na cozinha",
         "📚"
       ]
     ],
@@ -21250,29 +21251,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Cook together significa:",
         [
-          "(Help mom)",
-          "(Help dad)",
-          "(Cook together)",
-          "(Kitchen safety)"
+          "Ajudar a mamãe",
+          "Ajudar o papai",
+          "Cozinhar juntos",
+          "Segurança na cozinha"
         ],
         2
       ],
       [
-        "Help mom significa:",
+        "Help Mom significa:",
         [
-          "(Cook together)",
-          "(Help dad)",
-          "(Kitchen safety)",
-          "(Help mom)"
+          "Cozinhar juntos",
+          "Ajudar o papai",
+          "Segurança na cozinha",
+          "Ajudar a mamãe"
         ],
         3
       ],
       [
-        "Como dizemos \"(Help mom)\" em inglês?",
+        "Como dizemos \"Ajudar a mamãe\" em inglês?",
         [
           "Kitchen safety",
-          "Help dad",
-          "Help mom",
+          "Help Dad",
+          "Help Mom",
           "Cook together"
         ],
         2
@@ -21286,65 +21287,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 299,
     "slug": "kitchen-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Wash dishes, Dry dishes, Set table, Meal prep",
+    "description": "Quiz mix: Wash the dishes, Dry the dishes, Set the table, Meal prep",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Wash dishes, Dry dishes, Set table e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Wash the dishes, Dry the dishes, Set the table e mais algumas palavras.",
     "learn": [
-      "Wash dishes",
-      "Dry dishes",
-      "Set table",
+      "Wash the dishes",
+      "Dry the dishes",
+      "Set the table",
       "Meal prep"
     ],
     "words": [
       [
-        "Wash dishes",
-        "(Wash dishes)",
+        "Wash the dishes",
+        "Lavar a louça",
         "📚"
       ],
       [
-        "Dry dishes",
-        "(Dry dishes)",
+        "Dry the dishes",
+        "Secar a louça",
         "📚"
       ],
       [
-        "Set table",
-        "(Set table)",
+        "Set the table",
+        "Pôr a mesa",
         "📚"
       ],
       [
         "Meal prep",
-        "(Meal prep)",
+        "Preparar a refeição",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Wash dishes significa:",
+        "Wash the dishes significa:",
         [
-          "(Dry dishes)",
-          "(Set table)",
-          "(Meal prep)",
-          "(Wash dishes)"
+          "Secar a louça",
+          "Pôr a mesa",
+          "Preparar a refeição",
+          "Lavar a louça"
         ],
         3
       ],
       [
-        "Dry dishes significa:",
+        "Dry the dishes significa:",
         [
-          "(Meal prep)",
-          "(Set table)",
-          "(Dry dishes)",
-          "(Wash dishes)"
+          "Preparar a refeição",
+          "Pôr a mesa",
+          "Secar a louça",
+          "Lavar a louça"
         ],
         2
       ],
       [
-        "Como dizemos \"(Dry dishes)\" em inglês?",
+        "Como dizemos \"Secar a louça\" em inglês?",
         [
           "Meal prep",
-          "Dry dishes",
-          "Wash dishes",
-          "Set table"
+          "Dry the dishes",
+          "Wash the dishes",
+          "Set the table"
         ],
         1
       ]
@@ -21357,34 +21358,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 300,
     "slug": "kitchen-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Snack time, Yummy food, Clean kitchen, Chef hat",
+    "description": "Revisão final: Snack time, Yummy food, Clean kitchen, Chef's hat",
     "icon": "📚",
     "objective": "Hoje você vai aprender Snack time, Yummy food, Clean kitchen e mais algumas palavras.",
     "learn": [
       "Snack time",
       "Yummy food",
       "Clean kitchen",
-      "Chef hat"
+      "Chef's hat"
     ],
     "words": [
       [
         "Snack time",
-        "(Snack time)",
+        "Hora do lanche",
         "📚"
       ],
       [
         "Yummy food",
-        "(Yummy food)",
+        "Comida deliciosa",
         "📚"
       ],
       [
         "Clean kitchen",
-        "(Clean kitchen)",
+        "Cozinha limpa",
         "📚"
       ],
       [
-        "Chef hat",
-        "(Chef hat)",
+        "Chef's hat",
+        "Chapéu de chef",
         "📚"
       ]
     ],
@@ -21392,30 +21393,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Snack time significa:",
         [
-          "(Chef hat)",
-          "(Clean kitchen)",
-          "(Snack time)",
-          "(Yummy food)"
+          "Chapéu de chef",
+          "Cozinha limpa",
+          "Hora do lanche",
+          "Comida deliciosa"
         ],
         2
       ],
       [
         "Yummy food significa:",
         [
-          "(Chef hat)",
-          "(Yummy food)",
-          "(Snack time)",
-          "(Clean kitchen)"
+          "Chapéu de chef",
+          "Comida deliciosa",
+          "Hora do lanche",
+          "Cozinha limpa"
         ],
         1
       ],
       [
-        "Como dizemos \"(Yummy food)\" em inglês?",
+        "Como dizemos \"Comida deliciosa\" em inglês?",
         [
           "Snack time",
           "Yummy food",
           "Clean kitchen",
-          "Chef hat"
+          "Chef's hat"
         ],
         1
       ]
@@ -21445,17 +21446,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Seed",
-        "(Seed)",
+        "Semente",
         "📚"
       ],
       [
         "Water",
-        "(Water)",
+        "Regar",
         "📚"
       ],
       [
         "Soil",
-        "(Soil)",
+        "Solo",
         "📚"
       ]
     ],
@@ -21463,25 +21464,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Plant significa:",
         [
-          "(Soil)",
+          "Solo",
           "Plantar",
-          "(Seed)",
-          "(Water)"
+          "Semente",
+          "Regar"
         ],
         1
       ],
       [
         "Seed significa:",
         [
-          "(Water)",
-          "(Seed)",
+          "Regar",
+          "Semente",
           "Plantar",
-          "(Soil)"
+          "Solo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Seed)\" em inglês?",
+        "Como dizemos \"Semente\" em inglês?",
         [
           "Plant",
           "Soil",
@@ -21516,17 +21517,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Grow",
-        "(Grow)",
+        "Crescer",
         "📚"
       ],
       [
         "Flower",
-        "(Flower)",
+        "Flor",
         "📚"
       ],
       [
         "Vegetable",
-        "(Vegetable)",
+        "Legume",
         "📚"
       ]
     ],
@@ -21534,10 +21535,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sun significa:",
         [
-          "(Flower)",
+          "Flor",
           "Sol",
-          "(Grow)",
-          "(Vegetable)"
+          "Crescer",
+          "Legume"
         ],
         1
       ],
@@ -21545,14 +21546,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Grow significa:",
         [
           "Sol",
-          "(Vegetable)",
-          "(Flower)",
-          "(Grow)"
+          "Legume",
+          "Flor",
+          "Crescer"
         ],
         3
       ],
       [
-        "Como dizemos \"(Grow)\" em inglês?",
+        "Como dizemos \"Crescer\" em inglês?",
         [
           "Flower",
           "Grow",
@@ -21582,22 +21583,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Fruit tree",
-        "(Fruit tree)",
+        "Árvore frutífera",
         "📚"
       ],
       [
         "Weed",
-        "(Weed)",
+        "Erva daninha",
         "📚"
       ],
       [
         "Shovel",
-        "(Shovel)",
+        "Pá",
         "📚"
       ],
       [
         "Rake",
-        "(Rake)",
+        "Rastelo",
         "📚"
       ]
     ],
@@ -21605,25 +21606,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Fruit tree significa:",
         [
-          "(Weed)",
-          "(Rake)",
-          "(Shovel)",
-          "(Fruit tree)"
+          "Erva daninha",
+          "Rastelo",
+          "Pá",
+          "Árvore frutífera"
         ],
         3
       ],
       [
         "Weed significa:",
         [
-          "(Shovel)",
-          "(Weed)",
-          "(Rake)",
-          "(Fruit tree)"
+          "Pá",
+          "Erva daninha",
+          "Rastelo",
+          "Árvore frutífera"
         ],
         1
       ],
       [
-        "Como dizemos \"(Weed)\" em inglês?",
+        "Como dizemos \"Erva daninha\" em inglês?",
         [
           "Fruit tree",
           "Rake",
@@ -21653,22 +21654,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Hose",
-        "(Hose)",
+        "Mangueira",
         "📚"
       ],
       [
         "Pot",
-        "(Pot)",
+        "Panela",
         "📚"
       ],
       [
         "Garden bed",
-        "(Garden bed)",
+        "Canteiro",
         "📚"
       ],
       [
         "Butterfly",
-        "(Butterfly)",
+        "Borboleta",
         "📚"
       ]
     ],
@@ -21676,25 +21677,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Hose significa:",
         [
-          "(Garden bed)",
-          "(Hose)",
-          "(Butterfly)",
-          "(Pot)"
+          "Canteiro",
+          "Mangueira",
+          "Borboleta",
+          "Panela"
         ],
         1
       ],
       [
         "Pot significa:",
         [
-          "(Hose)",
-          "(Pot)",
-          "(Butterfly)",
-          "(Garden bed)"
+          "Mangueira",
+          "Panela",
+          "Borboleta",
+          "Canteiro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Pot)\" em inglês?",
+        "Como dizemos \"Panela\" em inglês?",
         [
           "Hose",
           "Pot",
@@ -21724,22 +21725,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bee",
-        "(Bee)",
+        "Abelha",
         "📚"
       ],
       [
         "Worm",
-        "(Worm)",
+        "Minhoca",
         "📚"
       ],
       [
         "Green",
-        "(Green)",
+        "Verde",
         "📚"
       ],
       [
         "Harvest",
-        "(Harvest)",
+        "Colheita",
         "📚"
       ]
     ],
@@ -21747,25 +21748,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bee significa:",
         [
-          "(Worm)",
-          "(Bee)",
-          "(Harvest)",
-          "(Green)"
+          "Minhoca",
+          "Abelha",
+          "Colheita",
+          "Verde"
         ],
         1
       ],
       [
         "Worm significa:",
         [
-          "(Green)",
-          "(Worm)",
-          "(Bee)",
-          "(Harvest)"
+          "Verde",
+          "Minhoca",
+          "Abelha",
+          "Colheita"
         ],
         1
       ],
       [
-        "Como dizemos \"(Worm)\" em inglês?",
+        "Como dizemos \"Minhoca\" em inglês?",
         [
           "Bee",
           "Green",
@@ -21783,34 +21784,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 306,
     "slug": "garden-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Pick, Plant flowers, Plant tomatoes, Care plants",
+    "description": "Ouvir: Pick, Plant flowers, Plant tomatoes, Care for plants",
     "icon": "📚",
     "objective": "Hoje você vai aprender Pick, Plant flowers, Plant tomatoes e mais algumas palavras.",
     "learn": [
       "Pick",
       "Plant flowers",
       "Plant tomatoes",
-      "Care plants"
+      "Care for plants"
     ],
     "words": [
       [
         "Pick",
-        "(Pick)",
+        "Colher (do pé)",
         "📚"
       ],
       [
         "Plant flowers",
-        "(Plant flowers)",
+        "Plantar flores",
         "📚"
       ],
       [
         "Plant tomatoes",
-        "(Plant tomatoes)",
+        "Plantar tomates",
         "📚"
       ],
       [
-        "Care plants",
-        "(Care plants)",
+        "Care for plants",
+        "Cuidar das plantas",
         "📚"
       ]
     ],
@@ -21818,27 +21819,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Pick significa:",
         [
-          "(Plant tomatoes)",
-          "(Pick)",
-          "(Plant flowers)",
-          "(Care plants)"
+          "Plantar tomates",
+          "Colher (do pé)",
+          "Plantar flores",
+          "Cuidar das plantas"
         ],
         1
       ],
       [
         "Plant flowers significa:",
         [
-          "(Pick)",
-          "(Plant tomatoes)",
-          "(Care plants)",
-          "(Plant flowers)"
+          "Colher (do pé)",
+          "Plantar tomates",
+          "Cuidar das plantas",
+          "Plantar flores"
         ],
         3
       ],
       [
-        "Como dizemos \"(Plant flowers)\" em inglês?",
+        "Como dizemos \"Plantar flores\" em inglês?",
         [
-          "Care plants",
+          "Care for plants",
           "Plant tomatoes",
           "Plant flowers",
           "Pick"
@@ -21854,65 +21855,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 307,
     "slug": "garden-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Spring plant, Summer grow, Autumn pick, Garden gloves",
+    "description": "Memória: Plant in spring, Grow in summer, Pick in autumn, Garden gloves",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Spring plant, Summer grow, Autumn pick e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Plant in spring, Grow in summer, Pick in autumn e mais algumas palavras.",
     "learn": [
-      "Spring plant",
-      "Summer grow",
-      "Autumn pick",
+      "Plant in spring",
+      "Grow in summer",
+      "Pick in autumn",
       "Garden gloves"
     ],
     "words": [
       [
-        "Spring plant",
-        "(Spring plant)",
+        "Plant in spring",
+        "Plantar na primavera",
         "📚"
       ],
       [
-        "Summer grow",
-        "(Summer grow)",
+        "Grow in summer",
+        "Crescer no verão",
         "📚"
       ],
       [
-        "Autumn pick",
-        "(Autumn pick)",
+        "Pick in autumn",
+        "Colher no outono",
         "📚"
       ],
       [
         "Garden gloves",
-        "(Garden gloves)",
+        "Luvas de jardim",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Spring plant significa:",
+        "Plant in spring significa:",
         [
-          "(Summer grow)",
-          "(Autumn pick)",
-          "(Garden gloves)",
-          "(Spring plant)"
+          "Crescer no verão",
+          "Colher no outono",
+          "Luvas de jardim",
+          "Plantar na primavera"
         ],
         3
       ],
       [
-        "Summer grow significa:",
+        "Grow in summer significa:",
         [
-          "(Garden gloves)",
-          "(Autumn pick)",
-          "(Summer grow)",
-          "(Spring plant)"
+          "Luvas de jardim",
+          "Colher no outono",
+          "Crescer no verão",
+          "Plantar na primavera"
         ],
         2
       ],
       [
-        "Como dizemos \"(Summer grow)\" em inglês?",
+        "Como dizemos \"Crescer no verão\" em inglês?",
         [
           "Garden gloves",
-          "Summer grow",
-          "Spring plant",
-          "Autumn pick"
+          "Grow in summer",
+          "Plant in spring",
+          "Pick in autumn"
         ],
         1
       ]
@@ -21937,22 +21938,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Wheelbarrow",
-        "(Wheelbarrow)",
+        "Carrinho de mão",
         "📚"
       ],
       [
         "Fence",
-        "(Fence)",
+        "Cerca",
         "📚"
       ],
       [
         "Compost",
-        "(Compost)",
+        "Adubo",
         "📚"
       ],
       [
         "Organic",
-        "(Organic)",
+        "Orgânico",
         "📚"
       ]
     ],
@@ -21960,25 +21961,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wheelbarrow significa:",
         [
-          "(Organic)",
-          "(Compost)",
-          "(Wheelbarrow)",
-          "(Fence)"
+          "Orgânico",
+          "Adubo",
+          "Carrinho de mão",
+          "Cerca"
         ],
         2
       ],
       [
         "Fence significa:",
         [
-          "(Organic)",
-          "(Fence)",
-          "(Wheelbarrow)",
-          "(Compost)"
+          "Orgânico",
+          "Cerca",
+          "Carrinho de mão",
+          "Adubo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Fence)\" em inglês?",
+        "Como dizemos \"Cerca\" em inglês?",
         [
           "Wheelbarrow",
           "Fence",
@@ -22008,22 +22009,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Fresh",
-        "(Fresh)",
+        "Fresquinho",
         "📚"
       ],
       [
         "Nature garden",
-        "(Nature garden)",
+        "Jardim natural",
         "📚"
       ],
       [
         "Backyard",
-        "(Backyard)",
+        "Quintal",
         "📚"
       ],
       [
         "Community garden",
-        "(Community garden)",
+        "Horta comunitária",
         "📚"
       ]
     ],
@@ -22031,25 +22032,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Fresh significa:",
         [
-          "(Community garden)",
-          "(Fresh)",
-          "(Nature garden)",
-          "(Backyard)"
+          "Horta comunitária",
+          "Fresquinho",
+          "Jardim natural",
+          "Quintal"
         ],
         1
       ],
       [
         "Nature garden significa:",
         [
-          "(Fresh)",
-          "(Nature garden)",
-          "(Backyard)",
-          "(Community garden)"
+          "Fresquinho",
+          "Jardim natural",
+          "Quintal",
+          "Horta comunitária"
         ],
         1
       ],
       [
-        "Como dizemos \"(Nature garden)\" em inglês?",
+        "Como dizemos \"Jardim natural\" em inglês?",
         [
           "Fresh",
           "Community garden",
@@ -22067,34 +22068,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 310,
     "slug": "garden-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Beautiful, Patience, Daily water, Love plants",
+    "description": "Revisão final: Beautiful, Patience, Water every day, Love plants",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Beautiful, Patience, Daily water e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Beautiful, Patience, Water every day e mais algumas palavras.",
     "learn": [
       "Beautiful",
       "Patience",
-      "Daily water",
+      "Water every day",
       "Love plants"
     ],
     "words": [
       [
         "Beautiful",
-        "(Beautiful)",
+        "Lindo",
         "📚"
       ],
       [
         "Patience",
-        "(Patience)",
+        "Paciência",
         "📚"
       ],
       [
-        "Daily water",
-        "(Daily water)",
+        "Water every day",
+        "Regar todo dia",
         "📚"
       ],
       [
         "Love plants",
-        "(Love plants)",
+        "Amar as plantas",
         "📚"
       ]
     ],
@@ -22102,28 +22103,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Beautiful significa:",
         [
-          "(Patience)",
-          "(Beautiful)",
-          "(Daily water)",
-          "(Love plants)"
+          "Paciência",
+          "Lindo",
+          "Regar todo dia",
+          "Amar as plantas"
         ],
         1
       ],
       [
         "Patience significa:",
         [
-          "(Beautiful)",
-          "(Love plants)",
-          "(Daily water)",
-          "(Patience)"
+          "Lindo",
+          "Amar as plantas",
+          "Regar todo dia",
+          "Paciência"
         ],
         3
       ],
       [
-        "Como dizemos \"(Patience)\" em inglês?",
+        "Como dizemos \"Paciência\" em inglês?",
         [
           "Love plants",
-          "Daily water",
+          "Water every day",
           "Patience",
           "Beautiful"
         ],
@@ -22155,17 +22156,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Bee",
-        "(Bee)",
+        "Abelha",
         "📚"
       ],
       [
         "Butterfly",
-        "(Butterfly)",
+        "Borboleta",
         "📚"
       ],
       [
         "Ladybug",
-        "(Ladybug)",
+        "Joaninha",
         "📚"
       ]
     ],
@@ -22173,9 +22174,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Ant significa:",
         [
-          "(Bee)",
-          "(Ladybug)",
-          "(Butterfly)",
+          "Abelha",
+          "Joaninha",
+          "Borboleta",
           "Formiga"
         ],
         3
@@ -22183,15 +22184,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bee significa:",
         [
-          "(Butterfly)",
-          "(Bee)",
-          "(Ladybug)",
+          "Borboleta",
+          "Abelha",
+          "Joaninha",
           "Formiga"
         ],
         1
       ],
       [
-        "Como dizemos \"(Bee)\" em inglês?",
+        "Como dizemos \"Abelha\" em inglês?",
         [
           "Ant",
           "Ladybug",
@@ -22221,22 +22222,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Spider",
-        "(Spider)",
+        "Aranha",
         "📚"
       ],
       [
         "Fly",
-        "(Fly)",
+        "Mosca",
         "📚"
       ],
       [
         "Mosquito",
-        "(Mosquito)",
+        "Mosquito",
         "📚"
       ],
       [
         "Beetle",
-        "(Beetle)",
+        "Besouro",
         "📚"
       ]
     ],
@@ -22244,25 +22245,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Spider significa:",
         [
-          "(Mosquito)",
-          "(Spider)",
-          "(Beetle)",
-          "(Fly)"
+          "Mosquito",
+          "Aranha",
+          "Besouro",
+          "Mosca"
         ],
         1
       ],
       [
         "Fly significa:",
         [
-          "(Spider)",
-          "(Beetle)",
-          "(Fly)",
-          "(Mosquito)"
+          "Aranha",
+          "Besouro",
+          "Mosca",
+          "Mosquito"
         ],
         2
       ],
       [
-        "Como dizemos \"(Fly)\" em inglês?",
+        "Como dizemos \"Mosca\" em inglês?",
         [
           "Mosquito",
           "Fly",
@@ -22292,22 +22293,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Grasshopper",
-        "(Grasshopper)",
+        "Gafanhoto",
         "📚"
       ],
       [
         "Dragonfly",
-        "(Dragonfly)",
+        "Libélula",
         "📚"
       ],
       [
         "Worm",
-        "(Worm)",
+        "Minhoca",
         "📚"
       ],
       [
         "Snail",
-        "(Snail)",
+        "Caracol",
         "📚"
       ]
     ],
@@ -22315,25 +22316,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Grasshopper significa:",
         [
-          "(Dragonfly)",
-          "(Snail)",
-          "(Grasshopper)",
-          "(Worm)"
+          "Libélula",
+          "Caracol",
+          "Gafanhoto",
+          "Minhoca"
         ],
         2
       ],
       [
         "Dragonfly significa:",
         [
-          "(Grasshopper)",
-          "(Dragonfly)",
-          "(Worm)",
-          "(Snail)"
+          "Gafanhoto",
+          "Libélula",
+          "Minhoca",
+          "Caracol"
         ],
         1
       ],
       [
-        "Como dizemos \"(Dragonfly)\" em inglês?",
+        "Como dizemos \"Libélula\" em inglês?",
         [
           "Grasshopper",
           "Worm",
@@ -22363,22 +22364,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Caterpillar",
-        "(Caterpillar)",
+        "Lagarta",
         "📚"
       ],
       [
         "Hive",
-        "(Hive)",
+        "Colmeia",
         "📚"
       ],
       [
         "Web",
-        "(Web)",
+        "Teia",
         "📚"
       ],
       [
         "Wings",
-        "(Wings)",
+        "Asas",
         "📚"
       ]
     ],
@@ -22386,25 +22387,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Caterpillar significa:",
         [
-          "(Hive)",
-          "(Caterpillar)",
-          "(Web)",
-          "(Wings)"
+          "Colmeia",
+          "Lagarta",
+          "Teia",
+          "Asas"
         ],
         1
       ],
       [
         "Hive significa:",
         [
-          "(Caterpillar)",
-          "(Web)",
-          "(Wings)",
-          "(Hive)"
+          "Lagarta",
+          "Teia",
+          "Asas",
+          "Colmeia"
         ],
         3
       ],
       [
-        "Como dizemos \"(Hive)\" em inglês?",
+        "Como dizemos \"Colmeia\" em inglês?",
         [
           "Wings",
           "Web",
@@ -22434,22 +22435,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Small",
-        "(Small)",
+        "Pequeno",
         "📚"
       ],
       [
         "Fast",
-        "(Fast)",
+        "Rápido",
         "📚"
       ],
       [
         "Buzz",
-        "(Buzz)",
+        "Zumbir",
         "📚"
       ],
       [
         "Crawl",
-        "(Crawl)",
+        "Rastejar",
         "📚"
       ]
     ],
@@ -22457,25 +22458,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Small significa:",
         [
-          "(Fast)",
-          "(Buzz)",
-          "(Crawl)",
-          "(Small)"
+          "Rápido",
+          "Zumbir",
+          "Rastejar",
+          "Pequeno"
         ],
         3
       ],
       [
         "Fast significa:",
         [
-          "(Crawl)",
-          "(Buzz)",
-          "(Fast)",
-          "(Small)"
+          "Rastejar",
+          "Zumbir",
+          "Rápido",
+          "Pequeno"
         ],
         2
       ],
       [
-        "Como dizemos \"(Fast)\" em inglês?",
+        "Como dizemos \"Rápido\" em inglês?",
         [
           "Crawl",
           "Fast",
@@ -22493,34 +22494,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 316,
     "slug": "insects-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Garden bug, Help bees, Do not hurt, Observe",
+    "description": "Ouvir: Garden bug, Help the bees, Do not hurt, Observe",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Garden bug, Help bees, Do not hurt e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Garden bug, Help the bees, Do not hurt e mais algumas palavras.",
     "learn": [
       "Garden bug",
-      "Help bees",
+      "Help the bees",
       "Do not hurt",
       "Observe"
     ],
     "words": [
       [
         "Garden bug",
-        "(Garden bug)",
+        "Bichinho de jardim",
         "📚"
       ],
       [
-        "Help bees",
-        "(Help bees)",
+        "Help the bees",
+        "Ajudar as abelhas",
         "📚"
       ],
       [
         "Do not hurt",
-        "(Do not hurt)",
+        "Não machucar",
         "📚"
       ],
       [
         "Observe",
-        "(Observe)",
+        "Observar",
         "📚"
       ]
     ],
@@ -22528,28 +22529,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Garden bug significa:",
         [
-          "(Observe)",
-          "(Do not hurt)",
-          "(Garden bug)",
-          "(Help bees)"
+          "Observar",
+          "Não machucar",
+          "Bichinho de jardim",
+          "Ajudar as abelhas"
         ],
         2
       ],
       [
-        "Help bees significa:",
+        "Help the bees significa:",
         [
-          "(Observe)",
-          "(Help bees)",
-          "(Garden bug)",
-          "(Do not hurt)"
+          "Observar",
+          "Ajudar as abelhas",
+          "Bichinho de jardim",
+          "Não machucar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Help bees)\" em inglês?",
+        "Como dizemos \"Ajudar as abelhas\" em inglês?",
         [
           "Do not hurt",
-          "Help bees",
+          "Help the bees",
           "Garden bug",
           "Observe"
         ],
@@ -22564,62 +22565,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 317,
     "slug": "insects-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Magnify, Nature, Colorful, Dots",
+    "description": "Memória: Magnifying glass, Nature, Colorful, Dots",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Magnify, Nature, Colorful e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Magnifying glass, Nature, Colorful e mais algumas palavras.",
     "learn": [
-      "Magnify",
+      "Magnifying glass",
       "Nature",
       "Colorful",
       "Dots"
     ],
     "words": [
       [
-        "Magnify",
-        "(Magnify)",
+        "Magnifying glass",
+        "Lupa",
         "📚"
       ],
       [
         "Nature",
-        "(Nature)",
+        "Natureza",
         "📚"
       ],
       [
         "Colorful",
-        "(Colorful)",
+        "Colorido",
         "📚"
       ],
       [
         "Dots",
-        "(Dots)",
+        "Bolinhas",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Magnify significa:",
+        "Magnifying glass significa:",
         [
-          "(Dots)",
-          "(Magnify)",
-          "(Nature)",
-          "(Colorful)"
+          "Bolinhas",
+          "Lupa",
+          "Natureza",
+          "Colorido"
         ],
         1
       ],
       [
         "Nature significa:",
         [
-          "(Magnify)",
-          "(Nature)",
-          "(Colorful)",
-          "(Dots)"
+          "Lupa",
+          "Natureza",
+          "Colorido",
+          "Bolinhas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Nature)\" em inglês?",
+        "Como dizemos \"Natureza\" em inglês?",
         [
-          "Magnify",
+          "Magnifying glass",
           "Colorful",
           "Dots",
           "Nature"
@@ -22647,22 +22648,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Stripes",
-        "(Stripes)",
+        "Listras",
         "📚"
       ],
       [
         "Night bug",
-        "(Night bug)",
+        "Inseto noturno",
         "📚"
       ],
       [
         "Day bug",
-        "(Day bug)",
+        "Inseto diurno",
         "📚"
       ],
       [
         "Insect book",
-        "(Insect book)",
+        "Livro de insetos",
         "📚"
       ]
     ],
@@ -22670,25 +22671,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Stripes significa:",
         [
-          "(Night bug)",
-          "(Stripes)",
-          "(Day bug)",
-          "(Insect book)"
+          "Inseto noturno",
+          "Listras",
+          "Inseto diurno",
+          "Livro de insetos"
         ],
         1
       ],
       [
         "Night bug significa:",
         [
-          "(Stripes)",
-          "(Insect book)",
-          "(Day bug)",
-          "(Night bug)"
+          "Listras",
+          "Livro de insetos",
+          "Inseto diurno",
+          "Inseto noturno"
         ],
         3
       ],
       [
-        "Como dizemos \"(Night bug)\" em inglês?",
+        "Como dizemos \"Inseto noturno\" em inglês?",
         [
           "Insect book",
           "Night bug",
@@ -22706,62 +22707,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 319,
     "slug": "insects-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Count legs, Six legs, Eight legs, Safe bug",
+    "description": "Quiz mix: Count the legs, Six legs, Eight legs, Safe bug",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Count legs, Six legs, Eight legs e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Count the legs, Six legs, Eight legs e mais algumas palavras.",
     "learn": [
-      "Count legs",
+      "Count the legs",
       "Six legs",
       "Eight legs",
       "Safe bug"
     ],
     "words": [
       [
-        "Count legs",
-        "(Count legs)",
+        "Count the legs",
+        "Contar as patas",
         "📚"
       ],
       [
         "Six legs",
-        "(Six legs)",
+        "Seis patas",
         "📚"
       ],
       [
         "Eight legs",
-        "(Eight legs)",
+        "Oito patas",
         "📚"
       ],
       [
         "Safe bug",
-        "(Safe bug)",
+        "Inseto inofensivo",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Count legs significa:",
+        "Count the legs significa:",
         [
-          "(Six legs)",
-          "(Safe bug)",
-          "(Eight legs)",
-          "(Count legs)"
+          "Seis patas",
+          "Inseto inofensivo",
+          "Oito patas",
+          "Contar as patas"
         ],
         3
       ],
       [
         "Six legs significa:",
         [
-          "(Safe bug)",
-          "(Eight legs)",
-          "(Six legs)",
-          "(Count legs)"
+          "Inseto inofensivo",
+          "Oito patas",
+          "Seis patas",
+          "Contar as patas"
         ],
         2
       ],
       [
-        "Como dizemos \"(Six legs)\" em inglês?",
+        "Como dizemos \"Seis patas\" em inglês?",
         [
-          "Count legs",
+          "Count the legs",
           "Six legs",
           "Safe bug",
           "Eight legs"
@@ -22789,22 +22790,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Scary bug",
-        "(Scary bug)",
+        "Inseto assustador",
         "📚"
       ],
       [
         "Friendly bug",
-        "(Friendly bug)",
+        "Inseto amigo",
         "📚"
       ],
       [
         "Bug hotel",
-        "(Bug hotel)",
+        "Hotel de insetos",
         "📚"
       ],
       [
         "Protect insects",
-        "(Protect insects)",
+        "Proteger os insetos",
         "📚"
       ]
     ],
@@ -22812,25 +22813,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Scary bug significa:",
         [
-          "(Protect insects)",
-          "(Bug hotel)",
-          "(Scary bug)",
-          "(Friendly bug)"
+          "Proteger os insetos",
+          "Hotel de insetos",
+          "Inseto assustador",
+          "Inseto amigo"
         ],
         2
       ],
       [
         "Friendly bug significa:",
         [
-          "(Scary bug)",
-          "(Protect insects)",
-          "(Friendly bug)",
-          "(Bug hotel)"
+          "Inseto assustador",
+          "Proteger os insetos",
+          "Inseto amigo",
+          "Hotel de insetos"
         ],
         2
       ],
       [
-        "Como dizemos \"(Friendly bug)\" em inglês?",
+        "Como dizemos \"Inseto amigo\" em inglês?",
         [
           "Scary bug",
           "Bug hotel",
@@ -22865,17 +22866,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Owl",
-        "(Owl)",
+        "Coruja",
         "📚"
       ],
       [
         "Parrot",
-        "(Parrot)",
+        "Papagaio",
         "📚"
       ],
       [
         "Penguin",
-        "(Penguin)",
+        "Pinguim",
         "📚"
       ]
     ],
@@ -22883,25 +22884,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Eagle significa:",
         [
-          "(Owl)",
-          "(Penguin)",
+          "Coruja",
+          "Pinguim",
           "Águia",
-          "(Parrot)"
+          "Papagaio"
         ],
         2
       ],
       [
         "Owl significa:",
         [
-          "(Parrot)",
-          "(Owl)",
+          "Papagaio",
+          "Coruja",
           "Águia",
-          "(Penguin)"
+          "Pinguim"
         ],
         1
       ],
       [
-        "Como dizemos \"(Owl)\" em inglês?",
+        "Como dizemos \"Coruja\" em inglês?",
         [
           "Eagle",
           "Penguin",
@@ -22931,22 +22932,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Duck",
-        "(Duck)",
+        "Pato",
         "📚"
       ],
       [
         "Chicken",
-        "(Chicken)",
+        "Galinha",
         "📚"
       ],
       [
         "Swan",
-        "(Swan)",
+        "Cisne",
         "📚"
       ],
       [
         "Crow",
-        "(Crow)",
+        "Corvo",
         "📚"
       ]
     ],
@@ -22954,25 +22955,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Duck significa:",
         [
-          "(Swan)",
-          "(Duck)",
-          "(Chicken)",
-          "(Crow)"
+          "Cisne",
+          "Pato",
+          "Galinha",
+          "Corvo"
         ],
         1
       ],
       [
         "Chicken significa:",
         [
-          "(Duck)",
-          "(Swan)",
-          "(Crow)",
-          "(Chicken)"
+          "Pato",
+          "Cisne",
+          "Corvo",
+          "Galinha"
         ],
         3
       ],
       [
-        "Como dizemos \"(Chicken)\" em inglês?",
+        "Como dizemos \"Galinha\" em inglês?",
         [
           "Crow",
           "Swan",
@@ -23002,22 +23003,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Woodpecker",
-        "(Woodpecker)",
+        "Pica-pau",
         "📚"
       ],
       [
         "Hummingbird",
-        "(Hummingbird)",
+        "Beija-flor",
         "📚"
       ],
       [
         "Nest",
-        "(Nest)",
+        "Ninho",
         "📚"
       ],
       [
         "Egg",
-        "(Egg)",
+        "Ovo",
         "📚"
       ]
     ],
@@ -23025,25 +23026,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Woodpecker significa:",
         [
-          "(Hummingbird)",
-          "(Nest)",
-          "(Egg)",
-          "(Woodpecker)"
+          "Beija-flor",
+          "Ninho",
+          "Ovo",
+          "Pica-pau"
         ],
         3
       ],
       [
         "Hummingbird significa:",
         [
-          "(Egg)",
-          "(Nest)",
-          "(Hummingbird)",
-          "(Woodpecker)"
+          "Ovo",
+          "Ninho",
+          "Beija-flor",
+          "Pica-pau"
         ],
         2
       ],
       [
-        "Como dizemos \"(Hummingbird)\" em inglês?",
+        "Como dizemos \"Beija-flor\" em inglês?",
         [
           "Woodpecker",
           "Hummingbird",
@@ -23073,22 +23074,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Feather",
-        "(Feather)",
+        "Pena",
         "📚"
       ],
       [
         "Wing",
-        "(Wing)",
+        "Asa",
         "📚"
       ],
       [
         "Beak",
-        "(Beak)",
+        "Bico",
         "📚"
       ],
       [
         "Fly",
-        "(Fly)",
+        "Mosca",
         "📚"
       ]
     ],
@@ -23096,25 +23097,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Feather significa:",
         [
-          "(Fly)",
-          "(Beak)",
-          "(Feather)",
-          "(Wing)"
+          "Mosca",
+          "Bico",
+          "Pena",
+          "Asa"
         ],
         2
       ],
       [
         "Wing significa:",
         [
-          "(Fly)",
-          "(Wing)",
-          "(Feather)",
-          "(Beak)"
+          "Mosca",
+          "Asa",
+          "Pena",
+          "Bico"
         ],
         1
       ],
       [
-        "Como dizemos \"(Wing)\" em inglês?",
+        "Como dizemos \"Asa\" em inglês?",
         [
           "Beak",
           "Wing",
@@ -23144,17 +23145,17 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sing",
-        "(Sing)",
+        "Cantar",
         "📚"
       ],
       [
         "Chirp",
-        "(Chirp)",
+        "Piar",
         "📚"
       ],
       [
         "Sky",
-        "(Sky)",
+        "Céu",
         "📚"
       ],
       [
@@ -23168,24 +23169,24 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Sing significa:",
         [
           "Árvore",
-          "(Sing)",
-          "(Chirp)",
-          "(Sky)"
+          "Cantar",
+          "Piar",
+          "Céu"
         ],
         1
       ],
       [
         "Chirp significa:",
         [
-          "(Sky)",
-          "(Chirp)",
-          "(Sing)",
+          "Céu",
+          "Piar",
+          "Cantar",
           "Árvore"
         ],
         1
       ],
       [
-        "Como dizemos \"(Chirp)\" em inglês?",
+        "Como dizemos \"Piar\" em inglês?",
         [
           "Sky",
           "Tree",
@@ -23203,65 +23204,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 326,
     "slug": "birds-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Bird bath, Feed birds, Watch birds, Migration",
+    "description": "Ouvir: Birdbath, Feed the birds, Watch the birds, Migration",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Bird bath, Feed birds, Watch birds e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Birdbath, Feed the birds, Watch the birds e mais algumas palavras.",
     "learn": [
-      "Bird bath",
-      "Feed birds",
-      "Watch birds",
+      "Birdbath",
+      "Feed the birds",
+      "Watch the birds",
       "Migration"
     ],
     "words": [
       [
-        "Bird bath",
-        "(Bird bath)",
+        "Birdbath",
+        "Banheira de passarinho",
         "📚"
       ],
       [
-        "Feed birds",
-        "(Feed birds)",
+        "Feed the birds",
+        "Alimentar os pássaros",
         "📚"
       ],
       [
-        "Watch birds",
-        "(Watch birds)",
+        "Watch the birds",
+        "Observar os pássaros",
         "📚"
       ],
       [
         "Migration",
-        "(Migration)",
+        "Migração",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Bird bath significa:",
+        "Birdbath significa:",
         [
-          "(Watch birds)",
-          "(Bird bath)",
-          "(Feed birds)",
-          "(Migration)"
+          "Observar os pássaros",
+          "Banheira de passarinho",
+          "Alimentar os pássaros",
+          "Migração"
         ],
         1
       ],
       [
-        "Feed birds significa:",
+        "Feed the birds significa:",
         [
-          "(Bird bath)",
-          "(Watch birds)",
-          "(Migration)",
-          "(Feed birds)"
+          "Banheira de passarinho",
+          "Observar os pássaros",
+          "Migração",
+          "Alimentar os pássaros"
         ],
         3
       ],
       [
-        "Como dizemos \"(Feed birds)\" em inglês?",
+        "Como dizemos \"Alimentar os pássaros\" em inglês?",
         [
           "Migration",
-          "Feed birds",
-          "Watch birds",
-          "Bird bath"
+          "Feed the birds",
+          "Watch the birds",
+          "Birdbath"
         ],
         1
       ]
@@ -23286,22 +23287,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Baby bird",
-        "(Baby bird)",
+        "Filhote de pássaro",
         "📚"
       ],
       [
         "Mother bird",
-        "(Mother bird)",
+        "Mamãe pássaro",
         "📚"
       ],
       [
         "Colorful bird",
-        "(Colorful bird)",
+        "Pássaro colorido",
         "📚"
       ],
       [
         "Night bird",
-        "(Night bird)",
+        "Pássaro noturno",
         "📚"
       ]
     ],
@@ -23309,25 +23310,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Baby bird significa:",
         [
-          "(Mother bird)",
-          "(Colorful bird)",
-          "(Night bird)",
-          "(Baby bird)"
+          "Mamãe pássaro",
+          "Pássaro colorido",
+          "Pássaro noturno",
+          "Filhote de pássaro"
         ],
         3
       ],
       [
         "Mother bird significa:",
         [
-          "(Night bird)",
-          "(Mother bird)",
-          "(Colorful bird)",
-          "(Baby bird)"
+          "Pássaro noturno",
+          "Mamãe pássaro",
+          "Pássaro colorido",
+          "Filhote de pássaro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Mother bird)\" em inglês?",
+        "Como dizemos \"Mamãe pássaro\" em inglês?",
         [
           "Night bird",
           "Mother bird",
@@ -23345,34 +23346,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 328,
     "slug": "birds-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Day bird, Farm bird, Sea bird, Forest bird",
+    "description": "Frases: Day bird, Farm bird, Seabird, Forest bird",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Day bird, Farm bird, Sea bird e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Day bird, Farm bird, Seabird e mais algumas palavras.",
     "learn": [
       "Day bird",
       "Farm bird",
-      "Sea bird",
+      "Seabird",
       "Forest bird"
     ],
     "words": [
       [
         "Day bird",
-        "(Day bird)",
+        "Pássaro diurno",
         "📚"
       ],
       [
         "Farm bird",
-        "(Farm bird)",
+        "Ave de fazenda",
         "📚"
       ],
       [
-        "Sea bird",
-        "(Sea bird)",
+        "Seabird",
+        "Ave marinha",
         "📚"
       ],
       [
         "Forest bird",
-        "(Forest bird)",
+        "Pássaro da floresta",
         "📚"
       ]
     ],
@@ -23380,28 +23381,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Day bird significa:",
         [
-          "(Forest bird)",
-          "(Day bird)",
-          "(Sea bird)",
-          "(Farm bird)"
+          "Pássaro da floresta",
+          "Pássaro diurno",
+          "Ave marinha",
+          "Ave de fazenda"
         ],
         1
       ],
       [
         "Farm bird significa:",
         [
-          "(Day bird)",
-          "(Farm bird)",
-          "(Forest bird)",
-          "(Sea bird)"
+          "Pássaro diurno",
+          "Ave de fazenda",
+          "Pássaro da floresta",
+          "Ave marinha"
         ],
         1
       ],
       [
-        "Como dizemos \"(Farm bird)\" em inglês?",
+        "Como dizemos \"Ave de fazenda\" em inglês?",
         [
           "Day bird",
-          "Sea bird",
+          "Seabird",
           "Farm bird",
           "Forest bird"
         ],
@@ -23416,34 +23417,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 329,
     "slug": "birds-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: City bird, Bird song, Flap wings, Land",
+    "description": "Quiz mix: City bird, Birdsong, Flap your wings, Land",
     "icon": "📚",
-    "objective": "Hoje você vai aprender City bird, Bird song, Flap wings e mais algumas palavras.",
+    "objective": "Hoje você vai aprender City bird, Birdsong, Flap your wings e mais algumas palavras.",
     "learn": [
       "City bird",
-      "Bird song",
-      "Flap wings",
+      "Birdsong",
+      "Flap your wings",
       "Land"
     ],
     "words": [
       [
         "City bird",
-        "(City bird)",
+        "Pássaro da cidade",
         "📚"
       ],
       [
-        "Bird song",
-        "(Bird song)",
+        "Birdsong",
+        "Canto dos pássaros",
         "📚"
       ],
       [
-        "Flap wings",
-        "(Flap wings)",
+        "Flap your wings",
+        "Bater as asas",
         "📚"
       ],
       [
         "Land",
-        "(Land)",
+        "Pousar",
         "📚"
       ]
     ],
@@ -23451,30 +23452,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "City bird significa:",
         [
-          "(Bird song)",
-          "(City bird)",
-          "(Land)",
-          "(Flap wings)"
+          "Canto dos pássaros",
+          "Pássaro da cidade",
+          "Pousar",
+          "Bater as asas"
         ],
         1
       ],
       [
-        "Bird song significa:",
+        "Birdsong significa:",
         [
-          "(City bird)",
-          "(Flap wings)",
-          "(Bird song)",
-          "(Land)"
+          "Pássaro da cidade",
+          "Bater as asas",
+          "Canto dos pássaros",
+          "Pousar"
         ],
         2
       ],
       [
-        "Como dizemos \"(Bird song)\" em inglês?",
+        "Como dizemos \"Canto dos pássaros\" em inglês?",
         [
-          "Flap wings",
+          "Flap your wings",
           "Land",
           "City bird",
-          "Bird song"
+          "Birdsong"
         ],
         3
       ]
@@ -23487,34 +23488,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 330,
     "slug": "birds-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Take off, Bird house, Protect birds, Beautiful bird",
+    "description": "Revisão final: Take off, Birdhouse, Protect birds, Beautiful bird",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Take off, Bird house, Protect birds e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Take off, Birdhouse, Protect birds e mais algumas palavras.",
     "learn": [
       "Take off",
-      "Bird house",
+      "Birdhouse",
       "Protect birds",
       "Beautiful bird"
     ],
     "words": [
       [
         "Take off",
-        "(Take off)",
+        "Levantar voo",
         "📚"
       ],
       [
-        "Bird house",
-        "(Bird house)",
+        "Birdhouse",
+        "Casinha de passarinho",
         "📚"
       ],
       [
         "Protect birds",
-        "(Protect birds)",
+        "Proteger os pássaros",
         "📚"
       ],
       [
         "Beautiful bird",
-        "(Beautiful bird)",
+        "Pássaro bonito",
         "📚"
       ]
     ],
@@ -23522,28 +23523,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Take off significa:",
         [
-          "(Bird house)",
-          "(Protect birds)",
-          "(Take off)",
-          "(Beautiful bird)"
+          "Casinha de passarinho",
+          "Proteger os pássaros",
+          "Levantar voo",
+          "Pássaro bonito"
         ],
         2
       ],
       [
-        "Bird house significa:",
+        "Birdhouse significa:",
         [
-          "(Take off)",
-          "(Beautiful bird)",
-          "(Protect birds)",
-          "(Bird house)"
+          "Levantar voo",
+          "Pássaro bonito",
+          "Proteger os pássaros",
+          "Casinha de passarinho"
         ],
         3
       ],
       [
-        "Como dizemos \"(Bird house)\" em inglês?",
+        "Como dizemos \"Casinha de passarinho\" em inglês?",
         [
           "Protect birds",
-          "Bird house",
+          "Birdhouse",
           "Beautiful bird",
           "Take off"
         ],
@@ -23575,17 +23576,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Square",
-        "(Square)",
+        "Quadrado",
         "📚"
       ],
       [
         "Triangle",
-        "(Triangle)",
+        "Triângulo",
         "📚"
       ],
       [
         "Rectangle",
-        "(Rectangle)",
+        "Retângulo",
         "📚"
       ]
     ],
@@ -23593,9 +23594,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Circle significa:",
         [
-          "(Square)",
-          "(Rectangle)",
-          "(Triangle)",
+          "Quadrado",
+          "Retângulo",
+          "Triângulo",
           "Círculo"
         ],
         3
@@ -23603,15 +23604,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Square significa:",
         [
-          "(Rectangle)",
-          "(Triangle)",
-          "(Square)",
+          "Retângulo",
+          "Triângulo",
+          "Quadrado",
           "Círculo"
         ],
         2
       ],
       [
-        "Como dizemos \"(Square)\" em inglês?",
+        "Como dizemos \"Quadrado\" em inglês?",
         [
           "Circle",
           "Square",
@@ -23641,22 +23642,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Star shape",
-        "(Star shape)",
+        "Forma de estrela",
         "📚"
       ],
       [
         "Heart shape",
-        "(Heart shape)",
+        "Forma de coração",
         "📚"
       ],
       [
         "Oval",
-        "(Oval)",
+        "Oval",
         "📚"
       ],
       [
         "Diamond",
-        "(Diamond)",
+        "Losango",
         "📚"
       ]
     ],
@@ -23664,25 +23665,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Star shape significa:",
         [
-          "(Diamond)",
-          "(Oval)",
-          "(Star shape)",
-          "(Heart shape)"
+          "Losango",
+          "Oval",
+          "Forma de estrela",
+          "Forma de coração"
         ],
         2
       ],
       [
         "Heart shape significa:",
         [
-          "(Star shape)",
-          "(Heart shape)",
-          "(Diamond)",
-          "(Oval)"
+          "Forma de estrela",
+          "Forma de coração",
+          "Losango",
+          "Oval"
         ],
         1
       ],
       [
-        "Como dizemos \"(Heart shape)\" em inglês?",
+        "Como dizemos \"Forma de coração\" em inglês?",
         [
           "Star shape",
           "Heart shape",
@@ -23712,22 +23713,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Pentagon",
-        "(Pentagon)",
+        "Pentágono",
         "📚"
       ],
       [
         "Hexagon",
-        "(Hexagon)",
+        "Hexágono",
         "📚"
       ],
       [
         "Round",
-        "(Round)",
+        "Redondo",
         "📚"
       ],
       [
         "Corner",
-        "(Corner)",
+        "Canto",
         "📚"
       ]
     ],
@@ -23735,25 +23736,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Pentagon significa:",
         [
-          "(Hexagon)",
-          "(Pentagon)",
-          "(Corner)",
-          "(Round)"
+          "Hexágono",
+          "Pentágono",
+          "Canto",
+          "Redondo"
         ],
         1
       ],
       [
         "Hexagon significa:",
         [
-          "(Round)",
-          "(Hexagon)",
-          "(Pentagon)",
-          "(Corner)"
+          "Redondo",
+          "Hexágono",
+          "Pentágono",
+          "Canto"
         ],
         1
       ],
       [
-        "Como dizemos \"(Hexagon)\" em inglês?",
+        "Como dizemos \"Hexágono\" em inglês?",
         [
           "Round",
           "Corner",
@@ -23771,34 +23772,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 334,
     "slug": "shapes-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Side, Edge, Draw shape, Cut shape",
+    "description": "Desafio: Side, Edge, Draw a shape, Cut out a shape",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Side, Edge, Draw shape e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Side, Edge, Draw a shape e mais algumas palavras.",
     "learn": [
       "Side",
       "Edge",
-      "Draw shape",
-      "Cut shape"
+      "Draw a shape",
+      "Cut out a shape"
     ],
     "words": [
       [
         "Side",
-        "(Side)",
+        "Lado",
         "📚"
       ],
       [
         "Edge",
-        "(Edge)",
+        "Aresta",
         "📚"
       ],
       [
-        "Draw shape",
-        "(Draw shape)",
+        "Draw a shape",
+        "Desenhar uma forma",
         "📚"
       ],
       [
-        "Cut shape",
-        "(Cut shape)",
+        "Cut out a shape",
+        "Recortar uma forma",
         "📚"
       ]
     ],
@@ -23806,29 +23807,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Side significa:",
         [
-          "(Draw shape)",
-          "(Side)",
-          "(Edge)",
-          "(Cut shape)"
+          "Desenhar uma forma",
+          "Lado",
+          "Aresta",
+          "Recortar uma forma"
         ],
         1
       ],
       [
         "Edge significa:",
         [
-          "(Draw shape)",
-          "(Cut shape)",
-          "(Side)",
-          "(Edge)"
+          "Desenhar uma forma",
+          "Recortar uma forma",
+          "Lado",
+          "Aresta"
         ],
         3
       ],
       [
-        "Como dizemos \"(Edge)\" em inglês?",
+        "Como dizemos \"Aresta\" em inglês?",
         [
-          "Cut shape",
+          "Cut out a shape",
           "Edge",
-          "Draw shape",
+          "Draw a shape",
           "Side"
         ],
         1
@@ -23842,63 +23843,63 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 335,
     "slug": "shapes-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Find shape, Match shape, Big circle, Small square",
+    "description": "Falar: Find the shape, Match the shapes, Big circle, Small square",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Find shape, Match shape, Big circle e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Find the shape, Match the shapes, Big circle e mais algumas palavras.",
     "learn": [
-      "Find shape",
-      "Match shape",
+      "Find the shape",
+      "Match the shapes",
       "Big circle",
       "Small square"
     ],
     "words": [
       [
-        "Find shape",
-        "(Find shape)",
+        "Find the shape",
+        "Encontrar a forma",
         "📚"
       ],
       [
-        "Match shape",
-        "(Match shape)",
+        "Match the shapes",
+        "Combinar as formas",
         "📚"
       ],
       [
         "Big circle",
-        "(Big circle)",
+        "Círculo grande",
         "📚"
       ],
       [
         "Small square",
-        "(Small square)",
+        "Quadrado pequeno",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Find shape significa:",
+        "Find the shape significa:",
         [
-          "(Big circle)",
-          "(Small square)",
-          "(Match shape)",
-          "(Find shape)"
+          "Círculo grande",
+          "Quadrado pequeno",
+          "Combinar as formas",
+          "Encontrar a forma"
         ],
         3
       ],
       [
-        "Match shape significa:",
+        "Match the shapes significa:",
         [
-          "(Small square)",
-          "(Match shape)",
-          "(Big circle)",
-          "(Find shape)"
+          "Quadrado pequeno",
+          "Combinar as formas",
+          "Círculo grande",
+          "Encontrar a forma"
         ],
         1
       ],
       [
-        "Como dizemos \"(Match shape)\" em inglês?",
+        "Como dizemos \"Combinar as formas\" em inglês?",
         [
-          "Find shape",
-          "Match shape",
+          "Find the shape",
+          "Match the shapes",
           "Small square",
           "Big circle"
         ],
@@ -23906,7 +23907,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ]
     ],
     "speak": {
-      "phrase": "Find shape",
+      "phrase": "Find the shape",
       "tip": "Repita devagar três vezes em voz alta!"
     }
   },
@@ -23929,22 +23930,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Red triangle",
-        "(Red triangle)",
+        "Triângulo vermelho",
         "📚"
       ],
       [
         "Blue rectangle",
-        "(Blue rectangle)",
+        "Retângulo azul",
         "📚"
       ],
       [
         "Shape game",
-        "(Shape game)",
+        "Jogo das formas",
         "📚"
       ],
       [
         "Pattern",
-        "(Pattern)",
+        "Padrão",
         "📚"
       ]
     ],
@@ -23952,25 +23953,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Red triangle significa:",
         [
-          "(Pattern)",
-          "(Red triangle)",
-          "(Shape game)",
-          "(Blue rectangle)"
+          "Padrão",
+          "Triângulo vermelho",
+          "Jogo das formas",
+          "Retângulo azul"
         ],
         1
       ],
       [
         "Blue rectangle significa:",
         [
-          "(Pattern)",
-          "(Blue rectangle)",
-          "(Red triangle)",
-          "(Shape game)"
+          "Padrão",
+          "Retângulo azul",
+          "Triângulo vermelho",
+          "Jogo das formas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Blue rectangle)\" em inglês?",
+        "Como dizemos \"Retângulo azul\" em inglês?",
         [
           "Red triangle",
           "Shape game",
@@ -23988,64 +23989,64 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 337,
     "slug": "shapes-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Sort shapes, Build shapes, Shape art, Geometry fun",
+    "description": "Memória: Sort the shapes, Build shapes, Shape art, Geometry fun",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Sort shapes, Build shapes, Shape art e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Sort the shapes, Build shapes, Shape art e mais algumas palavras.",
     "learn": [
-      "Sort shapes",
+      "Sort the shapes",
       "Build shapes",
       "Shape art",
       "Geometry fun"
     ],
     "words": [
       [
-        "Sort shapes",
-        "(Sort shapes)",
+        "Sort the shapes",
+        "Separar as formas",
         "📚"
       ],
       [
         "Build shapes",
-        "(Build shapes)",
+        "Montar formas",
         "📚"
       ],
       [
         "Shape art",
-        "(Shape art)",
+        "Arte com formas",
         "📚"
       ],
       [
         "Geometry fun",
-        "(Geometry fun)",
+        "Geometria divertida",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Sort shapes significa:",
+        "Sort the shapes significa:",
         [
-          "(Geometry fun)",
-          "(Sort shapes)",
-          "(Build shapes)",
-          "(Shape art)"
+          "Geometria divertida",
+          "Separar as formas",
+          "Montar formas",
+          "Arte com formas"
         ],
         1
       ],
       [
         "Build shapes significa:",
         [
-          "(Sort shapes)",
-          "(Shape art)",
-          "(Build shapes)",
-          "(Geometry fun)"
+          "Separar as formas",
+          "Arte com formas",
+          "Montar formas",
+          "Geometria divertida"
         ],
         2
       ],
       [
-        "Como dizemos \"(Build shapes)\" em inglês?",
+        "Como dizemos \"Montar formas\" em inglês?",
         [
           "Shape art",
           "Geometry fun",
-          "Sort shapes",
+          "Sort the shapes",
           "Build shapes"
         ],
         3
@@ -24059,65 +24060,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 338,
     "slug": "shapes-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Count sides, Equal sides, Point, Line",
+    "description": "Frases: Count the sides, Equal sides, Point, Line",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Count sides, Equal sides, Point e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Count the sides, Equal sides, Point e mais algumas palavras.",
     "learn": [
-      "Count sides",
+      "Count the sides",
       "Equal sides",
       "Point",
       "Line"
     ],
     "words": [
       [
-        "Count sides",
-        "(Count sides)",
+        "Count the sides",
+        "Contar os lados",
         "📚"
       ],
       [
         "Equal sides",
-        "(Equal sides)",
+        "Lados iguais",
         "📚"
       ],
       [
         "Point",
-        "(Point)",
+        "Ponto",
         "📚"
       ],
       [
         "Line",
-        "(Line)",
+        "Fila",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Count sides significa:",
+        "Count the sides significa:",
         [
-          "(Equal sides)",
-          "(Point)",
-          "(Count sides)",
-          "(Line)"
+          "Lados iguais",
+          "Ponto",
+          "Contar os lados",
+          "Fila"
         ],
         2
       ],
       [
         "Equal sides significa:",
         [
-          "(Point)",
-          "(Line)",
-          "(Count sides)",
-          "(Equal sides)"
+          "Ponto",
+          "Fila",
+          "Contar os lados",
+          "Lados iguais"
         ],
         3
       ],
       [
-        "Como dizemos \"(Equal sides)\" em inglês?",
+        "Como dizemos \"Lados iguais\" em inglês?",
         [
           "Point",
           "Equal sides",
           "Line",
-          "Count sides"
+          "Count the sides"
         ],
         1
       ]
@@ -24142,22 +24143,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Curve",
-        "(Curve)",
+        "Curva",
         "📚"
       ],
       [
         "Flat",
-        "(Flat)",
+        "Plano",
         "📚"
       ],
       [
         "Solid shape",
-        "(Solid shape)",
+        "Sólido geométrico",
         "📚"
       ],
       [
         "Cube",
-        "(Cube)",
+        "Cubo",
         "📚"
       ]
     ],
@@ -24165,25 +24166,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Curve significa:",
         [
-          "(Solid shape)",
-          "(Cube)",
-          "(Flat)",
-          "(Curve)"
+          "Sólido geométrico",
+          "Cubo",
+          "Plano",
+          "Curva"
         ],
         3
       ],
       [
         "Flat significa:",
         [
-          "(Solid shape)",
-          "(Flat)",
-          "(Cube)",
-          "(Curve)"
+          "Sólido geométrico",
+          "Plano",
+          "Cubo",
+          "Curva"
         ],
         1
       ],
       [
-        "Como dizemos \"(Flat)\" em inglês?",
+        "Como dizemos \"Plano\" em inglês?",
         [
           "Curve",
           "Flat",
@@ -24213,22 +24214,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sphere",
-        "(Sphere)",
+        "Esfera",
         "📚"
       ],
       [
         "Cone",
-        "(Cone)",
+        "Cone",
         "📚"
       ],
       [
         "Cylinder",
-        "(Cylinder)",
+        "Cilindro",
         "📚"
       ],
       [
         "Shape hunt",
-        "(Shape hunt)",
+        "Caça às formas",
         "📚"
       ]
     ],
@@ -24236,25 +24237,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sphere significa:",
         [
-          "(Cylinder)",
-          "(Sphere)",
-          "(Shape hunt)",
-          "(Cone)"
+          "Cilindro",
+          "Esfera",
+          "Caça às formas",
+          "Cone"
         ],
         1
       ],
       [
         "Cone significa:",
         [
-          "(Sphere)",
-          "(Cone)",
-          "(Shape hunt)",
-          "(Cylinder)"
+          "Esfera",
+          "Cone",
+          "Caça às formas",
+          "Cilindro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Cone)\" em inglês?",
+        "Como dizemos \"Cone\" em inglês?",
         [
           "Sphere",
           "Cone",
@@ -24289,17 +24290,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Small",
-        "(Small)",
+        "Pequeno",
         "📚"
       ],
       [
         "Tall",
-        "(Tall)",
+        "Alto",
         "📚"
       ],
       [
         "Short",
-        "(Short)",
+        "Baixo",
         "📚"
       ]
     ],
@@ -24307,10 +24308,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Big significa:",
         [
-          "(Small)",
+          "Pequeno",
           "Grande",
-          "(Short)",
-          "(Tall)"
+          "Baixo",
+          "Alto"
         ],
         1
       ],
@@ -24318,14 +24319,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Small significa:",
         [
           "Grande",
-          "(Small)",
-          "(Tall)",
-          "(Short)"
+          "Pequeno",
+          "Alto",
+          "Baixo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Small)\" em inglês?",
+        "Como dizemos \"Pequeno\" em inglês?",
         [
           "Tall",
           "Short",
@@ -24355,22 +24356,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Long",
-        "(Long)",
+        "Comprido",
         "📚"
       ],
       [
         "Wide",
-        "(Wide)",
+        "Largo",
         "📚"
       ],
       [
         "Narrow",
-        "(Narrow)",
+        "Estreito",
         "📚"
       ],
       [
         "Heavy",
-        "(Heavy)",
+        "Pesado",
         "📚"
       ]
     ],
@@ -24378,25 +24379,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Long significa:",
         [
-          "(Wide)",
-          "(Long)",
-          "(Narrow)",
-          "(Heavy)"
+          "Largo",
+          "Comprido",
+          "Estreito",
+          "Pesado"
         ],
         1
       ],
       [
         "Wide significa:",
         [
-          "(Narrow)",
-          "(Heavy)",
-          "(Long)",
-          "(Wide)"
+          "Estreito",
+          "Pesado",
+          "Comprido",
+          "Largo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Wide)\" em inglês?",
+        "Como dizemos \"Largo\" em inglês?",
         [
           "Heavy",
           "Narrow",
@@ -24426,22 +24427,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Light",
-        "(Light)",
+        "Leve",
         "📚"
       ],
       [
         "Huge",
-        "(Huge)",
+        "Enorme",
         "📚"
       ],
       [
         "Tiny",
-        "(Tiny)",
+        "Minúsculo",
         "📚"
       ],
       [
         "Medium",
-        "(Medium)",
+        "Médio",
         "📚"
       ]
     ],
@@ -24449,25 +24450,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Light significa:",
         [
-          "(Tiny)",
-          "(Medium)",
-          "(Huge)",
-          "(Light)"
+          "Minúsculo",
+          "Médio",
+          "Enorme",
+          "Leve"
         ],
         3
       ],
       [
         "Huge significa:",
         [
-          "(Medium)",
-          "(Huge)",
-          "(Tiny)",
-          "(Light)"
+          "Médio",
+          "Enorme",
+          "Minúsculo",
+          "Leve"
         ],
         1
       ],
       [
-        "Como dizemos \"(Huge)\" em inglês?",
+        "Como dizemos \"Enorme\" em inglês?",
         [
           "Light",
           "Huge",
@@ -24497,22 +24498,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Compare",
-        "(Compare)",
+        "Comparar",
         "📚"
       ],
       [
         "Measure",
-        "(Measure)",
+        "Medir",
         "📚"
       ],
       [
         "Ruler",
-        "(Ruler)",
+        "Régua",
         "📚"
       ],
       [
         "Scale",
-        "(Scale)",
+        "Balança",
         "📚"
       ]
     ],
@@ -24520,25 +24521,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Compare significa:",
         [
-          "(Scale)",
-          "(Compare)",
-          "(Ruler)",
-          "(Measure)"
+          "Balança",
+          "Comparar",
+          "Régua",
+          "Medir"
         ],
         1
       ],
       [
         "Measure significa:",
         [
-          "(Compare)",
-          "(Measure)",
-          "(Scale)",
-          "(Ruler)"
+          "Comparar",
+          "Medir",
+          "Balança",
+          "Régua"
         ],
         1
       ],
       [
-        "Como dizemos \"(Measure)\" em inglês?",
+        "Como dizemos \"Medir\" em inglês?",
         [
           "Compare",
           "Ruler",
@@ -24568,22 +24569,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Grow bigger",
-        "(Grow bigger)",
+        "Ficar maior",
         "📚"
       ],
       [
         "Shrink",
-        "(Shrink)",
+        "Encolher",
         "📚"
       ],
       [
         "Same size",
-        "(Same size)",
+        "Mesmo tamanho",
         "📚"
       ],
       [
         "Different size",
-        "(Different size)",
+        "Tamanho diferente",
         "📚"
       ]
     ],
@@ -24591,25 +24592,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Grow bigger significa:",
         [
-          "(Shrink)",
-          "(Grow bigger)",
-          "(Different size)",
-          "(Same size)"
+          "Encolher",
+          "Ficar maior",
+          "Tamanho diferente",
+          "Mesmo tamanho"
         ],
         1
       ],
       [
         "Shrink significa:",
         [
-          "(Grow bigger)",
-          "(Same size)",
-          "(Shrink)",
-          "(Different size)"
+          "Ficar maior",
+          "Mesmo tamanho",
+          "Encolher",
+          "Tamanho diferente"
         ],
         2
       ],
       [
-        "Como dizemos \"(Shrink)\" em inglês?",
+        "Como dizemos \"Encolher\" em inglês?",
         [
           "Grow bigger",
           "Same size",
@@ -24643,22 +24644,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bigger than",
-        "(Bigger than)",
+        "Maior que",
         "📚"
       ],
       [
         "Smaller than",
-        "(Smaller than)",
+        "Menor que",
         "📚"
       ],
       [
         "Tallest",
-        "(Tallest)",
+        "O mais alto",
         "📚"
       ],
       [
         "Shortest",
-        "(Shortest)",
+        "O mais baixo",
         "📚"
       ]
     ],
@@ -24666,25 +24667,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bigger than significa:",
         [
-          "(Smaller than)",
-          "(Tallest)",
-          "(Bigger than)",
-          "(Shortest)"
+          "Menor que",
+          "O mais alto",
+          "Maior que",
+          "O mais baixo"
         ],
         2
       ],
       [
         "Smaller than significa:",
         [
-          "(Tallest)",
-          "(Shortest)",
-          "(Bigger than)",
-          "(Smaller than)"
+          "O mais alto",
+          "O mais baixo",
+          "Maior que",
+          "Menor que"
         ],
         3
       ],
       [
-        "Como dizemos \"(Smaller than)\" em inglês?",
+        "Como dizemos \"Menor que\" em inglês?",
         [
           "Tallest",
           "Smaller than",
@@ -24702,34 +24703,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 347,
     "slug": "sizes-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Longest, Size sort, Fit, Too big",
+    "description": "Memória: Longest, Sort by size, Fit, Too big",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Longest, Size sort, Fit e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Longest, Sort by size, Fit e mais algumas palavras.",
     "learn": [
       "Longest",
-      "Size sort",
+      "Sort by size",
       "Fit",
       "Too big"
     ],
     "words": [
       [
         "Longest",
-        "(Longest)",
+        "O mais comprido",
         "📚"
       ],
       [
-        "Size sort",
-        "(Size sort)",
+        "Sort by size",
+        "Organizar por tamanho",
         "📚"
       ],
       [
         "Fit",
-        "(Fit)",
+        "Caber",
         "📚"
       ],
       [
         "Too big",
-        "(Too big)",
+        "Grande demais",
         "📚"
       ]
     ],
@@ -24737,28 +24738,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Longest significa:",
         [
-          "(Fit)",
-          "(Too big)",
-          "(Size sort)",
-          "(Longest)"
+          "Caber",
+          "Grande demais",
+          "Organizar por tamanho",
+          "O mais comprido"
         ],
         3
       ],
       [
-        "Size sort significa:",
+        "Sort by size significa:",
         [
-          "(Fit)",
-          "(Size sort)",
-          "(Too big)",
-          "(Longest)"
+          "Caber",
+          "Organizar por tamanho",
+          "Grande demais",
+          "O mais comprido"
         ],
         1
       ],
       [
-        "Como dizemos \"(Size sort)\" em inglês?",
+        "Como dizemos \"Organizar por tamanho\" em inglês?",
         [
           "Longest",
-          "Size sort",
+          "Sort by size",
           "Too big",
           "Fit"
         ],
@@ -24773,34 +24774,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 348,
     "slug": "sizes-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Too small, Just right, Size words, Describe size",
+    "description": "Frases: Too small, Just right, Size words, Describe the size",
     "icon": "📚",
     "objective": "Hoje você vai aprender Too small, Just right, Size words e mais algumas palavras.",
     "learn": [
       "Too small",
       "Just right",
       "Size words",
-      "Describe size"
+      "Describe the size"
     ],
     "words": [
       [
         "Too small",
-        "(Too small)",
+        "Pequeno demais",
         "📚"
       ],
       [
         "Just right",
-        "(Just right)",
+        "Do tamanho certo",
         "📚"
       ],
       [
         "Size words",
-        "(Size words)",
+        "Palavras de tamanho",
         "📚"
       ],
       [
-        "Describe size",
-        "(Describe size)",
+        "Describe the size",
+        "Descrever o tamanho",
         "📚"
       ]
     ],
@@ -24808,30 +24809,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Too small significa:",
         [
-          "(Size words)",
-          "(Too small)",
-          "(Describe size)",
-          "(Just right)"
+          "Palavras de tamanho",
+          "Pequeno demais",
+          "Descrever o tamanho",
+          "Do tamanho certo"
         ],
         1
       ],
       [
         "Just right significa:",
         [
-          "(Too small)",
-          "(Just right)",
-          "(Describe size)",
-          "(Size words)"
+          "Pequeno demais",
+          "Do tamanho certo",
+          "Descrever o tamanho",
+          "Palavras de tamanho"
         ],
         1
       ],
       [
-        "Como dizemos \"(Just right)\" em inglês?",
+        "Como dizemos \"Do tamanho certo\" em inglês?",
         [
           "Too small",
           "Size words",
           "Just right",
-          "Describe size"
+          "Describe the size"
         ],
         2
       ]
@@ -24856,22 +24857,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Animal sizes",
-        "(Animal sizes)",
+        "Tamanhos dos animais",
         "📚"
       ],
       [
         "Food sizes",
-        "(Food sizes)",
+        "Tamanhos das comidas",
         "📚"
       ],
       [
         "Toy sizes",
-        "(Toy sizes)",
+        "Tamanhos dos brinquedos",
         "📚"
       ],
       [
         "Room size",
-        "(Room size)",
+        "Tamanho do quarto",
         "📚"
       ]
     ],
@@ -24879,25 +24880,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Animal sizes significa:",
         [
-          "(Food sizes)",
-          "(Animal sizes)",
-          "(Room size)",
-          "(Toy sizes)"
+          "Tamanhos das comidas",
+          "Tamanhos dos animais",
+          "Tamanho do quarto",
+          "Tamanhos dos brinquedos"
         ],
         1
       ],
       [
         "Food sizes significa:",
         [
-          "(Animal sizes)",
-          "(Food sizes)",
-          "(Toy sizes)",
-          "(Room size)"
+          "Tamanhos dos animais",
+          "Tamanhos das comidas",
+          "Tamanhos dos brinquedos",
+          "Tamanho do quarto"
         ],
         1
       ],
       [
-        "Como dizemos \"(Food sizes)\" em inglês?",
+        "Como dizemos \"Tamanhos das comidas\" em inglês?",
         [
           "Animal sizes",
           "Toy sizes",
@@ -24927,22 +24928,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Full",
-        "(Full)",
+        "Cheio",
         "📚"
       ],
       [
         "Empty",
-        "(Empty)",
+        "Vazio",
         "📚"
       ],
       [
         "High",
-        "(High)",
+        "No alto",
         "📚"
       ],
       [
         "Low",
-        "(Low)",
+        "Embaixo",
         "📚"
       ]
     ],
@@ -24950,25 +24951,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Full significa:",
         [
-          "(Empty)",
-          "(Full)",
-          "(High)",
-          "(Low)"
+          "Vazio",
+          "Cheio",
+          "No alto",
+          "Embaixo"
         ],
         1
       ],
       [
         "Empty significa:",
         [
-          "(High)",
-          "(Low)",
-          "(Full)",
-          "(Empty)"
+          "No alto",
+          "Embaixo",
+          "Cheio",
+          "Vazio"
         ],
         3
       ],
       [
-        "Como dizemos \"(Empty)\" em inglês?",
+        "Como dizemos \"Vazio\" em inglês?",
         [
           "High",
           "Empty",
@@ -24986,14 +24987,14 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 351,
     "slug": "opposites-l1",
     "title": "Lição 1: Fundamentos",
-    "description": "Fundamentos: Hot cold, Big small, Up down, In out",
+    "description": "Fundamentos: Hot cold, Big and small, Up and down, In and out",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Hot cold, Big small, Up down e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Hot cold, Big and small, Up and down e mais algumas palavras.",
     "learn": [
       "Hot cold",
-      "Big small",
-      "Up down",
-      "In out"
+      "Big and small",
+      "Up and down",
+      "In and out"
     ],
     "words": [
       [
@@ -25002,18 +25003,18 @@ export const LESSON_SPECS: LessonSpec[] = [
         "📚"
       ],
       [
-        "Big small",
-        "(Big small)",
+        "Big and small",
+        "Grande e pequeno",
         "📚"
       ],
       [
-        "Up down",
-        "(Up down)",
+        "Up and down",
+        "Para cima e para baixo",
         "📚"
       ],
       [
-        "In out",
-        "(In out)",
+        "In and out",
+        "Dentro e fora",
         "📚"
       ]
     ],
@@ -25021,30 +25022,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Hot cold significa:",
         [
-          "(Up down)",
-          "(In out)",
-          "(Big small)",
+          "Para cima e para baixo",
+          "Dentro e fora",
+          "Grande e pequeno",
           "Quente/frio"
         ],
         3
       ],
       [
-        "Big small significa:",
+        "Big and small significa:",
         [
-          "(In out)",
-          "(Up down)",
-          "(Big small)",
+          "Dentro e fora",
+          "Para cima e para baixo",
+          "Grande e pequeno",
           "Quente/frio"
         ],
         2
       ],
       [
-        "Como dizemos \"(Big small)\" em inglês?",
+        "Como dizemos \"Grande e pequeno\" em inglês?",
         [
           "Hot cold",
-          "Big small",
-          "In out",
-          "Up down"
+          "Big and small",
+          "In and out",
+          "Up and down"
         ],
         1
       ]
@@ -25057,65 +25058,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 352,
     "slug": "opposites-l2",
     "title": "Lição 2: Prática 1",
-    "description": "Prática 1: Open close, Day night, Happy sad, Fast slow",
+    "description": "Prática 1: Open and close, Day and night, Happy and sad, Fast and slow",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Open close, Day night, Happy sad e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Open and close, Day and night, Happy and sad e mais algumas palavras.",
     "learn": [
-      "Open close",
-      "Day night",
-      "Happy sad",
-      "Fast slow"
+      "Open and close",
+      "Day and night",
+      "Happy and sad",
+      "Fast and slow"
     ],
     "words": [
       [
-        "Open close",
-        "(Open close)",
+        "Open and close",
+        "Abrir e fechar",
         "📚"
       ],
       [
-        "Day night",
-        "(Day night)",
+        "Day and night",
+        "Dia e noite",
         "📚"
       ],
       [
-        "Happy sad",
-        "(Happy sad)",
+        "Happy and sad",
+        "Feliz e triste",
         "📚"
       ],
       [
-        "Fast slow",
-        "(Fast slow)",
+        "Fast and slow",
+        "Rápido e devagar",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Open close significa:",
+        "Open and close significa:",
         [
-          "(Fast slow)",
-          "(Happy sad)",
-          "(Open close)",
-          "(Day night)"
+          "Rápido e devagar",
+          "Feliz e triste",
+          "Abrir e fechar",
+          "Dia e noite"
         ],
         2
       ],
       [
-        "Day night significa:",
+        "Day and night significa:",
         [
-          "(Open close)",
-          "(Day night)",
-          "(Fast slow)",
-          "(Happy sad)"
+          "Abrir e fechar",
+          "Dia e noite",
+          "Rápido e devagar",
+          "Feliz e triste"
         ],
         1
       ],
       [
-        "Como dizemos \"(Day night)\" em inglês?",
+        "Como dizemos \"Dia e noite\" em inglês?",
         [
-          "Open close",
-          "Happy sad",
-          "Day night",
-          "Fast slow"
+          "Open and close",
+          "Happy and sad",
+          "Day and night",
+          "Fast and slow"
         ],
         2
       ]
@@ -25128,65 +25129,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 353,
     "slug": "opposites-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: Old new, Clean dirty, Full empty, Light dark",
+    "description": "Prática 2: Old and new, Clean and dirty, Full and empty, Light and dark",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Old new, Clean dirty, Full empty e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Old and new, Clean and dirty, Full and empty e mais algumas palavras.",
     "learn": [
-      "Old new",
-      "Clean dirty",
-      "Full empty",
-      "Light dark"
+      "Old and new",
+      "Clean and dirty",
+      "Full and empty",
+      "Light and dark"
     ],
     "words": [
       [
-        "Old new",
-        "(Old new)",
+        "Old and new",
+        "Velho e novo",
         "📚"
       ],
       [
-        "Clean dirty",
-        "(Clean dirty)",
+        "Clean and dirty",
+        "Limpo e sujo",
         "📚"
       ],
       [
-        "Full empty",
-        "(Full empty)",
+        "Full and empty",
+        "Cheio e vazio",
         "📚"
       ],
       [
-        "Light dark",
-        "(Light dark)",
+        "Light and dark",
+        "Claro e escuro",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Old new significa:",
+        "Old and new significa:",
         [
-          "(Clean dirty)",
-          "(Old new)",
-          "(Light dark)",
-          "(Full empty)"
+          "Limpo e sujo",
+          "Velho e novo",
+          "Claro e escuro",
+          "Cheio e vazio"
         ],
         1
       ],
       [
-        "Clean dirty significa:",
+        "Clean and dirty significa:",
         [
-          "(Old new)",
-          "(Full empty)",
-          "(Clean dirty)",
-          "(Light dark)"
+          "Velho e novo",
+          "Cheio e vazio",
+          "Limpo e sujo",
+          "Claro e escuro"
         ],
         2
       ],
       [
-        "Como dizemos \"(Clean dirty)\" em inglês?",
+        "Como dizemos \"Limpo e sujo\" em inglês?",
         [
-          "Old new",
-          "Full empty",
-          "Light dark",
-          "Clean dirty"
+          "Old and new",
+          "Full and empty",
+          "Light and dark",
+          "Clean and dirty"
         ],
         3
       ]
@@ -25199,65 +25200,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 354,
     "slug": "opposites-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Wet dry, Hard soft, Loud quiet, Near far",
+    "description": "Desafio: Wet and dry, Hard and soft, Loud and quiet, Near and far",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Wet dry, Hard soft, Loud quiet e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Wet and dry, Hard and soft, Loud and quiet e mais algumas palavras.",
     "learn": [
-      "Wet dry",
-      "Hard soft",
-      "Loud quiet",
-      "Near far"
+      "Wet and dry",
+      "Hard and soft",
+      "Loud and quiet",
+      "Near and far"
     ],
     "words": [
       [
-        "Wet dry",
-        "(Wet dry)",
+        "Wet and dry",
+        "Molhado e seco",
         "📚"
       ],
       [
-        "Hard soft",
-        "(Hard soft)",
+        "Hard and soft",
+        "Duro e macio",
         "📚"
       ],
       [
-        "Loud quiet",
-        "(Loud quiet)",
+        "Loud and quiet",
+        "Barulhento e silencioso",
         "📚"
       ],
       [
-        "Near far",
-        "(Near far)",
+        "Near and far",
+        "Perto e longe",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Wet dry significa:",
+        "Wet and dry significa:",
         [
-          "(Hard soft)",
-          "(Loud quiet)",
-          "(Wet dry)",
-          "(Near far)"
+          "Duro e macio",
+          "Barulhento e silencioso",
+          "Molhado e seco",
+          "Perto e longe"
         ],
         2
       ],
       [
-        "Hard soft significa:",
+        "Hard and soft significa:",
         [
-          "(Wet dry)",
-          "(Loud quiet)",
-          "(Near far)",
-          "(Hard soft)"
+          "Molhado e seco",
+          "Barulhento e silencioso",
+          "Perto e longe",
+          "Duro e macio"
         ],
         3
       ],
       [
-        "Como dizemos \"(Hard soft)\" em inglês?",
+        "Como dizemos \"Duro e macio\" em inglês?",
         [
-          "Near far",
-          "Loud quiet",
-          "Hard soft",
-          "Wet dry"
+          "Near and far",
+          "Loud and quiet",
+          "Hard and soft",
+          "Wet and dry"
         ],
         2
       ]
@@ -25270,71 +25271,71 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 355,
     "slug": "opposites-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Start stop, Give take, Push pull, Win lose",
+    "description": "Falar: Start and stop, Give and take, Push and pull, Win and lose",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Start stop, Give take, Push pull e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Start and stop, Give and take, Push and pull e mais algumas palavras.",
     "learn": [
-      "Start stop",
-      "Give take",
-      "Push pull",
-      "Win lose"
+      "Start and stop",
+      "Give and take",
+      "Push and pull",
+      "Win and lose"
     ],
     "words": [
       [
-        "Start stop",
-        "(Start stop)",
+        "Start and stop",
+        "Começar e parar",
         "📚"
       ],
       [
-        "Give take",
-        "(Give take)",
+        "Give and take",
+        "Dar e receber",
         "📚"
       ],
       [
-        "Push pull",
-        "(Push pull)",
+        "Push and pull",
+        "Empurrar e puxar",
         "📚"
       ],
       [
-        "Win lose",
-        "(Win lose)",
+        "Win and lose",
+        "Ganhar e perder",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Start stop significa:",
+        "Start and stop significa:",
         [
-          "(Give take)",
-          "(Push pull)",
-          "(Win lose)",
-          "(Start stop)"
+          "Dar e receber",
+          "Empurrar e puxar",
+          "Ganhar e perder",
+          "Começar e parar"
         ],
         3
       ],
       [
-        "Give take significa:",
+        "Give and take significa:",
         [
-          "(Push pull)",
-          "(Give take)",
-          "(Win lose)",
-          "(Start stop)"
+          "Empurrar e puxar",
+          "Dar e receber",
+          "Ganhar e perder",
+          "Começar e parar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Give take)\" em inglês?",
+        "Como dizemos \"Dar e receber\" em inglês?",
         [
-          "Win lose",
-          "Give take",
-          "Start stop",
-          "Push pull"
+          "Win and lose",
+          "Give and take",
+          "Start and stop",
+          "Push and pull"
         ],
         1
       ]
     ],
     "speak": {
-      "phrase": "Start stop",
+      "phrase": "Start and stop",
       "tip": "Repita devagar três vezes em voz alta!"
     }
   },
@@ -25345,65 +25346,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 356,
     "slug": "opposites-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Love hate, Before after, Inside outside, Always never",
+    "description": "Ouvir: Love and hate, Before and after, Inside and outside, Always and never",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Love hate, Before after, Inside outside e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Love and hate, Before and after, Inside and outside e mais algumas palavras.",
     "learn": [
-      "Love hate",
-      "Before after",
-      "Inside outside",
-      "Always never"
+      "Love and hate",
+      "Before and after",
+      "Inside and outside",
+      "Always and never"
     ],
     "words": [
       [
-        "Love hate",
-        "(Love hate)",
+        "Love and hate",
+        "Amar e odiar",
         "📚"
       ],
       [
-        "Before after",
-        "(Before after)",
+        "Before and after",
+        "Antes e depois",
         "📚"
       ],
       [
-        "Inside outside",
-        "(Inside outside)",
+        "Inside and outside",
+        "Lado de dentro e lado de fora",
         "📚"
       ],
       [
-        "Always never",
-        "(Always never)",
+        "Always and never",
+        "Sempre e nunca",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Love hate significa:",
+        "Love and hate significa:",
         [
-          "(Inside outside)",
-          "(Love hate)",
-          "(Always never)",
-          "(Before after)"
+          "Lado de dentro e lado de fora",
+          "Amar e odiar",
+          "Sempre e nunca",
+          "Antes e depois"
         ],
         1
       ],
       [
-        "Before after significa:",
+        "Before and after significa:",
         [
-          "(Love hate)",
-          "(Before after)",
-          "(Always never)",
-          "(Inside outside)"
+          "Amar e odiar",
+          "Antes e depois",
+          "Sempre e nunca",
+          "Lado de dentro e lado de fora"
         ],
         1
       ],
       [
-        "Como dizemos \"(Before after)\" em inglês?",
+        "Como dizemos \"Antes e depois\" em inglês?",
         [
-          "Inside outside",
-          "Before after",
-          "Love hate",
-          "Always never"
+          "Inside and outside",
+          "Before and after",
+          "Love and hate",
+          "Always and never"
         ],
         1
       ]
@@ -25416,65 +25417,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 357,
     "slug": "opposites-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Right wrong, Same different, Young old, Thick thin",
+    "description": "Memória: Right and wrong, Same and different, Young and old, Thick and thin",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Right wrong, Same different, Young old e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Right and wrong, Same and different, Young and old e mais algumas palavras.",
     "learn": [
-      "Right wrong",
-      "Same different",
-      "Young old",
-      "Thick thin"
+      "Right and wrong",
+      "Same and different",
+      "Young and old",
+      "Thick and thin"
     ],
     "words": [
       [
-        "Right wrong",
-        "(Right wrong)",
+        "Right and wrong",
+        "Certo e errado",
         "📚"
       ],
       [
-        "Same different",
-        "(Same different)",
+        "Same and different",
+        "Igual e diferente",
         "📚"
       ],
       [
-        "Young old",
-        "(Young old)",
+        "Young and old",
+        "Jovem e idoso",
         "📚"
       ],
       [
-        "Thick thin",
-        "(Thick thin)",
+        "Thick and thin",
+        "Grosso e fino",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Right wrong significa:",
+        "Right and wrong significa:",
         [
-          "(Same different)",
-          "(Right wrong)",
-          "(Thick thin)",
-          "(Young old)"
+          "Igual e diferente",
+          "Certo e errado",
+          "Grosso e fino",
+          "Jovem e idoso"
         ],
         1
       ],
       [
-        "Same different significa:",
+        "Same and different significa:",
         [
-          "(Right wrong)",
-          "(Young old)",
-          "(Same different)",
-          "(Thick thin)"
+          "Certo e errado",
+          "Jovem e idoso",
+          "Igual e diferente",
+          "Grosso e fino"
         ],
         2
       ],
       [
-        "Como dizemos \"(Same different)\" em inglês?",
+        "Como dizemos \"Igual e diferente\" em inglês?",
         [
-          "Right wrong",
-          "Thick thin",
-          "Young old",
-          "Same different"
+          "Right and wrong",
+          "Thick and thin",
+          "Young and old",
+          "Same and different"
         ],
         3
       ]
@@ -25487,65 +25488,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 358,
     "slug": "opposites-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Strong weak, Early late, Opposites game, Match opposites",
+    "description": "Frases: Strong and weak, Early and late, Opposites game, Match the opposites",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Strong weak, Early late, Opposites game e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Strong and weak, Early and late, Opposites game e mais algumas palavras.",
     "learn": [
-      "Strong weak",
-      "Early late",
+      "Strong and weak",
+      "Early and late",
       "Opposites game",
-      "Match opposites"
+      "Match the opposites"
     ],
     "words": [
       [
-        "Strong weak",
-        "(Strong weak)",
+        "Strong and weak",
+        "Forte e fraco",
         "📚"
       ],
       [
-        "Early late",
-        "(Early late)",
+        "Early and late",
+        "Cedo e tarde",
         "📚"
       ],
       [
         "Opposites game",
-        "(Opposites game)",
+        "Jogo dos opostos",
         "📚"
       ],
       [
-        "Match opposites",
-        "(Match opposites)",
+        "Match the opposites",
+        "Ligar os opostos",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Strong weak significa:",
+        "Strong and weak significa:",
         [
-          "(Early late)",
-          "(Opposites game)",
-          "(Strong weak)",
-          "(Match opposites)"
+          "Cedo e tarde",
+          "Jogo dos opostos",
+          "Forte e fraco",
+          "Ligar os opostos"
         ],
         2
       ],
       [
-        "Early late significa:",
+        "Early and late significa:",
         [
-          "(Strong weak)",
-          "(Opposites game)",
-          "(Match opposites)",
-          "(Early late)"
+          "Forte e fraco",
+          "Jogo dos opostos",
+          "Ligar os opostos",
+          "Cedo e tarde"
         ],
         3
       ],
       [
-        "Como dizemos \"(Early late)\" em inglês?",
+        "Como dizemos \"Cedo e tarde\" em inglês?",
         [
-          "Match opposites",
+          "Match the opposites",
           "Opposites game",
-          "Early late",
-          "Strong weak"
+          "Early and late",
+          "Strong and weak"
         ],
         2
       ]
@@ -25558,34 +25559,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 359,
     "slug": "opposites-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Compare, Think opposite, Fun pairs, Learn both",
+    "description": "Quiz mix: Compare, Think of the opposite, Fun pairs, Learn both words",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Compare, Think opposite, Fun pairs e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Compare, Think of the opposite, Fun pairs e mais algumas palavras.",
     "learn": [
       "Compare",
-      "Think opposite",
+      "Think of the opposite",
       "Fun pairs",
-      "Learn both"
+      "Learn both words"
     ],
     "words": [
       [
         "Compare",
-        "(Compare)",
+        "Comparar",
         "📚"
       ],
       [
-        "Think opposite",
-        "(Think opposite)",
+        "Think of the opposite",
+        "Pensar no oposto",
         "📚"
       ],
       [
         "Fun pairs",
-        "(Fun pairs)",
+        "Pares divertidos",
         "📚"
       ],
       [
-        "Learn both",
-        "(Learn both)",
+        "Learn both words",
+        "Aprender as duas palavras",
         "📚"
       ]
     ],
@@ -25593,29 +25594,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Compare significa:",
         [
-          "(Think opposite)",
-          "(Fun pairs)",
-          "(Learn both)",
-          "(Compare)"
+          "Pensar no oposto",
+          "Pares divertidos",
+          "Aprender as duas palavras",
+          "Comparar"
         ],
         3
       ],
       [
-        "Think opposite significa:",
+        "Think of the opposite significa:",
         [
-          "(Fun pairs)",
-          "(Think opposite)",
-          "(Learn both)",
-          "(Compare)"
+          "Pares divertidos",
+          "Pensar no oposto",
+          "Aprender as duas palavras",
+          "Comparar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Think opposite)\" em inglês?",
+        "Como dizemos \"Pensar no oposto\" em inglês?",
         [
           "Compare",
-          "Learn both",
-          "Think opposite",
+          "Learn both words",
+          "Think of the opposite",
           "Fun pairs"
         ],
         2
@@ -25629,62 +25630,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 360,
     "slug": "opposites-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Use words, Describe, Opposite day, Switch",
+    "description": "Revisão final: Use the words, Describe, Opposite day, Switch",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Use words, Describe, Opposite day e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Use the words, Describe, Opposite day e mais algumas palavras.",
     "learn": [
-      "Use words",
+      "Use the words",
       "Describe",
       "Opposite day",
       "Switch"
     ],
     "words": [
       [
-        "Use words",
-        "(Use words)",
+        "Use the words",
+        "Usar as palavras",
         "📚"
       ],
       [
         "Describe",
-        "(Describe)",
+        "Descrever",
         "📚"
       ],
       [
         "Opposite day",
-        "(Opposite day)",
+        "Dia do contrário",
         "📚"
       ],
       [
         "Switch",
-        "(Switch)",
+        "Trocar",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Use words significa:",
+        "Use the words significa:",
         [
-          "(Opposite day)",
-          "(Use words)",
-          "(Switch)",
-          "(Describe)"
+          "Dia do contrário",
+          "Usar as palavras",
+          "Trocar",
+          "Descrever"
         ],
         1
       ],
       [
         "Describe significa:",
         [
-          "(Use words)",
-          "(Describe)",
-          "(Switch)",
-          "(Opposite day)"
+          "Usar as palavras",
+          "Descrever",
+          "Trocar",
+          "Dia do contrário"
         ],
         1
       ],
       [
-        "Como dizemos \"(Describe)\" em inglês?",
+        "Como dizemos \"Descrever\" em inglês?",
         [
-          "Use words",
+          "Use the words",
           "Opposite day",
           "Describe",
           "Switch"
@@ -25717,17 +25718,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "On",
-        "(On)",
+        "Em cima de",
         "📚"
       ],
       [
         "Under",
-        "(Under)",
+        "Embaixo de",
         "📚"
       ],
       [
         "Over",
-        "(Over)",
+        "Por cima de",
         "📚"
       ]
     ],
@@ -25735,10 +25736,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "In significa:",
         [
-          "(On)",
+          "Em cima de",
           "Dentro",
-          "(Over)",
-          "(Under)"
+          "Por cima de",
+          "Embaixo de"
         ],
         1
       ],
@@ -25746,14 +25747,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "On significa:",
         [
           "Dentro",
-          "(Under)",
-          "(On)",
-          "(Over)"
+          "Embaixo de",
+          "Em cima de",
+          "Por cima de"
         ],
         2
       ],
       [
-        "Como dizemos \"(On)\" em inglês?",
+        "Como dizemos \"Em cima de\" em inglês?",
         [
           "In",
           "Under",
@@ -25771,34 +25772,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 362,
     "slug": "prepositions-l2",
     "title": "Lição 2: Prática 1",
-    "description": "Prática 1: Behind, In front, Next to, Between",
+    "description": "Prática 1: Behind, In front of, Next to, Between",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Behind, In front, Next to e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Behind, In front of, Next to e mais algumas palavras.",
     "learn": [
       "Behind",
-      "In front",
+      "In front of",
       "Next to",
       "Between"
     ],
     "words": [
       [
         "Behind",
-        "(Behind)",
+        "Atrás de",
         "📚"
       ],
       [
-        "In front",
-        "(In front)",
+        "In front of",
+        "Na frente de",
         "📚"
       ],
       [
         "Next to",
-        "(Next to)",
+        "Ao lado de",
         "📚"
       ],
       [
         "Between",
-        "(Between)",
+        "Entre",
         "📚"
       ]
     ],
@@ -25806,29 +25807,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Behind significa:",
         [
-          "(In front)",
-          "(Next to)",
-          "(Behind)",
-          "(Between)"
+          "Na frente de",
+          "Ao lado de",
+          "Atrás de",
+          "Entre"
         ],
         2
       ],
       [
-        "In front significa:",
+        "In front of significa:",
         [
-          "(Behind)",
-          "(Next to)",
-          "(Between)",
-          "(In front)"
+          "Atrás de",
+          "Ao lado de",
+          "Entre",
+          "Na frente de"
         ],
         3
       ],
       [
-        "Como dizemos \"(In front)\" em inglês?",
+        "Como dizemos \"Na frente de\" em inglês?",
         [
           "Between",
           "Next to",
-          "In front",
+          "In front of",
           "Behind"
         ],
         2
@@ -25854,22 +25855,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Above",
-        "(Above)",
+        "Acima de",
         "📚"
       ],
       [
         "Below",
-        "(Below)",
+        "Abaixo de",
         "📚"
       ],
       [
         "Inside",
-        "(Inside)",
+        "Dentro de",
         "📚"
       ],
       [
         "Outside",
-        "(Outside)",
+        "Fora de",
         "📚"
       ]
     ],
@@ -25877,25 +25878,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Above significa:",
         [
-          "(Below)",
-          "(Inside)",
-          "(Outside)",
-          "(Above)"
+          "Abaixo de",
+          "Dentro de",
+          "Fora de",
+          "Acima de"
         ],
         3
       ],
       [
         "Below significa:",
         [
-          "(Outside)",
-          "(Inside)",
-          "(Below)",
-          "(Above)"
+          "Fora de",
+          "Dentro de",
+          "Abaixo de",
+          "Acima de"
         ],
         2
       ],
       [
-        "Como dizemos \"(Below)\" em inglês?",
+        "Como dizemos \"Abaixo de\" em inglês?",
         [
           "Outside",
           "Below",
@@ -25925,22 +25926,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Through",
-        "(Through)",
+        "Através de",
         "📚"
       ],
       [
         "Around",
-        "(Around)",
+        "Em volta de",
         "📚"
       ],
       [
         "Near",
-        "(Near)",
+        "Perto de",
         "📚"
       ],
       [
         "Far from",
-        "(Far from)",
+        "Longe de",
         "📚"
       ]
     ],
@@ -25948,25 +25949,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Through significa:",
         [
-          "(Far from)",
-          "(Near)",
-          "(Through)",
-          "(Around)"
+          "Longe de",
+          "Perto de",
+          "Através de",
+          "Em volta de"
         ],
         2
       ],
       [
         "Around significa:",
         [
-          "(Far from)",
-          "(Around)",
-          "(Through)",
-          "(Near)"
+          "Longe de",
+          "Em volta de",
+          "Através de",
+          "Perto de"
         ],
         1
       ],
       [
-        "Como dizemos \"(Around)\" em inglês?",
+        "Como dizemos \"Em volta de\" em inglês?",
         [
           "Near",
           "Around",
@@ -25996,22 +25997,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "With",
-        "(With)",
+        "Com",
         "📚"
       ],
       [
         "Without",
-        "(Without)",
+        "Sem",
         "📚"
       ],
       [
         "From",
-        "(From)",
+        "De (origem)",
         "📚"
       ],
       [
         "To",
-        "(To)",
+        "Para (destino)",
         "📚"
       ]
     ],
@@ -26019,25 +26020,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "With significa:",
         [
-          "(To)",
-          "(With)",
-          "(Without)",
-          "(From)"
+          "Para (destino)",
+          "Com",
+          "Sem",
+          "De (origem)"
         ],
         1
       ],
       [
         "Without significa:",
         [
-          "(From)",
-          "(Without)",
-          "(With)",
-          "(To)"
+          "De (origem)",
+          "Sem",
+          "Com",
+          "Para (destino)"
         ],
         1
       ],
       [
-        "Como dizemos \"(Without)\" em inglês?",
+        "Como dizemos \"Sem\" em inglês?",
         [
           "With",
           "To",
@@ -26067,22 +26068,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Into",
-        "(Into)",
+        "Para dentro de",
         "📚"
       ],
       [
         "Onto",
-        "(Onto)",
+        "Para cima de",
         "📚"
       ],
       [
         "Off",
-        "(Off)",
+        "Para fora de",
         "📚"
       ],
       [
         "Up",
-        "(Up)",
+        "Para cima",
         "📚"
       ]
     ],
@@ -26090,25 +26091,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Into significa:",
         [
-          "(Off)",
-          "(Into)",
-          "(Onto)",
-          "(Up)"
+          "Para fora de",
+          "Para dentro de",
+          "Para cima de",
+          "Para cima"
         ],
         1
       ],
       [
         "Onto significa:",
         [
-          "(Into)",
-          "(Up)",
-          "(Off)",
-          "(Onto)"
+          "Para dentro de",
+          "Para cima",
+          "Para fora de",
+          "Para cima de"
         ],
         3
       ],
       [
-        "Como dizemos \"(Onto)\" em inglês?",
+        "Como dizemos \"Para cima de\" em inglês?",
         [
           "Off",
           "Onto",
@@ -26138,22 +26139,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Down",
-        "(Down)",
+        "Para baixo",
         "📚"
       ],
       [
         "Across",
-        "(Across)",
+        "Do outro lado de",
         "📚"
       ],
       [
         "Along",
-        "(Along)",
+        "Ao longo de",
         "📚"
       ],
       [
         "At",
-        "(At)",
+        "Em (lugar)",
         "📚"
       ]
     ],
@@ -26161,25 +26162,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Down significa:",
         [
-          "(Across)",
-          "(At)",
-          "(Along)",
-          "(Down)"
+          "Do outro lado de",
+          "Em (lugar)",
+          "Ao longo de",
+          "Para baixo"
         ],
         3
       ],
       [
         "Across significa:",
         [
-          "(At)",
-          "(Along)",
-          "(Across)",
-          "(Down)"
+          "Em (lugar)",
+          "Ao longo de",
+          "Do outro lado de",
+          "Para baixo"
         ],
         2
       ],
       [
-        "Como dizemos \"(Across)\" em inglês?",
+        "Como dizemos \"Do outro lado de\" em inglês?",
         [
           "Down",
           "At",
@@ -26197,34 +26198,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 368,
     "slug": "prepositions-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: By, For, Cat on table, Dog under bed",
+    "description": "Frases: By, For, The cat is on the table, The dog is under the bed",
     "icon": "📚",
-    "objective": "Hoje você vai aprender By, For, Cat on table e mais algumas palavras.",
+    "objective": "Hoje você vai aprender By, For, The cat is on the table e mais algumas palavras.",
     "learn": [
       "By",
       "For",
-      "Cat on table",
-      "Dog under bed"
+      "The cat is on the table",
+      "The dog is under the bed"
     ],
     "words": [
       [
         "By",
-        "(By)",
+        "Junto a",
         "📚"
       ],
       [
         "For",
-        "(For)",
+        "Para (alguém)",
         "📚"
       ],
       [
-        "Cat on table",
-        "(Cat on table)",
+        "The cat is on the table",
+        "O gato está na mesa",
         "📚"
       ],
       [
-        "Dog under bed",
-        "(Dog under bed)",
+        "The dog is under the bed",
+        "O cachorro está embaixo da cama",
         "📚"
       ]
     ],
@@ -26232,30 +26233,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "By significa:",
         [
-          "(Dog under bed)",
-          "(Cat on table)",
-          "(By)",
-          "(For)"
+          "O cachorro está embaixo da cama",
+          "O gato está na mesa",
+          "Junto a",
+          "Para (alguém)"
         ],
         2
       ],
       [
         "For significa:",
         [
-          "(By)",
-          "(Dog under bed)",
-          "(For)",
-          "(Cat on table)"
+          "Junto a",
+          "O cachorro está embaixo da cama",
+          "Para (alguém)",
+          "O gato está na mesa"
         ],
         2
       ],
       [
-        "Como dizemos \"(For)\" em inglês?",
+        "Como dizemos \"Para (alguém)\" em inglês?",
         [
-          "Cat on table",
+          "The cat is on the table",
           "For",
           "By",
-          "Dog under bed"
+          "The dog is under the bed"
         ],
         1
       ]
@@ -26268,65 +26269,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 369,
     "slug": "prepositions-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Book in bag, Bird on tree, Toy under chair, Stand behind",
+    "description": "Quiz mix: The book is in the bag, The bird is in the tree, The toy is under the chair, Stand behind me",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Book in bag, Bird on tree, Toy under chair e mais algumas palavras.",
+    "objective": "Hoje você vai aprender The book is in the bag, The bird is in the tree, The toy is under the chair e mais algumas palavras.",
     "learn": [
-      "Book in bag",
-      "Bird on tree",
-      "Toy under chair",
-      "Stand behind"
+      "The book is in the bag",
+      "The bird is in the tree",
+      "The toy is under the chair",
+      "Stand behind me"
     ],
     "words": [
       [
-        "Book in bag",
-        "(Book in bag)",
+        "The book is in the bag",
+        "O livro está na mochila",
         "📚"
       ],
       [
-        "Bird on tree",
-        "(Bird on tree)",
+        "The bird is in the tree",
+        "O pássaro está na árvore",
         "📚"
       ],
       [
-        "Toy under chair",
-        "(Toy under chair)",
+        "The toy is under the chair",
+        "O brinquedo está embaixo da cadeira",
         "📚"
       ],
       [
-        "Stand behind",
-        "(Stand behind)",
+        "Stand behind me",
+        "Fique atrás de mim",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Book in bag significa:",
+        "The book is in the bag significa:",
         [
-          "(Bird on tree)",
-          "(Stand behind)",
-          "(Book in bag)",
-          "(Toy under chair)"
+          "O pássaro está na árvore",
+          "Fique atrás de mim",
+          "O livro está na mochila",
+          "O brinquedo está embaixo da cadeira"
         ],
         2
       ],
       [
-        "Bird on tree significa:",
+        "The bird is in the tree significa:",
         [
-          "(Book in bag)",
-          "(Toy under chair)",
-          "(Bird on tree)",
-          "(Stand behind)"
+          "O livro está na mochila",
+          "O brinquedo está embaixo da cadeira",
+          "O pássaro está na árvore",
+          "Fique atrás de mim"
         ],
         2
       ],
       [
-        "Como dizemos \"(Bird on tree)\" em inglês?",
+        "Como dizemos \"O pássaro está na árvore\" em inglês?",
         [
-          "Toy under chair",
-          "Stand behind",
-          "Book in bag",
-          "Bird on tree"
+          "The toy is under the chair",
+          "Stand behind me",
+          "The book is in the bag",
+          "The bird is in the tree"
         ],
         3
       ]
@@ -26351,22 +26352,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sit in front",
-        "(Sit in front)",
+        "Sentar na frente",
         "📚"
       ],
       [
         "Walk to school",
-        "(Walk to school)",
+        "Ir a pé para a escola",
         "📚"
       ],
       [
         "Come from home",
-        "(Come from home)",
+        "Vir de casa",
         "📚"
       ],
       [
         "Play with friends",
-        "(Play with friends)",
+        "Brincar com os amigos",
         "📚"
       ]
     ],
@@ -26374,25 +26375,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sit in front significa:",
         [
-          "(Walk to school)",
-          "(Come from home)",
-          "(Sit in front)",
-          "(Play with friends)"
+          "Ir a pé para a escola",
+          "Vir de casa",
+          "Sentar na frente",
+          "Brincar com os amigos"
         ],
         2
       ],
       [
         "Walk to school significa:",
         [
-          "(Sit in front)",
-          "(Come from home)",
-          "(Play with friends)",
-          "(Walk to school)"
+          "Sentar na frente",
+          "Vir de casa",
+          "Brincar com os amigos",
+          "Ir a pé para a escola"
         ],
         3
       ],
       [
-        "Como dizemos \"(Walk to school)\" em inglês?",
+        "Como dizemos \"Ir a pé para a escola\" em inglês?",
         [
           "Play with friends",
           "Come from home",
@@ -26403,7 +26404,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(Sit in front)",
+      "ptLabel": "Sentar na frente",
       "words": [
         "in",
         "Sit",
@@ -26436,17 +26437,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "What",
-        "(What)",
+        "O quê",
         "📚"
       ],
       [
         "Where",
-        "(Where)",
+        "Onde",
         "📚"
       ],
       [
         "When",
-        "(When)",
+        "Quando",
         "📚"
       ]
     ],
@@ -26454,9 +26455,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Who significa:",
         [
-          "(What)",
-          "(Where)",
-          "(When)",
+          "O quê",
+          "Onde",
+          "Quando",
           "Quem"
         ],
         3
@@ -26464,15 +26465,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "What significa:",
         [
-          "(When)",
-          "(Where)",
-          "(What)",
+          "Quando",
+          "Onde",
+          "O quê",
           "Quem"
         ],
         2
       ],
       [
-        "Como dizemos \"(What)\" em inglês?",
+        "Como dizemos \"O quê\" em inglês?",
         [
           "Who",
           "What",
@@ -26502,22 +26503,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Why",
-        "(Why)",
+        "Por quê",
         "📚"
       ],
       [
         "How",
-        "(How)",
+        "Como",
         "📚"
       ],
       [
         "Which",
-        "(Which)",
+        "Qual",
         "📚"
       ],
       [
         "Whose",
-        "(Whose)",
+        "De quem",
         "📚"
       ]
     ],
@@ -26525,25 +26526,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Why significa:",
         [
-          "(Whose)",
-          "(Which)",
-          "(Why)",
-          "(How)"
+          "De quem",
+          "Qual",
+          "Por quê",
+          "Como"
         ],
         2
       ],
       [
         "How significa:",
         [
-          "(Whose)",
-          "(How)",
-          "(Why)",
-          "(Which)"
+          "De quem",
+          "Como",
+          "Por quê",
+          "Qual"
         ],
         1
       ],
       [
-        "Como dizemos \"(How)\" em inglês?",
+        "Como dizemos \"Como\" em inglês?",
         [
           "Which",
           "How",
@@ -26561,34 +26562,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 373,
     "slug": "questions-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: How many, How much, What is this, Who are you",
+    "description": "Prática 2: How many, How much is it?, What is this, Who are you?",
     "icon": "📚",
-    "objective": "Hoje você vai aprender How many, How much, What is this e mais algumas palavras.",
+    "objective": "Hoje você vai aprender How many, How much is it?, What is this e mais algumas palavras.",
     "learn": [
       "How many",
-      "How much",
+      "How much is it?",
       "What is this",
-      "Who are you"
+      "Who are you?"
     ],
     "words": [
       [
         "How many",
-        "(How many)",
+        "Quantos",
         "📚"
       ],
       [
-        "How much",
-        "(How much)",
+        "How much is it?",
+        "Quanto custa?",
         "📚"
       ],
       [
         "What is this",
-        "(What is this)",
+        "O que é isto?",
         "📚"
       ],
       [
-        "Who are you",
-        "(Who are you)",
+        "Who are you?",
+        "Quem é você?",
         "📚"
       ]
     ],
@@ -26596,36 +26597,36 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "How many significa:",
         [
-          "(Who are you)",
-          "(How many)",
-          "(How much)",
-          "(What is this)"
+          "Quem é você?",
+          "Quantos",
+          "Quanto custa?",
+          "O que é isto?"
         ],
         1
       ],
       [
-        "How much significa:",
+        "How much is it? significa:",
         [
-          "(What is this)",
-          "(How much)",
-          "(How many)",
-          "(Who are you)"
+          "O que é isto?",
+          "Quanto custa?",
+          "Quantos",
+          "Quem é você?"
         ],
         1
       ],
       [
-        "Como dizemos \"(How much)\" em inglês?",
+        "Como dizemos \"Quanto custa?\" em inglês?",
         [
           "How many",
           "What is this",
-          "Who are you",
-          "How much"
+          "Who are you?",
+          "How much is it?"
         ],
         3
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(What is this)",
+      "ptLabel": "O que é isto?",
       "words": [
         "is",
         "What",
@@ -26641,65 +26642,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 374,
     "slug": "questions-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Where are you, When is it, Why not, How old",
+    "description": "Desafio: Where are you?, When is it?, Why not?, How old are you?",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Where are you, When is it, Why not e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Where are you?, When is it?, Why not? e mais algumas palavras.",
     "learn": [
-      "Where are you",
-      "When is it",
-      "Why not",
-      "How old"
+      "Where are you?",
+      "When is it?",
+      "Why not?",
+      "How old are you?"
     ],
     "words": [
       [
-        "Where are you",
-        "(Where are you)",
+        "Where are you?",
+        "Onde você está?",
         "📚"
       ],
       [
-        "When is it",
-        "(When is it)",
+        "When is it?",
+        "Quando é?",
         "📚"
       ],
       [
-        "Why not",
-        "(Why not)",
+        "Why not?",
+        "Por que não?",
         "📚"
       ],
       [
-        "How old",
-        "(How old)",
+        "How old are you?",
+        "Quantos anos você tem?",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Where are you significa:",
+        "Where are you? significa:",
         [
-          "(Why not)",
-          "(Where are you)",
-          "(When is it)",
-          "(How old)"
+          "Por que não?",
+          "Onde você está?",
+          "Quando é?",
+          "Quantos anos você tem?"
         ],
         1
       ],
       [
-        "When is it significa:",
+        "When is it? significa:",
         [
-          "(Where are you)",
-          "(How old)",
-          "(Why not)",
-          "(When is it)"
+          "Onde você está?",
+          "Quantos anos você tem?",
+          "Por que não?",
+          "Quando é?"
         ],
         3
       ],
       [
-        "Como dizemos \"(When is it)\" em inglês?",
+        "Como dizemos \"Quando é?\" em inglês?",
         [
-          "How old",
-          "When is it",
-          "Why not",
-          "Where are you"
+          "How old are you?",
+          "When is it?",
+          "Why not?",
+          "Where are you?"
         ],
         1
       ]
@@ -26712,71 +26713,71 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 375,
     "slug": "questions-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Which one, Whose bag, Question mark, Ask politely",
+    "description": "Falar: Which one?, Whose bag is this?, Question mark, Ask politely",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Which one, Whose bag, Question mark e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Which one?, Whose bag is this?, Question mark e mais algumas palavras.",
     "learn": [
-      "Which one",
-      "Whose bag",
+      "Which one?",
+      "Whose bag is this?",
       "Question mark",
       "Ask politely"
     ],
     "words": [
       [
-        "Which one",
-        "(Which one)",
+        "Which one?",
+        "Qual deles?",
         "📚"
       ],
       [
-        "Whose bag",
-        "(Whose bag)",
+        "Whose bag is this?",
+        "De quem é esta mochila?",
         "📚"
       ],
       [
         "Question mark",
-        "(Question mark)",
+        "Ponto de interrogação",
         "📚"
       ],
       [
         "Ask politely",
-        "(Ask politely)",
+        "Perguntar com educação",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Which one significa:",
+        "Which one? significa:",
         [
-          "(Whose bag)",
-          "(Ask politely)",
-          "(Question mark)",
-          "(Which one)"
+          "De quem é esta mochila?",
+          "Perguntar com educação",
+          "Ponto de interrogação",
+          "Qual deles?"
         ],
         3
       ],
       [
-        "Whose bag significa:",
+        "Whose bag is this? significa:",
         [
-          "(Question mark)",
-          "(Whose bag)",
-          "(Ask politely)",
-          "(Which one)"
+          "Ponto de interrogação",
+          "De quem é esta mochila?",
+          "Perguntar com educação",
+          "Qual deles?"
         ],
         1
       ],
       [
-        "Como dizemos \"(Whose bag)\" em inglês?",
+        "Como dizemos \"De quem é esta mochila?\" em inglês?",
         [
           "Ask politely",
-          "Whose bag",
-          "Which one",
+          "Whose bag is this?",
+          "Which one?",
           "Question mark"
         ],
         1
       ]
     ],
     "speak": {
-      "phrase": "Which one",
+      "phrase": "Which one?",
       "tip": "Repita devagar três vezes em voz alta!"
     }
   },
@@ -26799,22 +26800,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Answer",
-        "(Answer)",
+        "Responder",
         "📚"
       ],
       [
         "Listen first",
-        "(Listen first)",
+        "Ouvir primeiro",
         "📚"
       ],
       [
         "Think",
-        "(Think)",
+        "Pensar",
         "📚"
       ],
       [
         "Curious",
-        "(Curious)",
+        "Curioso(a)",
         "📚"
       ]
     ],
@@ -26822,25 +26823,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Answer significa:",
         [
-          "(Think)",
-          "(Answer)",
-          "(Curious)",
-          "(Listen first)"
+          "Pensar",
+          "Responder",
+          "Curioso(a)",
+          "Ouvir primeiro"
         ],
         1
       ],
       [
         "Listen first significa:",
         [
-          "(Answer)",
-          "(Curious)",
-          "(Listen first)",
-          "(Think)"
+          "Responder",
+          "Curioso(a)",
+          "Ouvir primeiro",
+          "Pensar"
         ],
         2
       ],
       [
-        "Como dizemos \"(Listen first)\" em inglês?",
+        "Como dizemos \"Ouvir primeiro\" em inglês?",
         [
           "Think",
           "Listen first",
@@ -26858,34 +26859,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 377,
     "slug": "questions-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Find out, Tell me, Do you know, Can you",
+    "description": "Memória: Find out, Tell me, Do you know, Can you help me?",
     "icon": "📚",
     "objective": "Hoje você vai aprender Find out, Tell me, Do you know e mais algumas palavras.",
     "learn": [
       "Find out",
       "Tell me",
       "Do you know",
-      "Can you"
+      "Can you help me?"
     ],
     "words": [
       [
         "Find out",
-        "(Find out)",
+        "Descobrir",
         "📚"
       ],
       [
         "Tell me",
-        "(Tell me)",
+        "Me conta",
         "📚"
       ],
       [
         "Do you know",
-        "(Do you know)",
+        "Você sabe?",
         "📚"
       ],
       [
-        "Can you",
-        "(Can you)",
+        "Can you help me?",
+        "Você pode me ajudar?",
         "📚"
       ]
     ],
@@ -26893,28 +26894,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Find out significa:",
         [
-          "(Tell me)",
-          "(Can you)",
-          "(Find out)",
-          "(Do you know)"
+          "Me conta",
+          "Você pode me ajudar?",
+          "Descobrir",
+          "Você sabe?"
         ],
         2
       ],
       [
         "Tell me significa:",
         [
-          "(Do you know)",
-          "(Tell me)",
-          "(Find out)",
-          "(Can you)"
+          "Você sabe?",
+          "Me conta",
+          "Descobrir",
+          "Você pode me ajudar?"
         ],
         1
       ],
       [
-        "Como dizemos \"(Tell me)\" em inglês?",
+        "Como dizemos \"Me conta\" em inglês?",
         [
           "Find out",
-          "Can you",
+          "Can you help me?",
           "Do you know",
           "Tell me"
         ],
@@ -26922,7 +26923,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(Do you know)",
+      "ptLabel": "Você sabe?",
       "words": [
         "know",
         "Do",
@@ -26938,65 +26939,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 378,
     "slug": "questions-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Will you, What time, What color, Where go",
+    "description": "Frases: Will you play with me?, What time is it?, What color is it?, Where are you going?",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Will you, What time, What color e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Will you play with me?, What time is it?, What color is it? e mais algumas palavras.",
     "learn": [
-      "Will you",
-      "What time",
-      "What color",
-      "Where go"
+      "Will you play with me?",
+      "What time is it?",
+      "What color is it?",
+      "Where are you going?"
     ],
     "words": [
       [
-        "Will you",
-        "(Will you)",
+        "Will you play with me?",
+        "Você vai brincar comigo?",
         "📚"
       ],
       [
-        "What time",
-        "(What time)",
+        "What time is it?",
+        "Que horas são?",
         "📚"
       ],
       [
-        "What color",
-        "(What color)",
+        "What color is it?",
+        "Que cor é?",
         "📚"
       ],
       [
-        "Where go",
-        "(Where go)",
+        "Where are you going?",
+        "Aonde você vai?",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Will you significa:",
+        "Will you play with me? significa:",
         [
-          "(What color)",
-          "(Will you)",
-          "(What time)",
-          "(Where go)"
+          "Que cor é?",
+          "Você vai brincar comigo?",
+          "Que horas são?",
+          "Aonde você vai?"
         ],
         1
       ],
       [
-        "What time significa:",
+        "What time is it? significa:",
         [
-          "(What color)",
-          "(Where go)",
-          "(Will you)",
-          "(What time)"
+          "Que cor é?",
+          "Aonde você vai?",
+          "Você vai brincar comigo?",
+          "Que horas são?"
         ],
         3
       ],
       [
-        "Como dizemos \"(What time)\" em inglês?",
+        "Como dizemos \"Que horas são?\" em inglês?",
         [
-          "Where go",
-          "What time",
-          "What color",
-          "Will you"
+          "Where are you going?",
+          "What time is it?",
+          "What color is it?",
+          "Will you play with me?"
         ],
         1
       ]
@@ -27009,65 +27010,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 379,
     "slug": "questions-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Who with, When start, Why because, How help",
+    "description": "Quiz mix: Who are you with?, When does it start?, Why? Because..., How can I help?",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Who with, When start, Why because e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Who are you with?, When does it start?, Why? Because... e mais algumas palavras.",
     "learn": [
-      "Who with",
-      "When start",
-      "Why because",
-      "How help"
+      "Who are you with?",
+      "When does it start?",
+      "Why? Because...",
+      "How can I help?"
     ],
     "words": [
       [
-        "Who with",
-        "(Who with)",
+        "Who are you with?",
+        "Com quem você está?",
         "📚"
       ],
       [
-        "When start",
-        "(When start)",
+        "When does it start?",
+        "Quando começa?",
         "📚"
       ],
       [
-        "Why because",
-        "(Why because)",
+        "Why? Because...",
+        "Por quê? Porque...",
         "📚"
       ],
       [
-        "How help",
-        "(How help)",
+        "How can I help?",
+        "Como posso ajudar?",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Who with significa:",
+        "Who are you with? significa:",
         [
-          "(Why because)",
-          "(How help)",
-          "(When start)",
-          "(Who with)"
+          "Por quê? Porque...",
+          "Como posso ajudar?",
+          "Quando começa?",
+          "Com quem você está?"
         ],
         3
       ],
       [
-        "When start significa:",
+        "When does it start? significa:",
         [
-          "(How help)",
-          "(Why because)",
-          "(When start)",
-          "(Who with)"
+          "Como posso ajudar?",
+          "Por quê? Porque...",
+          "Quando começa?",
+          "Com quem você está?"
         ],
         2
       ],
       [
-        "Como dizemos \"(When start)\" em inglês?",
+        "Como dizemos \"Quando começa?\" em inglês?",
         [
-          "Who with",
-          "How help",
-          "When start",
-          "Why because"
+          "Who are you with?",
+          "How can I help?",
+          "When does it start?",
+          "Why? Because..."
         ],
         2
       ]
@@ -27080,34 +27081,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 380,
     "slug": "questions-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Good question, More questions, Learn ask, Speak up",
+    "description": "Revisão final: Good question, More questions, Learn to ask, Speak up",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Good question, More questions, Learn ask e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Good question, More questions, Learn to ask e mais algumas palavras.",
     "learn": [
       "Good question",
       "More questions",
-      "Learn ask",
+      "Learn to ask",
       "Speak up"
     ],
     "words": [
       [
         "Good question",
-        "(Good question)",
+        "Boa pergunta",
         "📚"
       ],
       [
         "More questions",
-        "(More questions)",
+        "Mais perguntas",
         "📚"
       ],
       [
-        "Learn ask",
-        "(Learn ask)",
+        "Learn to ask",
+        "Aprender a perguntar",
         "📚"
       ],
       [
         "Speak up",
-        "(Speak up)",
+        "Falar mais alto",
         "📚"
       ]
     ],
@@ -27115,27 +27116,27 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Good question significa:",
         [
-          "(Speak up)",
-          "(Learn ask)",
-          "(Good question)",
-          "(More questions)"
+          "Falar mais alto",
+          "Aprender a perguntar",
+          "Boa pergunta",
+          "Mais perguntas"
         ],
         2
       ],
       [
         "More questions significa:",
         [
-          "(Good question)",
-          "(More questions)",
-          "(Speak up)",
-          "(Learn ask)"
+          "Boa pergunta",
+          "Mais perguntas",
+          "Falar mais alto",
+          "Aprender a perguntar"
         ],
         1
       ],
       [
-        "Como dizemos \"(More questions)\" em inglês?",
+        "Como dizemos \"Mais perguntas\" em inglês?",
         [
-          "Learn ask",
+          "Learn to ask",
           "More questions",
           "Good question",
           "Speak up"
@@ -27168,17 +27169,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Small",
-        "(Small)",
+        "Pequeno",
         "📚"
       ],
       [
         "Fast",
-        "(Fast)",
+        "Rápido",
         "📚"
       ],
       [
         "Slow",
-        "(Slow)",
+        "Devagar",
         "📚"
       ]
     ],
@@ -27186,25 +27187,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Big significa:",
         [
-          "(Small)",
+          "Pequeno",
           "Grande",
-          "(Slow)",
-          "(Fast)"
+          "Devagar",
+          "Rápido"
         ],
         1
       ],
       [
         "Small significa:",
         [
-          "(Fast)",
-          "(Small)",
+          "Rápido",
+          "Pequeno",
           "Grande",
-          "(Slow)"
+          "Devagar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Small)\" em inglês?",
+        "Como dizemos \"Pequeno\" em inglês?",
         [
           "Fast",
           "Slow",
@@ -27234,22 +27235,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Pretty",
-        "(Pretty)",
+        "Bonito",
         "📚"
       ],
       [
         "Ugly",
-        "(Ugly)",
+        "Feio",
         "📚"
       ],
       [
         "Kind",
-        "(Kind)",
+        "Gentil",
         "📚"
       ],
       [
         "Mean",
-        "(Mean)",
+        "Malvado",
         "📚"
       ]
     ],
@@ -27257,25 +27258,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Pretty significa:",
         [
-          "(Kind)",
-          "(Pretty)",
-          "(Ugly)",
-          "(Mean)"
+          "Gentil",
+          "Bonito",
+          "Feio",
+          "Malvado"
         ],
         1
       ],
       [
         "Ugly significa:",
         [
-          "(Pretty)",
-          "(Kind)",
-          "(Mean)",
-          "(Ugly)"
+          "Bonito",
+          "Gentil",
+          "Malvado",
+          "Feio"
         ],
         3
       ],
       [
-        "Como dizemos \"(Ugly)\" em inglês?",
+        "Como dizemos \"Feio\" em inglês?",
         [
           "Mean",
           "Ugly",
@@ -27305,22 +27306,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Smart",
-        "(Smart)",
+        "Inteligente",
         "📚"
       ],
       [
         "Funny",
-        "(Funny)",
+        "Engraçado",
         "📚"
       ],
       [
         "Quiet",
-        "(Quiet)",
+        "Quieto",
         "📚"
       ],
       [
         "Loud",
-        "(Loud)",
+        "Alto (som)",
         "📚"
       ]
     ],
@@ -27328,25 +27329,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Smart significa:",
         [
-          "(Funny)",
-          "(Quiet)",
-          "(Loud)",
-          "(Smart)"
+          "Engraçado",
+          "Quieto",
+          "Alto (som)",
+          "Inteligente"
         ],
         3
       ],
       [
         "Funny significa:",
         [
-          "(Loud)",
-          "(Funny)",
-          "(Quiet)",
-          "(Smart)"
+          "Alto (som)",
+          "Engraçado",
+          "Quieto",
+          "Inteligente"
         ],
         1
       ],
       [
-        "Como dizemos \"(Funny)\" em inglês?",
+        "Como dizemos \"Engraçado\" em inglês?",
         [
           "Loud",
           "Funny",
@@ -27376,22 +27377,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Brave",
-        "(Brave)",
+        "Corajoso(a)",
         "📚"
       ],
       [
         "Shy",
-        "(Shy)",
+        "Tímido(a)",
         "📚"
       ],
       [
         "Strong",
-        "(Strong)",
+        "Forte",
         "📚"
       ],
       [
         "Weak",
-        "(Weak)",
+        "Fraco",
         "📚"
       ]
     ],
@@ -27399,25 +27400,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Brave significa:",
         [
-          "(Weak)",
-          "(Brave)",
-          "(Strong)",
-          "(Shy)"
+          "Fraco",
+          "Corajoso(a)",
+          "Forte",
+          "Tímido(a)"
         ],
         1
       ],
       [
         "Shy significa:",
         [
-          "(Weak)",
-          "(Shy)",
-          "(Brave)",
-          "(Strong)"
+          "Fraco",
+          "Tímido(a)",
+          "Corajoso(a)",
+          "Forte"
         ],
         1
       ],
       [
-        "Como dizemos \"(Shy)\" em inglês?",
+        "Como dizemos \"Tímido(a)\" em inglês?",
         [
           "Brave",
           "Strong",
@@ -27447,22 +27448,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "New",
-        "(New)",
+        "Novo",
         "📚"
       ],
       [
         "Old",
-        "(Old)",
+        "Velho",
         "📚"
       ],
       [
         "Clean",
-        "(Clean)",
+        "Limpo",
         "📚"
       ],
       [
         "Dirty",
-        "(Dirty)",
+        "Sujo",
         "📚"
       ]
     ],
@@ -27470,25 +27471,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "New significa:",
         [
-          "(Dirty)",
-          "(New)",
-          "(Old)",
-          "(Clean)"
+          "Sujo",
+          "Novo",
+          "Velho",
+          "Limpo"
         ],
         1
       ],
       [
         "Old significa:",
         [
-          "(Clean)",
-          "(Old)",
-          "(New)",
-          "(Dirty)"
+          "Limpo",
+          "Velho",
+          "Novo",
+          "Sujo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Old)\" em inglês?",
+        "Como dizemos \"Velho\" em inglês?",
         [
           "New",
           "Dirty",
@@ -27518,22 +27519,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Soft",
-        "(Soft)",
+        "Baixinho (som)",
         "📚"
       ],
       [
         "Hard",
-        "(Hard)",
+        "Duro",
         "📚"
       ],
       [
         "Sweet",
-        "(Sweet)",
+        "Doce",
         "📚"
       ],
       [
         "Sour",
-        "(Sour)",
+        "Azedo",
         "📚"
       ]
     ],
@@ -27541,25 +27542,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Soft significa:",
         [
-          "(Sweet)",
-          "(Soft)",
-          "(Hard)",
-          "(Sour)"
+          "Doce",
+          "Baixinho (som)",
+          "Duro",
+          "Azedo"
         ],
         1
       ],
       [
         "Hard significa:",
         [
-          "(Soft)",
-          "(Sour)",
-          "(Sweet)",
-          "(Hard)"
+          "Baixinho (som)",
+          "Azedo",
+          "Doce",
+          "Duro"
         ],
         3
       ],
       [
-        "Como dizemos \"(Hard)\" em inglês?",
+        "Como dizemos \"Duro\" em inglês?",
         [
           "Sweet",
           "Hard",
@@ -27589,22 +27590,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Hot",
-        "(Hot)",
+        "Quente",
         "📚"
       ],
       [
         "Cold",
-        "(Cold)",
+        "Resfriado",
         "📚"
       ],
       [
         "Good",
-        "(Good)",
+        "Bom",
         "📚"
       ],
       [
         "Bad",
-        "(Bad)",
+        "Ruim",
         "📚"
       ]
     ],
@@ -27612,25 +27613,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Hot significa:",
         [
-          "(Cold)",
-          "(Bad)",
-          "(Good)",
-          "(Hot)"
+          "Resfriado",
+          "Ruim",
+          "Bom",
+          "Quente"
         ],
         3
       ],
       [
         "Cold significa:",
         [
-          "(Bad)",
-          "(Cold)",
-          "(Good)",
-          "(Hot)"
+          "Ruim",
+          "Resfriado",
+          "Bom",
+          "Quente"
         ],
         1
       ],
       [
-        "Como dizemos \"(Cold)\" em inglês?",
+        "Como dizemos \"Resfriado\" em inglês?",
         [
           "Hot",
           "Bad",
@@ -27648,34 +27649,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 388,
     "slug": "adjectives-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Happy, Sad, Describe, Adjective word",
+    "description": "Frases: Happy, Sad, Describe, Adjective",
     "icon": "📚",
     "objective": "Hoje você vai aprender Happy, Sad, Describe e mais algumas palavras.",
     "learn": [
       "Happy",
       "Sad",
       "Describe",
-      "Adjective word"
+      "Adjective"
     ],
     "words": [
       [
         "Happy",
-        "(Happy)",
+        "Feliz",
         "📚"
       ],
       [
         "Sad",
-        "(Sad)",
+        "Triste",
         "📚"
       ],
       [
         "Describe",
-        "(Describe)",
+        "Descrever",
         "📚"
       ],
       [
-        "Adjective word",
-        "(Adjective word)",
+        "Adjective",
+        "Adjetivo",
         "📚"
       ]
     ],
@@ -27683,30 +27684,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Happy significa:",
         [
-          "(Adjective word)",
-          "(Happy)",
-          "(Describe)",
-          "(Sad)"
+          "Adjetivo",
+          "Feliz",
+          "Descrever",
+          "Triste"
         ],
         1
       ],
       [
         "Sad significa:",
         [
-          "(Happy)",
-          "(Adjective word)",
-          "(Sad)",
-          "(Describe)"
+          "Feliz",
+          "Adjetivo",
+          "Triste",
+          "Descrever"
         ],
         2
       ],
       [
-        "Como dizemos \"(Sad)\" em inglês?",
+        "Como dizemos \"Triste\" em inglês?",
         [
           "Happy",
           "Sad",
           "Describe",
-          "Adjective word"
+          "Adjective"
         ],
         1
       ]
@@ -27731,22 +27732,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Colorful",
-        "(Colorful)",
+        "Colorido",
         "📚"
       ],
       [
         "Beautiful",
-        "(Beautiful)",
+        "Lindo",
         "📚"
       ],
       [
         "Special",
-        "(Special)",
+        "Especial",
         "📚"
       ],
       [
         "Amazing",
-        "(Amazing)",
+        "Incrível",
         "📚"
       ]
     ],
@@ -27754,25 +27755,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Colorful significa:",
         [
-          "(Beautiful)",
-          "(Amazing)",
-          "(Colorful)",
-          "(Special)"
+          "Lindo",
+          "Incrível",
+          "Colorido",
+          "Especial"
         ],
         2
       ],
       [
         "Beautiful significa:",
         [
-          "(Special)",
-          "(Beautiful)",
-          "(Colorful)",
-          "(Amazing)"
+          "Especial",
+          "Lindo",
+          "Colorido",
+          "Incrível"
         ],
         1
       ],
       [
-        "Como dizemos \"(Beautiful)\" em inglês?",
+        "Como dizemos \"Lindo\" em inglês?",
         [
           "Special",
           "Amazing",
@@ -27802,22 +27803,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Wonderful",
-        "(Wonderful)",
+        "Maravilhoso",
         "📚"
       ],
       [
         "Terrible",
-        "(Terrible)",
+        "Terrível",
         "📚"
       ],
       [
         "Perfect",
-        "(Perfect)",
+        "Perfeito",
         "📚"
       ],
       [
         "Awesome",
-        "(Awesome)",
+        "Muito legal",
         "📚"
       ]
     ],
@@ -27825,25 +27826,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wonderful significa:",
         [
-          "(Perfect)",
-          "(Wonderful)",
-          "(Terrible)",
-          "(Awesome)"
+          "Perfeito",
+          "Maravilhoso",
+          "Terrível",
+          "Muito legal"
         ],
         1
       ],
       [
         "Terrible significa:",
         [
-          "(Perfect)",
-          "(Awesome)",
-          "(Wonderful)",
-          "(Terrible)"
+          "Perfeito",
+          "Muito legal",
+          "Maravilhoso",
+          "Terrível"
         ],
         3
       ],
       [
-        "Como dizemos \"(Terrible)\" em inglês?",
+        "Como dizemos \"Terrível\" em inglês?",
         [
           "Awesome",
           "Terrible",
@@ -27861,14 +27862,14 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 391,
     "slug": "routine-l1",
     "title": "Lição 1: Fundamentos",
-    "description": "Fundamentos: Wake up, Brush teeth, Eat breakfast, Go school",
+    "description": "Fundamentos: Wake up, Brush your teeth, Eat breakfast, Go to school",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Wake up, Brush teeth, Eat breakfast e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Wake up, Brush your teeth, Eat breakfast e mais algumas palavras.",
     "learn": [
       "Wake up",
-      "Brush teeth",
+      "Brush your teeth",
       "Eat breakfast",
-      "Go school"
+      "Go to school"
     ],
     "words": [
       [
@@ -27877,18 +27878,18 @@ export const LESSON_SPECS: LessonSpec[] = [
         "📚"
       ],
       [
-        "Brush teeth",
-        "(Brush teeth)",
+        "Brush your teeth",
+        "Escovar os dentes",
         "📚"
       ],
       [
         "Eat breakfast",
-        "(Eat breakfast)",
+        "Tomar café da manhã",
         "📚"
       ],
       [
-        "Go school",
-        "(Go school)",
+        "Go to school",
+        "Ir para a escola",
         "📚"
       ]
     ],
@@ -27896,29 +27897,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Wake up significa:",
         [
-          "(Eat breakfast)",
-          "(Go school)",
-          "(Brush teeth)",
+          "Tomar café da manhã",
+          "Ir para a escola",
+          "Escovar os dentes",
           "Acordar"
         ],
         3
       ],
       [
-        "Brush teeth significa:",
+        "Brush your teeth significa:",
         [
-          "(Go school)",
-          "(Brush teeth)",
-          "(Eat breakfast)",
+          "Ir para a escola",
+          "Escovar os dentes",
+          "Tomar café da manhã",
           "Acordar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Brush teeth)\" em inglês?",
+        "Como dizemos \"Escovar os dentes\" em inglês?",
         [
           "Wake up",
-          "Brush teeth",
-          "Go school",
+          "Brush your teeth",
+          "Go to school",
           "Eat breakfast"
         ],
         1
@@ -27944,22 +27945,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Study",
-        "(Study)",
+        "Estudar",
         "📚"
       ],
       [
         "Play",
-        "(Play)",
+        "Brincar",
         "📚"
       ],
       [
         "Eat lunch",
-        "(Eat lunch)",
+        "Almoçar",
         "📚"
       ],
       [
         "Homework",
-        "(Homework)",
+        "Lição de casa",
         "📚"
       ]
     ],
@@ -27967,25 +27968,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Study significa:",
         [
-          "(Homework)",
-          "(Study)",
-          "(Eat lunch)",
-          "(Play)"
+          "Lição de casa",
+          "Estudar",
+          "Almoçar",
+          "Brincar"
         ],
         1
       ],
       [
         "Play significa:",
         [
-          "(Homework)",
-          "(Play)",
-          "(Study)",
-          "(Eat lunch)"
+          "Lição de casa",
+          "Brincar",
+          "Estudar",
+          "Almoçar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Play)\" em inglês?",
+        "Como dizemos \"Brincar\" em inglês?",
         [
           "Study",
           "Eat lunch",
@@ -28003,34 +28004,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 393,
     "slug": "routine-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: Play outside, Eat dinner, Bath, Read book",
+    "description": "Prática 2: Play outside, Eat dinner, Bath, Read a book",
     "icon": "📚",
     "objective": "Hoje você vai aprender Play outside, Eat dinner, Bath e mais algumas palavras.",
     "learn": [
       "Play outside",
       "Eat dinner",
       "Bath",
-      "Read book"
+      "Read a book"
     ],
     "words": [
       [
         "Play outside",
-        "(Play outside)",
+        "Brincar lá fora",
         "📚"
       ],
       [
         "Eat dinner",
-        "(Eat dinner)",
+        "Jantar",
         "📚"
       ],
       [
         "Bath",
-        "(Bath)",
+        "Banho de banheira",
         "📚"
       ],
       [
-        "Read book",
-        "(Read book)",
+        "Read a book",
+        "Ler um livro",
         "📚"
       ]
     ],
@@ -28038,28 +28039,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Play outside significa:",
         [
-          "(Read book)",
-          "(Play outside)",
-          "(Eat dinner)",
-          "(Bath)"
+          "Ler um livro",
+          "Brincar lá fora",
+          "Jantar",
+          "Banho de banheira"
         ],
         1
       ],
       [
         "Eat dinner significa:",
         [
-          "(Play outside)",
-          "(Bath)",
-          "(Eat dinner)",
-          "(Read book)"
+          "Brincar lá fora",
+          "Banho de banheira",
+          "Jantar",
+          "Ler um livro"
         ],
         2
       ],
       [
-        "Como dizemos \"(Eat dinner)\" em inglês?",
+        "Como dizemos \"Jantar\" em inglês?",
         [
           "Play outside",
-          "Read book",
+          "Read a book",
           "Bath",
           "Eat dinner"
         ],
@@ -28086,22 +28087,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Sleep",
-        "(Sleep)",
+        "Dormir",
         "📚"
       ],
       [
         "Alarm clock",
-        "(Alarm clock)",
+        "Despertador",
         "📚"
       ],
       [
         "Morning",
-        "(Morning)",
+        "Manhã",
         "📚"
       ],
       [
         "Afternoon",
-        "(Afternoon)",
+        "Tarde",
         "📚"
       ]
     ],
@@ -28109,25 +28110,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sleep significa:",
         [
-          "(Alarm clock)",
-          "(Morning)",
-          "(Sleep)",
-          "(Afternoon)"
+          "Despertador",
+          "Manhã",
+          "Dormir",
+          "Tarde"
         ],
         2
       ],
       [
         "Alarm clock significa:",
         [
-          "(Sleep)",
-          "(Afternoon)",
-          "(Morning)",
-          "(Alarm clock)"
+          "Dormir",
+          "Tarde",
+          "Manhã",
+          "Despertador"
         ],
         3
       ],
       [
-        "Como dizemos \"(Alarm clock)\" em inglês?",
+        "Como dizemos \"Despertador\" em inglês?",
         [
           "Morning",
           "Alarm clock",
@@ -28157,22 +28158,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Evening",
-        "(Evening)",
+        "Final da tarde",
         "📚"
       ],
       [
         "Night",
-        "(Night)",
+        "Noite",
         "📚"
       ],
       [
         "Daily routine",
-        "(Daily routine)",
+        "Rotina diária",
         "📚"
       ],
       [
         "Schedule",
-        "(Schedule)",
+        "Horário",
         "📚"
       ]
     ],
@@ -28180,25 +28181,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Evening significa:",
         [
-          "(Night)",
-          "(Schedule)",
-          "(Daily routine)",
-          "(Evening)"
+          "Noite",
+          "Horário",
+          "Rotina diária",
+          "Final da tarde"
         ],
         3
       ],
       [
         "Night significa:",
         [
-          "(Daily routine)",
-          "(Night)",
-          "(Schedule)",
-          "(Evening)"
+          "Rotina diária",
+          "Noite",
+          "Horário",
+          "Final da tarde"
         ],
         1
       ],
       [
-        "Como dizemos \"(Night)\" em inglês?",
+        "Como dizemos \"Noite\" em inglês?",
         [
           "Schedule",
           "Night",
@@ -28220,62 +28221,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 396,
     "slug": "routine-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: First then, After that, Always, Usually",
+    "description": "Ouvir: First, then, After that, Always, Usually",
     "icon": "📚",
-    "objective": "Hoje você vai aprender First then, After that, Always e mais algumas palavras.",
+    "objective": "Hoje você vai aprender First, then, After that, Always e mais algumas palavras.",
     "learn": [
-      "First then",
+      "First, then",
       "After that",
       "Always",
       "Usually"
     ],
     "words": [
       [
-        "First then",
-        "(First then)",
+        "First, then",
+        "Primeiro, depois",
         "📚"
       ],
       [
         "After that",
-        "(After that)",
+        "Depois disso",
         "📚"
       ],
       [
         "Always",
-        "(Always)",
+        "Sempre",
         "📚"
       ],
       [
         "Usually",
-        "(Usually)",
+        "Geralmente",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "First then significa:",
+        "First, then significa:",
         [
-          "(Always)",
-          "(First then)",
-          "(Usually)",
-          "(After that)"
+          "Sempre",
+          "Primeiro, depois",
+          "Geralmente",
+          "Depois disso"
         ],
         1
       ],
       [
         "After that significa:",
         [
-          "(First then)",
-          "(Usually)",
-          "(After that)",
-          "(Always)"
+          "Primeiro, depois",
+          "Geralmente",
+          "Depois disso",
+          "Sempre"
         ],
         2
       ],
       [
-        "Como dizemos \"(After that)\" em inglês?",
+        "Como dizemos \"Depois disso\" em inglês?",
         [
-          "First then",
+          "First, then",
           "Always",
           "After that",
           "Usually"
@@ -28291,34 +28292,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 397,
     "slug": "routine-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Sometimes, Get dressed, Pack bag, Recess",
+    "description": "Memória: Sometimes, Get dressed, Pack your bag, Recess",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Sometimes, Get dressed, Pack bag e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Sometimes, Get dressed, Pack your bag e mais algumas palavras.",
     "learn": [
       "Sometimes",
       "Get dressed",
-      "Pack bag",
+      "Pack your bag",
       "Recess"
     ],
     "words": [
       [
         "Sometimes",
-        "(Sometimes)",
+        "Às vezes",
         "📚"
       ],
       [
         "Get dressed",
-        "(Get dressed)",
+        "Vestir-se",
         "📚"
       ],
       [
-        "Pack bag",
-        "(Pack bag)",
+        "Pack your bag",
+        "Arrumar a mochila",
         "📚"
       ],
       [
         "Recess",
-        "(Recess)",
+        "Recreio",
         "📚"
       ]
     ],
@@ -28326,28 +28327,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Sometimes significa:",
         [
-          "(Get dressed)",
-          "(Recess)",
-          "(Sometimes)",
-          "(Pack bag)"
+          "Vestir-se",
+          "Recreio",
+          "Às vezes",
+          "Arrumar a mochila"
         ],
         2
       ],
       [
         "Get dressed significa:",
         [
-          "(Sometimes)",
-          "(Get dressed)",
-          "(Pack bag)",
-          "(Recess)"
+          "Às vezes",
+          "Vestir-se",
+          "Arrumar a mochila",
+          "Recreio"
         ],
         1
       ],
       [
-        "Como dizemos \"(Get dressed)\" em inglês?",
+        "Como dizemos \"Vestir-se\" em inglês?",
         [
           "Sometimes",
-          "Pack bag",
+          "Pack your bag",
           "Recess",
           "Get dressed"
         ],
@@ -28362,34 +28363,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 398,
     "slug": "routine-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Come home, Help home, Family time, Quiet time",
+    "description": "Frases: Come home, Help at home, Family time, Quiet time",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Come home, Help home, Family time e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Come home, Help at home, Family time e mais algumas palavras.",
     "learn": [
       "Come home",
-      "Help home",
+      "Help at home",
       "Family time",
       "Quiet time"
     ],
     "words": [
       [
         "Come home",
-        "(Come home)",
+        "Voltar para casa",
         "📚"
       ],
       [
-        "Help home",
-        "(Help home)",
+        "Help at home",
+        "Ajudar em casa",
         "📚"
       ],
       [
         "Family time",
-        "(Family time)",
+        "Tempo em família",
         "📚"
       ],
       [
         "Quiet time",
-        "(Quiet time)",
+        "Momento tranquilo",
         "📚"
       ]
     ],
@@ -28397,28 +28398,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Come home significa:",
         [
-          "(Help home)",
-          "(Come home)",
-          "(Family time)",
-          "(Quiet time)"
+          "Ajudar em casa",
+          "Voltar para casa",
+          "Tempo em família",
+          "Momento tranquilo"
         ],
         1
       ],
       [
-        "Help home significa:",
+        "Help at home significa:",
         [
-          "(Family time)",
-          "(Quiet time)",
-          "(Come home)",
-          "(Help home)"
+          "Tempo em família",
+          "Momento tranquilo",
+          "Voltar para casa",
+          "Ajudar em casa"
         ],
         3
       ],
       [
-        "Como dizemos \"(Help home)\" em inglês?",
+        "Como dizemos \"Ajudar em casa\" em inglês?",
         [
           "Family time",
-          "Help home",
+          "Help at home",
           "Quiet time",
           "Come home"
         ],
@@ -28433,34 +28434,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 399,
     "slug": "routine-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Bedtime story, Good night, Rest well, Tomorrow again",
+    "description": "Quiz mix: Bedtime story, Good night, Rest well, Again tomorrow",
     "icon": "📚",
     "objective": "Hoje você vai aprender Bedtime story, Good night, Rest well e mais algumas palavras.",
     "learn": [
       "Bedtime story",
       "Good night",
       "Rest well",
-      "Tomorrow again"
+      "Again tomorrow"
     ],
     "words": [
       [
         "Bedtime story",
-        "(Bedtime story)",
+        "História para dormir",
         "📚"
       ],
       [
         "Good night",
-        "(Good night)",
+        "Boa noite",
         "📚"
       ],
       [
         "Rest well",
-        "(Rest well)",
+        "Descansar bem",
         "📚"
       ],
       [
-        "Tomorrow again",
-        "(Tomorrow again)",
+        "Again tomorrow",
+        "Amanhã de novo",
         "📚"
       ]
     ],
@@ -28468,28 +28469,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bedtime story significa:",
         [
-          "(Rest well)",
-          "(Tomorrow again)",
-          "(Good night)",
-          "(Bedtime story)"
+          "Descansar bem",
+          "Amanhã de novo",
+          "Boa noite",
+          "História para dormir"
         ],
         3
       ],
       [
         "Good night significa:",
         [
-          "(Tomorrow again)",
-          "(Good night)",
-          "(Rest well)",
-          "(Bedtime story)"
+          "Amanhã de novo",
+          "Boa noite",
+          "Descansar bem",
+          "História para dormir"
         ],
         1
       ],
       [
-        "Como dizemos \"(Good night)\" em inglês?",
+        "Como dizemos \"Boa noite\" em inglês?",
         [
           "Bedtime story",
-          "Tomorrow again",
+          "Again tomorrow",
           "Good night",
           "Rest well"
         ],
@@ -28504,34 +28505,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 400,
     "slug": "routine-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Healthy routine, On time, Ready, Start day",
+    "description": "Revisão final: Healthy routine, On time, Ready, Start the day",
     "icon": "📚",
     "objective": "Hoje você vai aprender Healthy routine, On time, Ready e mais algumas palavras.",
     "learn": [
       "Healthy routine",
       "On time",
       "Ready",
-      "Start day"
+      "Start the day"
     ],
     "words": [
       [
         "Healthy routine",
-        "(Healthy routine)",
+        "Rotina saudável",
         "📚"
       ],
       [
         "On time",
-        "(On time)",
+        "Na hora",
         "📚"
       ],
       [
         "Ready",
-        "(Ready)",
+        "Pronto",
         "📚"
       ],
       [
-        "Start day",
-        "(Start day)",
+        "Start the day",
+        "Começar o dia",
         "📚"
       ]
     ],
@@ -28539,30 +28540,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Healthy routine significa:",
         [
-          "(Start day)",
-          "(Healthy routine)",
-          "(Ready)",
-          "(On time)"
+          "Começar o dia",
+          "Rotina saudável",
+          "Pronto",
+          "Na hora"
         ],
         1
       ],
       [
         "On time significa:",
         [
-          "(Healthy routine)",
-          "(On time)",
-          "(Start day)",
-          "(Ready)"
+          "Rotina saudável",
+          "Na hora",
+          "Começar o dia",
+          "Pronto"
         ],
         1
       ],
       [
-        "Como dizemos \"(On time)\" em inglês?",
+        "Como dizemos \"Na hora\" em inglês?",
         [
           "Ready",
           "On time",
           "Healthy routine",
-          "Start day"
+          "Start the day"
         ],
         1
       ]
@@ -28592,17 +28593,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "February",
-        "(February)",
+        "Fevereiro",
         "📚"
       ],
       [
         "March",
-        "(March)",
+        "Março",
         "📚"
       ],
       [
         "April",
-        "(April)",
+        "Abril",
         "📚"
       ]
     ],
@@ -28610,10 +28611,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "January significa:",
         [
-          "(February)",
+          "Fevereiro",
           "Janeiro",
-          "(April)",
-          "(March)"
+          "Abril",
+          "Março"
         ],
         1
       ],
@@ -28621,14 +28622,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "February significa:",
         [
           "Janeiro",
-          "(March)",
-          "(February)",
-          "(April)"
+          "Março",
+          "Fevereiro",
+          "Abril"
         ],
         2
       ],
       [
-        "Como dizemos \"(February)\" em inglês?",
+        "Como dizemos \"Fevereiro\" em inglês?",
         [
           "January",
           "March",
@@ -28658,22 +28659,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "May",
-        "(May)",
+        "Maio",
         "📚"
       ],
       [
         "June",
-        "(June)",
+        "Junho",
         "📚"
       ],
       [
         "July",
-        "(July)",
+        "Julho",
         "📚"
       ],
       [
         "August",
-        "(August)",
+        "Agosto",
         "📚"
       ]
     ],
@@ -28681,25 +28682,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "May significa:",
         [
-          "(June)",
-          "(July)",
-          "(May)",
-          "(August)"
+          "Junho",
+          "Julho",
+          "Maio",
+          "Agosto"
         ],
         2
       ],
       [
         "June significa:",
         [
-          "(May)",
-          "(August)",
-          "(July)",
-          "(June)"
+          "Maio",
+          "Agosto",
+          "Julho",
+          "Junho"
         ],
         3
       ],
       [
-        "Como dizemos \"(June)\" em inglês?",
+        "Como dizemos \"Junho\" em inglês?",
         [
           "August",
           "June",
@@ -28729,22 +28730,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "September",
-        "(September)",
+        "Setembro",
         "📚"
       ],
       [
         "October",
-        "(October)",
+        "Outubro",
         "📚"
       ],
       [
         "November",
-        "(November)",
+        "Novembro",
         "📚"
       ],
       [
         "December",
-        "(December)",
+        "Dezembro",
         "📚"
       ]
     ],
@@ -28752,25 +28753,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "September significa:",
         [
-          "(October)",
-          "(December)",
-          "(November)",
-          "(September)"
+          "Outubro",
+          "Dezembro",
+          "Novembro",
+          "Setembro"
         ],
         3
       ],
       [
         "October significa:",
         [
-          "(November)",
-          "(October)",
-          "(December)",
-          "(September)"
+          "Novembro",
+          "Outubro",
+          "Dezembro",
+          "Setembro"
         ],
         1
       ],
       [
-        "Como dizemos \"(October)\" em inglês?",
+        "Como dizemos \"Outubro\" em inglês?",
         [
           "December",
           "October",
@@ -28800,22 +28801,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Month",
-        "(Month)",
+        "Mês",
         "📚"
       ],
       [
         "Year",
-        "(Year)",
+        "Ano",
         "📚"
       ],
       [
         "Date",
-        "(Date)",
+        "Data",
         "📚"
       ],
       [
         "Birthday month",
-        "(Birthday month)",
+        "Mês do aniversário",
         "📚"
       ]
     ],
@@ -28823,25 +28824,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Month significa:",
         [
-          "(Date)",
-          "(Month)",
-          "(Birthday month)",
-          "(Year)"
+          "Data",
+          "Mês",
+          "Mês do aniversário",
+          "Ano"
         ],
         1
       ],
       [
         "Year significa:",
         [
-          "(Birthday month)",
-          "(Year)",
-          "(Month)",
-          "(Date)"
+          "Mês do aniversário",
+          "Ano",
+          "Mês",
+          "Data"
         ],
         1
       ],
       [
-        "Como dizemos \"(Year)\" em inglês?",
+        "Como dizemos \"Ano\" em inglês?",
         [
           "Month",
           "Date",
@@ -28871,22 +28872,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Holiday month",
-        "(Holiday month)",
+        "Mês de feriado",
         "📚"
       ],
       [
         "Spring month",
-        "(Spring month)",
+        "Mês da primavera",
         "📚"
       ],
       [
         "Summer month",
-        "(Summer month)",
+        "Mês de verão",
         "📚"
       ],
       [
         "Fall month",
-        "(Fall month)",
+        "Mês de outono",
         "📚"
       ]
     ],
@@ -28894,25 +28895,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Holiday month significa:",
         [
-          "(Fall month)",
-          "(Holiday month)",
-          "(Spring month)",
-          "(Summer month)"
+          "Mês de outono",
+          "Mês de feriado",
+          "Mês da primavera",
+          "Mês de verão"
         ],
         1
       ],
       [
         "Spring month significa:",
         [
-          "(Holiday month)",
-          "(Summer month)",
-          "(Spring month)",
-          "(Fall month)"
+          "Mês de feriado",
+          "Mês de verão",
+          "Mês da primavera",
+          "Mês de outono"
         ],
         2
       ],
       [
-        "Como dizemos \"(Spring month)\" em inglês?",
+        "Como dizemos \"Mês da primavera\" em inglês?",
         [
           "Holiday month",
           "Summer month",
@@ -28946,22 +28947,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Winter month",
-        "(Winter month)",
+        "Mês de inverno",
         "📚"
       ],
       [
         "First month",
-        "(First month)",
+        "Primeiro mês",
         "📚"
       ],
       [
         "Last month",
-        "(Last month)",
+        "Último mês",
         "📚"
       ],
       [
         "Next month",
-        "(Next month)",
+        "Próximo mês",
         "📚"
       ]
     ],
@@ -28969,25 +28970,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Winter month significa:",
         [
-          "(First month)",
-          "(Last month)",
-          "(Winter month)",
-          "(Next month)"
+          "Primeiro mês",
+          "Último mês",
+          "Mês de inverno",
+          "Próximo mês"
         ],
         2
       ],
       [
         "First month significa:",
         [
-          "(Winter month)",
-          "(Last month)",
-          "(Next month)",
-          "(First month)"
+          "Mês de inverno",
+          "Último mês",
+          "Próximo mês",
+          "Primeiro mês"
         ],
         3
       ],
       [
-        "Como dizemos \"(First month)\" em inglês?",
+        "Como dizemos \"Primeiro mês\" em inglês?",
         [
           "Last month",
           "First month",
@@ -29017,22 +29018,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "This month",
-        "(This month)",
+        "Este mês",
         "📚"
       ],
       [
         "Calendar page",
-        "(Calendar page)",
+        "Página do calendário",
         "📚"
       ],
       [
         "Season change",
-        "(Season change)",
+        "Mudança de estação",
         "📚"
       ],
       [
         "School year",
-        "(School year)",
+        "Ano escolar",
         "📚"
       ]
     ],
@@ -29040,25 +29041,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "This month significa:",
         [
-          "(Calendar page)",
-          "(Season change)",
-          "(School year)",
-          "(This month)"
+          "Página do calendário",
+          "Mudança de estação",
+          "Ano escolar",
+          "Este mês"
         ],
         3
       ],
       [
         "Calendar page significa:",
         [
-          "(Season change)",
-          "(Calendar page)",
-          "(School year)",
-          "(This month)"
+          "Mudança de estação",
+          "Página do calendário",
+          "Ano escolar",
+          "Este mês"
         ],
         1
       ],
       [
-        "Como dizemos \"(Calendar page)\" em inglês?",
+        "Como dizemos \"Página do calendário\" em inglês?",
         [
           "School year",
           "Calendar page",
@@ -29076,34 +29077,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 408,
     "slug": "months-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Vacation month, Cold month, Hot month, Rain month",
+    "description": "Frases: Vacation month, Cold month, Hot month, Rainy month",
     "icon": "📚",
     "objective": "Hoje você vai aprender Vacation month, Cold month, Hot month e mais algumas palavras.",
     "learn": [
       "Vacation month",
       "Cold month",
       "Hot month",
-      "Rain month"
+      "Rainy month"
     ],
     "words": [
       [
         "Vacation month",
-        "(Vacation month)",
+        "Mês de férias",
         "📚"
       ],
       [
         "Cold month",
-        "(Cold month)",
+        "Mês frio",
         "📚"
       ],
       [
         "Hot month",
-        "(Hot month)",
+        "Mês quente",
         "📚"
       ],
       [
-        "Rain month",
-        "(Rain month)",
+        "Rainy month",
+        "Mês chuvoso",
         "📚"
       ]
     ],
@@ -29111,30 +29112,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Vacation month significa:",
         [
-          "(Hot month)",
-          "(Vacation month)",
-          "(Rain month)",
-          "(Cold month)"
+          "Mês quente",
+          "Mês de férias",
+          "Mês chuvoso",
+          "Mês frio"
         ],
         1
       ],
       [
         "Cold month significa:",
         [
-          "(Vacation month)",
-          "(Rain month)",
-          "(Cold month)",
-          "(Hot month)"
+          "Mês de férias",
+          "Mês chuvoso",
+          "Mês frio",
+          "Mês quente"
         ],
         2
       ],
       [
-        "Como dizemos \"(Cold month)\" em inglês?",
+        "Como dizemos \"Mês frio\" em inglês?",
         [
           "Vacation month",
           "Cold month",
           "Hot month",
-          "Rain month"
+          "Rainy month"
         ],
         1
       ]
@@ -29147,65 +29148,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 409,
     "slug": "months-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Snow month, Count months, Twelve months, Month names",
+    "description": "Quiz mix: Snowy month, Count the months, Twelve months, Month names",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Snow month, Count months, Twelve months e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Snowy month, Count the months, Twelve months e mais algumas palavras.",
     "learn": [
-      "Snow month",
-      "Count months",
+      "Snowy month",
+      "Count the months",
       "Twelve months",
       "Month names"
     ],
     "words": [
       [
-        "Snow month",
-        "(Snow month)",
+        "Snowy month",
+        "Mês de neve",
         "📚"
       ],
       [
-        "Count months",
-        "(Count months)",
+        "Count the months",
+        "Contar os meses",
         "📚"
       ],
       [
         "Twelve months",
-        "(Twelve months)",
+        "Doze meses",
         "📚"
       ],
       [
         "Month names",
-        "(Month names)",
+        "Nomes dos meses",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Snow month significa:",
+        "Snowy month significa:",
         [
-          "(Count months)",
-          "(Month names)",
-          "(Snow month)",
-          "(Twelve months)"
+          "Contar os meses",
+          "Nomes dos meses",
+          "Mês de neve",
+          "Doze meses"
         ],
         2
       ],
       [
-        "Count months significa:",
+        "Count the months significa:",
         [
-          "(Twelve months)",
-          "(Count months)",
-          "(Snow month)",
-          "(Month names)"
+          "Doze meses",
+          "Contar os meses",
+          "Mês de neve",
+          "Nomes dos meses"
         ],
         1
       ],
       [
-        "Como dizemos \"(Count months)\" em inglês?",
+        "Como dizemos \"Contar os meses\" em inglês?",
         [
-          "Snow month",
+          "Snowy month",
           "Twelve months",
           "Month names",
-          "Count months"
+          "Count the months"
         ],
         3
       ]
@@ -29218,65 +29219,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 410,
     "slug": "months-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Learn calendar, Plan month, Special month, Remember date",
+    "description": "Revisão final: Learn the calendar, Plan the month, Special month, Remember the date",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Learn calendar, Plan month, Special month e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Learn the calendar, Plan the month, Special month e mais algumas palavras.",
     "learn": [
-      "Learn calendar",
-      "Plan month",
+      "Learn the calendar",
+      "Plan the month",
       "Special month",
-      "Remember date"
+      "Remember the date"
     ],
     "words": [
       [
-        "Learn calendar",
-        "(Learn calendar)",
+        "Learn the calendar",
+        "Aprender o calendário",
         "📚"
       ],
       [
-        "Plan month",
-        "(Plan month)",
+        "Plan the month",
+        "Planejar o mês",
         "📚"
       ],
       [
         "Special month",
-        "(Special month)",
+        "Mês especial",
         "📚"
       ],
       [
-        "Remember date",
-        "(Remember date)",
+        "Remember the date",
+        "Lembrar a data",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Learn calendar significa:",
+        "Learn the calendar significa:",
         [
-          "(Special month)",
-          "(Learn calendar)",
-          "(Plan month)",
-          "(Remember date)"
+          "Mês especial",
+          "Aprender o calendário",
+          "Planejar o mês",
+          "Lembrar a data"
         ],
         1
       ],
       [
-        "Plan month significa:",
+        "Plan the month significa:",
         [
-          "(Learn calendar)",
-          "(Special month)",
-          "(Remember date)",
-          "(Plan month)"
+          "Aprender o calendário",
+          "Mês especial",
+          "Lembrar a data",
+          "Planejar o mês"
         ],
         3
       ],
       [
-        "Como dizemos \"(Plan month)\" em inglês?",
+        "Como dizemos \"Planejar o mês\" em inglês?",
         [
-          "Remember date",
+          "Remember the date",
           "Special month",
-          "Plan month",
-          "Learn calendar"
+          "Plan the month",
+          "Learn the calendar"
         ],
         2
       ]
@@ -29306,17 +29307,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "New Year",
-        "(New Year)",
+        "Ano-Novo",
         "📚"
       ],
       [
         "Easter",
-        "(Easter)",
+        "Páscoa",
         "📚"
       ],
       [
         "Halloween",
-        "(Halloween)",
+        "Dia das Bruxas",
         "📚"
       ]
     ],
@@ -29324,9 +29325,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Christmas significa:",
         [
-          "(New Year)",
-          "(Easter)",
-          "(Halloween)",
+          "Ano-Novo",
+          "Páscoa",
+          "Dia das Bruxas",
           "Natal"
         ],
         3
@@ -29334,15 +29335,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "New Year significa:",
         [
-          "(Halloween)",
-          "(New Year)",
-          "(Easter)",
+          "Dia das Bruxas",
+          "Ano-Novo",
+          "Páscoa",
           "Natal"
         ],
         1
       ],
       [
-        "Como dizemos \"(New Year)\" em inglês?",
+        "Como dizemos \"Ano-Novo\" em inglês?",
         [
           "Halloween",
           "New Year",
@@ -29360,19 +29361,19 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 412,
     "slug": "holidays-l2",
     "title": "Lição 2: Prática 1",
-    "description": "Prática 1: Thanksgiving, Birthday, Valentine, Mother day",
+    "description": "Prática 1: Thanksgiving, Birthday, Valentine's Day, Mother's Day",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Thanksgiving, Birthday, Valentine e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Thanksgiving, Birthday, Valentine's Day e mais algumas palavras.",
     "learn": [
       "Thanksgiving",
       "Birthday",
-      "Valentine",
-      "Mother day"
+      "Valentine's Day",
+      "Mother's Day"
     ],
     "words": [
       [
         "Thanksgiving",
-        "(Thanksgiving)",
+        "Dia de Ação de Graças",
         "📚"
       ],
       [
@@ -29381,13 +29382,13 @@ export const LESSON_SPECS: LessonSpec[] = [
         "📚"
       ],
       [
-        "Valentine",
-        "(Valentine)",
+        "Valentine's Day",
+        "Dia dos Namorados",
         "📚"
       ],
       [
-        "Mother day",
-        "(Mother day)",
+        "Mother's Day",
+        "Dia das Mães",
         "📚"
       ]
     ],
@@ -29395,9 +29396,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Thanksgiving significa:",
         [
-          "(Mother day)",
-          "(Thanksgiving)",
-          "(Valentine)",
+          "Dia das Mães",
+          "Dia de Ação de Graças",
+          "Dia dos Namorados",
           "Aniversário"
         ],
         1
@@ -29405,10 +29406,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Birthday significa:",
         [
-          "(Mother day)",
+          "Dia das Mães",
           "Aniversário",
-          "(Thanksgiving)",
-          "(Valentine)"
+          "Dia de Ação de Graças",
+          "Dia dos Namorados"
         ],
         1
       ],
@@ -29416,9 +29417,9 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Como dizemos \"Aniversário\" em inglês?",
         [
           "Thanksgiving",
-          "Valentine",
+          "Valentine's Day",
           "Birthday",
-          "Mother day"
+          "Mother's Day"
         ],
         2
       ]
@@ -29431,65 +29432,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 413,
     "slug": "holidays-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: Father day, Independence, Holiday fun, Gift",
+    "description": "Prática 2: Father's Day, Independence Day, Holiday fun, Gift",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Father day, Independence, Holiday fun e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Father's Day, Independence Day, Holiday fun e mais algumas palavras.",
     "learn": [
-      "Father day",
-      "Independence",
+      "Father's Day",
+      "Independence Day",
       "Holiday fun",
       "Gift"
     ],
     "words": [
       [
-        "Father day",
-        "(Father day)",
+        "Father's Day",
+        "Dia dos Pais",
         "📚"
       ],
       [
-        "Independence",
-        "(Independence)",
+        "Independence Day",
+        "Dia da Independência",
         "📚"
       ],
       [
         "Holiday fun",
-        "(Holiday fun)",
+        "Diversão no feriado",
         "📚"
       ],
       [
         "Gift",
-        "(Gift)",
+        "Presente",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Father day significa:",
+        "Father's Day significa:",
         [
-          "(Gift)",
-          "(Father day)",
-          "(Independence)",
-          "(Holiday fun)"
+          "Presente",
+          "Dia dos Pais",
+          "Dia da Independência",
+          "Diversão no feriado"
         ],
         1
       ],
       [
-        "Independence significa:",
+        "Independence Day significa:",
         [
-          "(Father day)",
-          "(Holiday fun)",
-          "(Independence)",
-          "(Gift)"
+          "Dia dos Pais",
+          "Diversão no feriado",
+          "Dia da Independência",
+          "Presente"
         ],
         2
       ],
       [
-        "Como dizemos \"(Independence)\" em inglês?",
+        "Como dizemos \"Dia da Independência\" em inglês?",
         [
-          "Father day",
+          "Father's Day",
           "Gift",
           "Holiday fun",
-          "Independence"
+          "Independence Day"
         ],
         3
       ]
@@ -29514,22 +29515,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Decorate",
-        "(Decorate)",
+        "Decorar",
         "📚"
       ],
       [
         "Family visit",
-        "(Family visit)",
+        "Visita da família",
         "📚"
       ],
       [
         "Special food",
-        "(Special food)",
+        "Comida especial",
         "📚"
       ],
       [
         "Party",
-        "(Party)",
+        "Festa",
         "📚"
       ]
     ],
@@ -29537,25 +29538,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Decorate significa:",
         [
-          "(Family visit)",
-          "(Special food)",
-          "(Decorate)",
-          "(Party)"
+          "Visita da família",
+          "Comida especial",
+          "Decorar",
+          "Festa"
         ],
         2
       ],
       [
         "Family visit significa:",
         [
-          "(Decorate)",
-          "(Special food)",
-          "(Party)",
-          "(Family visit)"
+          "Decorar",
+          "Comida especial",
+          "Festa",
+          "Visita da família"
         ],
         3
       ],
       [
-        "Como dizemos \"(Family visit)\" em inglês?",
+        "Como dizemos \"Visita da família\" em inglês?",
         [
           "Special food",
           "Family visit",
@@ -29585,22 +29586,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Costume",
-        "(Costume)",
+        "Fantasia",
         "📚"
       ],
       [
         "Candy",
-        "(Candy)",
+        "Doces",
         "📚"
       ],
       [
         "Fireworks",
-        "(Fireworks)",
+        "Fogos de artifício",
         "📚"
       ],
       [
         "Santa",
-        "(Santa)",
+        "Papai Noel",
         "📚"
       ]
     ],
@@ -29608,25 +29609,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Costume significa:",
         [
-          "(Candy)",
-          "(Fireworks)",
-          "(Santa)",
-          "(Costume)"
+          "Doces",
+          "Fogos de artifício",
+          "Papai Noel",
+          "Fantasia"
         ],
         3
       ],
       [
         "Candy significa:",
         [
-          "(Fireworks)",
-          "(Candy)",
-          "(Santa)",
-          "(Costume)"
+          "Fogos de artifício",
+          "Doces",
+          "Papai Noel",
+          "Fantasia"
         ],
         1
       ],
       [
-        "Como dizemos \"(Candy)\" em inglês?",
+        "Como dizemos \"Doces\" em inglês?",
         [
           "Santa",
           "Candy",
@@ -29661,17 +29662,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Lights",
-        "(Lights)",
+        "Luzes",
         "📚"
       ],
       [
         "Cards",
-        "(Cards)",
+        "Cartas",
         "📚"
       ],
       [
         "Celebrate",
-        "(Celebrate)",
+        "Comemorar",
         "📚"
       ]
     ],
@@ -29679,25 +29680,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tree significa:",
         [
-          "(Cards)",
+          "Cartas",
           "Árvore",
-          "(Celebrate)",
-          "(Lights)"
+          "Comemorar",
+          "Luzes"
         ],
         1
       ],
       [
         "Lights significa:",
         [
-          "(Celebrate)",
-          "(Lights)",
+          "Comemorar",
+          "Luzes",
           "Árvore",
-          "(Cards)"
+          "Cartas"
         ],
         1
       ],
       [
-        "Como dizemos \"(Lights)\" em inglês?",
+        "Como dizemos \"Luzes\" em inglês?",
         [
           "Tree",
           "Lights",
@@ -29727,22 +29728,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Tradition",
-        "(Tradition)",
+        "Tradição",
         "📚"
       ],
       [
         "Culture",
-        "(Culture)",
+        "Cultura",
         "📚"
       ],
       [
         "Share joy",
-        "(Share joy)",
+        "Espalhar alegria",
         "📚"
       ],
       [
         "Holiday song",
-        "(Holiday song)",
+        "Música de feriado",
         "📚"
       ]
     ],
@@ -29750,25 +29751,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tradition significa:",
         [
-          "(Holiday song)",
-          "(Tradition)",
-          "(Culture)",
-          "(Share joy)"
+          "Música de feriado",
+          "Tradição",
+          "Cultura",
+          "Espalhar alegria"
         ],
         1
       ],
       [
         "Culture significa:",
         [
-          "(Tradition)",
-          "(Culture)",
-          "(Share joy)",
-          "(Holiday song)"
+          "Tradição",
+          "Cultura",
+          "Espalhar alegria",
+          "Música de feriado"
         ],
         1
       ],
       [
-        "Como dizemos \"(Culture)\" em inglês?",
+        "Como dizemos \"Cultura\" em inglês?",
         [
           "Tradition",
           "Holiday song",
@@ -29786,34 +29787,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 418,
     "slug": "holidays-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Holiday break, No school, Happy holiday, Remember",
+    "description": "Frases: Holiday break, No school, Happy holidays, Remember",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Holiday break, No school, Happy holiday e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Holiday break, No school, Happy holidays e mais algumas palavras.",
     "learn": [
       "Holiday break",
       "No school",
-      "Happy holiday",
+      "Happy holidays",
       "Remember"
     ],
     "words": [
       [
         "Holiday break",
-        "(Holiday break)",
+        "Recesso de feriado",
         "📚"
       ],
       [
         "No school",
-        "(No school)",
+        "Sem aula",
         "📚"
       ],
       [
-        "Happy holiday",
-        "(Happy holiday)",
+        "Happy holidays",
+        "Boas festas",
         "📚"
       ],
       [
         "Remember",
-        "(Remember)",
+        "Lembrar",
         "📚"
       ]
     ],
@@ -29821,28 +29822,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Holiday break significa:",
         [
-          "(No school)",
-          "(Holiday break)",
-          "(Happy holiday)",
-          "(Remember)"
+          "Sem aula",
+          "Recesso de feriado",
+          "Boas festas",
+          "Lembrar"
         ],
         1
       ],
       [
         "No school significa:",
         [
-          "(Holiday break)",
-          "(Happy holiday)",
-          "(Remember)",
-          "(No school)"
+          "Recesso de feriado",
+          "Boas festas",
+          "Lembrar",
+          "Sem aula"
         ],
         3
       ],
       [
-        "Como dizemos \"(No school)\" em inglês?",
+        "Como dizemos \"Sem aula\" em inglês?",
         [
           "Remember",
-          "Happy holiday",
+          "Happy holidays",
           "No school",
           "Holiday break"
         ],
@@ -29869,22 +29870,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Respect",
-        "(Respect)",
+        "Respeito",
         "📚"
       ],
       [
         "Help others",
-        "(Help others)",
+        "Ajudar os outros",
         "📚"
       ],
       [
         "Holiday story",
-        "(Holiday story)",
+        "História de feriado",
         "📚"
       ],
       [
         "Holiday craft",
-        "(Holiday craft)",
+        "Artesanato de feriado",
         "📚"
       ]
     ],
@@ -29892,25 +29893,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Respect significa:",
         [
-          "(Help others)",
-          "(Holiday story)",
-          "(Holiday craft)",
-          "(Respect)"
+          "Ajudar os outros",
+          "História de feriado",
+          "Artesanato de feriado",
+          "Respeito"
         ],
         3
       ],
       [
         "Help others significa:",
         [
-          "(Holiday craft)",
-          "(Holiday story)",
-          "(Help others)",
-          "(Respect)"
+          "Artesanato de feriado",
+          "História de feriado",
+          "Ajudar os outros",
+          "Respeito"
         ],
         2
       ],
       [
-        "Como dizemos \"(Help others)\" em inglês?",
+        "Como dizemos \"Ajudar os outros\" em inglês?",
         [
           "Holiday craft",
           "Help others",
@@ -29940,22 +29941,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Holiday meal",
-        "(Holiday meal)",
+        "Refeição de feriado",
         "📚"
       ],
       [
         "Holiday game",
-        "(Holiday game)",
+        "Jogo de feriado",
         "📚"
       ],
       [
         "Holiday memory",
-        "(Holiday memory)",
+        "Lembrança de feriado",
         "📚"
       ],
       [
         "Love holidays",
-        "(Love holidays)",
+        "Amar os feriados",
         "📚"
       ]
     ],
@@ -29963,25 +29964,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Holiday meal significa:",
         [
-          "(Love holidays)",
-          "(Holiday memory)",
-          "(Holiday meal)",
-          "(Holiday game)"
+          "Amar os feriados",
+          "Lembrança de feriado",
+          "Refeição de feriado",
+          "Jogo de feriado"
         ],
         2
       ],
       [
         "Holiday game significa:",
         [
-          "(Love holidays)",
-          "(Holiday game)",
-          "(Holiday meal)",
-          "(Holiday memory)"
+          "Amar os feriados",
+          "Jogo de feriado",
+          "Refeição de feriado",
+          "Lembrança de feriado"
         ],
         1
       ],
       [
-        "Como dizemos \"(Holiday game)\" em inglês?",
+        "Como dizemos \"Jogo de feriado\" em inglês?",
         [
           "Holiday memory",
           "Holiday game",
@@ -30016,17 +30017,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Ticket",
-        "(Ticket)",
+        "Passagem",
         "📚"
       ],
       [
         "Suitcase",
-        "(Suitcase)",
+        "Mala",
         "📚"
       ],
       [
         "Hotel",
-        "(Hotel)",
+        "Hotel",
         "📚"
       ]
     ],
@@ -30034,10 +30035,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Passport significa:",
         [
-          "(Hotel)",
+          "Hotel",
           "Passaporte",
-          "(Ticket)",
-          "(Suitcase)"
+          "Passagem",
+          "Mala"
         ],
         1
       ],
@@ -30045,14 +30046,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Ticket significa:",
         [
           "Passaporte",
-          "(Suitcase)",
-          "(Ticket)",
-          "(Hotel)"
+          "Mala",
+          "Passagem",
+          "Hotel"
         ],
         2
       ],
       [
-        "Como dizemos \"(Ticket)\" em inglês?",
+        "Como dizemos \"Passagem\" em inglês?",
         [
           "Passport",
           "Suitcase",
@@ -30082,22 +30083,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Map",
-        "(Map)",
+        "Mapa",
         "📚"
       ],
       [
         "Country",
-        "(Country)",
+        "País",
         "📚"
       ],
       [
         "City",
-        "(City)",
+        "Cidade",
         "📚"
       ],
       [
         "Beach trip",
-        "(Beach trip)",
+        "Viagem à praia",
         "📚"
       ]
     ],
@@ -30105,25 +30106,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Map significa:",
         [
-          "(Country)",
-          "(City)",
-          "(Map)",
-          "(Beach trip)"
+          "País",
+          "Cidade",
+          "Mapa",
+          "Viagem à praia"
         ],
         2
       ],
       [
         "Country significa:",
         [
-          "(Map)",
-          "(Beach trip)",
-          "(City)",
-          "(Country)"
+          "Mapa",
+          "Viagem à praia",
+          "Cidade",
+          "País"
         ],
         3
       ],
       [
-        "Como dizemos \"(Country)\" em inglês?",
+        "Como dizemos \"País\" em inglês?",
         [
           "Beach trip",
           "Country",
@@ -30153,22 +30154,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Mountain trip",
-        "(Mountain trip)",
+        "Viagem à montanha",
         "📚"
       ],
       [
         "Camping trip",
-        "(Camping trip)",
+        "Viagem de acampamento",
         "📚"
       ],
       [
         "Airport",
-        "(Airport)",
+        "Aeroporto",
         "📚"
       ],
       [
         "Plane ride",
-        "(Plane ride)",
+        "Viagem de avião",
         "📚"
       ]
     ],
@@ -30176,25 +30177,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Mountain trip significa:",
         [
-          "(Camping trip)",
-          "(Plane ride)",
-          "(Airport)",
-          "(Mountain trip)"
+          "Viagem de acampamento",
+          "Viagem de avião",
+          "Aeroporto",
+          "Viagem à montanha"
         ],
         3
       ],
       [
         "Camping trip significa:",
         [
-          "(Airport)",
-          "(Camping trip)",
-          "(Plane ride)",
-          "(Mountain trip)"
+          "Aeroporto",
+          "Viagem de acampamento",
+          "Viagem de avião",
+          "Viagem à montanha"
         ],
         1
       ],
       [
-        "Como dizemos \"(Camping trip)\" em inglês?",
+        "Como dizemos \"Viagem de acampamento\" em inglês?",
         [
           "Plane ride",
           "Camping trip",
@@ -30224,22 +30225,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Train ride",
-        "(Train ride)",
+        "Viagem de trem",
         "📚"
       ],
       [
         "Bus trip",
-        "(Bus trip)",
+        "Viagem de ônibus",
         "📚"
       ],
       [
         "Car trip",
-        "(Car trip)",
+        "Viagem de carro",
         "📚"
       ],
       [
         "Visit family",
-        "(Visit family)",
+        "Visitar a família",
         "📚"
       ]
     ],
@@ -30247,25 +30248,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Train ride significa:",
         [
-          "(Car trip)",
-          "(Train ride)",
-          "(Visit family)",
-          "(Bus trip)"
+          "Viagem de carro",
+          "Viagem de trem",
+          "Visitar a família",
+          "Viagem de ônibus"
         ],
         1
       ],
       [
         "Bus trip significa:",
         [
-          "(Visit family)",
-          "(Bus trip)",
-          "(Train ride)",
-          "(Car trip)"
+          "Visitar a família",
+          "Viagem de ônibus",
+          "Viagem de trem",
+          "Viagem de carro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Bus trip)\" em inglês?",
+        "Como dizemos \"Viagem de ônibus\" em inglês?",
         [
           "Car trip",
           "Bus trip",
@@ -30295,22 +30296,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Tour guide",
-        "(Tour guide)",
+        "Guia turístico",
         "📚"
       ],
       [
         "Museum visit",
-        "(Museum visit)",
+        "Visita ao museu",
         "📚"
       ],
       [
         "Take photos",
-        "(Take photos)",
+        "Tirar fotos",
         "📚"
       ],
       [
         "Souvenir",
-        "(Souvenir)",
+        "Lembrancinha",
         "📚"
       ]
     ],
@@ -30318,25 +30319,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tour guide significa:",
         [
-          "(Souvenir)",
-          "(Tour guide)",
-          "(Museum visit)",
-          "(Take photos)"
+          "Lembrancinha",
+          "Guia turístico",
+          "Visita ao museu",
+          "Tirar fotos"
         ],
         1
       ],
       [
         "Museum visit significa:",
         [
-          "(Tour guide)",
-          "(Museum visit)",
-          "(Take photos)",
-          "(Souvenir)"
+          "Guia turístico",
+          "Visita ao museu",
+          "Tirar fotos",
+          "Lembrancinha"
         ],
         1
       ],
       [
-        "Como dizemos \"(Museum visit)\" em inglês?",
+        "Como dizemos \"Visita ao museu\" em inglês?",
         [
           "Tour guide",
           "Souvenir",
@@ -30358,34 +30359,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 426,
     "slug": "travel-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Adventure, Explore new, Pack clothes, Travel safe",
+    "description": "Ouvir: Adventure, Explore new places, Pack clothes, Travel safely",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Adventure, Explore new, Pack clothes e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Adventure, Explore new places, Pack clothes e mais algumas palavras.",
     "learn": [
       "Adventure",
-      "Explore new",
+      "Explore new places",
       "Pack clothes",
-      "Travel safe"
+      "Travel safely"
     ],
     "words": [
       [
         "Adventure",
-        "(Adventure)",
+        "Aventura",
         "📚"
       ],
       [
-        "Explore new",
-        "(Explore new)",
+        "Explore new places",
+        "Explorar lugares novos",
         "📚"
       ],
       [
         "Pack clothes",
-        "(Pack clothes)",
+        "Colocar roupas na mala",
         "📚"
       ],
       [
-        "Travel safe",
-        "(Travel safe)",
+        "Travel safely",
+        "Viajar com segurança",
         "📚"
       ]
     ],
@@ -30393,29 +30394,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Adventure significa:",
         [
-          "(Explore new)",
-          "(Adventure)",
-          "(Pack clothes)",
-          "(Travel safe)"
+          "Explorar lugares novos",
+          "Aventura",
+          "Colocar roupas na mala",
+          "Viajar com segurança"
         ],
         1
       ],
       [
-        "Explore new significa:",
+        "Explore new places significa:",
         [
-          "(Adventure)",
-          "(Travel safe)",
-          "(Pack clothes)",
-          "(Explore new)"
+          "Aventura",
+          "Viajar com segurança",
+          "Colocar roupas na mala",
+          "Explorar lugares novos"
         ],
         3
       ],
       [
-        "Como dizemos \"(Explore new)\" em inglês?",
+        "Como dizemos \"Explorar lugares novos\" em inglês?",
         [
-          "Travel safe",
+          "Travel safely",
           "Pack clothes",
-          "Explore new",
+          "Explore new places",
           "Adventure"
         ],
         2
@@ -30429,34 +30430,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 427,
     "slug": "travel-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Seat belt, Excited trip, Long trip, Short trip",
+    "description": "Memória: Seat belt, Exciting trip, Long trip, Short trip",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Seat belt, Excited trip, Long trip e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Seat belt, Exciting trip, Long trip e mais algumas palavras.",
     "learn": [
       "Seat belt",
-      "Excited trip",
+      "Exciting trip",
       "Long trip",
       "Short trip"
     ],
     "words": [
       [
         "Seat belt",
-        "(Seat belt)",
+        "Cinto de segurança",
         "📚"
       ],
       [
-        "Excited trip",
-        "(Excited trip)",
+        "Exciting trip",
+        "Viagem emocionante",
         "📚"
       ],
       [
         "Long trip",
-        "(Long trip)",
+        "Viagem longa",
         "📚"
       ],
       [
         "Short trip",
-        "(Short trip)",
+        "Viagem curta",
         "📚"
       ]
     ],
@@ -30464,29 +30465,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Seat belt significa:",
         [
-          "(Excited trip)",
-          "(Short trip)",
-          "(Long trip)",
-          "(Seat belt)"
+          "Viagem emocionante",
+          "Viagem curta",
+          "Viagem longa",
+          "Cinto de segurança"
         ],
         3
       ],
       [
-        "Excited trip significa:",
+        "Exciting trip significa:",
         [
-          "(Short trip)",
-          "(Long trip)",
-          "(Excited trip)",
-          "(Seat belt)"
+          "Viagem curta",
+          "Viagem longa",
+          "Viagem emocionante",
+          "Cinto de segurança"
         ],
         2
       ],
       [
-        "Como dizemos \"(Excited trip)\" em inglês?",
+        "Como dizemos \"Viagem emocionante\" em inglês?",
         [
           "Seat belt",
           "Short trip",
-          "Excited trip",
+          "Exciting trip",
           "Long trip"
         ],
         2
@@ -30512,22 +30513,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Travel book",
-        "(Travel book)",
+        "Livro de viagem",
         "📚"
       ],
       [
         "World map",
-        "(World map)",
+        "Mapa-múndi",
         "📚"
       ],
       [
         "Different place",
-        "(Different place)",
+        "Lugar diferente",
         "📚"
       ],
       [
         "New food",
-        "(New food)",
+        "Comida nova",
         "📚"
       ]
     ],
@@ -30535,25 +30536,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Travel book significa:",
         [
-          "(New food)",
-          "(Different place)",
-          "(Travel book)",
-          "(World map)"
+          "Comida nova",
+          "Lugar diferente",
+          "Livro de viagem",
+          "Mapa-múndi"
         ],
         2
       ],
       [
         "World map significa:",
         [
-          "(New food)",
-          "(World map)",
-          "(Travel book)",
-          "(Different place)"
+          "Comida nova",
+          "Mapa-múndi",
+          "Livro de viagem",
+          "Lugar diferente"
         ],
         1
       ],
       [
-        "Como dizemos \"(World map)\" em inglês?",
+        "Como dizemos \"Mapa-múndi\" em inglês?",
         [
           "Travel book",
           "Different place",
@@ -30571,34 +30572,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 429,
     "slug": "travel-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: New friends, Language, Hello travel, Goodbye home",
+    "description": "Quiz mix: New friends, Language, Have a nice trip, Goodbye, home",
     "icon": "📚",
-    "objective": "Hoje você vai aprender New friends, Language, Hello travel e mais algumas palavras.",
+    "objective": "Hoje você vai aprender New friends, Language, Have a nice trip e mais algumas palavras.",
     "learn": [
       "New friends",
       "Language",
-      "Hello travel",
-      "Goodbye home"
+      "Have a nice trip",
+      "Goodbye, home"
     ],
     "words": [
       [
         "New friends",
-        "(New friends)",
+        "Amigos novos",
         "📚"
       ],
       [
         "Language",
-        "(Language)",
+        "Idioma",
         "📚"
       ],
       [
-        "Hello travel",
-        "(Hello travel)",
+        "Have a nice trip",
+        "Tenha uma boa viagem",
         "📚"
       ],
       [
-        "Goodbye home",
-        "(Goodbye home)",
+        "Goodbye, home",
+        "Tchau, casa",
         "📚"
       ]
     ],
@@ -30606,29 +30607,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "New friends significa:",
         [
-          "(Goodbye home)",
-          "(New friends)",
-          "(Language)",
-          "(Hello travel)"
+          "Tchau, casa",
+          "Amigos novos",
+          "Idioma",
+          "Tenha uma boa viagem"
         ],
         1
       ],
       [
         "Language significa:",
         [
-          "(Hello travel)",
-          "(Language)",
-          "(New friends)",
-          "(Goodbye home)"
+          "Tenha uma boa viagem",
+          "Idioma",
+          "Amigos novos",
+          "Tchau, casa"
         ],
         1
       ],
       [
-        "Como dizemos \"(Language)\" em inglês?",
+        "Como dizemos \"Idioma\" em inglês?",
         [
           "New friends",
-          "Hello travel",
-          "Goodbye home",
+          "Have a nice trip",
+          "Goodbye, home",
           "Language"
         ],
         3
@@ -30642,34 +30643,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 430,
     "slug": "travel-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Return home, Share stories, Travel dream, Fun travel",
+    "description": "Revisão final: Return home, Share stories, Dream trip, Fun trip",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Return home, Share stories, Travel dream e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Return home, Share stories, Dream trip e mais algumas palavras.",
     "learn": [
       "Return home",
       "Share stories",
-      "Travel dream",
-      "Fun travel"
+      "Dream trip",
+      "Fun trip"
     ],
     "words": [
       [
         "Return home",
-        "(Return home)",
+        "Retornar para casa",
         "📚"
       ],
       [
         "Share stories",
-        "(Share stories)",
+        "Contar histórias",
         "📚"
       ],
       [
-        "Travel dream",
-        "(Travel dream)",
+        "Dream trip",
+        "Viagem dos sonhos",
         "📚"
       ],
       [
-        "Fun travel",
-        "(Fun travel)",
+        "Fun trip",
+        "Viagem divertida",
         "📚"
       ]
     ],
@@ -30677,29 +30678,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Return home significa:",
         [
-          "(Travel dream)",
-          "(Return home)",
-          "(Share stories)",
-          "(Fun travel)"
+          "Viagem dos sonhos",
+          "Retornar para casa",
+          "Contar histórias",
+          "Viagem divertida"
         ],
         1
       ],
       [
         "Share stories significa:",
         [
-          "(Return home)",
-          "(Travel dream)",
-          "(Fun travel)",
-          "(Share stories)"
+          "Retornar para casa",
+          "Viagem dos sonhos",
+          "Viagem divertida",
+          "Contar histórias"
         ],
         3
       ],
       [
-        "Como dizemos \"(Share stories)\" em inglês?",
+        "Como dizemos \"Contar histórias\" em inglês?",
         [
-          "Fun travel",
+          "Fun trip",
           "Share stories",
-          "Travel dream",
+          "Dream trip",
           "Return home"
         ],
         1
@@ -30730,17 +30731,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Tablet",
-        "(Tablet)",
+        "Tablet",
         "📚"
       ],
       [
         "Phone",
-        "(Phone)",
+        "Celular",
         "📚"
       ],
       [
         "Screen",
-        "(Screen)",
+        "Tela",
         "📚"
       ]
     ],
@@ -30748,9 +30749,9 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Computer significa:",
         [
-          "(Tablet)",
-          "(Phone)",
-          "(Screen)",
+          "Tablet",
+          "Celular",
+          "Tela",
           "Computador"
         ],
         3
@@ -30758,15 +30759,15 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tablet significa:",
         [
-          "(Screen)",
-          "(Tablet)",
-          "(Phone)",
+          "Tela",
+          "Tablet",
+          "Celular",
           "Computador"
         ],
         1
       ],
       [
-        "Como dizemos \"(Tablet)\" em inglês?",
+        "Como dizemos \"Tablet\" em inglês?",
         [
           "Screen",
           "Tablet",
@@ -30796,22 +30797,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Keyboard",
-        "(Keyboard)",
+        "Teclado",
         "📚"
       ],
       [
         "Mouse",
-        "(Mouse)",
+        "Mouse",
         "📚"
       ],
       [
         "Click",
-        "(Click)",
+        "Clicar",
         "📚"
       ],
       [
         "Tap",
-        "(Tap)",
+        "Tocar na tela",
         "📚"
       ]
     ],
@@ -30819,25 +30820,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Keyboard significa:",
         [
-          "(Tap)",
-          "(Keyboard)",
-          "(Click)",
-          "(Mouse)"
+          "Tocar na tela",
+          "Teclado",
+          "Clicar",
+          "Mouse"
         ],
         1
       ],
       [
         "Mouse significa:",
         [
-          "(Tap)",
-          "(Mouse)",
-          "(Keyboard)",
-          "(Click)"
+          "Tocar na tela",
+          "Mouse",
+          "Teclado",
+          "Clicar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Mouse)\" em inglês?",
+        "Como dizemos \"Mouse\" em inglês?",
         [
           "Keyboard",
           "Mouse",
@@ -30855,34 +30856,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 433,
     "slug": "technology-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: App, Game app, Learn app, Video",
+    "description": "Prática 2: App, Game app, Learning app, Video",
     "icon": "📚",
-    "objective": "Hoje você vai aprender App, Game app, Learn app e mais algumas palavras.",
+    "objective": "Hoje você vai aprender App, Game app, Learning app e mais algumas palavras.",
     "learn": [
       "App",
       "Game app",
-      "Learn app",
+      "Learning app",
       "Video"
     ],
     "words": [
       [
         "App",
-        "(App)",
+        "Aplicativo",
         "📚"
       ],
       [
         "Game app",
-        "(Game app)",
+        "Aplicativo de jogo",
         "📚"
       ],
       [
-        "Learn app",
-        "(Learn app)",
+        "Learning app",
+        "Aplicativo de aprender",
         "📚"
       ],
       [
         "Video",
-        "(Video)",
+        "Vídeo",
         "📚"
       ]
     ],
@@ -30890,29 +30891,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "App significa:",
         [
-          "(Video)",
-          "(App)",
-          "(Game app)",
-          "(Learn app)"
+          "Vídeo",
+          "Aplicativo",
+          "Aplicativo de jogo",
+          "Aplicativo de aprender"
         ],
         1
       ],
       [
         "Game app significa:",
         [
-          "(Learn app)",
-          "(Game app)",
-          "(App)",
-          "(Video)"
+          "Aplicativo de aprender",
+          "Aplicativo de jogo",
+          "Aplicativo",
+          "Vídeo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Game app)\" em inglês?",
+        "Como dizemos \"Aplicativo de jogo\" em inglês?",
         [
           "App",
           "Video",
-          "Learn app",
+          "Learning app",
           "Game app"
         ],
         3
@@ -30938,22 +30939,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Photo",
-        "(Photo)",
+        "Foto",
         "📚"
       ],
       [
         "Camera",
-        "(Camera)",
+        "Câmera",
         "📚"
       ],
       [
         "Charge",
-        "(Charge)",
+        "Carregar",
         "📚"
       ],
       [
         "Battery",
-        "(Battery)",
+        "Bateria",
         "📚"
       ]
     ],
@@ -30961,25 +30962,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Photo significa:",
         [
-          "(Charge)",
-          "(Photo)",
-          "(Camera)",
-          "(Battery)"
+          "Carregar",
+          "Foto",
+          "Câmera",
+          "Bateria"
         ],
         1
       ],
       [
         "Camera significa:",
         [
-          "(Photo)",
-          "(Battery)",
-          "(Charge)",
-          "(Camera)"
+          "Foto",
+          "Bateria",
+          "Carregar",
+          "Câmera"
         ],
         3
       ],
       [
-        "Como dizemos \"(Camera)\" em inglês?",
+        "Como dizemos \"Câmera\" em inglês?",
         [
           "Battery",
           "Charge",
@@ -30997,34 +30998,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 435,
     "slug": "technology-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Internet, WiFi, Email, Message",
+    "description": "Falar: Internet, Wi-Fi, Email, Message",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Internet, WiFi, Email e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Internet, Wi-Fi, Email e mais algumas palavras.",
     "learn": [
       "Internet",
-      "WiFi",
+      "Wi-Fi",
       "Email",
       "Message"
     ],
     "words": [
       [
         "Internet",
-        "(Internet)",
+        "Internet",
         "📚"
       ],
       [
-        "WiFi",
-        "(WiFi)",
+        "Wi-Fi",
+        "Wi-Fi",
         "📚"
       ],
       [
         "Email",
-        "(Email)",
+        "E-mail",
         "📚"
       ],
       [
         "Message",
-        "(Message)",
+        "Mensagem",
         "📚"
       ]
     ],
@@ -31032,29 +31033,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Internet significa:",
         [
-          "(WiFi)",
-          "(Message)",
-          "(Email)",
-          "(Internet)"
+          "Wi-Fi",
+          "Mensagem",
+          "E-mail",
+          "Internet"
         ],
         3
       ],
       [
-        "WiFi significa:",
+        "Wi-Fi significa:",
         [
-          "(Message)",
-          "(Email)",
-          "(WiFi)",
-          "(Internet)"
+          "Mensagem",
+          "E-mail",
+          "Wi-Fi",
+          "Internet"
         ],
         2
       ],
       [
-        "Como dizemos \"(WiFi)\" em inglês?",
+        "Como dizemos \"Wi-Fi\" em inglês?",
         [
           "Internet",
           "Message",
-          "WiFi",
+          "Wi-Fi",
           "Email"
         ],
         2
@@ -31068,34 +31069,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 436,
     "slug": "technology-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Search, Type, Draw digital, Music app",
+    "description": "Ouvir: Search, Type, Draw on a tablet, Music app",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Search, Type, Draw digital e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Search, Type, Draw on a tablet e mais algumas palavras.",
     "learn": [
       "Search",
       "Type",
-      "Draw digital",
+      "Draw on a tablet",
       "Music app"
     ],
     "words": [
       [
         "Search",
-        "(Search)",
+        "Pesquisar",
         "📚"
       ],
       [
         "Type",
-        "(Type)",
+        "Digitar",
         "📚"
       ],
       [
-        "Draw digital",
-        "(Draw digital)",
+        "Draw on a tablet",
+        "Desenhar no tablet",
         "📚"
       ],
       [
         "Music app",
-        "(Music app)",
+        "Aplicativo de música",
         "📚"
       ]
     ],
@@ -31103,28 +31104,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Search significa:",
         [
-          "(Music app)",
-          "(Draw digital)",
-          "(Search)",
-          "(Type)"
+          "Aplicativo de música",
+          "Desenhar no tablet",
+          "Pesquisar",
+          "Digitar"
         ],
         2
       ],
       [
         "Type significa:",
         [
-          "(Search)",
-          "(Music app)",
-          "(Type)",
-          "(Draw digital)"
+          "Pesquisar",
+          "Aplicativo de música",
+          "Digitar",
+          "Desenhar no tablet"
         ],
         2
       ],
       [
-        "Como dizemos \"(Type)\" em inglês?",
+        "Como dizemos \"Digitar\" em inglês?",
         [
           "Search",
-          "Draw digital",
+          "Draw on a tablet",
           "Type",
           "Music app"
         ],
@@ -31139,65 +31140,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 437,
     "slug": "technology-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Safe online, Ask parent, Time limit, Break time",
+    "description": "Memória: Stay safe online, Ask a parent, Time limit, Break time",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Safe online, Ask parent, Time limit e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Stay safe online, Ask a parent, Time limit e mais algumas palavras.",
     "learn": [
-      "Safe online",
-      "Ask parent",
+      "Stay safe online",
+      "Ask a parent",
       "Time limit",
       "Break time"
     ],
     "words": [
       [
-        "Safe online",
-        "(Safe online)",
+        "Stay safe online",
+        "Segurança na internet",
         "📚"
       ],
       [
-        "Ask parent",
-        "(Ask parent)",
+        "Ask a parent",
+        "Perguntar aos pais",
         "📚"
       ],
       [
         "Time limit",
-        "(Time limit)",
+        "Limite de tempo",
         "📚"
       ],
       [
         "Break time",
-        "(Break time)",
+        "Hora da pausa",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Safe online significa:",
+        "Stay safe online significa:",
         [
-          "(Ask parent)",
-          "(Break time)",
-          "(Safe online)",
-          "(Time limit)"
+          "Perguntar aos pais",
+          "Hora da pausa",
+          "Segurança na internet",
+          "Limite de tempo"
         ],
         2
       ],
       [
-        "Ask parent significa:",
+        "Ask a parent significa:",
         [
-          "(Safe online)",
-          "(Time limit)",
-          "(Ask parent)",
-          "(Break time)"
+          "Segurança na internet",
+          "Limite de tempo",
+          "Perguntar aos pais",
+          "Hora da pausa"
         ],
         2
       ],
       [
-        "Como dizemos \"(Ask parent)\" em inglês?",
+        "Como dizemos \"Perguntar aos pais\" em inglês?",
         [
           "Time limit",
           "Break time",
-          "Safe online",
-          "Ask parent"
+          "Stay safe online",
+          "Ask a parent"
         ],
         3
       ]
@@ -31222,22 +31223,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Tech help",
-        "(Tech help)",
+        "Ajuda com tecnologia",
         "📚"
       ],
       [
         "Update",
-        "(Update)",
+        "Atualizar",
         "📚"
       ],
       [
         "Password",
-        "(Password)",
+        "Senha",
         "📚"
       ],
       [
         "User",
-        "(User)",
+        "Usuário",
         "📚"
       ]
     ],
@@ -31245,25 +31246,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Tech help significa:",
         [
-          "(Update)",
-          "(Password)",
-          "(Tech help)",
-          "(User)"
+          "Atualizar",
+          "Senha",
+          "Ajuda com tecnologia",
+          "Usuário"
         ],
         2
       ],
       [
         "Update significa:",
         [
-          "(Tech help)",
-          "(Password)",
-          "(User)",
-          "(Update)"
+          "Ajuda com tecnologia",
+          "Senha",
+          "Usuário",
+          "Atualizar"
         ],
         3
       ],
       [
-        "Como dizemos \"(Update)\" em inglês?",
+        "Como dizemos \"Atualizar\" em inglês?",
         [
           "User",
           "Password",
@@ -31281,65 +31282,65 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 439,
     "slug": "technology-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Login, Logout, Save file, Print",
+    "description": "Quiz mix: Log in, Log out, Save the file, Print",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Login, Logout, Save file e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Log in, Log out, Save the file e mais algumas palavras.",
     "learn": [
-      "Login",
-      "Logout",
-      "Save file",
+      "Log in",
+      "Log out",
+      "Save the file",
       "Print"
     ],
     "words": [
       [
-        "Login",
-        "(Login)",
+        "Log in",
+        "Entrar",
         "📚"
       ],
       [
-        "Logout",
-        "(Logout)",
+        "Log out",
+        "Sair",
         "📚"
       ],
       [
-        "Save file",
-        "(Save file)",
+        "Save the file",
+        "Salvar o arquivo",
         "📚"
       ],
       [
         "Print",
-        "(Print)",
+        "Imprimir",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Login significa:",
+        "Log in significa:",
         [
-          "(Logout)",
-          "(Save file)",
-          "(Print)",
-          "(Login)"
+          "Sair",
+          "Salvar o arquivo",
+          "Imprimir",
+          "Entrar"
         ],
         3
       ],
       [
-        "Logout significa:",
+        "Log out significa:",
         [
-          "(Print)",
-          "(Logout)",
-          "(Save file)",
-          "(Login)"
+          "Imprimir",
+          "Sair",
+          "Salvar o arquivo",
+          "Entrar"
         ],
         1
       ],
       [
-        "Como dizemos \"(Logout)\" em inglês?",
+        "Como dizemos \"Sair\" em inglês?",
         [
           "Print",
-          "Logout",
-          "Login",
-          "Save file"
+          "Log out",
+          "Log in",
+          "Save the file"
         ],
         1
       ]
@@ -31352,62 +31353,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 440,
     "slug": "technology-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Share link, Headphones, Volume, Tech class",
+    "description": "Revisão final: Share a link, Headphones, Volume, Tech class",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Share link, Headphones, Volume e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Share a link, Headphones, Volume e mais algumas palavras.",
     "learn": [
-      "Share link",
+      "Share a link",
       "Headphones",
       "Volume",
       "Tech class"
     ],
     "words": [
       [
-        "Share link",
-        "(Share link)",
+        "Share a link",
+        "Compartilhar um link",
         "📚"
       ],
       [
         "Headphones",
-        "(Headphones)",
+        "Fones de ouvido",
         "📚"
       ],
       [
         "Volume",
-        "(Volume)",
+        "Volume",
         "📚"
       ],
       [
         "Tech class",
-        "(Tech class)",
+        "Aula de tecnologia",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Share link significa:",
+        "Share a link significa:",
         [
-          "(Tech class)",
-          "(Share link)",
-          "(Volume)",
-          "(Headphones)"
+          "Aula de tecnologia",
+          "Compartilhar um link",
+          "Volume",
+          "Fones de ouvido"
         ],
         1
       ],
       [
         "Headphones significa:",
         [
-          "(Tech class)",
-          "(Headphones)",
-          "(Share link)",
-          "(Volume)"
+          "Aula de tecnologia",
+          "Fones de ouvido",
+          "Compartilhar um link",
+          "Volume"
         ],
         1
       ],
       [
-        "Como dizemos \"(Headphones)\" em inglês?",
+        "Como dizemos \"Fones de ouvido\" em inglês?",
         [
-          "Share link",
+          "Share a link",
           "Volume",
           "Headphones",
           "Tech class"
@@ -31440,17 +31441,17 @@ export const LESSON_SPECS: LessonSpec[] = [
       ],
       [
         "Reuse",
-        "(Reuse)",
+        "Reutilizar",
         "📚"
       ],
       [
         "Reduce",
-        "(Reduce)",
+        "Reduzir",
         "📚"
       ],
       [
         "Trash",
-        "(Trash)",
+        "Lixo",
         "📚"
       ]
     ],
@@ -31458,10 +31459,10 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Recycle significa:",
         [
-          "(Trash)",
+          "Lixo",
           "Reciclar",
-          "(Reuse)",
-          "(Reduce)"
+          "Reutilizar",
+          "Reduzir"
         ],
         1
       ],
@@ -31469,14 +31470,14 @@ export const LESSON_SPECS: LessonSpec[] = [
         "Reuse significa:",
         [
           "Reciclar",
-          "(Reuse)",
-          "(Reduce)",
-          "(Trash)"
+          "Reutilizar",
+          "Reduzir",
+          "Lixo"
         ],
         1
       ],
       [
-        "Como dizemos \"(Reuse)\" em inglês?",
+        "Como dizemos \"Reutilizar\" em inglês?",
         [
           "Recycle",
           "Trash",
@@ -31506,22 +31507,22 @@ export const LESSON_SPECS: LessonSpec[] = [
     "words": [
       [
         "Bin",
-        "(Bin)",
+        "Lixeira",
         "📚"
       ],
       [
         "Plastic",
-        "(Plastic)",
+        "Plástico",
         "📚"
       ],
       [
         "Paper",
-        "(Paper)",
+        "Papel",
         "📚"
       ],
       [
         "Glass",
-        "(Glass)",
+        "Vidro",
         "📚"
       ]
     ],
@@ -31529,25 +31530,25 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Bin significa:",
         [
-          "(Plastic)",
-          "(Bin)",
-          "(Paper)",
-          "(Glass)"
+          "Plástico",
+          "Lixeira",
+          "Papel",
+          "Vidro"
         ],
         1
       ],
       [
         "Plastic significa:",
         [
-          "(Bin)",
-          "(Glass)",
-          "(Paper)",
-          "(Plastic)"
+          "Lixeira",
+          "Vidro",
+          "Papel",
+          "Plástico"
         ],
         3
       ],
       [
-        "Como dizemos \"(Plastic)\" em inglês?",
+        "Como dizemos \"Plástico\" em inglês?",
         [
           "Glass",
           "Plastic",
@@ -31565,64 +31566,64 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 443,
     "slug": "environment-l3",
     "title": "Lição 3: Prática 2",
-    "description": "Prática 2: Clean park, Plant tree, Save water, Save energy",
+    "description": "Prática 2: Clean the park, Plant a tree, Save water, Save energy",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Clean park, Plant tree, Save water e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Clean the park, Plant a tree, Save water e mais algumas palavras.",
     "learn": [
-      "Clean park",
-      "Plant tree",
+      "Clean the park",
+      "Plant a tree",
       "Save water",
       "Save energy"
     ],
     "words": [
       [
-        "Clean park",
-        "(Clean park)",
+        "Clean the park",
+        "Limpar o parque",
         "📚"
       ],
       [
-        "Plant tree",
-        "(Plant tree)",
+        "Plant a tree",
+        "Plantar uma árvore",
         "📚"
       ],
       [
         "Save water",
-        "(Save water)",
+        "Economizar água",
         "📚"
       ],
       [
         "Save energy",
-        "(Save energy)",
+        "Economizar energia",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Clean park significa:",
+        "Clean the park significa:",
         [
-          "(Plant tree)",
-          "(Save energy)",
-          "(Save water)",
-          "(Clean park)"
+          "Plantar uma árvore",
+          "Economizar energia",
+          "Economizar água",
+          "Limpar o parque"
         ],
         3
       ],
       [
-        "Plant tree significa:",
+        "Plant a tree significa:",
         [
-          "(Save energy)",
-          "(Save water)",
-          "(Plant tree)",
-          "(Clean park)"
+          "Economizar energia",
+          "Economizar água",
+          "Plantar uma árvore",
+          "Limpar o parque"
         ],
         2
       ],
       [
-        "Como dizemos \"(Plant tree)\" em inglês?",
+        "Como dizemos \"Plantar uma árvore\" em inglês?",
         [
-          "Clean park",
+          "Clean the park",
           "Save energy",
-          "Plant tree",
+          "Plant a tree",
           "Save water"
         ],
         2
@@ -31636,34 +31637,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 444,
     "slug": "environment-l4",
     "title": "Lição 4: Desafio",
-    "description": "Desafio: Earth, Planet care, Green life, Pollution bad",
+    "description": "Desafio: Earth, Care for the planet, Green life, Pollution is bad",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Earth, Planet care, Green life e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Earth, Care for the planet, Green life e mais algumas palavras.",
     "learn": [
       "Earth",
-      "Planet care",
+      "Care for the planet",
       "Green life",
-      "Pollution bad"
+      "Pollution is bad"
     ],
     "words": [
       [
         "Earth",
-        "(Earth)",
+        "Terra",
         "📚"
       ],
       [
-        "Planet care",
-        "(Planet care)",
+        "Care for the planet",
+        "Cuidar do planeta",
         "📚"
       ],
       [
         "Green life",
-        "(Green life)",
+        "Vida sustentável",
         "📚"
       ],
       [
-        "Pollution bad",
-        "(Pollution bad)",
+        "Pollution is bad",
+        "A poluição faz mal",
         "📚"
       ]
     ],
@@ -31671,30 +31672,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Earth significa:",
         [
-          "(Pollution bad)",
-          "(Green life)",
-          "(Earth)",
-          "(Planet care)"
+          "A poluição faz mal",
+          "Vida sustentável",
+          "Terra",
+          "Cuidar do planeta"
         ],
         2
       ],
       [
-        "Planet care significa:",
+        "Care for the planet significa:",
         [
-          "(Earth)",
-          "(Pollution bad)",
-          "(Planet care)",
-          "(Green life)"
+          "Terra",
+          "A poluição faz mal",
+          "Cuidar do planeta",
+          "Vida sustentável"
         ],
         2
       ],
       [
-        "Como dizemos \"(Planet care)\" em inglês?",
+        "Como dizemos \"Cuidar do planeta\" em inglês?",
         [
-          "Planet care",
+          "Care for the planet",
           "Green life",
           "Earth",
-          "Pollution bad"
+          "Pollution is bad"
         ],
         0
       ]
@@ -31707,34 +31708,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 445,
     "slug": "environment-l5",
     "title": "Lição 5: Falar",
-    "description": "Falar: Clean air, Ocean clean, Animal protect, No litter",
+    "description": "Falar: Clean air, Clean ocean, Protect animals, No littering",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Clean air, Ocean clean, Animal protect e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Clean air, Clean ocean, Protect animals e mais algumas palavras.",
     "learn": [
       "Clean air",
-      "Ocean clean",
-      "Animal protect",
-      "No litter"
+      "Clean ocean",
+      "Protect animals",
+      "No littering"
     ],
     "words": [
       [
         "Clean air",
-        "(Clean air)",
+        "Ar limpo",
         "📚"
       ],
       [
-        "Ocean clean",
-        "(Ocean clean)",
+        "Clean ocean",
+        "Oceano limpo",
         "📚"
       ],
       [
-        "Animal protect",
-        "(Animal protect)",
+        "Protect animals",
+        "Proteger os animais",
         "📚"
       ],
       [
-        "No litter",
-        "(No litter)",
+        "No littering",
+        "Não jogue lixo no chão",
         "📚"
       ]
     ],
@@ -31742,30 +31743,30 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Clean air significa:",
         [
-          "(Ocean clean)",
-          "(No litter)",
-          "(Clean air)",
-          "(Animal protect)"
+          "Oceano limpo",
+          "Não jogue lixo no chão",
+          "Ar limpo",
+          "Proteger os animais"
         ],
         2
       ],
       [
-        "Ocean clean significa:",
+        "Clean ocean significa:",
         [
-          "(Clean air)",
-          "(Animal protect)",
-          "(Ocean clean)",
-          "(No litter)"
+          "Ar limpo",
+          "Proteger os animais",
+          "Oceano limpo",
+          "Não jogue lixo no chão"
         ],
         2
       ],
       [
-        "Como dizemos \"(Ocean clean)\" em inglês?",
+        "Como dizemos \"Oceano limpo\" em inglês?",
         [
-          "Animal protect",
-          "No litter",
+          "Protect animals",
+          "No littering",
           "Clean air",
-          "Ocean clean"
+          "Clean ocean"
         ],
         3
       ]
@@ -31782,34 +31783,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 446,
     "slug": "environment-l6",
     "title": "Lição 6: Ouvir",
-    "description": "Ouvir: Pick up trash, Compost, Eco friendly, Nature help",
+    "description": "Ouvir: Pick up trash, Compost, Eco-friendly, Help nature",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Pick up trash, Compost, Eco friendly e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Pick up trash, Compost, Eco-friendly e mais algumas palavras.",
     "learn": [
       "Pick up trash",
       "Compost",
-      "Eco friendly",
-      "Nature help"
+      "Eco-friendly",
+      "Help nature"
     ],
     "words": [
       [
         "Pick up trash",
-        "(Pick up trash)",
+        "Recolher o lixo",
         "📚"
       ],
       [
         "Compost",
-        "(Compost)",
+        "Adubo",
         "📚"
       ],
       [
-        "Eco friendly",
-        "(Eco friendly)",
+        "Eco-friendly",
+        "Ecológico",
         "📚"
       ],
       [
-        "Nature help",
-        "(Nature help)",
+        "Help nature",
+        "Ajudar a natureza",
         "📚"
       ]
     ],
@@ -31817,29 +31818,29 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Pick up trash significa:",
         [
-          "(Compost)",
-          "(Eco friendly)",
-          "(Pick up trash)",
-          "(Nature help)"
+          "Adubo",
+          "Ecológico",
+          "Recolher o lixo",
+          "Ajudar a natureza"
         ],
         2
       ],
       [
         "Compost significa:",
         [
-          "(Eco friendly)",
-          "(Nature help)",
-          "(Pick up trash)",
-          "(Compost)"
+          "Ecológico",
+          "Ajudar a natureza",
+          "Recolher o lixo",
+          "Adubo"
         ],
         3
       ],
       [
-        "Como dizemos \"(Compost)\" em inglês?",
+        "Como dizemos \"Adubo\" em inglês?",
         [
-          "Nature help",
+          "Help nature",
           "Compost",
-          "Eco friendly",
+          "Eco-friendly",
           "Pick up trash"
         ],
         1
@@ -31853,62 +31854,62 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 447,
     "slug": "environment-l7",
     "title": "Lição 7: Memória",
-    "description": "Memória: Future world, Care together, Small action, Big change",
+    "description": "Memória: World of the future, Care together, Small action, Big change",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Future world, Care together, Small action e mais algumas palavras.",
+    "objective": "Hoje você vai aprender World of the future, Care together, Small action e mais algumas palavras.",
     "learn": [
-      "Future world",
+      "World of the future",
       "Care together",
       "Small action",
       "Big change"
     ],
     "words": [
       [
-        "Future world",
-        "(Future world)",
+        "World of the future",
+        "Mundo do futuro",
         "📚"
       ],
       [
         "Care together",
-        "(Care together)",
+        "Cuidar juntos",
         "📚"
       ],
       [
         "Small action",
-        "(Small action)",
+        "Pequena atitude",
         "📚"
       ],
       [
         "Big change",
-        "(Big change)",
+        "Grande mudança",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Future world significa:",
+        "World of the future significa:",
         [
-          "(Small action)",
-          "(Big change)",
-          "(Care together)",
-          "(Future world)"
+          "Pequena atitude",
+          "Grande mudança",
+          "Cuidar juntos",
+          "Mundo do futuro"
         ],
         3
       ],
       [
         "Care together significa:",
         [
-          "(Big change)",
-          "(Small action)",
-          "(Care together)",
-          "(Future world)"
+          "Grande mudança",
+          "Pequena atitude",
+          "Cuidar juntos",
+          "Mundo do futuro"
         ],
         2
       ],
       [
-        "Como dizemos \"(Care together)\" em inglês?",
+        "Como dizemos \"Cuidar juntos\" em inglês?",
         [
-          "Future world",
+          "World of the future",
           "Care together",
           "Big change",
           "Small action"
@@ -31924,64 +31925,64 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 448,
     "slug": "environment-l8",
     "title": "Lição 8: Frases",
-    "description": "Frases: Earth day, Green team, Bike not car, Walk more",
+    "description": "Frases: Earth Day, Green team, Bike, not car, Walk more",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Earth day, Green team, Bike not car e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Earth Day, Green team, Bike, not car e mais algumas palavras.",
     "learn": [
-      "Earth day",
+      "Earth Day",
       "Green team",
-      "Bike not car",
+      "Bike, not car",
       "Walk more"
     ],
     "words": [
       [
-        "Earth day",
-        "(Earth day)",
+        "Earth Day",
+        "Dia da Terra",
         "📚"
       ],
       [
         "Green team",
-        "(Green team)",
+        "Equipe verde",
         "📚"
       ],
       [
-        "Bike not car",
-        "(Bike not car)",
+        "Bike, not car",
+        "Bicicleta em vez de carro",
         "📚"
       ],
       [
         "Walk more",
-        "(Walk more)",
+        "Caminhar mais",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Earth day significa:",
+        "Earth Day significa:",
         [
-          "(Walk more)",
-          "(Bike not car)",
-          "(Earth day)",
-          "(Green team)"
+          "Caminhar mais",
+          "Bicicleta em vez de carro",
+          "Dia da Terra",
+          "Equipe verde"
         ],
         2
       ],
       [
         "Green team significa:",
         [
-          "(Walk more)",
-          "(Green team)",
-          "(Earth day)",
-          "(Bike not car)"
+          "Caminhar mais",
+          "Equipe verde",
+          "Dia da Terra",
+          "Bicicleta em vez de carro"
         ],
         1
       ],
       [
-        "Como dizemos \"(Green team)\" em inglês?",
+        "Como dizemos \"Equipe verde\" em inglês?",
         [
-          "Bike not car",
+          "Bike, not car",
           "Green team",
-          "Earth day",
+          "Earth Day",
           "Walk more"
         ],
         1
@@ -31995,63 +31996,63 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 449,
     "slug": "environment-l9",
     "title": "Lição 9: Quiz mix",
-    "description": "Quiz mix: Turn off light, Use less, Kind earth, Blue planet",
+    "description": "Quiz mix: Turn off the light, Use less, Be kind to Earth, Blue planet",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Turn off light, Use less, Kind earth e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Turn off the light, Use less, Be kind to Earth e mais algumas palavras.",
     "learn": [
-      "Turn off light",
+      "Turn off the light",
       "Use less",
-      "Kind earth",
+      "Be kind to Earth",
       "Blue planet"
     ],
     "words": [
       [
-        "Turn off light",
-        "(Turn off light)",
+        "Turn off the light",
+        "Apagar a luz",
         "📚"
       ],
       [
         "Use less",
-        "(Use less)",
+        "Usar menos",
         "📚"
       ],
       [
-        "Kind earth",
-        "(Kind earth)",
+        "Be kind to Earth",
+        "Seja gentil com a Terra",
         "📚"
       ],
       [
         "Blue planet",
-        "(Blue planet)",
+        "Planeta azul",
         "📚"
       ]
     ],
     "quiz": [
       [
-        "Turn off light significa:",
+        "Turn off the light significa:",
         [
-          "(Blue planet)",
-          "(Turn off light)",
-          "(Use less)",
-          "(Kind earth)"
+          "Planeta azul",
+          "Apagar a luz",
+          "Usar menos",
+          "Seja gentil com a Terra"
         ],
         1
       ],
       [
         "Use less significa:",
         [
-          "(Turn off light)",
-          "(Kind earth)",
-          "(Use less)",
-          "(Blue planet)"
+          "Apagar a luz",
+          "Seja gentil com a Terra",
+          "Usar menos",
+          "Planeta azul"
         ],
         2
       ],
       [
-        "Como dizemos \"(Use less)\" em inglês?",
+        "Como dizemos \"Usar menos\" em inglês?",
         [
-          "Turn off light",
-          "Kind earth",
+          "Turn off the light",
+          "Be kind to Earth",
           "Blue planet",
           "Use less"
         ],
@@ -32066,34 +32067,34 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 450,
     "slug": "environment-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: Healthy world, Learn green, Do your part, Thank earth",
+    "description": "Revisão final: Healthy world, Learn to be green, Do your part, Thank you, Earth",
     "icon": "📚",
-    "objective": "Hoje você vai aprender Healthy world, Learn green, Do your part e mais algumas palavras.",
+    "objective": "Hoje você vai aprender Healthy world, Learn to be green, Do your part e mais algumas palavras.",
     "learn": [
       "Healthy world",
-      "Learn green",
+      "Learn to be green",
       "Do your part",
-      "Thank earth"
+      "Thank you, Earth"
     ],
     "words": [
       [
         "Healthy world",
-        "(Healthy world)",
+        "Mundo saudável",
         "📚"
       ],
       [
-        "Learn green",
-        "(Learn green)",
+        "Learn to be green",
+        "Aprender a ser sustentável",
         "📚"
       ],
       [
         "Do your part",
-        "(Do your part)",
+        "Faça a sua parte",
         "📚"
       ],
       [
-        "Thank earth",
-        "(Thank earth)",
+        "Thank you, Earth",
+        "Obrigado, Terra",
         "📚"
       ]
     ],
@@ -32101,28 +32102,28 @@ export const LESSON_SPECS: LessonSpec[] = [
       [
         "Healthy world significa:",
         [
-          "(Learn green)",
-          "(Do your part)",
-          "(Healthy world)",
-          "(Thank earth)"
+          "Aprender a ser sustentável",
+          "Faça a sua parte",
+          "Mundo saudável",
+          "Obrigado, Terra"
         ],
         2
       ],
       [
-        "Learn green significa:",
+        "Learn to be green significa:",
         [
-          "(Healthy world)",
-          "(Thank earth)",
-          "(Do your part)",
-          "(Learn green)"
+          "Mundo saudável",
+          "Obrigado, Terra",
+          "Faça a sua parte",
+          "Aprender a ser sustentável"
         ],
         3
       ],
       [
-        "Como dizemos \"(Learn green)\" em inglês?",
+        "Como dizemos \"Aprender a ser sustentável\" em inglês?",
         [
-          "Thank earth",
-          "Learn green",
+          "Thank you, Earth",
+          "Learn to be green",
           "Do your part",
           "Healthy world"
         ],
@@ -32130,7 +32131,7 @@ export const LESSON_SPECS: LessonSpec[] = [
       ]
     ],
     "wordOrder": {
-      "ptLabel": "(Do your part)",
+      "ptLabel": "Faça a sua parte",
       "words": [
         "your",
         "Do",
