@@ -670,67 +670,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 10,
     "slug": "greetings-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: greetings-extra-36, greetings-extra-37, greetings-extra-38, greetings-extra-39",
+    "description": "Revisão final: Hello, I am fine, Excuse me, Goodbye friend",
     "icon": "👋",
-    "objective": "Hoje você vai aprender greetings-extra-36, greetings-extra-37, greetings-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Hello, I am fine, Excuse me e mais algumas palavras.",
     "learn": [
-      "greetings-extra-36",
-      "greetings-extra-37",
-      "greetings-extra-38",
-      "greetings-extra-39"
+      "Hello",
+      "I am fine",
+      "Excuse me",
+      "Goodbye friend"
     ],
     "words": [
       [
-        "greetings-extra-36",
-        "Extra 36",
+        "Hello",
+        "Olá",
         "👋"
       ],
       [
-        "greetings-extra-37",
-        "Extra 37",
+        "I am fine",
+        "Estou bem",
+        "😊"
+      ],
+      [
+        "Excuse me",
+        "Com licença",
         "👋"
       ],
       [
-        "greetings-extra-38",
-        "Extra 38",
-        "👋"
-      ],
-      [
-        "greetings-extra-39",
-        "Extra 39",
-        "👋"
+        "Goodbye friend",
+        "Tchau amigo",
+        "✌️"
       ]
     ],
     "quiz": [
       [
-        "greetings-extra-36 significa:",
+        "Hello significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 37",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "greetings-extra-37 significa:",
-        [
-          "Extra 36",
-          "Extra 39",
-          "Extra 38",
-          "Extra 37"
+          "Estou bem",
+          "Com licença",
+          "Tchau amigo",
+          "Olá"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "I am fine significa:",
         [
-          "greetings-extra-39",
-          "greetings-extra-38",
-          "greetings-extra-37",
-          "greetings-extra-36"
+          "Com licença",
+          "Tchau amigo",
+          "Olá",
+          "Estou bem"
         ],
-        2
+        3
+      ],
+      [
+        "Como dizemos \"Com licença\" em inglês?",
+        [
+          "Goodbye friend",
+          "Hello",
+          "I am fine",
+          "Excuse me"
+        ],
+        3
       ]
     ]
   },
@@ -1384,67 +1384,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 20,
     "slug": "colors-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: colors-extra-36, colors-extra-37, colors-extra-38, colors-extra-39",
-    "icon": "🎨",
-    "objective": "Hoje você vai aprender colors-extra-36, colors-extra-37, colors-extra-38 e mais algumas palavras.",
+    "description": "Revisão final: Red, Pink, Light blue, Light",
+    "icon": "🔴",
+    "objective": "Hoje você vai revisar Red, Pink, Light blue e mais algumas palavras.",
     "learn": [
-      "colors-extra-36",
-      "colors-extra-37",
-      "colors-extra-38",
-      "colors-extra-39"
+      "Red",
+      "Pink",
+      "Light blue",
+      "Light"
     ],
     "words": [
       [
-        "colors-extra-36",
-        "Extra 36",
-        "🎨"
+        "Red",
+        "Vermelho",
+        "🔴"
       ],
       [
-        "colors-extra-37",
-        "Extra 37",
-        "🎨"
+        "Pink",
+        "Rosa",
+        "🩷"
       ],
       [
-        "colors-extra-38",
-        "Extra 38",
-        "🎨"
+        "Light blue",
+        "Azul claro",
+        "💙"
       ],
       [
-        "colors-extra-39",
-        "Extra 39",
-        "🎨"
+        "Light",
+        "Claro",
+        "💡"
       ]
     ],
     "quiz": [
       [
-        "colors-extra-36 significa:",
+        "Red significa:",
         [
-          "Extra 39",
-          "Extra 38",
-          "Extra 36",
-          "Extra 37"
+          "Rosa",
+          "Azul claro",
+          "Claro",
+          "Vermelho"
         ],
-        2
+        3
       ],
       [
-        "colors-extra-37 significa:",
+        "Pink significa:",
         [
-          "Extra 36",
-          "Extra 39",
-          "Extra 37",
-          "Extra 38"
+          "Azul claro",
+          "Claro",
+          "Vermelho",
+          "Rosa"
         ],
-        2
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Azul claro\" em inglês?",
         [
-          "colors-extra-38",
-          "colors-extra-37",
-          "colors-extra-36",
-          "colors-extra-39"
+          "Light",
+          "Red",
+          "Pink",
+          "Light blue"
         ],
-        1
+        3
       ]
     ]
   },
@@ -2094,67 +2094,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 30,
     "slug": "animals-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: animals-extra-36, animals-extra-37, animals-extra-38, animals-extra-39",
-    "icon": "🐾",
-    "objective": "Hoje você vai aprender animals-extra-36, animals-extra-37, animals-extra-38 e mais algumas palavras.",
+    "description": "Revisão final: Dog, Lion, Bear, Pet",
+    "icon": "🐶",
+    "objective": "Hoje você vai revisar Dog, Lion, Bear e mais algumas palavras.",
     "learn": [
-      "animals-extra-36",
-      "animals-extra-37",
-      "animals-extra-38",
-      "animals-extra-39"
+      "Dog",
+      "Lion",
+      "Bear",
+      "Pet"
     ],
     "words": [
       [
-        "animals-extra-36",
-        "Extra 36",
-        "🐾"
+        "Dog",
+        "Cachorro",
+        "🐶"
       ],
       [
-        "animals-extra-37",
-        "Extra 37",
-        "🐾"
+        "Lion",
+        "Leão",
+        "🦁"
       ],
       [
-        "animals-extra-38",
-        "Extra 38",
-        "🐾"
+        "Bear",
+        "Urso",
+        "🐻"
       ],
       [
-        "animals-extra-39",
-        "Extra 39",
+        "Pet",
+        "Animal de estimação",
         "🐾"
       ]
     ],
     "quiz": [
       [
-        "animals-extra-36 significa:",
+        "Dog significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 37",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "animals-extra-37 significa:",
-        [
-          "Extra 38",
-          "Extra 39",
-          "Extra 36",
-          "Extra 37"
+          "Leão",
+          "Urso",
+          "Animal de estimação",
+          "Cachorro"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Lion significa:",
         [
-          "animals-extra-38",
-          "animals-extra-37",
-          "animals-extra-39",
-          "animals-extra-36"
+          "Urso",
+          "Animal de estimação",
+          "Cachorro",
+          "Leão"
         ],
-        1
+        3
+      ],
+      [
+        "Como dizemos \"Urso\" em inglês?",
+        [
+          "Pet",
+          "Dog",
+          "Lion",
+          "Bear"
+        ],
+        3
       ]
     ]
   },
@@ -2808,67 +2808,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 40,
     "slug": "numbers-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: numbers-extra-36, numbers-extra-37, numbers-extra-38, numbers-extra-39",
-    "icon": "🔢",
-    "objective": "Hoje você vai aprender numbers-extra-36, numbers-extra-37, numbers-extra-38 e mais algumas palavras.",
+    "description": "Revisão final: One, Nine, How many?, Half",
+    "icon": "1️⃣",
+    "objective": "Hoje você vai revisar One, Nine, How many? e mais algumas palavras.",
     "learn": [
-      "numbers-extra-36",
-      "numbers-extra-37",
-      "numbers-extra-38",
-      "numbers-extra-39"
+      "One",
+      "Nine",
+      "How many?",
+      "Half"
     ],
     "words": [
       [
-        "numbers-extra-36",
-        "Extra 36",
-        "🔢"
+        "One",
+        "Um",
+        "1️⃣"
       ],
       [
-        "numbers-extra-37",
-        "Extra 37",
-        "🔢"
+        "Nine",
+        "Nove",
+        "9️⃣"
       ],
       [
-        "numbers-extra-38",
-        "Extra 38",
-        "🔢"
+        "How many?",
+        "Quantos?",
+        "❓"
       ],
       [
-        "numbers-extra-39",
-        "Extra 39",
-        "🔢"
+        "Half",
+        "Metade",
+        "➗"
       ]
     ],
     "quiz": [
       [
-        "numbers-extra-36 significa:",
+        "One significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 39",
-          "Extra 37"
+          "Nove",
+          "Quantos?",
+          "Metade",
+          "Um"
         ],
-        1
+        3
       ],
       [
-        "numbers-extra-37 significa:",
+        "Nine significa:",
         [
-          "Extra 36",
-          "Extra 37",
-          "Extra 39",
-          "Extra 38"
+          "Quantos?",
+          "Metade",
+          "Um",
+          "Nove"
         ],
-        1
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Quantos?\" em inglês?",
         [
-          "numbers-extra-36",
-          "numbers-extra-37",
-          "numbers-extra-38",
-          "numbers-extra-39"
+          "Half",
+          "One",
+          "Nine",
+          "How many?"
         ],
-        1
+        3
       ]
     ]
   },
@@ -3518,67 +3518,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 50,
     "slug": "family-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: family-extra-36, family-extra-37, family-extra-38, family-extra-39",
-    "icon": "👨‍👩‍👧",
-    "objective": "Hoje você vai aprender family-extra-36, family-extra-37, family-extra-38 e mais algumas palavras.",
+    "description": "Revisão final: Mother, Uncle, Son, Stepmother",
+    "icon": "👩",
+    "objective": "Hoje você vai revisar Mother, Uncle, Son e mais algumas palavras.",
     "learn": [
-      "family-extra-36",
-      "family-extra-37",
-      "family-extra-38",
-      "family-extra-39"
+      "Mother",
+      "Uncle",
+      "Son",
+      "Stepmother"
     ],
     "words": [
       [
-        "family-extra-36",
-        "Extra 36",
-        "👨‍👩‍👧"
+        "Mother",
+        "Mãe",
+        "👩"
       ],
       [
-        "family-extra-37",
-        "Extra 37",
-        "👨‍👩‍👧"
+        "Uncle",
+        "Tio",
+        "👨"
       ],
       [
-        "family-extra-38",
-        "Extra 38",
-        "👨‍👩‍👧"
+        "Son",
+        "Filho",
+        "👦"
       ],
       [
-        "family-extra-39",
-        "Extra 39",
-        "👨‍👩‍👧"
+        "Stepmother",
+        "Madrasta",
+        "👩"
       ]
     ],
     "quiz": [
       [
-        "family-extra-36 significa:",
+        "Mother significa:",
         [
-          "Extra 37",
-          "Extra 36",
-          "Extra 38",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "family-extra-37 significa:",
-        [
-          "Extra 36",
-          "Extra 38",
-          "Extra 39",
-          "Extra 37"
+          "Tio",
+          "Filho",
+          "Madrasta",
+          "Mãe"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Uncle significa:",
         [
-          "family-extra-39",
-          "family-extra-38",
-          "family-extra-37",
-          "family-extra-36"
+          "Filho",
+          "Madrasta",
+          "Mãe",
+          "Tio"
         ],
-        2
+        3
+      ],
+      [
+        "Como dizemos \"Filho\" em inglês?",
+        [
+          "Stepmother",
+          "Mother",
+          "Uncle",
+          "Son"
+        ],
+        3
       ]
     ]
   },
@@ -4228,67 +4228,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 60,
     "slug": "body-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: body-extra-36, body-extra-37, body-extra-38, body-extra-39",
+    "description": "Revisão final: Head, Arm, Shoulder, Elbow",
     "icon": "🧒",
-    "objective": "Hoje você vai aprender body-extra-36, body-extra-37, body-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Head, Arm, Shoulder e mais algumas palavras.",
     "learn": [
-      "body-extra-36",
-      "body-extra-37",
-      "body-extra-38",
-      "body-extra-39"
+      "Head",
+      "Arm",
+      "Shoulder",
+      "Elbow"
     ],
     "words": [
       [
-        "body-extra-36",
-        "Extra 36",
+        "Head",
+        "Cabeça",
         "🧒"
       ],
       [
-        "body-extra-37",
-        "Extra 37",
-        "🧒"
+        "Arm",
+        "Braço",
+        "💪"
       ],
       [
-        "body-extra-38",
-        "Extra 38",
-        "🧒"
+        "Shoulder",
+        "Ombro",
+        "🤷"
       ],
       [
-        "body-extra-39",
-        "Extra 39",
-        "🧒"
+        "Elbow",
+        "Cotovelo",
+        "💪"
       ]
     ],
     "quiz": [
       [
-        "body-extra-36 significa:",
+        "Head significa:",
         [
-          "Extra 39",
-          "Extra 38",
-          "Extra 36",
-          "Extra 37"
+          "Braço",
+          "Ombro",
+          "Cotovelo",
+          "Cabeça"
         ],
-        2
+        3
       ],
       [
-        "body-extra-37 significa:",
+        "Arm significa:",
         [
-          "Extra 39",
-          "Extra 37",
-          "Extra 36",
-          "Extra 38"
+          "Ombro",
+          "Cotovelo",
+          "Cabeça",
+          "Braço"
         ],
-        1
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Ombro\" em inglês?",
         [
-          "body-extra-36",
-          "body-extra-37",
-          "body-extra-38",
-          "body-extra-39"
+          "Elbow",
+          "Head",
+          "Arm",
+          "Shoulder"
         ],
-        1
+        3
       ]
     ]
   },
@@ -4942,67 +4942,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 70,
     "slug": "food-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: food-extra-36, food-extra-37, food-extra-38, food-extra-39",
+    "description": "Revisão final: Apple, Water, I am hungry, Strawberry",
     "icon": "🍎",
-    "objective": "Hoje você vai aprender food-extra-36, food-extra-37, food-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Apple, Water, I am hungry e mais algumas palavras.",
     "learn": [
-      "food-extra-36",
-      "food-extra-37",
-      "food-extra-38",
-      "food-extra-39"
+      "Apple",
+      "Water",
+      "I am hungry",
+      "Strawberry"
     ],
     "words": [
       [
-        "food-extra-36",
-        "Extra 36",
+        "Apple",
+        "Maçã",
         "🍎"
       ],
       [
-        "food-extra-37",
-        "Extra 37",
-        "🍎"
+        "Water",
+        "Água",
+        "💧"
       ],
       [
-        "food-extra-38",
-        "Extra 38",
-        "🍎"
+        "I am hungry",
+        "Estou com fome",
+        "🍽️"
       ],
       [
-        "food-extra-39",
-        "Extra 39",
-        "🍎"
+        "Strawberry",
+        "Morango",
+        "🍓"
       ]
     ],
     "quiz": [
       [
-        "food-extra-36 significa:",
+        "Apple significa:",
         [
-          "Extra 37",
-          "Extra 36",
-          "Extra 38",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "food-extra-37 significa:",
-        [
-          "Extra 36",
-          "Extra 39",
-          "Extra 38",
-          "Extra 37"
+          "Água",
+          "Estou com fome",
+          "Morango",
+          "Maçã"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Water significa:",
         [
-          "food-extra-39",
-          "food-extra-38",
-          "food-extra-37",
-          "food-extra-36"
+          "Estou com fome",
+          "Morango",
+          "Maçã",
+          "Água"
         ],
-        2
+        3
+      ],
+      [
+        "Como dizemos \"Estou com fome\" em inglês?",
+        [
+          "Strawberry",
+          "Apple",
+          "Water",
+          "I am hungry"
+        ],
+        3
       ]
     ]
   },
@@ -5656,67 +5656,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 80,
     "slug": "clothes-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: clothes-extra-36, clothes-extra-37, clothes-extra-38, clothes-extra-39",
+    "description": "Revisão final: Shirt, Skirt, Put on shoes, Button",
     "icon": "👕",
-    "objective": "Hoje você vai aprender clothes-extra-36, clothes-extra-37, clothes-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Shirt, Skirt, Put on shoes e mais algumas palavras.",
     "learn": [
-      "clothes-extra-36",
-      "clothes-extra-37",
-      "clothes-extra-38",
-      "clothes-extra-39"
+      "Shirt",
+      "Skirt",
+      "Put on shoes",
+      "Button"
     ],
     "words": [
       [
-        "clothes-extra-36",
-        "Extra 36",
+        "Shirt",
+        "Camisa",
         "👕"
       ],
       [
-        "clothes-extra-37",
-        "Extra 37",
-        "👕"
+        "Skirt",
+        "Saia",
+        "👗"
       ],
       [
-        "clothes-extra-38",
-        "Extra 38",
-        "👕"
+        "Put on shoes",
+        "Calçar sapatos",
+        "👟"
       ],
       [
-        "clothes-extra-39",
-        "Extra 39",
-        "👕"
+        "Button",
+        "Botão",
+        "🔘"
       ]
     ],
     "quiz": [
       [
-        "clothes-extra-36 significa:",
+        "Shirt significa:",
         [
-          "Extra 39",
-          "Extra 38",
-          "Extra 36",
-          "Extra 37"
+          "Saia",
+          "Calçar sapatos",
+          "Botão",
+          "Camisa"
         ],
-        2
+        3
       ],
       [
-        "clothes-extra-37 significa:",
+        "Skirt significa:",
         [
-          "Extra 39",
-          "Extra 37",
-          "Extra 36",
-          "Extra 38"
+          "Calçar sapatos",
+          "Botão",
+          "Camisa",
+          "Saia"
         ],
-        1
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Calçar sapatos\" em inglês?",
         [
-          "clothes-extra-38",
-          "clothes-extra-37",
-          "clothes-extra-36",
-          "clothes-extra-39"
+          "Button",
+          "Shirt",
+          "Skirt",
+          "Put on shoes"
         ],
-        1
+        3
       ]
     ]
   },
@@ -6375,67 +6375,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 90,
     "slug": "weather-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: weather-extra-36, weather-extra-37, weather-extra-38, weather-extra-39",
+    "description": "Revisão final: Sunny, It is hot, Warm, Hail",
     "icon": "☀️",
-    "objective": "Hoje você vai aprender weather-extra-36, weather-extra-37, weather-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Sunny, It is hot, Warm e mais algumas palavras.",
     "learn": [
-      "weather-extra-36",
-      "weather-extra-37",
-      "weather-extra-38",
-      "weather-extra-39"
+      "Sunny",
+      "It is hot",
+      "Warm",
+      "Hail"
     ],
     "words": [
       [
-        "weather-extra-36",
-        "Extra 36",
+        "Sunny",
+        "Ensolarado",
         "☀️"
       ],
       [
-        "weather-extra-37",
-        "Extra 37",
-        "☀️"
+        "It is hot",
+        "Está quente",
+        "🌡️"
       ],
       [
-        "weather-extra-38",
-        "Extra 38",
-        "☀️"
+        "Warm",
+        "Morno",
+        "🌤️"
       ],
       [
-        "weather-extra-39",
-        "Extra 39",
-        "☀️"
+        "Hail",
+        "Granizo",
+        "🌨️"
       ]
     ],
     "quiz": [
       [
-        "weather-extra-36 significa:",
+        "Sunny significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 37",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "weather-extra-37 significa:",
-        [
-          "Extra 38",
-          "Extra 39",
-          "Extra 36",
-          "Extra 37"
+          "Está quente",
+          "Morno",
+          "Granizo",
+          "Ensolarado"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "It is hot significa:",
         [
-          "weather-extra-38",
-          "weather-extra-37",
-          "weather-extra-39",
-          "weather-extra-36"
+          "Morno",
+          "Granizo",
+          "Ensolarado",
+          "Está quente"
         ],
-        1
+        3
+      ],
+      [
+        "Como dizemos \"Morno\" em inglês?",
+        [
+          "Hail",
+          "Sunny",
+          "It is hot",
+          "Warm"
+        ],
+        3
       ]
     ]
   },
@@ -7089,67 +7089,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 100,
     "slug": "school-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: school-extra-36, school-extra-37, school-extra-38, school-extra-39",
+    "description": "Revisão final: School, Desk, I go to school, Library",
     "icon": "🏫",
-    "objective": "Hoje você vai aprender school-extra-36, school-extra-37, school-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar School, Desk, I go to school e mais algumas palavras.",
     "learn": [
-      "school-extra-36",
-      "school-extra-37",
-      "school-extra-38",
-      "school-extra-39"
+      "School",
+      "Desk",
+      "I go to school",
+      "Library"
     ],
     "words": [
       [
-        "school-extra-36",
-        "Extra 36",
+        "School",
+        "Escola",
         "🏫"
       ],
       [
-        "school-extra-37",
-        "Extra 37",
+        "Desk",
+        "Carteira",
+        "🪑"
+      ],
+      [
+        "I go to school",
+        "Eu vou à escola",
         "🏫"
       ],
       [
-        "school-extra-38",
-        "Extra 38",
-        "🏫"
-      ],
-      [
-        "school-extra-39",
-        "Extra 39",
-        "🏫"
+        "Library",
+        "Biblioteca",
+        "📚"
       ]
     ],
     "quiz": [
       [
-        "school-extra-36 significa:",
+        "School significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 39",
-          "Extra 37"
+          "Carteira",
+          "Eu vou à escola",
+          "Biblioteca",
+          "Escola"
         ],
-        1
+        3
       ],
       [
-        "school-extra-37 significa:",
+        "Desk significa:",
         [
-          "Extra 36",
-          "Extra 37",
-          "Extra 39",
-          "Extra 38"
+          "Eu vou à escola",
+          "Biblioteca",
+          "Escola",
+          "Carteira"
         ],
-        1
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Eu vou à escola\" em inglês?",
         [
-          "school-extra-36",
-          "school-extra-38",
-          "school-extra-37",
-          "school-extra-39"
+          "Library",
+          "School",
+          "Desk",
+          "I go to school"
         ],
-        2
+        3
       ]
     ]
   },
@@ -7803,67 +7803,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 110,
     "slug": "house-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: house-extra-36, house-extra-37, house-extra-38, house-extra-39",
+    "description": "Revisão final: House, Door, I am at home, Key",
     "icon": "🏠",
-    "objective": "Hoje você vai aprender house-extra-36, house-extra-37, house-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar House, Door, I am at home e mais algumas palavras.",
     "learn": [
-      "house-extra-36",
-      "house-extra-37",
-      "house-extra-38",
-      "house-extra-39"
+      "House",
+      "Door",
+      "I am at home",
+      "Key"
     ],
     "words": [
       [
-        "house-extra-36",
-        "Extra 36",
+        "House",
+        "Casa",
         "🏠"
       ],
       [
-        "house-extra-37",
-        "Extra 37",
-        "🏠"
+        "Door",
+        "Porta",
+        "🚪"
       ],
       [
-        "house-extra-38",
-        "Extra 38",
-        "🏠"
+        "I am at home",
+        "Estou em casa",
+        "🏡"
       ],
       [
-        "house-extra-39",
-        "Extra 39",
-        "🏠"
+        "Key",
+        "Chave",
+        "🔑"
       ]
     ],
     "quiz": [
       [
-        "house-extra-36 significa:",
+        "House significa:",
         [
-          "Extra 37",
-          "Extra 38",
-          "Extra 36",
-          "Extra 39"
-        ],
-        2
-      ],
-      [
-        "house-extra-37 significa:",
-        [
-          "Extra 38",
-          "Extra 39",
-          "Extra 36",
-          "Extra 37"
+          "Porta",
+          "Estou em casa",
+          "Chave",
+          "Casa"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Door significa:",
         [
-          "house-extra-39",
-          "house-extra-37",
-          "house-extra-38",
-          "house-extra-36"
+          "Estou em casa",
+          "Chave",
+          "Casa",
+          "Porta"
         ],
-        1
+        3
+      ],
+      [
+        "Como dizemos \"Estou em casa\" em inglês?",
+        [
+          "Key",
+          "House",
+          "Door",
+          "I am at home"
+        ],
+        3
       ]
     ]
   },
@@ -8513,67 +8513,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 120,
     "slug": "actions-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: actions-extra-36, actions-extra-37, actions-extra-38, actions-extra-39",
+    "description": "Revisão final: Run, Read, Throw, Look",
     "icon": "🏃",
-    "objective": "Hoje você vai aprender actions-extra-36, actions-extra-37, actions-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Run, Read, Throw e mais algumas palavras.",
     "learn": [
-      "actions-extra-36",
-      "actions-extra-37",
-      "actions-extra-38",
-      "actions-extra-39"
+      "Run",
+      "Read",
+      "Throw",
+      "Look"
     ],
     "words": [
       [
-        "actions-extra-36",
-        "Extra 36",
+        "Run",
+        "Correr",
         "🏃"
       ],
       [
-        "actions-extra-37",
-        "Extra 37",
-        "🏃"
+        "Read",
+        "Ler",
+        "📖"
       ],
       [
-        "actions-extra-38",
-        "Extra 38",
-        "🏃"
+        "Throw",
+        "Arremessar",
+        "🎯"
       ],
       [
-        "actions-extra-39",
-        "Extra 39",
-        "🏃"
+        "Look",
+        "Olhar",
+        "👀"
       ]
     ],
     "quiz": [
       [
-        "actions-extra-36 significa:",
+        "Run significa:",
         [
-          "Extra 39",
-          "Extra 36",
-          "Extra 38",
-          "Extra 37"
+          "Ler",
+          "Arremessar",
+          "Olhar",
+          "Correr"
         ],
-        1
+        3
       ],
       [
-        "actions-extra-37 significa:",
+        "Read significa:",
         [
-          "Extra 36",
-          "Extra 37",
-          "Extra 39",
-          "Extra 38"
+          "Arremessar",
+          "Olhar",
+          "Correr",
+          "Ler"
         ],
-        1
+        3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Como dizemos \"Arremessar\" em inglês?",
         [
-          "actions-extra-38",
-          "actions-extra-37",
-          "actions-extra-36",
-          "actions-extra-39"
+          "Look",
+          "Run",
+          "Read",
+          "Throw"
         ],
-        1
+        3
       ]
     ]
   },
@@ -9232,67 +9232,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 130,
     "slug": "feelings-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: feelings-extra-36, feelings-extra-37, feelings-extra-38, feelings-extra-39",
+    "description": "Revisão final: Happy, Be kind, Lonely, Feel better",
     "icon": "😊",
-    "objective": "Hoje você vai aprender feelings-extra-36, feelings-extra-37, feelings-extra-38 e mais algumas palavras.",
+    "objective": "Hoje você vai revisar Happy, Be kind, Lonely e mais algumas palavras.",
     "learn": [
-      "feelings-extra-36",
-      "feelings-extra-37",
-      "feelings-extra-38",
-      "feelings-extra-39"
+      "Happy",
+      "Be kind",
+      "Lonely",
+      "Feel better"
     ],
     "words": [
       [
-        "feelings-extra-36",
-        "Extra 36",
+        "Happy",
+        "Feliz",
         "😊"
       ],
       [
-        "feelings-extra-37",
-        "Extra 37",
-        "😊"
+        "Be kind",
+        "Seja gentil",
+        "💛"
       ],
       [
-        "feelings-extra-38",
-        "Extra 38",
-        "😊"
+        "Lonely",
+        "Solitário(a)",
+        "😔"
       ],
       [
-        "feelings-extra-39",
-        "Extra 39",
-        "😊"
+        "Feel better",
+        "Sentir-se melhor",
+        "💚"
       ]
     ],
     "quiz": [
       [
-        "feelings-extra-36 significa:",
+        "Happy significa:",
         [
-          "Extra 38",
-          "Extra 36",
-          "Extra 37",
-          "Extra 39"
-        ],
-        1
-      ],
-      [
-        "feelings-extra-37 significa:",
-        [
-          "Extra 36",
-          "Extra 39",
-          "Extra 38",
-          "Extra 37"
+          "Seja gentil",
+          "Solitário(a)",
+          "Sentir-se melhor",
+          "Feliz"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Be kind significa:",
         [
-          "feelings-extra-39",
-          "feelings-extra-37",
-          "feelings-extra-38",
-          "feelings-extra-36"
+          "Solitário(a)",
+          "Sentir-se melhor",
+          "Feliz",
+          "Seja gentil"
         ],
-        1
+        3
+      ],
+      [
+        "Como dizemos \"Solitário(a)\" em inglês?",
+        [
+          "Feel better",
+          "Happy",
+          "Be kind",
+          "Lonely"
+        ],
+        3
       ]
     ]
   },
@@ -10661,67 +10661,67 @@ export const LESSON_SPECS: LessonSpec[] = [
     "globalOrder": 150,
     "slug": "places-l10",
     "title": "Lição 10: Revisão final",
-    "description": "Revisão final: places-extra-36, places-extra-37, places-extra-38, places-extra-39",
-    "icon": "🗺️",
-    "objective": "Hoje você vai aprender places-extra-36, places-extra-37, places-extra-38 e mais algumas palavras.",
+    "description": "Revisão final: Park, Let us go, Station, Map",
+    "icon": "🌳",
+    "objective": "Hoje você vai revisar Park, Let us go, Station e mais algumas palavras.",
     "learn": [
-      "places-extra-36",
-      "places-extra-37",
-      "places-extra-38",
-      "places-extra-39"
+      "Park",
+      "Let us go",
+      "Station",
+      "Map"
     ],
     "words": [
       [
-        "places-extra-36",
-        "Extra 36",
-        "🗺️"
+        "Park",
+        "Parque",
+        "🌳"
       ],
       [
-        "places-extra-37",
-        "Extra 37",
-        "🗺️"
+        "Let us go",
+        "Vamos",
+        "🚀"
       ],
       [
-        "places-extra-38",
-        "Extra 38",
-        "🗺️"
+        "Station",
+        "Estação",
+        "🚉"
       ],
       [
-        "places-extra-39",
-        "Extra 39",
+        "Map",
+        "Mapa",
         "🗺️"
       ]
     ],
     "quiz": [
       [
-        "places-extra-36 significa:",
+        "Park significa:",
         [
-          "Extra 37",
-          "Extra 38",
-          "Extra 36",
-          "Extra 39"
-        ],
-        2
-      ],
-      [
-        "places-extra-37 significa:",
-        [
-          "Extra 36",
-          "Extra 39",
-          "Extra 38",
-          "Extra 37"
+          "Vamos",
+          "Estação",
+          "Mapa",
+          "Parque"
         ],
         3
       ],
       [
-        "Como dizemos \"Extra 37\" em inglês?",
+        "Let us go significa:",
         [
-          "places-extra-39",
-          "places-extra-37",
-          "places-extra-38",
-          "places-extra-36"
+          "Estação",
+          "Mapa",
+          "Parque",
+          "Vamos"
         ],
-        1
+        3
+      ],
+      [
+        "Como dizemos \"Estação\" em inglês?",
+        [
+          "Map",
+          "Park",
+          "Let us go",
+          "Station"
+        ],
+        3
       ]
     ]
   },

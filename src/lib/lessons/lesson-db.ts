@@ -1,7 +1,7 @@
 import type { LessonContent, LessonVocabCard } from "@/types/lesson";
 import type { ILessonVocab, ILessonQuiz } from "@/modules/types/models";
 
-export const LESSON_CONTENT_VERSION = 49;
+export const LESSON_CONTENT_VERSION = 50;
 
 export function lessonContentToDbFields(content: LessonContent) {
   const vocabulary: ILessonVocab[] = [];

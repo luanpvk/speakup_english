@@ -101,12 +101,13 @@ export function Hero() {
               <span className="absolute -bottom-[9px] left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-b-2 border-r-2 border-border bg-card md:left-16" />
             </div>
             <Image
-              src="/mascot.png"
+              src="/mascot-hero.png"
               alt="Mascote do SpeakUp: um gatinho amarelo com fones de ouvido"
-              width={360}
-              height={360}
+              width={836}
+              height={988}
+              sizes="(min-width: 768px) 320px, 240px"
               priority
-              className={cn("mt-12 h-56 w-56 md:h-80 md:w-80", !reduceMotion && "animate-float-gentle")}
+              className={cn("mt-12 h-64 w-auto md:h-[23rem]", !reduceMotion && "animate-float-gentle")}
             />
             <span className="absolute bottom-10 -left-4 inline-flex items-center gap-1.5 rounded-2xl border-2 border-border bg-card px-3 py-2 font-display font-bold text-orange-500 shadow-[0_4px_0_hsl(var(--border-shadow))] md:-left-10">
               <Flame className="h-5 w-5 fill-orange-400" aria-hidden />5 dias
